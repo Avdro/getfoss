@@ -11,6 +11,8 @@ tags:
   - Software
 ---
 
+![What Is FOSS?](/images/posts/cover.jpg)
+
 # What Is FOSS?
 
 Free and Open Source Software (FOSS) is software whose source code is available for people to study, use, modify, and share.
