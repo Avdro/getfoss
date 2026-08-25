@@ -124,3 +124,13 @@ menu:
       name: About
       url: /about/
       weight: 40
+
+    - identifier: contact
+      name: Contact
+      url: /contact/
+      weight: 50
+
+    - identifier: privacy
+      name: Privacy
+      url: /privacy-policy/
+      weight: 60
