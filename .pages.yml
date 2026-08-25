@@ -1,0 +1,82 @@
+media:
+  input: static/images
+  output: /getfoss/images
+
+content:
+  - name: posts
+    label: Posts
+    type: collection
+    path: content/posts
+    subfolders: false
+
+    filename: "{primary}.md"
+
+    view:
+      primary: title
+      sort: date
+      order: desc
+
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+
+      - name: date
+        label: Date
+        type: date
+        required: true
+
+      - name: draft
+        label: Draft
+        type: boolean
+        default: false
+
+      - name: description
+        label: Description
+        type: text
+
+      - name: categories
+        label: Categories
+        type: select
+        options:
+          multiple: true
+          values:
+            - Creative Tools
+            - Engineering
+            - System Tools
+            - Productivity
+            - Design
+            - Distributions
+            - Miscellaneous
+
+      - name: tags
+        label: Tags
+        type: string
+        list:
+          separator: ","
+
+      - name: cover
+        label: Cover
+        type: object
+        fields:
+          - name: image
+            label: Image
+            type: image
+            options:
+              media: images
+
+          - name: alt
+            label: Alt
+            type: string
+
+          - name: caption
+            label: Caption
+            type: string
+
+      - name: body
+        label: Content
+        type: rich-text
+        options:
+          format: markdown
+          media: images
