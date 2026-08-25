@@ -2,9 +2,6 @@ baseURL: "https://getfoss.org/"
 languageCode: "en-us"
 title: "GetFOSS"
 
-theme:
-  - PaperMod
-
 module:
   imports:
     - path: github.com/adityatelange/hugo-PaperMod
