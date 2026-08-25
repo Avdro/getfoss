@@ -1,6 +1,7 @@
 baseURL: "https://avdro.github.io/getfoss/"
 languageCode: "en-us"
 title: "GetFOSS"
+description: "Free and open-source software, Linux, privacy, security, and useful tools."
 
 module:
   imports:
@@ -15,6 +16,12 @@ params:
   ShowShareButtons: true
   ShowPostNavLinks: true
   ShowCodeCopyButtons: true
+  ShowBreadCrumbs: true
+  ShowToc: true
+
+  homeInfoParams:
+    Title: "GetFOSS"
+    Content: "Free and open-source software, Linux, privacy, security, and useful tools."
 
 menu:
   main:
