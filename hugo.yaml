@@ -78,7 +78,7 @@ params:
   hideSummary: false
 
   homeInfoParams:
-    Title: "Open Source Software, Linux & Digital Freedom"
+    Title: "Free & Open Source Software, Privacy & Security"
     Content: "Discover useful open source applications, practical guides, privacy-focused tools, Linux software, and projects that give you more control over your technology."
 
   fuseOpts:
