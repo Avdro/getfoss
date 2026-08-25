@@ -1,7 +1,7 @@
 ---
 title: "Article Title"
 date: 2026-08-25
-draft: false
+draft: true
 description: "A short description of the article."
 categories:
   - Miscellaneous
