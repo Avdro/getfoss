@@ -3,15 +3,20 @@ title: "What Is FOSS? A Beginner's Guide to Free and Open Source Software"
 date: 2026-08-25
 draft: false
 description: "A beginner-friendly introduction to Free and Open Source Software, its principles, licenses, benefits, and why FOSS matters."
+
 categories:
   - Miscellaneous
+
 tags:
   - FOSS
   - Open Source
   - Software
----
 
-![What Is FOSS?](../images/posts/cover.jpeg)
+cover:
+  image: "/getfoss/images/posts/cover.jpeg"
+  alt: "What Is FOSS?"
+  caption: "What Is FOSS?"
+---
 
 # What Is FOSS?
 
@@ -29,12 +34,12 @@ The word "free" refers primarily to freedom rather than price. Open source empha
 
 FOSS can provide several important advantages:
 
-- transparency;
-- user control;
-- community-driven development;
-- the ability to modify software;
-- long-term accessibility;
-- reduced dependence on a single vendor.
+- Transparency
+- User control
+- Community-driven development
+- The ability to modify software
+- Long-term accessibility
+- Reduced dependence on a single vendor
 
 ## FOSS Licenses
 
@@ -42,10 +47,10 @@ Open source software is distributed under licenses that define how the software 
 
 Popular examples include:
 
-- GNU General Public License;
-- MIT License;
-- Apache License 2.0;
-- BSD licenses.
+- GNU General Public License
+- MIT License
+- Apache License 2.0
+- BSD licenses
 
 Each license has different requirements and permissions, so checking the license before redistributing or modifying software is important.
 
