@@ -3,7 +3,7 @@ title: "Privacy Policy"
 date: 2026-08-25
 draft: false
 description: "Privacy Policy for GetFOSS"
-ShowShareButtons: false
+disableShare: true
 ---
 
 # Privacy Policy
