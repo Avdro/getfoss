@@ -46,18 +46,24 @@ content:
         type: text
 
       - name: categories
-        label: Categories
+        label: Category
         type: select
+        required: true
         options:
-          multiple: true
+          multiple: false
           values:
-            - Creative Tools
-            - Engineering
+            - Linux & BSD
+            - Security & Privacy
+            - Audio & Video
+            - Graphics & Design
+            - Engineering & CAD
+            - Office & Productivity
+            - Disk & Data
+            - Finance
+            - Development
             - System Tools
-            - Productivity
-            - Design
-            - Distributions
-            - Miscellaneous
+            - Networking & Internet
+            - Other
 
       - name: tags
         label: Tags
