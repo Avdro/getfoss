@@ -48,7 +48,7 @@ params:
 
   author: "GetFOSS"
 
-    label:
+  label:
     text: "GetFOSS"
 
   keywords:
