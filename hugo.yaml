@@ -81,12 +81,12 @@ params:
     Title: "Free & Open Source Software, Privacy & Security"
     Content: "Discover useful open source applications, practical guides, privacy-focused tools, Linux software, and projects that give you more control over your technology."
 
-    socialIcons:
-      - name: github
-        url: "https://github.com/Avdro/getfoss"
+  socialIcons:
+    - name: github
+      url: "https://github.com/Avdro/getfoss"
 
-      - name: rss
-        url: "/index.xml"
+    - name: rss
+      url: "/index.xml"
 
   fuseOpts:
     isCaseSensitive: false
