@@ -48,6 +48,9 @@ params:
 
   author: "GetFOSS"
 
+    label:
+    text: "GetFOSS"
+
   keywords:
     - open source software
     - free software
