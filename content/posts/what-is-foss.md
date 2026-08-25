@@ -11,7 +11,7 @@ tags:
   - Software
 ---
 
-![What Is FOSS?](/images/posts/cover.jpeg)
+![What Is FOSS?](../images/posts/cover.jpeg)
 
 # What Is FOSS?
 
