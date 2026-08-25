@@ -81,6 +81,19 @@ params:
     Title: "Open Source Software, Linux & Digital Freedom"
     Content: "Discover useful open source applications, practical guides, privacy-focused tools, Linux software, and projects that give you more control over your technology."
 
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 2
+    keys:
+      - title
+      - permalink
+      - summary
+      - content
+
   assets:
     disableHLJS: false
     disableFingerprinting: false
@@ -101,6 +114,11 @@ menu:
       name: Tags
       url: /tags/
       weight: 30
+
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 35
 
     - identifier: about
       name: About
