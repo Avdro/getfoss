@@ -3,7 +3,7 @@ title: "About"
 date: 2026-08-25
 draft: false
 description: "About GetFOSS"
-ShowShareButtons: false
+disableShare: true
 ---
 
 GetFOSS is an independent blog about free and open-source software.
