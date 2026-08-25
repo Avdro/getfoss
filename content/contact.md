@@ -3,7 +3,7 @@ title: "Contact"
 date: 2026-08-25
 draft: false
 description: "Contact GetFOSS"
-ShowShareButtons: false
+disableShare: true
 ---
 
 If you have a question, suggestion, correction, or feedback about GetFOSS, you can contact us by email.
