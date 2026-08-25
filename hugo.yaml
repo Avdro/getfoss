@@ -86,7 +86,7 @@ params:
       url: "https://github.com/Avdro/getfoss"
 
     - name: rss
-      url: "/index.xml"
+      url: "/getfoss/index.xml"
 
   fuseOpts:
     isCaseSensitive: false
