@@ -1,7 +1,7 @@
 baseURL: "https://avdro.github.io/getfoss/"
 locale: "en-us"
 
-title: "GetFOSS — Open Source Software, Linux & Privacy"
+title: "GetFOSS — Open Source Software"
 
 description: "GetFOSS is an independent publication about open source software, Linux, privacy, security, and digital freedom. Discover useful applications, practical guides, open source projects, and tools that give you more control over your technology."
 
@@ -42,7 +42,7 @@ minify:
 params:
   env: production
 
-  title: "GetFOSS — Open Source Software, Linux & Privacy"
+  title: "GetFOSS — Open Source Software"
 
   description: "GetFOSS is an independent publication about open source software, Linux, privacy, security, and digital freedom. Discover useful applications, practical guides, open source projects, and tools that give you more control over your technology."
 
