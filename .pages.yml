@@ -12,6 +12,19 @@ media:
       - webp
       - gif
 
+  - name: post_images
+    label: Post Images
+    input: static/images/posts
+    output: /getfoss/images/posts
+    categories:
+      - image
+    extensions:
+      - jpg
+      - jpeg
+      - png
+      - webp
+      - gif
+
 content:
   - name: posts
     label: Posts
@@ -79,8 +92,7 @@ content:
             label: Image
             type: image
             options:
-              media: images
-              path: posts
+              media: post_images
 
           - name: alt
             label: Alt
@@ -95,5 +107,4 @@ content:
         type: rich-text
         options:
           format: markdown
-          media: images
-          path: posts
+          media: post_images
