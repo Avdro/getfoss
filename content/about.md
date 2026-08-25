@@ -4,6 +4,9 @@ date: 2026-08-25
 draft: false
 description: "About GetFOSS"
 disableShare: true
+
+build:
+  list: never
 ---
 
 GetFOSS is an independent blog about free and open-source software.
