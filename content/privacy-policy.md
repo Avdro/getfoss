@@ -4,43 +4,53 @@ date: 2026-08-25
 draft: false
 description: "Privacy Policy for GetFOSS"
 disableShare: true
+
+build:
+  list: never
 ---
 
 # Privacy Policy
 
-**Last updated: August 25, 2026**
-
-GetFOSS respects your privacy. This Privacy Policy explains what information may be collected when you visit this website and how it is used.
+GetFOSS respects your privacy and aims to keep this website simple, transparent, and free from unnecessary tracking.
 
 ## Information We Collect
 
-GetFOSS does not require users to create an account or provide personal information to access the website.
+GetFOSS does not intentionally collect personal information from visitors.
 
-The website may collect limited technical information automatically, such as:
-
-- IP address
-- Browser type
-- Operating system
-- Referring page
-- Date and time of access
-- Pages visited
-
-This information may be collected by hosting, security, analytics, or other technical services used to operate the website.
+We do not require users to create an account, provide an email address, or submit personal information to read the website.
 
 ## Cookies
 
-GetFOSS does not use cookies for user accounts or personalized advertising.
+GetFOSS does not use advertising cookies or third-party tracking cookies.
 
-Some third-party services may use cookies or similar technologies when they are embedded in or used by the website. Their use of information is governed by their own privacy policies.
+The website may use essential browser storage required for certain functionality, such as remembering your preferred light or dark theme.
+
+## Analytics and Tracking
+
+GetFOSS does not use advertising trackers or sell visitor data.
+
+The website may be hosted through GitHub Pages, which is operated by GitHub. GitHub may process technical information such as IP addresses and request data as part of providing and securing its hosting infrastructure.
 
 ## External Links
 
-GetFOSS may contain links to external websites, software projects, repositories, documentation, and other resources.
+GetFOSS may link to external websites, software projects, repositories, and other resources.
 
-GetFOSS is not responsible for the privacy practices, security, or content of external websites. Visitors should review the privacy policies of third-party websites they visit.
+Once you leave GetFOSS, the privacy practices of the external website you visit are governed by that website's own policies.
+
+## RSS
+
+GetFOSS provides an RSS feed so readers can follow new articles using an RSS reader.
+
+The RSS feed does not require registration or personal information.
+
+## Changes to This Policy
+
+This Privacy Policy may be updated when the website, its technologies, or its practices change.
+
+The date at the top of this page indicates when the policy was last updated.
 
 ## Contact
 
-If you have questions about this Privacy Policy, contact:
+If you have questions or concerns about this Privacy Policy, please contact the GetFOSS project through GitHub.
 
-**darkamax@proton.me**
+[Contact GetFOSS on GitHub](https://github.com/Avdro/getfoss)
