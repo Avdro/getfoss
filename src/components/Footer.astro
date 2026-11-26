@@ -1,5 +1,5 @@
 ---
-import { SITE_NAME } from '../lib/site';
+import { GITHUB_URL, SITE_NAME } from '../lib/site';
 ---
 
 <footer class="footer">
@@ -7,29 +7,23 @@ import { SITE_NAME } from '../lib/site';
     &copy; {new Date().getFullYear()} {SITE_NAME}
   </span>
 
-  <nav class="social-links" aria-label="GetFOSS social media">
-    <a
-      href="https://bsky.app/profile/getfoss.org"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Bluesky
-    </a>
-    <a
-      href="https://www.facebook.com/getfossorg"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Facebook
-    </a>
-    <a
-      href="https://x.com/getfoss_org"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      X
-    </a>
-  </nav>
+  <div class="footer-navigation">
+    <nav class="footer-section" aria-label="Explore">
+      <span class="footer-heading">Explore</span>
+      <a href="/blog/">Blog</a>
+      <a href="/tags/">Tags</a>
+      <a href="/releases/">Latest Versions</a>
+      <a href="/early-access/">Upcoming Releases</a>
+    </nav>
+
+    <nav class="footer-section" aria-label="Social">
+      <span class="footer-heading">Social</span>
+      <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://bsky.app/profile/getfoss.org" target="_blank" rel="noopener noreferrer">Bluesky</a>
+      <a href="https://x.com/getfoss_org" target="_blank" rel="noopener noreferrer">X</a>
+      <a href="https://www.facebook.com/getfossorg" target="_blank" rel="noopener noreferrer">Facebook</a>
+    </nav>
+  </div>
 </footer>
 
 <style is:global>
@@ -40,26 +34,57 @@ import { SITE_NAME } from '../lib/site';
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1rem 1.5rem;
+    gap: 2rem 3rem;
     color: var(--muted);
     font-size: 0.85rem;
     font-family: var(--mono);
   }
 
-  .social-links {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
+  .copyright {
+    color: var(--muted);
   }
 
-  .social-links a {
+  .footer-navigation {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem 3rem;
+  }
+
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.65rem;
+  }
+
+  .footer-heading {
+    color: var(--text);
+    font-weight: 700;
+    margin-bottom: 0.15rem;
+  }
+
+  .footer-section a {
     color: var(--muted);
     text-decoration: none;
     transition: color 0.2s ease;
   }
 
-  .social-links a:hover {
+  .footer-section a:hover {
     color: var(--text);
+  }
+
+  @media (max-width: 640px) {
+    .footer {
+      justify-content: flex-start;
+      gap: 1.5rem;
+    }
+
+    .footer-navigation {
+      width: 100%;
+      justify-content: flex-start;
+      gap: 2rem;
+    }
   }
 </style>
