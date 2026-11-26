@@ -19,7 +19,6 @@ type PrereleaseEntry = {
   url?: string | null;
   source?: string | null;
 };
-
 type ReleaseApplication = {
   id: string;
   releases?: PrereleaseEntry[];
@@ -38,7 +37,6 @@ const releaseApplications = new Map(
 
 function getWebsiteIcon(website?: string): string | undefined {
   if (!website) return undefined;
-
   try {
     const hostname = new URL(website).hostname;
     return `https://www.google.com/s2/favicons?domain=${encodeURIComponent(hostname)}&sz=128`;
@@ -53,7 +51,6 @@ function formatDate(value?: string | null): string {
   const date = new Date(value);
 
   if (Number.isNaN(date.getTime())) return 'Date unavailable';
-
   return date.toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'short',
@@ -70,7 +67,6 @@ const allApps = softwareData.applications.map((app) => {
     : [];
 
   const latestRelease = releases[0] ?? null;
-
   return {
     ...app,
     releases,
@@ -86,7 +82,6 @@ const TOTAL_APPS = allApps.length;
 const TOTAL_PAGES = Math.ceil(TOTAL_APPS / APPS_PER_PAGE);
 
 const categories = [...new Set(allApps.map((app) => app.category))].sort();
-
 const releaseTypes = [
   'Alpha',
   'Beta',
@@ -112,7 +107,6 @@ export function getStaticPaths() {
 
   return paths;
 }
-
 const { page } = Astro.params;
 const pageStr = Array.isArray(page) ? page[0] : page;
 const currentPage = pageStr ? parseInt(pageStr, 10) : 1;
@@ -127,7 +121,6 @@ const endIdx = startIdx + APPS_PER_PAGE;
 const pageTitle = safePage === 1
   ? 'Early Access — GetFOSS'
   : `Early Access — Page ${safePage} — GetFOSS`;
-
 const pageDescription =
   'Discover alpha, beta, release candidate, nightly and development builds of free and open-source software. Explore pre-release versions, track development progress and find official project links.';
 ---
@@ -136,14 +129,12 @@ const pageDescription =
   <main class="early-access">
     <header class="early-access__header">
       <h1>Early Access</h1>
-
       <p class="early-access__subtitle">
         Discover pre-release versions of free and open-source software,
         from alpha and beta releases to release candidates, nightly builds
         and ongoing development versions.
       </p>
     </header>
-
     <section class="early-access__controls" aria-label="Search and filters">
       <div class="early-access__search-row">
         <input
@@ -155,7 +146,6 @@ const pageDescription =
           aria-label="Search applications"
         />
       </div>
-
       <div class="early-access__filter-row">
         <select
           id="early-access-category"
@@ -168,7 +158,6 @@ const pageDescription =
             <option value={category}>{category}</option>
           ))}
         </select>
-
         <select
           id="early-access-type"
           class="early-access__select"
@@ -190,7 +179,6 @@ const pageDescription =
         </button>
       </div>
     </section>
-
     <p
       id="early-access-results"
       class="early-access__results"
@@ -205,7 +193,6 @@ const pageDescription =
     >
       No applications match your search. Try changing your filters.
     </p>
-
     <section
       class="early-access__grid"
       id="early-access-grid"
@@ -247,24 +234,22 @@ const pageDescription =
                   <span>{app.name.slice(0, 1).toUpperCase()}</span>
                 )}
               </div>
-
               <span class="early-access-card__type">
                 {app.latestType}
               </span>
             </div>
 
             <div class="early-access-card__content">
+              <h2>{app.name}</h2>
+
               <p class="early-access-card__category">
                 {app.category}
               </p>
-
-              <h2>{app.name}</h2>
 
               <p class="early-access-card__description">
                 {app.description}
               </p>
             </div>
-
             <div class="early-access-card__meta">
               <div>
                 <span class="early-access-card__label">Latest build</span>
@@ -276,7 +261,6 @@ const pageDescription =
                 <strong>{formatDate(app.latestDate)}</strong>
               </div>
             </div>
-
             <div class="early-access-card__footer">
               <span>
                 {app.releases.length} recorded builds
@@ -290,7 +274,6 @@ const pageDescription =
         </article>
       ))}
     </section>
-
     <nav
       class="early-access__pagination"
       id="early-access-pagination"
@@ -305,7 +288,6 @@ const pageDescription =
           ← Previous
         </a>
       )}
-
       <span class="early-access__page-numbers">
         {Array.from({ length: TOTAL_PAGES }, (_, index) => index + 1).map((number) => (
           <a
@@ -322,7 +304,6 @@ const pageDescription =
           </a>
         ))}
       </span>
-
       {safePage < TOTAL_PAGES && (
         <a
           href={`/early-access/${safePage + 1}/`}
@@ -506,21 +487,25 @@ const pageDescription =
     flex: 1;
   }
 
+  /* Category label — exactly matches ReleaseCard.astro */
   .early-access-card__category {
-    margin: 0 0 0.35rem;
-    color: var(--palette-text-muted, #6b7280);
-    font-size: 0.75rem;
+    display: inline-block;
+    margin: 0.3rem 0 0;
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    line-height: 1.4;
   }
 
   .early-access-card h2 {
-    margin: 0 0 0.55rem;
+    margin: 0;
     font-size: 1.2rem;
   }
 
   .early-access-card__description {
     display: -webkit-box;
     overflow: hidden;
-    margin: 0;
+    margin: 0.55rem 0 0;
     color: var(--palette-text-muted, #6b7280);
     font-size: 0.9rem;
     line-height: 1.5;
@@ -655,7 +640,6 @@ const pageDescription =
   const grid = document.getElementById(
     'early-access-grid'
   ) as HTMLElement;
-
   const resultsInfo = document.getElementById(
     'early-access-results'
   ) as HTMLParagraphElement;
@@ -699,7 +683,6 @@ const pageDescription =
     }
 
     let matchCount = 0;
-
     allCards.forEach((card) => {
       const name = (card.dataset.name || '').toLowerCase();
       const description = (card.dataset.description || '').toLowerCase();
@@ -709,7 +692,6 @@ const pageDescription =
       const license = (card.dataset.license || '').toLowerCase();
 
       let matches = true;
-
       if (query) {
         matches =
           name.includes(query) ||
