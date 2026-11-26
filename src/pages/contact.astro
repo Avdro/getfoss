@@ -1,32 +1,76 @@
 ---
 import Layout from '../components/Layout.astro';
+
+const title = 'Contact GetFOSS — Suggestions, Feedback & Support';
+const description =
+  'Contact GetFOSS to recommend free and open-source software, report incorrect information, suggest improvements, or contribute to the project.';
 ---
 
 <Layout
-  title="Contact — GetFOSS"
-  description="Get in touch with GetFOSS to suggest open-source software, report an issue, or share feedback."
+  title={title}
+  description={description}
   canonicalPath="/contact/"
 >
   <main class="content-shell">
     <article class="prose">
       <header class="page-header">
         <p class="eyebrow">GET IN TOUCH</p>
-        <h1>Contact</h1>
-        <p class="lede">Have a suggestion, found an issue, or want to share something with the FOSS community? We'd love to hear from you.</p>
+        <h1>Contact GetFOSS</h1>
+        <p class="lede">
+          Have a FOSS application to recommend, spotted an error, or want
+          to help improve GetFOSS? We welcome suggestions, feedback, and
+          contributions from the open-source community.
+        </p>
       </header>
 
-      <h2>Get in touch</h2>
-      <p>For general questions, feedback, corrections, and suggestions, email us:</p>
-      <p><strong><a href="mailto:info@getfoss.org">info@getfoss.org</a></strong></p>
+      <h2>General inquiries</h2>
+      <p>
+        For questions about GetFOSS, editorial feedback, corrections,
+        or other inquiries, contact us by email:
+      </p>
+      <p>
+        <strong>
+          <a href="mailto:info@getfoss.org">info@getfoss.org</a>
+        </strong>
+      </p>
 
-      <h2>Suggest a FOSS project</h2>
-      <p>Know a great free and open-source application that deserves more attention? Send us its name, website, source code repository, and a short explanation of why you recommend it.</p>
+      <h2>Recommend open-source software</h2>
+      <p>
+        Know a free and open-source application that should be featured
+        on GetFOSS? We are always interested in discovering useful,
+        actively maintained projects.
+      </p>
+      <p>
+        When making a recommendation, include the application's name,
+        official website, source code repository, supported platforms,
+        and a short explanation of what makes it worth highlighting.
+      </p>
 
-      <h2>Report an issue</h2>
-      <p>If you notice incorrect information, a broken link, or a technical problem on the website, please let us know. Include the page URL and a description of the issue so we can investigate.</p>
+      <h2>Report an issue or correction</h2>
+      <p>
+        Accuracy matters. If you find outdated software information,
+        an incorrect version number, a broken link, or another problem,
+        please send us the relevant page URL and a clear description.
+        Where possible, include a link to an official source that
+        confirms the correction.
+      </p>
 
-      <h2>Contribute</h2>
-      <p>GetFOSS supports the open-source community. You can explore the project and contribute through our <a href="https://github.com/Avdro/getfoss" target="_blank" rel="noopener noreferrer">GitHub repository</a>.</p>
+      <h2>Contribute to GetFOSS</h2>
+      <p>
+        GetFOSS is built around the values of free and open-source
+        software. You can help improve the project by reporting bugs,
+        suggesting features, reviewing information, or contributing
+        directly to the website.
+      </p>
+      <p>
+        Visit our
+        <a
+          href="https://github.com/Avdro/getfoss"
+          target="_blank"
+          rel="noopener noreferrer"
+        >GitHub repository</a>
+        to explore the source code and contribute.
+      </p>
     </article>
   </main>
 </Layout>
