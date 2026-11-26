@@ -1,3 +1,4 @@
+
 ---
 import { ClientRouter } from 'astro:transitions';
 import { DEFAULT_PALETTE } from '../lib/palette';
@@ -8,22 +9,21 @@ import SearchOverlay from './SearchOverlay.astro';
 import ThemeSwitcher from './ThemeSwitcher.astro';
 
 interface Props {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   canonicalPath?: string;
   ogType?: 'website' | 'article';
 }
 
 const {
-  title,
-  description,
+  title = 'GetFOSS — Free and Open-Source Software',
+  description = 'Free and open-source software, done right. GetFOSS picks the best FOSS apps — private, secure, and community-driven — for every platform.',
   canonicalPath = '/',
   ogType = 'website',
 } = Astro.props;
 
 const site = SITE_URL;
 const canonicalUrl = new URL(canonicalPath, site).toString();
-// Replace public/assets/og.png with your own 1200x630 social preview image.
 const ogImageUrl = new URL('/assets/og.png', site).toString();
 ---
 
@@ -32,9 +32,11 @@ const ogImageUrl = new URL('/assets/og.png', site).toString();
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="theme-color" content="#f0eee9" />
+
     <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="alternate" type="application/rss+xml" title={SITE_NAME} href="/rss.xml" />
@@ -54,7 +56,14 @@ const ogImageUrl = new URL('/assets/og.png', site).toString();
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageUrl} />
 
-    <link rel="preload" href="/assets/jbm.woff2" as="font" type="font/woff2" crossorigin />
+    <link
+      rel="preload"
+      href="/assets/jbm.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
     <script is:inline define:vars={{ DEFAULT_PALETTE }}>
       (() => {
         const apply = () => {
@@ -62,24 +71,27 @@ const ogImageUrl = new URL('/assets/og.png', site).toString();
           const system = window.matchMedia('(prefers-color-scheme: dark)').matches
             ? DEFAULT_PALETTE.dark
             : DEFAULT_PALETTE.light;
-          document.documentElement.setAttribute('data-palette', saved || system);
+
+          document.documentElement.setAttribute(
+            'data-palette',
+            saved || system
+          );
         };
+
         apply();
         document.addEventListener('astro:after-swap', apply);
       })();
     </script>
+
     <link rel="stylesheet" href="/css/style.css" />
     <ClientRouter />
   </head>
+
   <body>
     <Header />
-
     <slot />
-
     <Footer />
-
     <ThemeSwitcher />
-
     <SearchOverlay />
   </body>
 </html>
