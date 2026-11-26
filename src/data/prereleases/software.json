@@ -2,22 +2,22 @@
   "schemaVersion": 1,
   "applications": [
     {
-      "id": "blender",
-      "name": "Blender",
-      "slug": "blender",
-      "description": "3D creation suite for modeling, sculpting, animation, rendering and video editing.",
-      "category": "3D Software",
+      "id": "penpot",
+      "name": "Penpot",
+      "slug": "penpot",
+      "description": "Open-source design and prototyping platform for creating user interfaces, interactive prototypes and design systems.",
+      "category": "Design & Prototyping",
       "platforms": [
-        "Windows",
-        "macOS",
-        "Linux"
+        "Web",
+        "Self-hosted"
       ],
-      "license": "GPL-3.0-or-later",
-      "website": "https://www.blender.org/",
-      "sourceUrl": "https://github.com/blender/blender",
+      "license": "MPL-2.0",
+      "website": "https://penpot.app/",
+      "sourceUrl": "https://github.com/penpot/penpot",
       "releaseSource": {
-        "type": "blender-daily-builds",
-        "url": "https://builder.blender.org/download/daily/"
+        "type": "github",
+        "owner": "penpot",
+        "repository": "penpot"
       }
     },
     {
@@ -315,9 +315,9 @@
       "website": "https://www.darktable.org/",
       "sourceUrl": "https://github.com/darktable-org/darktable",
       "releaseSource": {
-        "type": "gitlab",
-        "host": "https://github.com",
-        "project": "darktable-org/darktable"
+        "type": "github",
+        "owner": "darktable-org",
+        "repository": "darktable"
       }
     },
     {
