@@ -41,6 +41,20 @@ function buildAppData(app) {
   };
 }
 
+// getStaticPaths MUST be self-contained — Astro hoists it above all other
+// frontmatter code, so it cannot reference module-scope variables like
+// TOTAL_PAGES or allApps. It can only access imported modules (softwareData).
+export function getStaticPaths() {
+  const appsPerPage = 15;
+  const totalApps = softwareData.applications.length;
+  const totalPages = Math.ceil(totalApps / appsPerPage);
+  const paths = [{ params: { page: undefined } }]; // /releases/
+  for (let i = 2; i <= totalPages; i++) {
+    paths.push({ params: { page: String(i) } }); // /releases/2/ through /releases/20/
+  }
+  return paths;
+}
+
 const allApps = softwareData.applications.map(buildAppData);
 const TOTAL_APPS = allApps.length;
 const TOTAL_PAGES = Math.ceil(TOTAL_APPS / APPS_PER_PAGE);
@@ -49,14 +63,6 @@ const TOTAL_PAGES = Math.ceil(TOTAL_APPS / APPS_PER_PAGE);
 const categories = [...new Set(allApps.map((a) => a.category))].sort();
 const platforms = [...new Set(allApps.flatMap((a) => a.platforms))].sort();
 const licenses = [...new Set(allApps.map((a) => a.license))].sort();
-
-export function getStaticPaths() {
-  const paths = [{ params: { page: undefined } }]; // /releases/
-  for (let i = 2; i <= TOTAL_PAGES; i++) {
-    paths.push({ params: { page: String(i) } });
-  }
-  return paths;
-}
 
 const { page } = Astro.params;
 const pageStr = Array.isArray(page) ? page[0] : page;
@@ -194,7 +200,7 @@ const pageDescription = `Browse ${TOTAL_APPS} verified free and open-source appl
     }
 
     .releases-catalog__subtitle {
-      color: var(--palette-text-muted, #6b7280);
+      color: var(--muted);
       font-size: 1.05rem;
       margin: 0;
     }
@@ -211,17 +217,16 @@ const pageDescription = `Browse ${TOTAL_APPS} verified free and open-source appl
       width: 100%;
       padding: 0.75rem 1rem;
       font-size: 1rem;
-      border: 1px solid var(--palette-border, #d1d5db);
+      border: 1px solid var(--line);
       border-radius: 6px;
-      background: var(--palette-bg, #fff);
-      color: inherit;
+      background: var(--bg);
+      color: var(--ink);
       transition: border-color 0.15s ease;
     }
 
     .releases-catalog__search-input:focus {
       outline: none;
-      border-color: var(--palette-primary, #2563eb);
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+      border-color: var(--accent);
     }
 
     .releases-catalog__filter-row {
@@ -234,44 +239,44 @@ const pageDescription = `Browse ${TOTAL_APPS} verified free and open-source appl
     .releases-catalog__select {
       padding: 0.5rem 0.75rem;
       font-size: 0.9rem;
-      border: 1px solid var(--palette-border, #d1d5db);
+      border: 1px solid var(--line);
       border-radius: 6px;
-      background: var(--palette-bg, #fff);
-      color: inherit;
+      background: var(--bg);
+      color: var(--ink);
       cursor: pointer;
     }
 
     .releases-catalog__select:focus {
       outline: none;
-      border-color: var(--palette-primary, #2563eb);
+      border-color: var(--accent);
     }
 
     .releases-catalog__clear-btn {
       padding: 0.5rem 1rem;
       font-size: 0.9rem;
-      border: 1px solid var(--palette-border, #d1d5db);
+      border: 1px solid var(--line);
       border-radius: 6px;
       background: transparent;
-      color: inherit;
+      color: var(--ink);
       cursor: pointer;
       transition: background 0.15s ease;
     }
 
     .releases-catalog__clear-btn:hover {
-      background: var(--palette-bg-hover, #f3f4f6);
+      background: var(--line);
     }
 
     .releases-catalog__results-info {
       margin: 0 0 1rem;
       font-size: 0.9rem;
-      color: var(--palette-text-muted, #6b7280);
+      color: var(--muted);
       min-height: 1.2em;
     }
 
     .releases-catalog__no-results {
       text-align: center;
       padding: 2rem;
-      color: var(--palette-text-muted, #6b7280);
+      color: var(--muted);
       font-size: 1.1rem;
     }
 
@@ -298,7 +303,7 @@ const pageDescription = `Browse ${TOTAL_APPS} verified free and open-source appl
       flex-wrap: wrap;
       margin-top: 2rem;
       padding-top: 2rem;
-      border-top: 1px solid var(--palette-border, #e5e7eb);
+      border-top: 1px solid var(--line);
     }
 
     .releases-catalog__page-numbers {
@@ -313,26 +318,27 @@ const pageDescription = `Browse ${TOTAL_APPS} verified free and open-source appl
       display: inline-flex;
       align-items: center;
       padding: 0.4rem 0.7rem;
-      border: 1px solid var(--palette-border, #d1d5db);
+      border: 1px solid var(--line);
       border-radius: 6px;
       text-decoration: none;
-      color: inherit;
+      color: var(--ink);
       font-size: 0.9rem;
       transition: background 0.15s ease, border-color 0.15s ease;
     }
 
     .releases-catalog__page-link:hover,
     .releases-catalog__page-nav:hover {
-      background: var(--palette-bg-hover, #f3f4f6);
+      background: var(--line);
     }
 
     .releases-catalog__page-link--active {
-      background: var(--palette-primary, #2563eb);
-      color: #fff;
-      border-color: var(--palette-primary, #2563eb);
+      background: var(--accent);
+      color: var(--bg);
+      border-color: var(--accent);
     }
     .releases-catalog__page-link--active:hover {
-      background: var(--palette-primary-dark, #1d4ed8);
+      background: var(--accent);
+      opacity: 0.9;
     }
 
     /* When search/filter is active, hide pagination */
