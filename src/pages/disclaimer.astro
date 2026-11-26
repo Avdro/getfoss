@@ -1,0 +1,267 @@
+---
+import Layout from '../components/Layout.astro';
+
+const title = 'Disclaimer — GetFOSS';
+const description =
+  'Read the GetFOSS disclaimer covering software information, third-party downloads, external links, trademarks, and limitations of liability.';
+---
+
+<Layout
+  title={title}
+  description={description}
+  canonicalPath="/disclaimer/"
+>
+  <main class="disclaimer-page">
+    <article class="disclaimer-container">
+      <header class="page-header">
+        <p class="eyebrow">LEGAL INFORMATION</p>
+        <h1>Disclaimer</h1>
+        <p class="intro">
+          Important information about the content, software listings,
+          recommendations, and external resources published on GetFOSS.
+        </p>
+        <p class="updated">Last updated: November 26, 2026</p>
+      </header>
+
+      <div class="disclaimer-content">
+        <section>
+          <h2>1. General information</h2>
+          <p>
+            GetFOSS is an independent informational resource dedicated
+            to free and open-source software. The content published on
+            this website is provided for general informational and
+            educational purposes only.
+          </p>
+          <p>
+            While we make reasonable efforts to keep information accurate
+            and up to date, we do not guarantee that all content is
+            complete, current, or free from errors.
+          </p>
+        </section>
+
+        <section>
+          <h2>2. Software information</h2>
+          <p>
+            Software descriptions, features, supported platforms, license
+            information, version numbers, release dates, and other details
+            may change over time.
+          </p>
+          <p>
+            Always consult the official project website and documentation
+            before downloading, installing, or relying on any software
+            listed on GetFOSS. We cannot guarantee the availability,
+            functionality, compatibility, security, or continued
+            development of third-party projects.
+          </p>
+        </section>
+
+        <section>
+          <h2>3. Third-party software and downloads</h2>
+          <p>
+            GetFOSS does not necessarily develop, distribute, host, or
+            maintain the software featured on this website. Software
+            downloads and updates are generally provided by their
+            respective developers or official distribution channels.
+          </p>
+          <p>
+            You are responsible for verifying downloads, reviewing
+            software licenses, checking system requirements, and
+            determining whether an application is suitable for your
+            needs before installing or using it.
+          </p>
+        </section>
+
+        <section>
+          <h2>4. External links</h2>
+          <p>
+            This website may contain links to external websites,
+            repositories, documentation, and download services.
+            These resources are operated by third parties and are
+            outside our control.
+          </p>
+          <p>
+            A link to an external resource does not necessarily mean
+            that GetFOSS endorses its content, products, services,
+            or policies. We are not responsible for the availability,
+            accuracy, security, or content of third-party websites.
+          </p>
+        </section>
+
+        <section>
+          <h2>5. No professional advice</h2>
+          <p>
+            Nothing on GetFOSS should be interpreted as professional
+            security, legal, financial, or technical advice. Information
+            about privacy, encryption, security, and software licensing
+            is provided for general informational purposes and should
+            not replace independent research or professional guidance.
+          </p>
+        </section>
+
+        <section>
+          <h2>6. Trademarks and ownership</h2>
+          <p>
+            Product names, company names, logos, and trademarks mentioned
+            on GetFOSS belong to their respective owners. Their
+            appearance on this website is for identification and
+            informational purposes only.
+          </p>
+          <p>
+            Unless explicitly stated otherwise, GetFOSS is not affiliated
+            with, sponsored by, or officially endorsed by the developers
+            or organizations behind the software featured here.
+          </p>
+        </section>
+
+        <section>
+          <h2>7. Limitation of liability</h2>
+          <p>
+            To the extent permitted by applicable law, GetFOSS and its
+            contributors shall not be liable for any loss, damage, or
+            other consequences arising from the use of this website,
+            reliance on its content, or the downloading, installation,
+            or use of third-party software linked to or mentioned here.
+          </p>
+          <p>
+            You use the information and resources provided on this
+            website at your own discretion and risk.
+          </p>
+        </section>
+
+        <section>
+          <h2>8. Changes to this disclaimer</h2>
+          <p>
+            We may update this disclaimer from time to time to reflect
+            changes to the website, its content, or applicable
+            requirements. Any changes will be published on this page
+            with an updated revision date.
+          </p>
+        </section>
+
+        <section>
+          <h2>9. Contact</h2>
+          <p>
+            If you have questions about this disclaimer or the content
+            published on GetFOSS, please contact us at
+            <a href="mailto:info@getfoss.org">info@getfoss.org</a>.
+          </p>
+        </section>
+      </div>
+    </article>
+  </main>
+</Layout>
+
+<style>
+  .disclaimer-page {
+    width: 100%;
+    padding: 4.5rem 1.5rem 5rem;
+  }
+
+  .disclaimer-container {
+    width: 100%;
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  .page-header {
+    max-width: 700px;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .eyebrow {
+    margin: 0 0 1rem;
+    color: var(--accent);
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .page-header h1 {
+    margin: 0 0 1.25rem;
+    color: var(--text);
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    line-height: 1.12;
+    letter-spacing: -0.045em;
+  }
+
+  .intro {
+    max-width: 660px;
+    margin: 0;
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .updated {
+    margin: 1.25rem 0 0;
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 0.75rem;
+  }
+
+  .disclaimer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .disclaimer-content section {
+    max-width: 760px;
+  }
+
+  .disclaimer-content h2 {
+    margin: 0 0 0.8rem;
+    color: var(--text);
+    font-size: 1.2rem;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+  }
+
+  .disclaimer-content p {
+    margin: 0 0 0.85rem;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.85;
+  }
+
+  .disclaimer-content p:last-child {
+    margin-bottom: 0;
+  }
+
+  .disclaimer-content a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  @media (max-width: 640px) {
+    .disclaimer-page {
+      padding: 3rem 1.1rem 3.5rem;
+    }
+
+    .page-header {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+    }
+
+    .page-header h1 {
+      font-size: 2.35rem;
+    }
+
+    .intro {
+      font-size: 1rem;
+    }
+
+    .disclaimer-content {
+      gap: 1.6rem;
+    }
+
+    .disclaimer-content p {
+      font-size: 0.92rem;
+    }
+  }
+</style>
