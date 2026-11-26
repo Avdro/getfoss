@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-26T18:09:50.301Z",
+  "updatedAt": "2026-11-26T18:16:32.991Z",
   "applications": [
     {
       "id": "penpot",
@@ -339,7 +339,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:08:34.260Z"
+      "updatedAt": "2026-11-26T18:15:07.087Z"
     },
     {
       "id": "krita",
@@ -656,7 +656,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:08:35.580Z"
+      "updatedAt": "2026-11-26T18:15:09.007Z"
     },
     {
       "id": "gimp",
@@ -868,7 +868,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:08:36.827Z"
+      "updatedAt": "2026-11-26T18:15:10.999Z"
     },
     {
       "id": "inkscape",
@@ -1152,7 +1152,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:08:37.614Z"
+      "updatedAt": "2026-11-26T18:15:11.951Z"
     },
     {
       "id": "freecad",
@@ -3493,7 +3493,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T18:08:39.132Z"
+      "updatedAt": "2026-11-26T18:15:14.436Z"
     },
     {
       "id": "kicad",
@@ -3832,7 +3832,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:08:39.831Z"
+      "updatedAt": "2026-11-26T18:15:15.317Z"
     },
     {
       "id": "prusaslicer",
@@ -4589,7 +4589,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T18:08:41.059Z"
+      "updatedAt": "2026-11-26T18:15:16.542Z"
     },
     {
       "id": "orcaslicer",
@@ -5762,7 +5762,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T18:08:42.419Z"
+      "updatedAt": "2026-11-26T18:15:18.248Z"
     },
     {
       "id": "openscad",
@@ -5995,7 +5995,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:08:43.088Z"
+      "updatedAt": "2026-11-26T18:15:19.012Z"
     },
     {
       "id": "scribus",
@@ -6125,7 +6125,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:08:43.805Z"
+      "updatedAt": "2026-11-26T18:15:19.911Z"
     },
     {
       "id": "obs-studio",
@@ -8054,7 +8054,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T18:08:45.309Z"
+      "updatedAt": "2026-11-26T18:15:22.260Z"
     },
     {
       "id": "audacity",
@@ -8888,7 +8888,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:08:46.231Z"
+      "updatedAt": "2026-11-26T18:15:23.454Z"
     },
     {
       "id": "kdenlive",
@@ -8896,8 +8896,7 @@
       "slug": "kdenlive",
       "releaseCount": 0,
       "releases": [],
-      "updatedAt": null,
-      "error": "Could not retrieve GitLab releases or tags"
+      "updatedAt": "2026-11-26T18:15:24.238Z"
     },
     {
       "id": "shotcut",
@@ -10466,7 +10465,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T18:08:48.879Z"
+      "updatedAt": "2026-11-26T18:15:25.882Z"
     },
     {
       "id": "handbrake",
@@ -10536,7 +10535,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:08:49.962Z"
+      "updatedAt": "2026-11-26T18:15:27.175Z"
     },
     {
       "id": "darktable",
@@ -11228,7 +11227,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:08:51.087Z"
+      "updatedAt": "2026-11-26T18:15:28.658Z"
     },
     {
       "id": "digikam",
@@ -11567,7 +11566,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:08:52.358Z"
+      "updatedAt": "2026-11-26T18:15:30.532Z"
     },
     {
       "id": "rawtherapee",
@@ -12290,7 +12289,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:08:53.371Z"
+      "updatedAt": "2026-11-26T18:15:31.709Z"
     },
     {
       "id": "ardour",
@@ -12552,7 +12551,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:08:53.947Z"
+      "updatedAt": "2026-11-26T18:15:32.406Z"
     },
     {
       "id": "musescore",
@@ -13371,7 +13370,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:08:54.986Z"
+      "updatedAt": "2026-11-26T18:15:33.711Z"
     },
     {
       "id": "godot",
@@ -13446,7 +13445,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:08:56.116Z"
+      "updatedAt": "2026-11-26T18:15:35.347Z"
     },
     {
       "id": "openmw",
@@ -14055,7 +14054,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:08:56.928Z"
+      "updatedAt": "2026-11-26T18:15:36.400Z"
     },
     {
       "id": "dolphin-emu",
@@ -14075,7 +14074,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:08:57.476Z"
+      "updatedAt": "2026-11-26T18:15:37.151Z"
     },
     {
       "id": "pcsx2",
@@ -15044,7 +15043,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T18:08:58.516Z"
+      "updatedAt": "2026-11-26T18:15:38.395Z"
     },
     {
       "id": "rpcs3",
@@ -15383,7 +15382,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:08:59.388Z"
+      "updatedAt": "2026-11-26T18:15:39.408Z"
     },
     {
       "id": "ppsspp",
@@ -15432,7 +15431,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T18:09:00.196Z"
+      "updatedAt": "2026-11-26T18:15:40.310Z"
     },
     {
       "id": "retroarch",
@@ -15507,7 +15506,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:09:00.884Z"
+      "updatedAt": "2026-11-26T18:15:41.161Z"
     },
     {
       "id": "luanti",
@@ -15956,7 +15955,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:09:01.709Z"
+      "updatedAt": "2026-11-26T18:15:41.946Z"
     },
     {
       "id": "supertuxkart",
@@ -16447,7 +16446,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:09:02.722Z"
+      "updatedAt": "2026-11-26T18:15:43.178Z"
     },
     {
       "id": "openra",
@@ -18184,7 +18183,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T18:09:03.823Z"
+      "updatedAt": "2026-11-26T18:15:44.270Z"
     },
     {
       "id": "zed",
@@ -20233,7 +20232,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T18:09:05.432Z"
+      "updatedAt": "2026-11-26T18:15:46.002Z"
     },
     {
       "id": "vscodium",
@@ -20241,7 +20240,7 @@
       "slug": "vscodium",
       "releaseCount": 0,
       "releases": [],
-      "updatedAt": "2026-11-26T18:09:14.586Z"
+      "updatedAt": "2026-11-26T18:15:52.575Z"
     },
     {
       "id": "neovim",
@@ -20325,7 +20324,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:09:15.730Z"
+      "updatedAt": "2026-11-26T18:15:53.829Z"
     },
     {
       "id": "helix",
@@ -20333,7 +20332,7 @@
       "slug": "helix",
       "releaseCount": 0,
       "releases": [],
-      "updatedAt": "2026-11-26T18:09:16.518Z"
+      "updatedAt": "2026-11-26T18:15:54.738Z"
     },
     {
       "id": "wezterm",
@@ -20937,7 +20936,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:09:18.442Z"
+      "updatedAt": "2026-11-26T18:15:56.968Z"
     },
     {
       "id": "zellij",
@@ -21012,7 +21011,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:09:19.663Z"
+      "updatedAt": "2026-11-26T18:15:58.184Z"
     },
     {
       "id": "podman",
@@ -22553,7 +22552,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T18:09:21.187Z"
+      "updatedAt": "2026-11-26T18:15:59.767Z"
     },
     {
       "id": "qemu",
@@ -22892,7 +22891,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:09:21.888Z"
+      "updatedAt": "2026-11-26T18:16:00.566Z"
     },
     {
       "id": "deno",
@@ -22900,7 +22899,7 @@
       "slug": "deno",
       "releaseCount": 0,
       "releases": [],
-      "updatedAt": "2026-11-26T18:09:24.142Z"
+      "updatedAt": "2026-11-26T18:16:02.904Z"
     },
     {
       "id": "bevy",
@@ -23239,7 +23238,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:09:24.904Z"
+      "updatedAt": "2026-11-26T18:16:03.617Z"
     },
     {
       "id": "nextcloud",
@@ -23578,7 +23577,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:09:25.626Z"
+      "updatedAt": "2026-11-26T18:16:04.399Z"
     },
     {
       "id": "immich",
@@ -24439,7 +24438,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:09:27.053Z"
+      "updatedAt": "2026-11-26T18:16:06.190Z"
     },
     {
       "id": "home-assistant",
@@ -24778,7 +24777,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:09:27.797Z"
+      "updatedAt": "2026-11-26T18:16:07.106Z"
     },
     {
       "id": "jellyfin",
@@ -25117,7 +25116,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:09:28.880Z"
+      "updatedAt": "2026-11-26T18:16:08.322Z"
     },
     {
       "id": "kodi",
@@ -25456,7 +25455,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:09:29.654Z"
+      "updatedAt": "2026-11-26T18:16:09.142Z"
     },
     {
       "id": "syncthing",
@@ -28225,7 +28224,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T18:09:31.518Z"
+      "updatedAt": "2026-11-26T18:16:11.346Z"
     },
     {
       "id": "element",
@@ -28714,7 +28713,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T18:09:32.444Z"
+      "updatedAt": "2026-11-26T18:16:12.422Z"
     },
     {
       "id": "joplin",
@@ -31395,7 +31394,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T18:09:34.176Z"
+      "updatedAt": "2026-11-26T18:16:14.081Z"
     },
     {
       "id": "keepassxc",
@@ -32098,7 +32097,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:09:35.345Z"
+      "updatedAt": "2026-11-26T18:16:15.407Z"
     },
     {
       "id": "appflowy",
@@ -32279,7 +32278,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T18:09:36.734Z"
+      "updatedAt": "2026-11-26T18:16:17.021Z"
     },
     {
       "id": "brave",
@@ -34944,7 +34943,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T18:09:41.055Z"
+      "updatedAt": "2026-11-26T18:16:22.543Z"
     },
     {
       "id": "floorp",
@@ -35411,7 +35410,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:09:42.345Z"
+      "updatedAt": "2026-11-26T18:16:24.106Z"
     },
     {
       "id": "tor-browser",
@@ -35508,7 +35507,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:09:43.333Z"
+      "updatedAt": "2026-11-26T18:16:25.445Z"
     },
     {
       "id": "cosmic",
@@ -35715,7 +35714,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:09:43.989Z"
+      "updatedAt": "2026-11-26T18:16:26.107Z"
     },
     {
       "id": "kde-plasma",
@@ -35723,8 +35722,7 @@
       "slug": "kde-plasma",
       "releaseCount": 0,
       "releases": [],
-      "updatedAt": null,
-      "error": "Could not retrieve GitLab releases or tags"
+      "updatedAt": "2026-11-26T18:16:26.726Z"
     },
     {
       "id": "gnome-shell",
@@ -36063,7 +36061,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:09:46.853Z"
+      "updatedAt": "2026-11-26T18:16:29.253Z"
     },
     {
       "id": "openwrt",
@@ -36402,7 +36400,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:09:47.553Z"
+      "updatedAt": "2026-11-26T18:16:30.117Z"
     },
     {
       "id": "nix",
@@ -36410,7 +36408,7 @@
       "slug": "nix",
       "releaseCount": 0,
       "releases": [],
-      "updatedAt": "2026-11-26T18:09:48.102Z"
+      "updatedAt": "2026-11-26T18:16:30.746Z"
     },
     {
       "id": "incus",
@@ -36418,7 +36416,7 @@
       "slug": "incus",
       "releaseCount": 0,
       "releases": [],
-      "updatedAt": "2026-11-26T18:09:49.242Z"
+      "updatedAt": "2026-11-26T18:16:31.888Z"
     },
     {
       "id": "distrobox",
@@ -36573,7 +36571,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:09:49.951Z"
+      "updatedAt": "2026-11-26T18:16:32.642Z"
     }
   ]
 }
