@@ -1,4 +1,5 @@
 ---
+category: "Development Tools"
 title: "An Example Post"
 description: "A sample post showing the frontmatter fields and the markdown features this site supports."
 date: 2026-01-01
