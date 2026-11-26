@@ -1,3 +1,4 @@
+
 import { defineCollection } from 'astro:content';
 import { z } from 'astro/zod';
 import { glob } from 'astro/loaders';
@@ -8,6 +9,23 @@ const blog = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
+    category: z.enum([
+      'Operating Systems & Distributions',
+      'Audio Software',
+      'Video Software',
+      'Image & Graphics',
+      'Office & Productivity',
+      'Development Tools',
+      'System Utilities',
+      'Security & Privacy',
+      'Internet & Web',
+      'Communication & Collaboration',
+      'Design & Engineering (CAD / CAM / EDA)',
+      'Finance & Crypto',
+      'Cloud & Self-Hosting',
+      'Mobile & Smart Devices',
+      'Miscellaneous',
+    ]),
     date: z.coerce.date(),
     // Tags with the same slug share an archive page, so keep the first spelling.
     tags: z.array(z.string()).default([]).transform(tags => {
