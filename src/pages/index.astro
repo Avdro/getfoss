@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import Layout from '../components/Layout.astro';
 import TypedLede from '../components/TypedLede.astro';
+import SkillsMarquee from '../components/SkillsMarquee.astro';
 import { formatPostDate, postSlug } from '../lib/posts';
 import { SITE_URL } from '../lib/site';
 
@@ -34,6 +35,8 @@ const organizationSchema = JSON.stringify({
       <h1 class="visually-hidden">GetFOSS</h1>
       <TypedLede text={siteDescription} />
     </section>
+
+    <SkillsMarquee />
 
     <section class="section" aria-label="Recent articles">
       <nav class="commit-tree" aria-label="Site navigation">
