@@ -3,7 +3,7 @@ import Layout from '../../components/Layout.astro';
 import softwareData from '../../data/prereleases/software.json';
 import releasesData from '../../data/prereleases/releases.json';
 
-type Release = {
+interface Release {
   version?: string | null;
   tag?: string | null;
   name?: string | null;
@@ -11,9 +11,9 @@ type Release = {
   date?: string | null;
   url?: string | null;
   source?: string | null;
-};
+}
 
-type Application = {
+interface Application {
   id: string;
   name: string;
   slug: string;
@@ -23,12 +23,12 @@ type Application = {
   license: string;
   website?: string;
   sourceUrl?: string;
-};
+}
 
-type ReleaseApplication = {
+interface ReleaseApplication {
   id: string;
   releases?: Release[];
-};
+}
 
 export function getStaticPaths() {
   return softwareData.applications.map((app) => ({
@@ -46,18 +46,16 @@ if (!app) {
   throw new Error(`Early Access application not found: ${slug}`);
 }
 
-function getWebsiteIcon(website?: string): string | null {
-  if (!website) return null;
+let appIconUrl: string | undefined;
 
+if (app.website) {
   try {
-    const hostname = new URL(website).hostname;
-    return `https://www.google.com/s2/favicons?domain=${encodeURIComponent(hostname)}&sz=128`;
+    const websiteUrl = new URL(app.website);
+    appIconUrl = `https://www.google.com/s2/favicons?domain=${encodeURIComponent(websiteUrl.hostname)}&sz=128`;
   } catch {
-    return null;
+    appIconUrl = undefined;
   }
 }
-
-const appIcon = getWebsiteIcon(app.website);
 
 const releaseApplication = (
   releasesData.applications as ReleaseApplication[]
@@ -71,7 +69,7 @@ const releases = [...(releaseApplication?.releases ?? [])].sort(
   }
 );
 
-function formatDate(value?: string | null): string {
+function formatDate(value?: string | null) {
   if (!value) return 'Date unavailable';
 
   const date = new Date(value);
@@ -93,37 +91,43 @@ const pageDescription = `Explore the latest alpha, beta, nightly and development
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
-  <main class="early-access-detail">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
+  <main class="early-access-history">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
       <a href="/">Home</a>
-      <span>/</span>
+      <span aria-hidden="true">/</span>
       <a href="/early-access/">Early Access</a>
-      <span>/</span>
-      <span>{app.name}</span>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">{app.name}</span>
     </nav>
 
-    <header class="app-header">
-      <div class="app-heading">
-        {appIcon ? (
-          <img
-            class="app-icon"
-            src={appIcon}
-            alt={`${app.name} logo`}
-            width="64"
-            height="64"
-          />
-        ) : (
-          <div class="app-icon app-icon-fallback">
-            {app.name.slice(0, 1).toUpperCase()}
-          </div>
-        )}
+    <header class="history-header">
+      <a class="back-link" href="/early-access/">← Back to Early Access</a>
+
+      <div class="app-title-row">
+        <div class="app-icon">
+          {appIconUrl ? (
+            <img
+              src={appIconUrl}
+              alt={`${app.name} icon`}
+              width="64"
+              height="64"
+              loading="eager"
+              referrerpolicy="no-referrer"
+            />
+          ) : (
+            <span aria-hidden="true">
+              {app.name.slice(0, 1).toUpperCase()}
+            </span>
+          )}
+        </div>
 
         <div>
-          <p class="app-category">{app.category}</p>
+          <p class="eyebrow">{app.category}</p>
           <h1>{app.name}</h1>
-          <p class="app-description">{app.description}</p>
         </div>
       </div>
+
+      <p class="app-description">{app.description}</p>
 
       <div class="app-meta" aria-label="Application details">
         <div class="meta-group">
@@ -156,37 +160,35 @@ const pageDescription = `Explore the latest alpha, beta, nightly and development
       </div>
     </header>
 
-    <section class="build-section">
+    <section class="history-section" aria-labelledby="history-title">
       <div class="section-heading">
         <div>
-          <h2>Build History</h2>
-          <p>
-            Development versions and pre-release builds of {app.name}.
-          </p>
+          <p class="eyebrow">Build archive</p>
+          <h2 id="history-title">Build History</h2>
         </div>
 
-        <span class="build-count">
-          {releases.length} builds
+        <span class="release-count">
+          {releases.length} {releases.length === 1 ? 'build' : 'builds'}
         </span>
       </div>
 
       {latestRelease && (
-        <div class="latest-build">
-          <div>
-            <span class="latest-label">Latest build</span>
-            <h3>
-              {latestRelease.version || latestRelease.tag || latestRelease.name || 'Development build'}
-            </h3>
-            <p>
-              {latestRelease.releaseType || 'Development'}
-              <span> · </span>
-              {formatDate(latestRelease.date)}
-            </p>
-          </div>
+        <div class="latest-release">
+          <span class="latest-label">Latest Development Build</span>
+
+          <strong>
+            {latestRelease.version ||
+              latestRelease.tag ||
+              latestRelease.name ||
+              'Development build'}
+          </strong>
+
+          <span class="latest-date">
+            {formatDate(latestRelease.date)}
+          </span>
 
           {latestRelease.url && (
             <a
-              class="download-link"
               href={latestRelease.url}
               target="_blank"
               rel="noopener noreferrer"
@@ -198,135 +200,190 @@ const pageDescription = `Explore the latest alpha, beta, nightly and development
       )}
 
       {releases.length > 0 ? (
-        <div class="release-list">
-          {releases.map((release) => (
-            <article class="release-item">
-              <div class="release-marker"></div>
-
-              <div class="release-content">
-                <div class="release-title-row">
-                  <h3>
-                    {release.version || release.tag || release.name || 'Development build'}
-                  </h3>
-
-                  <span class="release-type">
-                    {release.releaseType || 'Development'}
-                  </span>
-                </div>
-
-                <p class="release-date">
-                  {formatDate(release.date)}
-                </p>
-
-                {release.source && (
-                  <p class="release-source">
-                    Source: {release.source}
-                  </p>
-                )}
+        <ol class="release-list">
+          {releases.map((release, index) => (
+            <li class="release-item">
+              <div class="release-marker" aria-hidden="true">
+                {index + 1}
               </div>
 
-              {release.url && (
-                <a
-                  class="release-link"
-                  href={release.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`View ${release.version || release.tag || 'release'}`}
-                >
-                  View ↗
-                </a>
-              )}
-            </article>
+              <div class="release-content">
+                <div class="release-main">
+                  <div>
+                    <h3>
+                      {release.name ||
+                        release.version ||
+                        release.tag ||
+                        'Development build'}
+                    </h3>
+
+                    {(release.version || release.tag) && (
+                      <p class="release-version">
+                        {release.version
+                          ? `Version ${release.version}`
+                          : release.tag}
+                      </p>
+                    )}
+                  </div>
+
+                  <time
+                    class="release-date"
+                    datetime={release.date || undefined}
+                  >
+                    {formatDate(release.date)}
+                  </time>
+                </div>
+
+                <div class="release-actions">
+                  {release.releaseType && (
+                    <span class="release-type">
+                      {release.releaseType}
+                    </span>
+                  )}
+
+                  {release.source && (
+                    <span class="release-source">
+                      Source: {release.source}
+                    </span>
+                  )}
+
+                  {release.url && (
+                    <a
+                      href={release.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Release Page ↗
+                    </a>
+                  )}
+                </div>
+              </div>
+            </li>
           ))}
-        </div>
+        </ol>
       ) : (
         <div class="empty-state">
-          <h3>No builds available yet</h3>
+          <h3>No development build data available yet</h3>
           <p>
-            There are currently no recorded development builds for {app.name}.
-            Check back later for updates.
+            Development build information has not been collected for this
+            application. Please check back after the next catalogue update.
           </p>
+
+          {app.sourceUrl && (
+            <a
+              href={app.sourceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visit the project source ↗
+            </a>
+          )}
         </div>
       )}
     </section>
 
-    <div class="back-link">
-      <a href="/early-access/">← Back to Early Access</a>
-    </div>
+    <footer class="history-footer">
+      <a href="/early-access/">← Browse all Early Access applications</a>
+    </footer>
   </main>
 </Layout>
 
 <style>
-  .early-access-detail {
-    max-width: 1000px;
+  .early-access-history {
+    width: min(100% - 2rem, 900px);
     margin: 0 auto;
-    padding: 2rem 1rem 4rem;
+    padding: 2rem 0 5rem;
+    color: var(--ink);
   }
 
-  .breadcrumb {
+  .breadcrumbs {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 0.55rem;
     margin-bottom: 2rem;
-    color: var(--palette-text-muted, #6b7280);
-    font-size: 0.85rem;
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 0.72rem;
   }
 
-  .breadcrumb a {
-    color: inherit;
+  .breadcrumbs a,
+  .back-link,
+  .history-footer a {
+    color: var(--accent);
     text-decoration: none;
   }
 
-  .breadcrumb a:hover {
-    color: var(--palette-primary, #2563eb);
+  .breadcrumbs a:hover,
+  .back-link:hover,
+  .history-footer a:hover,
+  .app-links a:hover,
+  .release-actions a:hover,
+  .latest-release a:hover {
+    text-decoration: underline;
   }
 
-  .app-header {
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--palette-border, #e5e7eb);
+  .history-header {
+    padding: 0 0 2rem;
+    border-bottom: 1px solid var(--line);
   }
 
-  .app-heading {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.25rem;
-  }
-
-  .app-icon {
-    display: block;
-    width: 64px;
-    height: 64px;
-    flex: 0 0 64px;
-    object-fit: contain;
-    border-radius: 12px;
-    background: var(--palette-bg-hover, #f3f4f6);
-  }
-
-  .app-icon-fallback {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.8rem;
-    font-weight: 700;
-  }
-
-  .app-category {
-    margin: 0 0 0.35rem;
-    color: var(--palette-text-muted, #6b7280);
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
     font-size: 0.85rem;
   }
 
-  .app-heading h1 {
-    margin: 0 0 0.5rem;
-    font-size: clamp(1.7rem, 4vw, 2.3rem);
+  .app-title-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .app-icon {
+    display: grid;
+    flex: 0 0 64px;
+    width: 64px;
+    height: 64px;
+    place-items: center;
+    overflow: hidden;
+    color: var(--accent);
+    background: var(--line);
+    border-radius: 14px;
+    font-family: var(--mono);
+    font-size: 1.7rem;
+    font-weight: 800;
+  }
+
+  .app-icon img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0.45rem;
+    object-fit: contain;
+  }
+
+  .eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.1;
   }
 
   .app-description {
     max-width: 700px;
-    margin: 0;
-    color: var(--palette-text-muted, #6b7280);
-    line-height: 1.6;
+    margin: 1.25rem 0 0;
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.7;
   }
 
   .app-meta {
@@ -381,164 +438,164 @@ const pageDescription = `Explore the latest alpha, beta, nightly and development
   .app-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-top: 1.5rem;
+    gap: 0.6rem 1rem;
+    margin-top: 1.25rem;
+    font-family: var(--mono);
+    font-size: 0.72rem;
   }
 
   .app-links a,
-  .download-link {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.6rem 0.9rem;
-    border: 1px solid var(--palette-border, #d1d5db);
-    border-radius: 6px;
-    color: inherit;
-    font-size: 0.85rem;
+  .release-actions a,
+  .latest-release a {
+    color: var(--accent);
     text-decoration: none;
   }
 
-  .app-links a:hover,
-  .download-link:hover {
-    border-color: var(--palette-primary, #2563eb);
-  }
-
-  .build-section {
+  .history-section {
     padding-top: 2.5rem;
   }
 
   .section-heading {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: end;
     justify-content: space-between;
     gap: 1rem;
     margin-bottom: 1.5rem;
   }
 
   .section-heading h2 {
-    margin: 0 0 0.4rem;
-    font-size: 1.5rem;
-    color: var(--accent);
-  }
-
-  .section-heading p {
     margin: 0;
-    color: var(--palette-text-muted, #6b7280);
-    font-size: 0.9rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
   }
 
-  .build-count {
-    padding: 0.35rem 0.7rem;
-    border: 1px solid var(--palette-border, #e5e7eb);
-    border-radius: 6px;
-    color: var(--palette-text-muted, #6b7280);
-    font-size: 0.8rem;
+  .release-count {
+    padding: 0.35rem 0.6rem;
+    color: var(--muted);
+    background: var(--line);
+    border-radius: 5px;
+    font-family: var(--mono);
+    font-size: 0.7rem;
   }
 
-  .latest-build {
+  .latest-release {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
+    gap: 0.6rem 1rem;
     margin-bottom: 1.5rem;
-    padding: 1.25rem;
-    border: 1px solid var(--palette-border, #e5e7eb);
-    border-radius: 9px;
-    background: var(--palette-bg-hover, #f9fafb);
+    padding: 1rem 1.15rem;
+    background: color-mix(in srgb, var(--accent) 7%, var(--bg));
+    border: 1px solid color-mix(in srgb, var(--accent) 25%, var(--line));
+    border-radius: 10px;
   }
 
   .latest-label {
-    color: var(--palette-text-muted, #6b7280);
-    font-size: 0.75rem;
+    width: 100%;
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
   }
 
-  .latest-build h3 {
-    margin: 0.3rem 0;
-    font-size: 1.15rem;
+  .latest-release strong {
+    color: var(--accent);
+    font-family: var(--mono);
+    font-size: 1.2rem;
   }
 
-  .latest-build p {
-    margin: 0;
-    color: var(--palette-text-muted, #6b7280);
+  .latest-date {
+    color: var(--muted);
     font-size: 0.85rem;
   }
 
-  .download-link {
-    background: var(--palette-bg, #fff);
+  .latest-release a {
+    margin-left: auto;
+    font-size: 0.8rem;
   }
 
   .release-list {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    gap: 0.85rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
   }
 
   .release-item {
     display: flex;
-    align-items: flex-start;
     gap: 1rem;
-    padding: 1.25rem 0;
-    border-bottom: 1px solid var(--palette-border, #e5e7eb);
+    padding: 1.1rem;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 10px;
   }
 
   .release-marker {
-    width: 10px;
-    height: 10px;
-    flex: 0 0 10px;
-    margin-top: 0.45rem;
+    display: grid;
+    flex: 0 0 30px;
+    width: 30px;
+    height: 30px;
+    place-items: center;
+    color: var(--muted);
+    background: var(--line);
     border-radius: 50%;
-    background: var(--palette-primary, #2563eb);
+    font-family: var(--mono);
+    font-size: 0.7rem;
   }
 
   .release-content {
-    min-width: 0;
     flex: 1;
+    min-width: 0;
   }
 
-  .release-title-row {
+  .release-main {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    gap: 0.65rem;
+    align-items: start;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
   }
 
-  .release-title-row h3 {
+  .release-main h3 {
     margin: 0;
     font-size: 1rem;
     overflow-wrap: anywhere;
   }
 
-  .release-type {
-    padding: 0.2rem 0.5rem;
-    border: 1px solid var(--palette-border, #e5e7eb);
-    border-radius: 4px;
-    color: var(--palette-text-muted, #6b7280);
-    font-size: 0.7rem;
+  .release-version {
+    margin: 0.3rem 0 0;
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 0.72rem;
   }
 
-  .release-date,
-  .release-source {
-    margin: 0.4rem 0 0;
-    color: var(--palette-text-muted, #6b7280);
+  .release-date {
+    color: var(--muted);
     font-size: 0.8rem;
+    white-space: nowrap;
   }
 
-  .release-link {
-    flex: 0 0 auto;
-    color: var(--palette-primary, #2563eb);
-    font-size: 0.85rem;
-    text-decoration: none;
+  .release-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1rem;
+    margin-top: 0.85rem;
+    font-size: 0.78rem;
   }
 
-  .release-link:hover {
-    text-decoration: underline;
+  .release-type,
+  .release-source {
+    color: var(--muted);
   }
 
   .empty-state {
-    padding: 2.5rem 1rem;
-    border: 1px solid var(--palette-border, #e5e7eb);
-    border-radius: 9px;
+    padding: 2rem;
     text-align: center;
+    background: var(--bg);
+    border: 1px dashed var(--line);
+    border-radius: 10px;
   }
 
   .empty-state h3 {
@@ -546,35 +603,44 @@ const pageDescription = `Explore the latest alpha, beta, nightly and development
   }
 
   .empty-state p {
-    margin: 0;
-    color: var(--palette-text-muted, #6b7280);
+    color: var(--muted);
     line-height: 1.6;
   }
 
-  .back-link {
+  .empty-state a {
+    color: var(--accent);
+  }
+
+  .history-footer {
     margin-top: 2.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.85rem;
   }
 
-  .back-link a {
-    color: var(--palette-primary, #2563eb);
-    text-decoration: none;
-  }
+  @media (max-width: 560px) {
+    .early-access-history {
+      width: min(100% - 1.25rem, 900px);
+      padding-top: 1.25rem;
+    }
 
-  .back-link a:hover {
-    text-decoration: underline;
-  }
-
-  @media (max-width: 600px) {
-    .app-heading {
-      flex-direction: column;
+    .app-icon {
+      flex-basis: 52px;
+      width: 52px;
+      height: 52px;
     }
 
     .release-item {
       gap: 0.7rem;
+      padding: 0.85rem;
     }
 
-    .release-link {
-      font-size: 0.8rem;
+    .release-date {
+      white-space: normal;
+    }
+
+    .latest-release a {
+      margin-left: 0;
     }
   }
 </style>
