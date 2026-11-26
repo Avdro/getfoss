@@ -1,5 +1,6 @@
 ---
-import { GITHUB_URL, SITE_NAME } from '../../lib/site';
+import { EMAIL, GITHUB_URL, SITE_NAME } from '../../lib/site';
+import EmailIcon from './EmailIcon.astro';
 import GitHubIcon from './GitHubIcon.astro';
 import RssIcon from './RssIcon.astro';
 import SearchIcon from './SearchIcon.astro';
@@ -47,15 +48,19 @@ const navLinks = [
         <GitHubIcon />
       </a>
 
-      <a class="nav-social-link" href="https://bsky.app/profile/getfoss.org" target="_blank" rel="noopener noreferrer" aria-label="GetFOSS on Bluesky">
+      <a class="nav-icon-link" href={`mailto:${EMAIL}`} aria-label="Email">
+        <EmailIcon />
+      </a>
+
+      <a class="nav-social-link" href="https://bsky.app/profile/getfoss.org" aria-label="GetFOSS on Bluesky" target="_blank" rel="noopener noreferrer">
         Bluesky
       </a>
 
-      <a class="nav-social-link" href="https://x.com/getfoss_org" target="_blank" rel="noopener noreferrer" aria-label="GetFOSS on X">
+      <a class="nav-social-link" href="https://x.com/getfoss_org" aria-label="GetFOSS on X" target="_blank" rel="noopener noreferrer">
         X
       </a>
 
-      <a class="nav-social-link" href="https://www.facebook.com/getfossorg" target="_blank" rel="noopener noreferrer" aria-label="GetFOSS on Facebook">
+      <a class="nav-social-link" href="https://www.facebook.com/getfossorg" aria-label="GetFOSS on Facebook" target="_blank" rel="noopener noreferrer">
         Facebook
       </a>
 
