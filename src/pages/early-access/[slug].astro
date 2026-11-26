@@ -51,7 +51,6 @@ function getWebsiteIcon(website?: string): string | null {
 
   try {
     const hostname = new URL(website).hostname;
-
     return `https://www.google.com/s2/favicons?domain=${encodeURIComponent(hostname)}&sz=128`;
   } catch {
     return null;
@@ -419,6 +418,7 @@ const pageDescription = `Explore the latest alpha, beta, nightly and development
   .section-heading h2 {
     margin: 0 0 0.4rem;
     font-size: 1.5rem;
+    color: var(--accent);
   }
 
   .section-heading p {
