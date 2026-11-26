@@ -1,3 +1,4 @@
+
 ---
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
@@ -7,11 +8,12 @@ import { getAllTags, slugifyTag } from '../../lib/tags';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
+
   const published = posts
     .filter((post) => !post.data.draft)
     .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
-  return getAllTags(posts).map(({ slug, name }) => ({
+  return getAllTags(published).map(({ slug, name }) => ({
     params: { tag: slug },
     props: {
       name,
@@ -32,24 +34,29 @@ const slug = Astro.params.tag!;
 ---
 
 <Layout
-  title={`#${name} — Your Name`}
-  description={`Posts tagged "${name}".`}
+  title={`#${name} — GetFOSS`}
+  description={`Free and open-source software, done right. GetFOSS picks the best FOSS apps — private, secure, and community-driven — for every platform. Explore articles tagged ${name}.`}
   canonicalPath={`/tags/${slug}/`}
 >
   <main class="content-shell">
     <section class="page-hero">
-      <p class="eyebrow"><span class="status-dot dot-blue"></span>tag</p>
-      <h1># {name}</h1>
+      <p class="eyebrow">
+        <span class="status-dot dot-blue"></span>
+        Tag archive
+      </p>
+
+      <h1>#{name}</h1>
+
       <p class="hero-lede">
         {posts.length === 0
-          ? 'Nothing here yet — check back soon.'
-          : `${posts.length} post${posts.length === 1 ? '' : 's'} tagged ${name}.`}{' '}
-        <a class="inline-link" href="/tags/">all tags</a>
+          ? 'No articles with this tag have been published yet.'
+          : `${posts.length} ${posts.length === 1 ? 'article' : 'articles'} tagged ${name}.`}{' '}
+        <a class="inline-link" href="/tags/">Browse all tags</a>
       </p>
     </section>
 
     {posts.length > 0 && (
-      <section class="section" aria-label="Posts">
+      <section class="section" aria-label={`Articles tagged ${name}`}>
         <div class="post-list">
           {posts.map((post) => <PostCard post={post} />)}
         </div>
