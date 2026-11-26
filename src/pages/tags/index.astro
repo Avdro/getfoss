@@ -4,26 +4,38 @@ import Layout from '../../components/Layout.astro';
 import TypedLede from '../../components/TypedLede.astro';
 import { getAllTags } from '../../lib/tags';
 
-const tags = getAllTags(await getCollection('blog'));
+const posts = (await getCollection('blog'))
+  .filter((post) => !post.data.draft);
+
+const tags = getAllTags(posts);
 ---
 
 <Layout
-  title="Tags — Your Name"
-  description="Posts grouped by tag."
+  title="Tags — GetFOSS"
+  description="Free and open-source software, done right. GetFOSS picks the best FOSS apps — private, secure, and community-driven — for every platform. Explore articles by tag."
   canonicalPath="/tags/"
 >
   <main class="content-shell">
     <section class="page-hero">
       <h1 class="visually-hidden">Tags</h1>
-      <TypedLede text="Posts grouped by tag." />
+      <TypedLede text="Explore free and open-source software by topic." />
     </section>
 
     <section class="section" aria-label="Tags">
-      <div class="tag-cloud">
-        {tags.map(({ slug, name, count }) => (
-          <a class="tag" href={`/tags/${slug}/`}>#{name} {count > 0 && <span class="tag-count">{count}</span>}</a>
-        ))}
-      </div>
+      {tags.length === 0 ? (
+        <p style="color: var(--muted); font-family: var(--mono);">
+          No tags available yet. Check back soon.
+        </p>
+      ) : (
+        <div class="tag-cloud">
+          {tags.map(({ slug, name, count }) => (
+            <a class="tag" href={`/tags/${slug}/`}>
+              #{name}
+              {count > 0 && <span class="tag-count">{count}</span>}
+            </a>
+          ))}
+        </div>
+      )}
     </section>
   </main>
 </Layout>
