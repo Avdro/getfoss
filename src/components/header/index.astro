@@ -4,6 +4,9 @@ import EmailIcon from './EmailIcon.astro';
 import GitHubIcon from './GitHubIcon.astro';
 import RssIcon from './RssIcon.astro';
 import SearchIcon from './SearchIcon.astro';
+import BlueskyIcon from './BlueskyIcon.astro';
+import FacebookIcon from './FacebookIcon.astro';
+import XIcon from './XIcon.astro';
 
 const currentPath = Astro.url.pathname;
 
@@ -47,14 +50,14 @@ const navLinks = [
       <a class="nav-icon-link" href={GITHUB_URL} aria-label="GitHub" target="_blank" rel="noopener">
         <GitHubIcon />
       </a>
-      <a class="nav-icon-link social-link" href="https://bsky.app/profile/getfoss.org" aria-label="Bluesky" target="_blank" rel="noopener">
-        Bluesky
+      <a class="nav-icon-link" href="https://bsky.app/profile/getfoss.org" aria-label="Bluesky" target="_blank" rel="noopener">
+        <BlueskyIcon />
       </a>
-      <a class="nav-icon-link social-link" href="https://www.facebook.com/getfossorg" aria-label="Facebook" target="_blank" rel="noopener">
-        Facebook
+      <a class="nav-icon-link" href="https://www.facebook.com/getfossorg" aria-label="Facebook" target="_blank" rel="noopener">
+        <FacebookIcon />
       </a>
-      <a class="nav-icon-link social-link" href="https://x.com/getfoss_org" aria-label="X" target="_blank" rel="noopener">
-        X
+      <a class="nav-icon-link" href="https://x.com/getfoss_org" aria-label="X" target="_blank" rel="noopener">
+        <XIcon />
       </a>
       <a class="nav-icon-link" href={`mailto:${EMAIL}`} aria-label="Email">
         <EmailIcon />
@@ -226,15 +229,6 @@ const navLinks = [
 
   .nav-icon-link svg:not([fill="none"]) {
     fill: currentColor;
-  }
-
-  .social-link {
-    width: auto;
-    padding: 0 0.55rem;
-    font-family: var(--mono);
-    font-size: 0.72rem;
-    font-weight: 600;
-    white-space: nowrap;
   }
 
   button.nav-icon-link {
