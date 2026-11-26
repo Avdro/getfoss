@@ -9,7 +9,7 @@ import { SITE_URL } from '../lib/site';
 const posts = (await getCollection('blog'))
   .filter((post) => !post.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, 3);
+  .slice(0, 7);
 
 const siteDescription =
   'Free and open-source software, done right. GetFOSS picks the best FOSS apps — private, secure, and community-driven — for every platform.';
@@ -39,7 +39,7 @@ const organizationSchema = JSON.stringify({
     <SkillsMarquee />
 
     <section class="section" aria-label="Recent articles">
-      <nav class="commit-tree" aria-label="Site navigation">
+      <nav class="commit-tree" aria-label="Latest articles">
         <a class="commit-tree-head" href="/blog/" title="All articles">
           Latest articles
         </a>
@@ -56,10 +56,6 @@ const organizationSchema = JSON.stringify({
             </a>
           ))
         )}
-
-        <a href="/blog/">All articles</a>
-        <a href="/tags/">Browse tags</a>
-        <a href="/about/">About GetFOSS</a>
       </nav>
     </section>
   </main>
