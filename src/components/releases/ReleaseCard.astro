@@ -23,14 +23,22 @@ const {
   icon,
 } = Astro.props;
 
-const formattedDate = new Date(`${releaseDate}T00:00:00Z`).toLocaleDateString('en-US', {
-  year: 'numeric',
-  month: 'short',
-  day: 'numeric',
-  timeZone: 'UTC',
-});
----
+const parsedReleaseDate = releaseDate
+  ? new Date(`${releaseDate}T00:00:00Z`)
+  : null;
 
+const formattedDate =
+  parsedReleaseDate && !Number.isNaN(parsedReleaseDate.getTime())
+    ? parsedReleaseDate.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        timeZone: 'UTC',
+      })
+    : '—';
+
+const displayVersion = version.trim() || '—';
+---
 <a class="release-card" href={`/releases/${slug}/`} aria-label={`View ${name} release history`}>
   <div class="card-top">
     <div class="app-identity">
@@ -46,22 +54,20 @@ const formattedDate = new Date(`${releaseDate}T00:00:00Z`).toLocaleDateString('e
         <span class="category">{category}</span>
       </div>
     </div>
-    <span class="version-badge">v{version}</span>
+    <span class="version-badge">{version.trim() ? `v${version}` : '—'}</span>
   </div>
-
   <p class="description">{description}</p>
 
   <div class="release-info">
     <div class="info-item">
       <span class="info-label">Latest Stable Version</span>
-      <strong>{version}</strong>
+      <strong>{displayVersion}</strong>
     </div>
     <div class="info-item">
       <span class="info-label">Released</span>
       <strong>{formattedDate}</strong>
     </div>
   </div>
-
   <div class="card-bottom">
     <div class="platforms" aria-label="Supported platforms">
       {platforms.map((platform) => (
@@ -73,7 +79,6 @@ const formattedDate = new Date(`${releaseDate}T00:00:00Z`).toLocaleDateString('e
 
   <span class="card-arrow" aria-hidden="true">↗</span>
 </a>
-
 <style>
   .release-card {
     position: relative;
@@ -90,7 +95,6 @@ const formattedDate = new Date(`${releaseDate}T00:00:00Z`).toLocaleDateString('e
     text-decoration: none;
     transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
   }
-
   .release-card:hover {
     border-color: var(--accent);
     transform: translateY(-3px);
@@ -119,7 +123,6 @@ const formattedDate = new Date(`${releaseDate}T00:00:00Z`).toLocaleDateString('e
     object-fit: contain;
     border-radius: 10px;
   }
-
   .app-icon-fallback {
     display: grid;
     place-items: center;
@@ -141,7 +144,6 @@ const formattedDate = new Date(`${releaseDate}T00:00:00Z`).toLocaleDateString('e
     line-height: 1.3;
     overflow-wrap: anywhere;
   }
-
   .category {
     display: inline-block;
     margin-top: 0.3rem;
@@ -150,7 +152,6 @@ const formattedDate = new Date(`${releaseDate}T00:00:00Z`).toLocaleDateString('e
     font-size: 0.7rem;
     line-height: 1.4;
   }
-
   .version-badge {
     flex: 0 0 auto;
     padding: 0.35rem 0.55rem;
@@ -163,7 +164,6 @@ const formattedDate = new Date(`${releaseDate}T00:00:00Z`).toLocaleDateString('e
     font-weight: 750;
     white-space: nowrap;
   }
-
   .description {
     display: -webkit-box;
     min-height: 3.9em;
@@ -184,7 +184,6 @@ const formattedDate = new Date(`${releaseDate}T00:00:00Z`).toLocaleDateString('e
     border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
   }
-
   .info-item {
     display: flex;
     flex-direction: column;
@@ -204,7 +203,6 @@ const formattedDate = new Date(`${releaseDate}T00:00:00Z`).toLocaleDateString('e
     font-weight: 700;
     overflow-wrap: anywhere;
   }
-
   .card-bottom {
     display: flex;
     flex-wrap: wrap;
@@ -229,7 +227,6 @@ const formattedDate = new Date(`${releaseDate}T00:00:00Z`).toLocaleDateString('e
     font-family: var(--mono);
     font-size: 0.65rem;
   }
-
   .license {
     color: var(--muted);
     font-family: var(--mono);
@@ -254,7 +251,6 @@ const formattedDate = new Date(`${releaseDate}T00:00:00Z`).toLocaleDateString('e
     .release-card {
       padding: 1rem;
     }
-
     .app-icon {
       flex-basis: 40px;
       width: 40px;
