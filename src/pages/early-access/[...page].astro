@@ -1,0 +1,767 @@
+---
+/**
+ * GetFOSS — Early Access Catalog
+ * File: src/pages/early-access/[...page].astro
+ *
+ * Separate catalogue for alpha, beta, release candidate,
+ * nightly and development builds.
+ */
+
+import Layout from '../../components/Layout.astro';
+import softwareData from '../../data/prereleases/software.json';
+import releasesData from '../../data/prereleases/releases.json';
+
+const APPS_PER_PAGE = 15;
+
+type PrereleaseEntry = {
+  version?: string | null;
+  tag?: string | null;
+  name?: string | null;
+  releaseType?: string | null;
+  date?: string | null;
+  url?: string | null;
+  source?: string | null;
+};
+
+type ReleaseApplication = {
+  id: string;
+  releases?: PrereleaseEntry[];
+};
+
+type ReleasesFile = {
+  applications?: ReleaseApplication[];
+  updatedAt?: string | null;
+};
+
+const releaseFile = releasesData as ReleasesFile;
+const releaseApplications = new Map(
+  (releaseFile.applications ?? []).map((app) => [app.id, app])
+);
+
+function getWebsiteIcon(website?: string): string | undefined {
+  if (!website) return undefined;
+
+  try {
+    const hostname = new URL(website).hostname;
+    return `https://www.google.com/s2/favicons?domain=${encodeURIComponent(hostname)}&sz=128`;
+  } catch {
+    return undefined;
+  }
+}
+
+function formatDate(value?: string | null): string {
+  if (!value) return 'Date unavailable';
+
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) return 'Date unavailable';
+
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+    timeZone: 'UTC',
+  });
+}
+
+const allApps = softwareData.applications.map((app) => {
+  const releaseData = releaseApplications.get(app.id);
+  const releases = Array.isArray(releaseData?.releases)
+    ? releaseData.releases
+    : [];
+
+  const latestRelease = releases[0] ?? null;
+
+  return {
+    ...app,
+    releases,
+    latestVersion: latestRelease?.version ?? latestRelease?.tag ?? null,
+    latestType: latestRelease?.releaseType ?? 'Development',
+    latestDate: latestRelease?.date ?? null,
+    latestUrl: latestRelease?.url ?? null,
+    icon: getWebsiteIcon(app.website),
+  };
+});
+
+const TOTAL_APPS = allApps.length;
+const TOTAL_PAGES = Math.ceil(TOTAL_APPS / APPS_PER_PAGE);
+
+const categories = [...new Set(allApps.map((app) => app.category))].sort();
+
+const releaseTypes = [
+  'Alpha',
+  'Beta',
+  'Release Candidate',
+  'Nightly',
+  'Development',
+];
+
+export function getStaticPaths() {
+  const totalPages = Math.ceil(
+    softwareData.applications.length / APPS_PER_PAGE
+  );
+
+  const paths: Array<{ params: { page: string | undefined } }> = [
+    { params: { page: undefined } },
+  ];
+
+  for (let i = 2; i <= totalPages; i++) {
+    paths.push({ params: { page: String(i) } });
+  }
+
+  return paths;
+}
+
+const { page } = Astro.params;
+const pageStr = Array.isArray(page) ? page[0] : page;
+const currentPage = pageStr ? parseInt(pageStr, 10) : 1;
+
+const safePage = Number.isFinite(currentPage)
+  ? Math.min(Math.max(currentPage, 1), Math.max(TOTAL_PAGES, 1))
+  : 1;
+
+const startIdx = (safePage - 1) * APPS_PER_PAGE;
+const endIdx = startIdx + APPS_PER_PAGE;
+
+const pageTitle = safePage === 1
+  ? 'Early Access — GetFOSS'
+  : `Early Access — Page ${safePage} — GetFOSS`;
+
+const pageDescription =
+  `Explore ${TOTAL_APPS} free and open-source applications with early access, beta, alpha, nightly and development builds.`;
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <main class="early-access">
+    <header class="early-access__header">
+      <h1>Early Access</h1>
+      <p class="early-access__subtitle">
+        Explore upcoming releases, beta versions and development builds
+        of free and open-source software.
+      </p>
+      <div class="early-access__stats">
+        <span>{TOTAL_APPS} applications</span>
+        <span>{TOTAL_PAGES} pages</span>
+      </div>
+    </header>
+
+    <section class="early-access__controls" aria-label="Search and filters">
+      <div class="early-access__search-row">
+        <input
+          type="search"
+          id="early-access-search"
+          class="early-access__search"
+          placeholder="Search applications..."
+          autocomplete="off"
+          aria-label="Search applications"
+        />
+      </div>
+
+      <div class="early-access__filter-row">
+        <select
+          id="early-access-category"
+          class="early-access__select"
+          aria-label="Filter by category"
+        >
+          <option value="">All Categories</option>
+          {categories.map((category) => (
+            <option value={category}>{category}</option>
+          ))}
+        </select>
+
+        <select
+          id="early-access-type"
+          class="early-access__select"
+          aria-label="Filter by build type"
+        >
+          <option value="">All Build Types</option>
+          {releaseTypes.map((type) => (
+            <option value={type}>{type}</option>
+          ))}
+        </select>
+
+        <button
+          type="button"
+          id="early-access-clear"
+          class="early-access__clear"
+        >
+          Clear filters
+        </button>
+      </div>
+    </section>
+
+    <p
+      id="early-access-results"
+      class="early-access__results"
+      role="status"
+      aria-live="polite"
+    ></p>
+
+    <p
+      id="early-access-empty"
+      class="early-access__empty"
+      style="display: none;"
+    >
+      No applications match your search. Try changing your filters.
+    </p>
+
+    <section
+      class="early-access__grid"
+      id="early-access-grid"
+      aria-label="Applications"
+    >
+      {allApps.map((app, index) => (
+        <article
+          class:list={[
+            'early-access-card',
+            {
+              'early-access-card--visible':
+                index >= startIdx && index < endIdx,
+            },
+          ]}
+          data-name={app.name}
+          data-description={app.description}
+          data-category={app.category}
+          data-type={app.latestType}
+          data-platforms={app.platforms.join(',')}
+          data-license={app.license}
+        >
+          <a
+            class="early-access-card__link"
+            href={`/early-access/${app.slug}/`}
+            aria-label={`View ${app.name} build history`}
+          >
+            <div class="early-access-card__top">
+              <div class="early-access-card__icon">
+                {app.icon ? (
+                  <img
+                    src={app.icon}
+                    alt=""
+                    width="48"
+                    height="48"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                  />
+                ) : (
+                  <span>{app.name.slice(0, 1).toUpperCase()}</span>
+                )}
+              </div>
+
+              <span class="early-access-card__type">
+                {app.latestType}
+              </span>
+            </div>
+
+            <div class="early-access-card__content">
+              <p class="early-access-card__category">
+                {app.category}
+              </p>
+
+              <h2>{app.name}</h2>
+
+              <p class="early-access-card__description">
+                {app.description}
+              </p>
+            </div>
+
+            <div class="early-access-card__meta">
+              <div>
+                <span class="early-access-card__label">Latest build</span>
+                <strong>{app.latestVersion || '—'}</strong>
+              </div>
+
+              <div class="early-access-card__date">
+                <span class="early-access-card__label">Updated</span>
+                <strong>{formatDate(app.latestDate)}</strong>
+              </div>
+            </div>
+
+            <div class="early-access-card__footer">
+              <span>
+                {app.releases.length} recorded builds
+              </span>
+              <span class="early-access-card__arrow" aria-hidden="true">
+                →
+              </span>
+            </div>
+          </a>
+        </article>
+      ))}
+    </section>
+
+    <nav
+      class="early-access__pagination"
+      id="early-access-pagination"
+      aria-label="Early Access pages"
+    >
+      {safePage > 1 && (
+        <a
+          href={safePage === 2 ? '/early-access/' : `/early-access/${safePage - 1}/`}
+          class="early-access__page-nav"
+          rel="prev"
+        >
+          ← Previous
+        </a>
+      )}
+
+      <span class="early-access__page-numbers">
+        {Array.from({ length: TOTAL_PAGES }, (_, index) => index + 1).map((number) => (
+          <a
+            href={number === 1 ? '/early-access/' : `/early-access/${number}/`}
+            class:list={[
+              'early-access__page-link',
+              {
+                'early-access__page-link--active': number === safePage,
+              },
+            ]}
+            aria-current={number === safePage ? 'page' : undefined}
+          >
+            {number}
+          </a>
+        ))}
+      </span>
+
+      {safePage < TOTAL_PAGES && (
+        <a
+          href={`/early-access/${safePage + 1}/`}
+          class="early-access__page-nav"
+          rel="next"
+        >
+          Next →
+        </a>
+      )}
+    </nav>
+  </main>
+</Layout>
+
+<style>
+  .early-access {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem 4rem;
+  }
+
+  .early-access__header {
+    margin-bottom: 2rem;
+  }
+
+  .early-access__header h1 {
+    margin: 0 0 0.5rem;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+  }
+
+  .early-access__subtitle {
+    margin: 0;
+    color: var(--palette-text-muted, #6b7280);
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  .early-access__stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1rem;
+  }
+
+  .early-access__stats span {
+    padding: 0.35rem 0.7rem;
+    border: 1px solid var(--palette-border, #e5e7eb);
+    border-radius: 6px;
+    color: var(--palette-text-muted, #6b7280);
+    font-size: 0.8rem;
+  }
+
+  .early-access__controls {
+    margin-bottom: 1rem;
+  }
+
+  .early-access__search-row {
+    margin-bottom: 0.75rem;
+  }
+
+  .early-access__search {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--palette-border, #d1d5db);
+    border-radius: 7px;
+    background: var(--palette-bg, #fff);
+    color: inherit;
+    font: inherit;
+  }
+
+  .early-access__search:focus {
+    outline: none;
+    border-color: var(--palette-primary, #2563eb);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  }
+
+  .early-access__filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .early-access__select,
+  .early-access__clear {
+    min-height: 40px;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--palette-border, #d1d5db);
+    border-radius: 6px;
+    background: var(--palette-bg, #fff);
+    color: inherit;
+    font: inherit;
+    font-size: 0.9rem;
+  }
+
+  .early-access__select {
+    cursor: pointer;
+  }
+
+  .early-access__clear {
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .early-access__clear:hover {
+    background: var(--palette-bg-hover, #f3f4f6);
+  }
+
+  .early-access__results {
+    min-height: 1.2em;
+    margin: 0 0 1rem;
+    color: var(--palette-text-muted, #6b7280);
+    font-size: 0.9rem;
+  }
+
+  .early-access__empty {
+    padding: 2rem;
+    color: var(--palette-text-muted, #6b7280);
+    text-align: center;
+  }
+
+  .early-access__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .early-access-card {
+    display: none;
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--palette-border, #e5e7eb);
+    border-radius: 10px;
+    background: var(--palette-bg, #fff);
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .early-access-card--visible {
+    display: block;
+  }
+
+  .early-access-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--palette-primary, #2563eb);
+  }
+
+  .early-access-card__link {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    padding: 1.25rem;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .early-access-card__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .early-access-card__icon {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 9px;
+    background: var(--palette-bg-hover, #f3f4f6);
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+
+  .early-access-card__icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .early-access-card__type {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.3rem 0.6rem;
+    border: 1px solid var(--palette-border, #e5e7eb);
+    border-radius: 5px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .early-access-card__content {
+    flex: 1;
+  }
+
+  .early-access-card__category {
+    margin: 0 0 0.35rem;
+    color: var(--palette-text-muted, #6b7280);
+    font-size: 0.75rem;
+  }
+
+  .early-access-card h2 {
+    margin: 0 0 0.55rem;
+    font-size: 1.2rem;
+  }
+
+  .early-access-card__description {
+    display: -webkit-box;
+    overflow: hidden;
+    margin: 0;
+    color: var(--palette-text-muted, #6b7280);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  .early-access-card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--palette-border, #e5e7eb);
+  }
+
+  .early-access-card__meta > div {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .early-access-card__label {
+    color: var(--palette-text-muted, #6b7280);
+    font-size: 0.7rem;
+  }
+
+  .early-access-card__meta strong {
+    overflow-wrap: anywhere;
+    font-size: 0.85rem;
+  }
+
+  .early-access-card__date {
+    text-align: right;
+  }
+
+  .early-access-card__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    color: var(--palette-text-muted, #6b7280);
+    font-size: 0.8rem;
+  }
+
+  .early-access-card__arrow {
+    color: var(--palette-primary, #2563eb);
+    font-size: 1.2rem;
+  }
+
+  .early-access__pagination {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--palette-border, #e5e7eb);
+  }
+
+  .early-access__page-numbers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.3rem;
+  }
+
+  .early-access__page-link,
+  .early-access__page-nav {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.45rem 0.7rem;
+    border: 1px solid var(--palette-border, #d1d5db);
+    border-radius: 6px;
+    color: inherit;
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+
+  .early-access__page-link:hover,
+  .early-access__page-nav:hover {
+    background: var(--palette-bg-hover, #f3f4f6);
+  }
+
+  .early-access__page-link--active {
+    border-color: var(--palette-primary, #2563eb);
+    background: var(--palette-primary, #2563eb);
+    color: #fff;
+  }
+
+  .early-access__pagination--hidden {
+    display: none;
+  }
+
+  @media (max-width: 640px) {
+    .early-access__filter-row {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .early-access__select,
+    .early-access__clear {
+      width: 100%;
+    }
+
+    .early-access__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+  const searchInput = document.getElementById(
+    'early-access-search'
+  ) as HTMLInputElement;
+
+  const categoryFilter = document.getElementById(
+    'early-access-category'
+  ) as HTMLSelectElement;
+
+  const typeFilter = document.getElementById(
+    'early-access-type'
+  ) as HTMLSelectElement;
+
+  const clearButton = document.getElementById(
+    'early-access-clear'
+  ) as HTMLButtonElement;
+
+  const grid = document.getElementById(
+    'early-access-grid'
+  ) as HTMLElement;
+
+  const resultsInfo = document.getElementById(
+    'early-access-results'
+  ) as HTMLParagraphElement;
+
+  const emptyMessage = document.getElementById(
+    'early-access-empty'
+  ) as HTMLParagraphElement;
+
+  const pagination = document.getElementById(
+    'early-access-pagination'
+  ) as HTMLElement;
+
+  const allCards = Array.from(
+    grid.querySelectorAll<HTMLElement>('.early-access-card')
+  );
+
+  function isFilterActive(): boolean {
+    return Boolean(
+      searchInput.value.trim() ||
+      categoryFilter.value ||
+      typeFilter.value
+    );
+  }
+
+  function performFilter(): void {
+    const query = searchInput.value.toLowerCase().trim();
+    const category = categoryFilter.value;
+    const type = typeFilter.value;
+
+    if (!isFilterActive()) {
+      allCards.forEach((card) => {
+        card.style.display = card.classList.contains(
+          'early-access-card--visible'
+        ) ? '' : 'none';
+      });
+
+      resultsInfo.textContent = '';
+      emptyMessage.style.display = 'none';
+      pagination.classList.remove('early-access__pagination--hidden');
+      return;
+    }
+
+    let matchCount = 0;
+
+    allCards.forEach((card) => {
+      const name = (card.dataset.name || '').toLowerCase();
+      const description = (card.dataset.description || '').toLowerCase();
+      const cardCategory = card.dataset.category || '';
+      const cardType = card.dataset.type || '';
+      const platforms = (card.dataset.platforms || '').toLowerCase();
+      const license = (card.dataset.license || '').toLowerCase();
+
+      let matches = true;
+
+      if (query) {
+        matches =
+          name.includes(query) ||
+          description.includes(query) ||
+          cardCategory.toLowerCase().includes(query) ||
+          cardType.toLowerCase().includes(query) ||
+          platforms.includes(query) ||
+          license.includes(query);
+      }
+
+      if (matches && category && cardCategory !== category) {
+        matches = false;
+      }
+
+      if (matches && type && cardType !== type) {
+        matches = false;
+      }
+
+      card.style.display = matches ? '' : 'none';
+
+      if (matches) matchCount++;
+    });
+
+    pagination.classList.add('early-access__pagination--hidden');
+
+    resultsInfo.textContent =
+      `${matchCount} ${matchCount === 1 ? 'result' : 'results'} found`;
+
+    emptyMessage.style.display = matchCount === 0 ? '' : 'none';
+  }
+
+  searchInput.addEventListener('input', performFilter);
+  categoryFilter.addEventListener('change', performFilter);
+  typeFilter.addEventListener('change', performFilter);
+
+  clearButton.addEventListener('click', () => {
+    searchInput.value = '';
+    categoryFilter.value = '';
+    typeFilter.value = '';
+    performFilter();
+  });
+</script>
