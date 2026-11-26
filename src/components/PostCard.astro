@@ -1,3 +1,4 @@
+
 ---
 import type { CollectionEntry } from 'astro:content';
 import { formatPostDate, postSlug } from '../lib/posts';
@@ -9,19 +10,29 @@ interface Props {
 }
 
 const { post, latest = false } = Astro.props;
-// Tags whose slug is empty have no archive page; skip their chips.
 const tags = post.data.tags.filter((tag) => slugifyTag(tag) !== '');
 ---
 
 <article class="post-card">
   <a class="post-card-link" href={`/blog/${postSlug(post)}/`}>
     <div>
-      <h2>{post.data.title}{latest && <span class="tag-latest">latest</span>}</h2>
+      <h2>
+        {post.data.title}
+        {latest && <span class="tag-latest">latest</span>}
+      </h2>
+
       <p>{post.data.description}</p>
-      <p class="post-card-meta">{formatPostDate(post.data.date)}</p>
+
+      <p class="post-card-meta">
+        <span class="post-card-category">{post.data.category}</span>
+        <span class="post-card-meta-separator" aria-hidden="true">·</span>
+        <time datetime={post.data.date.toISOString()}>
+          {formatPostDate(post.data.date)}
+        </time>
+      </p>
     </div>
   </a>
-  {/* Chips are siblings of the card link, not children: anchors can't nest. */}
+
   {tags.length > 0 && (
     <p class="post-tags">
       {tags.map((tag) => (
@@ -32,13 +43,10 @@ const tags = post.data.tags.filter((tag) => slugifyTag(tag) !== '');
 </article>
 
 <style is:global>
-  /* Lines act as separators between posts, not around the list —
-   the section border above and footer border below frame it already. */
   .post-card + .post-card {
     border-top: 1px solid var(--line);
   }
 
-  /* Git-tag badge on the newest commit in the log. */
   .tag-latest {
     display: inline-block;
     margin-left: 0.7rem;
@@ -68,7 +76,7 @@ const tags = post.data.tags.filter((tag) => slugifyTag(tag) !== '');
     font-size: clamp(1.45rem, 3vw, 2.05rem);
     font-family: var(--mono);
     font-weight: 400;
-    line-height: 1;
+    line-height: 1.15;
     letter-spacing: -0.055em;
     transition: color 0.16s ease;
   }
@@ -81,11 +89,24 @@ const tags = post.data.tags.filter((tag) => slugifyTag(tag) !== '');
   }
 
   .post-card-meta {
-    margin: 0.4rem 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.65rem 0 0;
     color: var(--muted);
     font-family: var(--mono);
     font-size: 0.75rem;
     font-weight: 600;
+  }
+
+  .post-card .post-card-meta-separator {
+    margin: 0;
+    color: var(--muted);
+  }
+
+  .post-card-category {
+    color: var(--accent);
   }
 
   .post-card:hover h2 {
@@ -98,10 +119,6 @@ const tags = post.data.tags.filter((tag) => slugifyTag(tag) !== '');
     gap: 0.5rem;
   }
 
-  /* On post cards the chips are a sibling of the card link, not a child
-   (anchors can't nest), so pull them up into the link's bottom padding
-   and restore the card's spacing below. The .post-card scope also beats
-   the `.post-card p` margin rule without needing !important. */
   .post-card .post-tags {
     margin: -0.85rem 0 0;
     padding: 0 0 1.45rem;
