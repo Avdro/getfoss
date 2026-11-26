@@ -1,0 +1,1190 @@
+{
+  "schemaVersion": 1,
+  "applications": [
+    {
+      "id": "blender",
+      "name": "Blender",
+      "slug": "blender",
+      "description": "3D creation suite for modeling, sculpting, animation, rendering and video editing.",
+      "category": "3D Software",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "GPL-3.0-or-later",
+      "website": "https://www.blender.org/",
+      "sourceUrl": "https://github.com/blender/blender",
+      "releaseSource": {
+        "type": "blender-daily-builds",
+        "url": "https://builder.blender.org/download/daily/"
+      }
+    },
+    {
+      "id": "krita",
+      "name": "Krita",
+      "slug": "krita",
+      "description": "Digital painting application for illustration, concept art, comics and texture creation.",
+      "category": "Graphics & Design",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "GPL-3.0-or-later",
+      "website": "https://krita.org/",
+      "sourceUrl": "https://invent.kde.org/graphics/krita",
+      "releaseSource": {
+        "type": "gitlab",
+        "host": "https://invent.kde.org",
+        "project": "graphics/krita"
+      }
+    },
+    {
+      "id": "gimp",
+      "name": "GIMP",
+      "slug": "gimp",
+      "description": "Free image editor for photo retouching, image composition and graphic design.",
+      "category": "Graphics & Design",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "GPL-3.0-or-later",
+      "website": "https://www.gimp.org/",
+      "sourceUrl": "https://gitlab.gnome.org/GNOME/gimp",
+      "releaseSource": {
+        "type": "gitlab",
+        "host": "https://gitlab.gnome.org",
+        "project": "GNOME/gimp"
+      }
+    },
+    {
+      "id": "inkscape",
+      "name": "Inkscape",
+      "slug": "inkscape",
+      "description": "Vector graphics editor for illustrations, diagrams, logos and scalable artwork.",
+      "category": "Graphics & Design",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "GPL-3.0-or-later",
+      "website": "https://inkscape.org/",
+      "sourceUrl": "https://gitlab.com/inkscape/inkscape",
+      "releaseSource": {
+        "type": "gitlab",
+        "host": "https://gitlab.com",
+        "project": "inkscape/inkscape"
+      }
+    },
+    {
+      "id": "freecad",
+      "name": "FreeCAD",
+      "slug": "freecad",
+      "description": "Parametric 3D CAD modeler for product design, engineering and architecture.",
+      "category": "3D & CAD",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "LGPL-2.1-or-later",
+      "website": "https://www.freecad.org/",
+      "sourceUrl": "https://github.com/FreeCAD/FreeCAD",
+      "releaseSource": {
+        "type": "github",
+        "owner": "FreeCAD",
+        "repository": "FreeCAD"
+      }
+    },
+    {
+      "id": "kicad",
+      "name": "KiCad",
+      "slug": "kicad",
+      "description": "Electronic design automation suite for schematic capture and PCB layout.",
+      "category": "Electronics Design",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "GPL-3.0-or-later",
+      "website": "https://www.kicad.org/",
+      "sourceUrl": "https://gitlab.com/kicad/code/kicad",
+      "releaseSource": {
+        "type": "gitlab",
+        "host": "https://gitlab.com",
+        "project": "kicad/code/kicad"
+      }
+    },
+    {
+      "id": "prusaslicer",
+      "name": "PrusaSlicer",
+      "slug": "prusaslicer",
+      "description": "Advanced 3D printer slicing software with configurable supports and print profiles.",
+      "category": "3D Printing",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "AGPL-3.0-or-later",
+      "website": "https://www.prusa3d.com/page/prusaslicer_424/",
+      "sourceUrl": "https://github.com/prusa3d/PrusaSlicer",
+      "releaseSource": {
+        "type": "github",
+        "owner": "prusa3d",
+        "repository": "PrusaSlicer"
+      }
+    },
+    {
+      "id": "orcaslicer",
+      "name": "OrcaSlicer",
+      "slug": "orcaslicer",
+      "description": "Open-source slicer for FDM printers with calibration tools and advanced print controls.",
+      "category": "3D Printing",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "AGPL-3.0-or-later",
+      "website": "https://orcaslicer.com/",
+      "sourceUrl": "https://github.com/SoftFever/OrcaSlicer",
+      "releaseSource": {
+        "type": "github",
+        "owner": "SoftFever",
+        "repository": "OrcaSlicer"
+      }
+    },
+    {
+      "id": "openscad",
+      "name": "OpenSCAD",
+      "slug": "openscad",
+      "description": "Script-based solid 3D CAD modeller for creating precise parametric objects.",
+      "category": "3D & CAD",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "GPL-2.0-or-later",
+      "website": "https://openscad.org/",
+      "sourceUrl": "https://github.com/openscad/openscad",
+      "releaseSource": {
+        "type": "github",
+        "owner": "openscad",
+        "repository": "openscad"
+      }
+    },
+    {
+      "id": "scribus",
+      "name": "Scribus",
+      "slug": "scribus",
+      "description": "Desktop publishing application for professional page layout and PDF production.",
+      "category": "Desktop Publishing",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "GPL-2.0-or-later",
+      "website": "https://www.scribus.net/",
+      "sourceUrl": "https://gitlab.com/scribus/scribus",
+      "releaseSource": {
+        "type": "gitlab",
+        "host": "https://gitlab.com",
+        "project": "scribus/scribus"
+      }
+    },
+    {
+      "id": "obs-studio",
+      "name": "OBS Studio",
+      "slug": "obs-studio",
+      "description": "Software for video recording and live streaming with real-time scene composition.",
+      "category": "Audio & Video",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "GPL-2.0-or-later",
+      "website": "https://obsproject.com/",
+      "sourceUrl": "https://github.com/obsproject/obs-studio",
+      "releaseSource": {
+        "type": "github",
+        "owner": "obsproject",
+        "repository": "obs-studio"
+      }
+    },
+    {
+      "id": "audacity",
+      "name": "Audacity",
+      "slug": "audacity",
+      "description": "Multi-track audio editor and recorder for recording, editing and processing sound.",
+      "category": "Audio & Video",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "GPL-3.0-or-later",
+      "website": "https://www.audacityteam.org/",
+      "sourceUrl": "https://github.com/audacity/audacity",
+      "releaseSource": {
+        "type": "github",
+        "owner": "audacity",
+        "repository": "audacity"
+      }
+    },
+    {
+      "id": "kdenlive",
+      "name": "Kdenlive",
+      "slug": "kdenlive",
+      "description": "Non-linear video editor with multi-track editing, effects and transitions.",
+      "category": "Audio & Video",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "GPL-3.0-or-later",
+      "website": "https://kdenlive.org/",
+      "sourceUrl": "https://invent.kde.org/multimedia/kdenlive",
+      "releaseSource": {
+        "type": "gitlab",
+        "host": "https://invent.kde.org",
+        "project": "multimedia/kdenlive"
+      }
+    },
+    {
+      "id": "shotcut",
+      "name": "Shotcut",
+      "slug": "shotcut",
+      "description": "Cross-platform video editor supporting a wide range of formats and filters.",
+      "category": "Audio & Video",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "GPL-3.0-or-later",
+      "website": "https://shotcut.org/",
+      "sourceUrl": "https://github.com/mltframework/shotcut",
+      "releaseSource": {
+        "type": "github",
+        "owner": "mltframework",
+        "repository": "shotcut"
+      }
+    },
+    {
+      "id": "handbrake",
+      "name": "HandBrake",
+      "slug": "handbrake",
+      "description": "Open-source video transcoder for converting video between common formats.",
+      "category": "Audio & Video",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "GPL-2.0-or-later",
+      "website": "https://handbrake.fr/",
+      "sourceUrl": "https://github.com/HandBrake/HandBrake",
+      "releaseSource": {
+        "type": "github",
+        "owner": "HandBrake",
+        "repository": "HandBrake"
+      }
+    },
+    {
+      "id": "darktable",
+      "name": "darktable",
+      "slug": "darktable",
+      "description": "Photography workflow application and RAW developer for digital photography.",
+      "category": "Photography",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "GPL-3.0-or-later",
+      "website": "https://www.darktable.org/",
+      "sourceUrl": "https://github.com/darktable-org/darktable",
+      "releaseSource": {
+        "type": "gitlab",
+        "host": "https://github.com",
+        "project": "darktable-org/darktable"
+      }
+    },
+    {
+      "id": "digikam",
+      "name": "digiKam",
+      "slug": "digikam",
+      "description": "Photo management application for organizing, editing and sharing large collections.",
+      "category": "Photography",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "GPL-2.0-or-later",
+      "website": "https://www.digikam.org/",
+      "sourceUrl": "https://invent.kde.org/graphics/digikam",
+      "releaseSource": {
+        "type": "gitlab",
+        "host": "https://invent.kde.org",
+        "project": "graphics/digikam"
+      }
+    },
+    {
+      "id": "rawtherapee",
+      "name": "RawTherapee",
+      "slug": "rawtherapee",
+      "description": "Cross-platform RAW image processor with advanced color and detail controls.",
+      "category": "Photography",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "GPL-3.0-or-later",
+      "website": "https://rawtherapee.com/",
+      "sourceUrl": "https://github.com/Beep6581/RawTherapee",
+      "releaseSource": {
+        "type": "github",
+        "owner": "Beep6581",
+        "repository": "RawTherapee"
+      }
+    },
+    {
+      "id": "ardour",
+      "name": "Ardour",
+      "slug": "ardour",
+      "description": "Digital audio workstation for recording, editing, mixing and mastering audio.",
+      "category": "Audio Software",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "GPL-2.0-or-later",
+      "website": "https://ardour.org/",
+      "sourceUrl": "https://github.com/Ardour/ardour",
+      "releaseSource": {
+        "type": "github",
+        "owner": "Ardour",
+        "repository": "ardour"
+      }
+    },
+    {
+      "id": "musescore",
+      "name": "MuseScore Studio",
+      "slug": "musescore",
+      "description": "Music notation software for composing, arranging, playing and printing scores.",
+      "category": "Audio Software",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "GPL-3.0-only",
+      "website": "https://musescore.org/",
+      "sourceUrl": "https://github.com/musescore/MuseScore",
+      "releaseSource": {
+        "type": "github",
+        "owner": "musescore",
+        "repository": "MuseScore"
+      }
+    },
+    {
+      "id": "godot",
+      "name": "Godot Engine",
+      "slug": "godot",
+      "description": "Open-source game engine for building 2D and 3D games and interactive applications.",
+      "category": "Game Development",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "MIT",
+      "website": "https://godotengine.org/",
+      "sourceUrl": "https://github.com/godotengine/godot",
+      "releaseSource": {
+        "type": "github",
+        "owner": "godotengine",
+        "repository": "godot"
+      }
+    },
+    {
+      "id": "openmw",
+      "name": "OpenMW",
+      "slug": "openmw",
+      "description": "Open-source engine recreation for The Elder Scrolls III: Morrowind.",
+      "category": "Games",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "GPL-3.0-only",
+      "website": "https://openmw.org/",
+      "sourceUrl": "https://github.com/OpenMW/openmw",
+      "releaseSource": {
+        "type": "github",
+        "owner": "OpenMW",
+        "repository": "openmw"
+      }
+    },
+    {
+      "id": "dolphin-emu",
+      "name": "Dolphin Emulator",
+      "slug": "dolphin-emu",
+      "description": "GameCube and Wii emulator with enhanced graphics and modern controller support.",
+      "category": "Games",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "GPL-2.0-or-later",
+      "website": "https://dolphin-emu.org/",
+      "sourceUrl": "https://github.com/dolphin-emu/dolphin",
+      "releaseSource": {
+        "type": "github",
+        "owner": "dolphin-emu",
+        "repository": "dolphin"
+      }
+    },
+    {
+      "id": "pcsx2",
+      "name": "PCSX2",
+      "slug": "pcsx2",
+      "description": "PlayStation 2 emulator with compatibility improvements and graphics enhancements.",
+      "category": "Games",
+      "platforms": [
+        "Windows",
+        "Linux"
+      ],
+      "license": "GPL-3.0-or-later",
+      "website": "https://pcsx2.net/",
+      "sourceUrl": "https://github.com/PCSX2/pcsx2",
+      "releaseSource": {
+        "type": "github",
+        "owner": "PCSX2",
+        "repository": "pcsx2"
+      }
+    },
+    {
+      "id": "rpcs3",
+      "name": "RPCS3",
+      "slug": "rpcs3",
+      "description": "Open-source PlayStation 3 emulator and debugger.",
+      "category": "Games",
+      "platforms": [
+        "Windows",
+        "Linux"
+      ],
+      "license": "GPL-2.0-or-later",
+      "website": "https://rpcs3.net/",
+      "sourceUrl": "https://github.com/RPCS3/rpcs3",
+      "releaseSource": {
+        "type": "github",
+        "owner": "RPCS3",
+        "repository": "rpcs3"
+      }
+    },
+    {
+      "id": "ppsspp",
+      "name": "PPSSPP",
+      "slug": "ppsspp",
+      "description": "PSP emulator for playing portable games in high definition.",
+      "category": "Games",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux",
+        "Android"
+      ],
+      "license": "GPL-2.0-or-later",
+      "website": "https://www.ppsspp.org/",
+      "sourceUrl": "https://github.com/hrydgard/ppsspp",
+      "releaseSource": {
+        "type": "github",
+        "owner": "hrydgard",
+        "repository": "ppsspp"
+      }
+    },
+    {
+      "id": "retroarch",
+      "name": "RetroArch",
+      "slug": "retroarch",
+      "description": "Frontend for emulators, game engines and media players with a unified interface.",
+      "category": "Games",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux",
+        "Android"
+      ],
+      "license": "GPL-3.0-or-later",
+      "website": "https://www.retroarch.com/",
+      "sourceUrl": "https://github.com/libretro/RetroArch",
+      "releaseSource": {
+        "type": "github",
+        "owner": "libretro",
+        "repository": "RetroArch"
+      }
+    },
+    {
+      "id": "luanti",
+      "name": "Luanti",
+      "slug": "luanti",
+      "description": "Open-source voxel game engine and platform for community-created games.",
+      "category": "Games",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux",
+        "Android"
+      ],
+      "license": "LGPL-2.1-or-later",
+      "website": "https://www.luanti.org/",
+      "sourceUrl": "https://github.com/luanti-org/luanti",
+      "releaseSource": {
+        "type": "github",
+        "owner": "luanti-org",
+        "repository": "luanti"
+      }
+    },
+    {
+      "id": "supertuxkart",
+      "name": "SuperTuxKart",
+      "slug": "supertuxkart",
+      "description": "Open-source 3D kart racing game with multiple modes, tracks and characters.",
+      "category": "Games",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "GPL-3.0-or-later",
+      "website": "https://supertuxkart.net/",
+      "sourceUrl": "https://github.com/supertuxkart/stk-code",
+      "releaseSource": {
+        "type": "github",
+        "owner": "supertuxkart",
+        "repository": "stk-code"
+      }
+    },
+    {
+      "id": "openra",
+      "name": "OpenRA",
+      "slug": "openra",
+      "description": "Open-source real-time strategy engine for classic Command & Conquer games.",
+      "category": "Games",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "GPL-3.0-or-later",
+      "website": "https://www.openra.net/",
+      "sourceUrl": "https://github.com/OpenRA/OpenRA",
+      "releaseSource": {
+        "type": "github",
+        "owner": "OpenRA",
+        "repository": "OpenRA"
+      }
+    },
+    {
+      "id": "zed",
+      "name": "Zed",
+      "slug": "zed",
+      "description": "High-performance code editor with collaborative editing and built-in developer tools.",
+      "category": "Development Tools",
+      "platforms": [
+        "macOS",
+        "Linux"
+      ],
+      "license": "GPL-3.0-or-later",
+      "website": "https://zed.dev/",
+      "sourceUrl": "https://github.com/zed-industries/zed",
+      "releaseSource": {
+        "type": "github",
+        "owner": "zed-industries",
+        "repository": "zed"
+      }
+    },
+    {
+      "id": "vscodium",
+      "name": "VSCodium",
+      "slug": "vscodium",
+      "description": "Community-driven build of Visual Studio Code without Microsoft branding and telemetry.",
+      "category": "Development Tools",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "MIT",
+      "website": "https://vscodium.com/",
+      "sourceUrl": "https://github.com/VSCodium/vscodium",
+      "releaseSource": {
+        "type": "github",
+        "owner": "VSCodium",
+        "repository": "vscodium"
+      }
+    },
+    {
+      "id": "neovim",
+      "name": "Neovim",
+      "slug": "neovim",
+      "description": "Extensible text editor focused on usability, extensibility and modern workflows.",
+      "category": "Development Tools",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "Apache-2.0",
+      "website": "https://neovim.io/",
+      "sourceUrl": "https://github.com/neovim/neovim",
+      "releaseSource": {
+        "type": "github",
+        "owner": "neovim",
+        "repository": "neovim"
+      }
+    },
+    {
+      "id": "helix",
+      "name": "Helix",
+      "slug": "helix",
+      "description": "Modal text editor with built-in language server support and tree-sitter integration.",
+      "category": "Development Tools",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "MPL-2.0",
+      "website": "https://helix-editor.com/",
+      "sourceUrl": "https://github.com/helix-editor/helix",
+      "releaseSource": {
+        "type": "github",
+        "owner": "helix-editor",
+        "repository": "helix"
+      }
+    },
+    {
+      "id": "wezterm",
+      "name": "WezTerm",
+      "slug": "wezterm",
+      "description": "GPU-accelerated terminal emulator and multiplexer with extensive customization.",
+      "category": "Development Tools",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "MIT",
+      "website": "https://wezterm.org/",
+      "sourceUrl": "https://github.com/wez/wezterm",
+      "releaseSource": {
+        "type": "github",
+        "owner": "wez",
+        "repository": "wezterm"
+      }
+    },
+    {
+      "id": "zellij",
+      "name": "Zellij",
+      "slug": "zellij",
+      "description": "Terminal workspace and multiplexer with panes, tabs and plugin support.",
+      "category": "Development Tools",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "MIT",
+      "website": "https://zellij.dev/",
+      "sourceUrl": "https://github.com/zellij-org/zellij",
+      "releaseSource": {
+        "type": "github",
+        "owner": "zellij-org",
+        "repository": "zellij"
+      }
+    },
+    {
+      "id": "podman",
+      "name": "Podman",
+      "slug": "podman",
+      "description": "Daemonless container engine for developing, managing and running containers.",
+      "category": "Development Tools",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "Apache-2.0",
+      "website": "https://podman.io/",
+      "sourceUrl": "https://github.com/containers/podman",
+      "releaseSource": {
+        "type": "github",
+        "owner": "containers",
+        "repository": "podman"
+      }
+    },
+    {
+      "id": "qemu",
+      "name": "QEMU",
+      "slug": "qemu",
+      "description": "Generic machine emulator and virtualizer for running guest operating systems.",
+      "category": "Development Tools",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "GPL-2.0-or-later",
+      "website": "https://www.qemu.org/",
+      "sourceUrl": "https://gitlab.com/qemu-project/qemu",
+      "releaseSource": {
+        "type": "gitlab",
+        "host": "https://gitlab.com",
+        "project": "qemu-project/qemu"
+      }
+    },
+    {
+      "id": "deno",
+      "name": "Deno",
+      "slug": "deno",
+      "description": "JavaScript, TypeScript and WebAssembly runtime with built-in tooling.",
+      "category": "Development Tools",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "MIT",
+      "website": "https://deno.com/",
+      "sourceUrl": "https://github.com/denoland/deno",
+      "releaseSource": {
+        "type": "github",
+        "owner": "denoland",
+        "repository": "deno"
+      }
+    },
+    {
+      "id": "bevy",
+      "name": "Bevy",
+      "slug": "bevy",
+      "description": "Data-driven game engine built in Rust for 2D and 3D applications.",
+      "category": "Game Development",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "MIT OR Apache-2.0",
+      "website": "https://bevy.org/",
+      "sourceUrl": "https://github.com/bevyengine/bevy",
+      "releaseSource": {
+        "type": "github",
+        "owner": "bevyengine",
+        "repository": "bevy"
+      }
+    },
+    {
+      "id": "nextcloud",
+      "name": "Nextcloud",
+      "slug": "nextcloud",
+      "description": "Self-hosted content collaboration platform for files, calendars and communication.",
+      "category": "Self-hosted & Productivity",
+      "platforms": [
+        "Linux"
+      ],
+      "license": "AGPL-3.0-or-later",
+      "website": "https://nextcloud.com/",
+      "sourceUrl": "https://github.com/nextcloud/server",
+      "releaseSource": {
+        "type": "github",
+        "owner": "nextcloud",
+        "repository": "server"
+      }
+    },
+    {
+      "id": "immich",
+      "name": "Immich",
+      "slug": "immich",
+      "description": "Self-hosted photo and video management solution with mobile backups.",
+      "category": "Self-hosted & Productivity",
+      "platforms": [
+        "Linux"
+      ],
+      "license": "AGPL-3.0",
+      "website": "https://immich.app/",
+      "sourceUrl": "https://github.com/immich-app/immich",
+      "releaseSource": {
+        "type": "github",
+        "owner": "immich-app",
+        "repository": "immich"
+      }
+    },
+    {
+      "id": "home-assistant",
+      "name": "Home Assistant",
+      "slug": "home-assistant",
+      "description": "Open-source home automation platform with integrations for smart devices.",
+      "category": "Self-hosted & Productivity",
+      "platforms": [
+        "Linux"
+      ],
+      "license": "Apache-2.0",
+      "website": "https://www.home-assistant.io/",
+      "sourceUrl": "https://github.com/home-assistant/core",
+      "releaseSource": {
+        "type": "github",
+        "owner": "home-assistant",
+        "repository": "core"
+      }
+    },
+    {
+      "id": "jellyfin",
+      "name": "Jellyfin",
+      "slug": "jellyfin",
+      "description": "Free media server for organizing and streaming personal media libraries.",
+      "category": "Self-hosted & Productivity",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "GPL-2.0-or-later",
+      "website": "https://jellyfin.org/",
+      "sourceUrl": "https://github.com/jellyfin/jellyfin",
+      "releaseSource": {
+        "type": "github",
+        "owner": "jellyfin",
+        "repository": "jellyfin"
+      }
+    },
+    {
+      "id": "kodi",
+      "name": "Kodi",
+      "slug": "kodi",
+      "description": "Open-source media center for managing and playing videos, music and photos.",
+      "category": "Self-hosted & Productivity",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux",
+        "Android"
+      ],
+      "license": "GPL-2.0-or-later",
+      "website": "https://kodi.tv/",
+      "sourceUrl": "https://github.com/xbmc/xbmc",
+      "releaseSource": {
+        "type": "github",
+        "owner": "xbmc",
+        "repository": "xbmc"
+      }
+    },
+    {
+      "id": "syncthing",
+      "name": "Syncthing",
+      "slug": "syncthing",
+      "description": "Continuous peer-to-peer file synchronization between devices.",
+      "category": "Self-hosted & Productivity",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "MPL-2.0",
+      "website": "https://syncthing.net/",
+      "sourceUrl": "https://github.com/syncthing/syncthing",
+      "releaseSource": {
+        "type": "github",
+        "owner": "syncthing",
+        "repository": "syncthing"
+      }
+    },
+    {
+      "id": "element",
+      "name": "Element",
+      "slug": "element",
+      "description": "Secure messaging client built on the Matrix open network.",
+      "category": "Communication",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux",
+        "Android"
+      ],
+      "license": "AGPL-3.0-only",
+      "website": "https://element.io/",
+      "sourceUrl": "https://github.com/element-hq/element-desktop",
+      "releaseSource": {
+        "type": "github",
+        "owner": "element-hq",
+        "repository": "element-desktop"
+      }
+    },
+    {
+      "id": "joplin",
+      "name": "Joplin",
+      "slug": "joplin",
+      "description": "Open-source note-taking and task management application with synchronization.",
+      "category": "Productivity",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux",
+        "Android"
+      ],
+      "license": "MIT",
+      "website": "https://joplinapp.org/",
+      "sourceUrl": "https://github.com/laurent22/joplin",
+      "releaseSource": {
+        "type": "github",
+        "owner": "laurent22",
+        "repository": "joplin"
+      }
+    },
+    {
+      "id": "keepassxc",
+      "name": "KeePassXC",
+      "slug": "keepassxc",
+      "description": "Cross-platform password manager with local encrypted vaults.",
+      "category": "Security & Privacy",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "GPL-2.0-or-later",
+      "website": "https://keepassxc.org/",
+      "sourceUrl": "https://github.com/keepassxreboot/keepassxc",
+      "releaseSource": {
+        "type": "github",
+        "owner": "keepassxreboot",
+        "repository": "keepassxc"
+      }
+    },
+    {
+      "id": "appflowy",
+      "name": "AppFlowy",
+      "slug": "appflowy",
+      "description": "Open-source workspace for notes, projects, tasks and knowledge management.",
+      "category": "Productivity",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "AGPL-3.0",
+      "website": "https://appflowy.io/",
+      "sourceUrl": "https://github.com/AppFlowy-IO/AppFlowy",
+      "releaseSource": {
+        "type": "github",
+        "owner": "AppFlowy-IO",
+        "repository": "AppFlowy"
+      }
+    },
+    {
+      "id": "brave",
+      "name": "Brave",
+      "slug": "brave",
+      "description": "Privacy-focused web browser with built-in tracker and ad blocking.",
+      "category": "Browsers",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux",
+        "Android"
+      ],
+      "license": "MPL-2.0",
+      "website": "https://brave.com/",
+      "sourceUrl": "https://github.com/brave/brave-browser",
+      "releaseSource": {
+        "type": "github",
+        "owner": "brave",
+        "repository": "brave-browser"
+      }
+    },
+    {
+      "id": "floorp",
+      "name": "Floorp",
+      "slug": "floorp",
+      "description": "Open-source Firefox-based browser focused on customization, privacy and productivity.",
+      "category": "Browsers",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "BSD-3-Clause",
+      "website": "https://floorp.app/",
+      "sourceUrl": "https://github.com/Floorp-Projects/Floorp",
+      "releaseSource": {
+        "type": "github",
+        "owner": "Floorp-Projects",
+        "repository": "Floorp"
+      }
+    },
+    {
+      "id": "tor-browser",
+      "name": "Tor Browser",
+      "slug": "tor-browser",
+      "description": "Privacy-focused browser designed to reduce tracking and resist censorship.",
+      "category": "Browsers & Privacy",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "MPL-2.0",
+      "website": "https://www.torproject.org/",
+      "sourceUrl": "https://gitlab.torproject.org/tpo/applications/tor-browser",
+      "releaseSource": {
+        "type": "gitlab",
+        "host": "https://gitlab.torproject.org",
+        "project": "tpo/applications/tor-browser"
+      }
+    },
+    {
+      "id": "cosmic",
+      "name": "COSMIC Desktop",
+      "slug": "cosmic",
+      "description": "Rust-based desktop environment developed by System76 for Linux.",
+      "category": "Desktop Environments",
+      "platforms": [
+        "Linux"
+      ],
+      "license": "GPL-3.0-or-later",
+      "website": "https://system76.com/cosmic/",
+      "sourceUrl": "https://github.com/pop-os/cosmic-epoch",
+      "releaseSource": {
+        "type": "github",
+        "owner": "pop-os",
+        "repository": "cosmic-epoch"
+      }
+    },
+    {
+      "id": "kde-plasma",
+      "name": "KDE Plasma",
+      "slug": "kde-plasma",
+      "description": "Customizable desktop environment for Linux and other Unix-like systems.",
+      "category": "Desktop Environments",
+      "platforms": [
+        "Linux"
+      ],
+      "license": "GPL-2.0-or-later",
+      "website": "https://kde.org/plasma-desktop/",
+      "sourceUrl": "https://invent.kde.org/plasma/plasma-workspace",
+      "releaseSource": {
+        "type": "gitlab",
+        "host": "https://invent.kde.org",
+        "project": "plasma/plasma-workspace"
+      }
+    },
+    {
+      "id": "gnome-shell",
+      "name": "GNOME Shell",
+      "slug": "gnome-shell",
+      "description": "Core user interface and window management experience of the GNOME desktop.",
+      "category": "Desktop Environments",
+      "platforms": [
+        "Linux"
+      ],
+      "license": "GPL-2.0-or-later",
+      "website": "https://www.gnome.org/",
+      "sourceUrl": "https://gitlab.gnome.org/GNOME/gnome-shell",
+      "releaseSource": {
+        "type": "gitlab",
+        "host": "https://gitlab.gnome.org",
+        "project": "GNOME/gnome-shell"
+      }
+    },
+    {
+      "id": "openwrt",
+      "name": "OpenWrt",
+      "slug": "openwrt",
+      "description": "Linux-based operating system for embedded devices and network routers.",
+      "category": "Operating Systems & Networking",
+      "platforms": [
+        "Linux"
+      ],
+      "license": "GPL-2.0-or-later",
+      "website": "https://openwrt.org/",
+      "sourceUrl": "https://github.com/openwrt/openwrt",
+      "releaseSource": {
+        "type": "github",
+        "owner": "openwrt",
+        "repository": "openwrt"
+      }
+    },
+    {
+      "id": "nix",
+      "name": "Nix",
+      "slug": "nix",
+      "description": "Functional package manager for reproducible and declarative software environments.",
+      "category": "Development Tools",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "LGPL-2.1-or-later",
+      "website": "https://nixos.org/",
+      "sourceUrl": "https://github.com/NixOS/nix",
+      "releaseSource": {
+        "type": "github",
+        "owner": "NixOS",
+        "repository": "nix"
+      }
+    },
+    {
+      "id": "incus",
+      "name": "Incus",
+      "slug": "incus",
+      "description": "System container and virtual machine manager for Linux servers.",
+      "category": "System Tools",
+      "platforms": [
+        "Linux"
+      ],
+      "license": "Apache-2.0",
+      "website": "https://linuxcontainers.org/incus/",
+      "sourceUrl": "https://github.com/lxc/incus",
+      "releaseSource": {
+        "type": "github",
+        "owner": "lxc",
+        "repository": "incus"
+      }
+    },
+    {
+      "id": "distrobox",
+      "name": "Distrobox",
+      "slug": "distrobox",
+      "description": "Run applications and command-line environments from multiple Linux distributions.",
+      "category": "System Tools",
+      "platforms": [
+        "Linux"
+      ],
+      "license": "GPL-3.0-or-later",
+      "website": "https://distrobox.it/",
+      "sourceUrl": "https://github.com/89luca89/distrobox",
+      "releaseSource": {
+        "type": "github",
+        "owner": "89luca89",
+        "repository": "distrobox"
+      }
+    }
+  ]
+}
