@@ -1,272 +1,314 @@
 ---
 import { EMAIL, GITHUB_URL, SITE_NAME } from '../../lib/site';
+
 import EmailIcon from './EmailIcon.astro';
 import GitHubIcon from './GitHubIcon.astro';
 import RssIcon from './RssIcon.astro';
 import SearchIcon from './SearchIcon.astro';
-
-const currentPath = Astro.url.pathname;
-
-const navLinks = [
-  { href: '/', label: 'Home', current: currentPath === '/' },
-  { href: '/blog/', label: 'Blog', current: currentPath.startsWith('/blog') },
-  { href: '/about/', label: 'About', current: currentPath === '/about/' },
-];
 ---
 
 <header class="site-header">
-  <nav class="nav" aria-label="Primary navigation">
-    <a class="brand" href="/" aria-label={`${SITE_NAME} Home`}>
-      <span>{SITE_NAME}</span>
+  <div class="header-inner">
+    <a class="site-brand" href="/" aria-label={`${SITE_NAME} home`}>
+      {SITE_NAME}
     </a>
 
-    <details class="nav-menu">
-      <summary class="nav-menu-button" aria-label="Open navigation">
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about/">About</a>
+    </nav>
+
+    <div class="nav-tools">
+      <button
+        class="icon-button search-trigger"
+        type="button"
+        aria-label="Open search"
+        data-search-trigger
+      >
+        <SearchIcon />
+      </button>
+
+      <a
+        class="icon-button"
+        href={GITHUB_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GetFOSS on GitHub"
+      >
+        <GitHubIcon />
+      </a>
+
+      <a
+        class="icon-button"
+        href={`mailto:${EMAIL}`}
+        aria-label={`Email ${EMAIL}`}
+      >
+        <EmailIcon />
+      </a>
+
+      <a class="icon-button" href="/rss.xml" aria-label="RSS feed">
+        <RssIcon />
+      </a>
+
+      <div class="social-links" aria-label="Social media">
+        <a
+          class="nav-social-link"
+          href="https://bsky.app/profile/getfoss.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Bluesky
+        </a>
+
+        <a
+          class="nav-social-link"
+          href="https://www.facebook.com/getfossorg"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Facebook
+        </a>
+
+        <a
+          class="nav-social-link"
+          href="https://x.com/getfoss_org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          X
+        </a>
+      </div>
+    </div>
+
+    <details class="mobile-menu">
+      <summary aria-label="Open navigation menu">
         <span></span>
         <span></span>
         <span></span>
       </summary>
-      <div class="nav-menu-panel">
-        {navLinks.map(({ href, label, current }) => (
-          <a href={href} aria-current={current ? 'page' : undefined}>{label}</a>
-        ))}
-      </div>
+
+      <nav class="mobile-nav" aria-label="Mobile navigation">
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        <a href="/about/">About</a>
+        <a href="/rss.xml">RSS</a>
+        <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href={`mailto:${EMAIL}`}>Email</a>
+        <a href="https://bsky.app/profile/getfoss.org" target="_blank" rel="noopener noreferrer">Bluesky</a>
+        <a href="https://www.facebook.com/getfossorg" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://x.com/getfoss_org" target="_blank" rel="noopener noreferrer">X</a>
+      </nav>
     </details>
-
-    <div class="nav-links">
-      {navLinks.map(({ href, label, current }) => (
-        <a href={href} aria-current={current ? 'page' : undefined}>{label}</a>
-      ))}
-    </div>
-
-    <div class="nav-tools">
-      <button class="nav-icon-link" type="button" id="search-open" aria-label="Search (Ctrl+K)">
-        <SearchIcon />
-      </button>
-
-      <a class="nav-icon-link" href={GITHUB_URL} aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-        <GitHubIcon />
-      </a>
-
-      <a class="nav-icon-link" href={`mailto:${EMAIL}`} aria-label="Email">
-        <EmailIcon />
-      </a>
-
-      <a class="nav-social-link" href="https://bsky.app/profile/getfoss.org" aria-label="GetFOSS on Bluesky" target="_blank" rel="noopener noreferrer">
-        Bluesky
-      </a>
-
-      <a class="nav-social-link" href="https://x.com/getfoss_org" aria-label="GetFOSS on X" target="_blank" rel="noopener noreferrer">
-        X
-      </a>
-
-      <a class="nav-social-link" href="https://www.facebook.com/getfossorg" aria-label="GetFOSS on Facebook" target="_blank" rel="noopener noreferrer">
-        Facebook
-      </a>
-
-      <a class="nav-icon-link" href="/rss.xml" aria-label="RSS feed">
-        <RssIcon />
-      </a>
-    </div>
-  </nav>
+  </div>
 </header>
 
-<style is:global>
+<style>
   .site-header {
     position: sticky;
     top: 0;
-    z-index: 20;
-    backdrop-filter: blur(12px);
-    background: color-mix(in srgb, var(--bg) 92%, transparent);
-    border-bottom: 1px solid var(--line);
+    z-index: 100;
+    width: 100%;
+    border-bottom: 1px solid var(--border);
+    background: color-mix(in srgb, var(--background) 85%, transparent);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
   }
 
-  .nav {
-    position: relative;
-    max-width: var(--max);
-    margin: 0 auto;
-    padding: 0.85rem 1.25rem;
+  .header-inner {
+    width: min(100% - 3rem, var(--content-width, 1200px));
+    min-height: 4.5rem;
+    margin-inline: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
-  .brand {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.55rem;
+  .site-brand {
+    color: var(--foreground);
     font-family: var(--mono);
-    font-weight: 700;
-    letter-spacing: -0.04em;
-    color: var(--ink);
-  }
-
-  .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
-    color: var(--muted);
-    font-size: 0.9rem;
-    font-family: var(--mono);
-  }
-
-  .nav-links a[aria-current="page"]::after,
-  .nav-menu-panel a[aria-current="page"]::after {
-    content: "";
-    display: inline-block;
-    width: 0.55ch;
-    height: 1em;
-    margin-left: 0.35ch;
-    vertical-align: middle;
-    transform: translateY(-0.08em);
-    background: var(--accent);
-    animation: type-cursor-blink 0.9s step-start infinite;
-  }
-
-  .nav-links a:hover,
-  .nav-links a[aria-current="page"] {
-    color: var(--accent);
-  }
-
-  .nav-menu {
-    display: none;
-    margin-left: auto;
-  }
-
-  .nav-menu-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 0.22rem;
-    width: 2.1rem;
-    height: 2.1rem;
-    border: 1px solid var(--line);
-    border-radius: var(--radius-md);
-    color: var(--ink-soft);
-    cursor: pointer;
-    list-style: none;
-    transition: color 120ms ease, border-color 120ms ease, background 120ms ease;
-  }
-
-  .nav-menu-button::-webkit-details-marker { display: none; }
-  .nav-menu-button::marker { content: ""; }
-
-  .nav-menu-button span {
-    display: block;
-    width: 0.92rem;
-    height: 1px;
-    background: currentColor;
-  }
-
-  .nav-menu-button:hover,
-  .nav-menu[open] .nav-menu-button {
-    color: var(--accent);
-    border-color: color-mix(in srgb, var(--accent) 38%, var(--line));
-    background: var(--accent-soft);
-  }
-
-  .nav-menu-panel {
-    position: absolute;
-    top: calc(100% + 0.5rem);
-    right: 1.25rem;
-    z-index: 30;
-    display: grid;
-    min-width: min(18rem, calc(100vw - 2rem));
-    padding: 0.35rem;
-    border: 1px solid var(--line-strong);
-    border-radius: var(--radius-md);
-    background: var(--bg-elevated);
-    box-shadow: 0 16px 44px rgba(0, 0, 0, 0.16);
-  }
-
-  .nav-menu-panel a {
-    border-radius: var(--radius-sm);
-    padding: 0.62rem 0.7rem;
-    color: var(--ink-soft);
-    font-family: var(--mono);
-    font-size: 0.86rem;
-    font-weight: 600;
-  }
-
-  .nav-menu-panel a:hover,
-  .nav-menu-panel a[aria-current="page"] {
-    background: var(--accent-soft);
-    color: var(--accent);
-  }
-
-  .nav-tools {
-    display: flex;
-    align-items: center;
-    gap: 0.45rem;
-  }
-
-  .nav-icon-link,
-  .nav-social-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: 2.1rem;
-    border: 1px solid var(--line);
-    border-radius: var(--radius-md);
-    color: var(--muted);
-    transition: color 120ms ease, border-color 120ms ease, background 120ms ease;
-  }
-
-  .nav-icon-link {
-    width: 2.1rem;
-  }
-
-  .nav-social-link {
-    padding: 0 0.55rem;
-    font-family: var(--mono);
-    font-size: 0.7rem;
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: -0.06em;
+    text-decoration: none;
     white-space: nowrap;
   }
 
-  .nav-icon-link:hover,
+  .desktop-nav,
+  .nav-tools,
+  .social-links {
+    display: flex;
+    align-items: center;
+  }
+
+  .desktop-nav {
+    gap: 1.5rem;
+    margin-left: auto;
+  }
+
+  .desktop-nav a,
+  .nav-social-link {
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    text-decoration: none;
+    transition: color 160ms ease;
+  }
+
+  .desktop-nav a:hover,
   .nav-social-link:hover {
-    color: var(--accent);
-    border-color: color-mix(in srgb, var(--accent) 38%, var(--line));
-    background: var(--accent-soft);
+    color: var(--foreground);
   }
 
-  .nav-icon-link svg {
-    width: 1rem;
-    height: 1rem;
+  .nav-tools {
+    gap: 0.85rem;
   }
 
-  .nav-icon-link svg:not([fill="none"]) {
-    fill: currentColor;
-  }
-
-  button.nav-icon-link {
+  .icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
     padding: 0;
+    border: 0;
     background: transparent;
+    color: var(--muted);
     cursor: pointer;
-    font-family: inherit;
+    text-decoration: none;
+    transition: color 160ms ease, transform 160ms ease;
   }
 
-  @media (max-width: 860px) {
-    .nav-links { display: none; }
-    .nav-menu { display: flex; }
+  .icon-button:hover {
+    color: var(--foreground);
+    transform: translateY(-2px);
   }
 
-  @media (max-width: 640px) {
-    .nav-tools {
-      gap: 0.35rem;
-      flex-wrap: wrap;
+  .icon-button :global(svg) {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+
+  .social-links {
+    gap: 0.8rem;
+    padding-left: 0.5rem;
+    border-left: 1px solid var(--border);
+  }
+
+  .nav-social-link {
+    white-space: nowrap;
+  }
+
+  .mobile-menu {
+    display: none;
+    position: relative;
+  }
+
+  .mobile-menu summary {
+    display: flex;
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .mobile-menu summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .mobile-menu summary span {
+    display: block;
+    width: 1.25rem;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--foreground);
+    transition: transform 160ms ease;
+  }
+
+  .mobile-menu[open] summary span:first-child {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .mobile-menu[open] summary span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-menu[open] summary span:last-child {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .mobile-nav {
+    position: absolute;
+    top: calc(100% + 0.75rem);
+    right: 0;
+    display: flex;
+    min-width: 13rem;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius, 0.75rem);
+    background: var(--background);
+    box-shadow: 0 12px 32px rgb(0 0 0 / 12%);
+  }
+
+  .mobile-nav a {
+    padding: 0.65rem 0.75rem;
+    border-radius: 0.35rem;
+    color: var(--foreground);
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    text-decoration: none;
+  }
+
+  .mobile-nav a:hover {
+    background: var(--surface);
+  }
+
+  @media (max-width: 900px) {
+    .header-inner {
+      width: min(100% - 2rem, var(--content-width, 1200px));
     }
 
-    .nav {
-      flex-wrap: wrap;
-      row-gap: 0.5rem;
+    .desktop-nav {
+      gap: 1rem;
     }
 
     .nav-tools {
-      flex-basis: 100%;
-      justify-content: flex-end;
+      gap: 0.55rem;
+    }
+
+    .social-links {
+      gap: 0.55rem;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .header-inner {
+      min-height: 4rem;
+    }
+
+    .desktop-nav,
+    .nav-tools {
+      display: none;
+    }
+
+    .mobile-menu {
+      display: block;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .icon-button,
+    .desktop-nav a,
+    .nav-social-link,
+    .mobile-menu summary span {
+      transition: none;
     }
   }
 </style>
