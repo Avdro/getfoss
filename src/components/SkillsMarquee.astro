@@ -1,29 +1,31 @@
 ---
-import { skills, slugifyTag } from '../lib/tags';
+import { getCollection } from 'astro:content';
+import { getAllTags } from '../lib/tags';
+
+const posts = (await getCollection('blog'))
+  .filter((post) => !post.data.draft);
+
+const tags = getAllTags(posts);
 ---
 
-<section class="skills-marquee" aria-label="Skills">
-  <ul class="visually-hidden">
-    {skills.map((skill) => (
-      <li><a href={`/tags/${slugifyTag(skill)}/`}>{skill}</a></li>
-    ))}
-  </ul>
-  {/* Two copies make the loop seamless; hidden from readers and search.
-      tabindex="-1" keeps the aria-hidden copies out of the tab order —
-      the visually-hidden list above is the keyboard-reachable one. */}
-  <div class="skills-track" aria-hidden="true" data-pagefind-ignore>
-    {[...skills, ...skills].map((skill) => (
-      <a class="skills-item" href={`/tags/${slugifyTag(skill)}/`} tabindex="-1">{skill}</a>
-    ))}
-  </div>
-</section>
+{tags.length > 0 && (
+  <section class="skills-marquee" aria-label="Explore topics">
+    <ul class="visually-hidden">
+      {tags.map(({ slug, name }) => (
+        <li><a href={`/tags/${slug}/`}>{name}</a></li>
+      ))}
+    </ul>
+
+    <div class="skills-track" aria-hidden="true" data-pagefind-ignore>
+      {[...tags, ...tags].map(({ slug, name }) => (
+        <a class="skills-item" href={`/tags/${slug}/`} tabindex="-1">{name}</a>
+      ))}
+    </div>
+  </section>
+)}
 
 <style is:global>
-  /* Skills marquee at the bottom of init: one long strip of mono tags
-   scrolling continuously, faded at both edges. */
   .skills-marquee {
-    /* Constrained to the content column so its top border lines up with
-     the section dividers above it. */
     max-width: var(--max);
     margin: 4.5rem auto 0;
     padding: 1.2rem 1.25rem;
@@ -39,8 +41,6 @@ import { skills, slugifyTag } from '../lib/tags';
     animation: skills-scroll 70s linear infinite;
   }
 
-  /* Spacing lives on the items (not flex gap) so the track's second half is
-   exactly as wide as the first and the -50% loop point is invisible. */
   .skills-item {
     padding-right: 2.4rem;
     font-family: var(--mono);
@@ -60,7 +60,9 @@ import { skills, slugifyTag } from '../lib/tags';
   }
 
   @keyframes skills-scroll {
-    to { transform: translateX(-50%); }
+    to {
+      transform: translateX(-50%);
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {
