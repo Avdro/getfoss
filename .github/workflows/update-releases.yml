@@ -31,6 +31,12 @@ jobs:
 
       - name: Update release data
         run: node scripts/update-releases.mjs
+        env:
+          # GITHUB_TOKEN is automatically provided by GitHub Actions.
+          # Without it, the GitHub API rate limit is 60 requests/hour,
+          # which is far below the ~283 requests needed for this catalog.
+          # With it, the limit is 5000 requests/hour.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit updated release data
         id: commit
