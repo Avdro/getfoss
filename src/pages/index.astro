@@ -2,62 +2,67 @@
 import { getCollection } from 'astro:content';
 import Layout from '../components/Layout.astro';
 import TypedLede from '../components/TypedLede.astro';
-import SkillsMarquee from '../components/SkillsMarquee.astro';
 import { formatPostDate, postSlug } from '../lib/posts';
-import { GITHUB_URL, LINKEDIN_URL, SITE_URL } from '../lib/site';
+import { SITE_URL } from '../lib/site';
 
 const posts = (await getCollection('blog'))
   .filter((post) => !post.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, 3);
 
-const personSchema = JSON.stringify({
+const siteDescription =
+  'Free and open-source software, done right. GetFOSS picks the best FOSS apps — private, secure, and community-driven — for every platform.';
+
+const organizationSchema = JSON.stringify({
   '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Your Name',
-  jobTitle: 'Your Job Title',
+  '@type': 'Organization',
+  name: 'GetFOSS',
   url: SITE_URL,
-  sameAs: [GITHUB_URL, LINKEDIN_URL],
-  // Escape < so no value can ever close the inline <script> tag.
+  description: siteDescription,
 }).replace(/</g, '\\u003c');
 ---
 
 <Layout
-  title="Palette — Your Name"
-  description="A short tagline describing you and what you write about."
+  title="GetFOSS — Free and Open-Source Software"
+  description={siteDescription}
   canonicalPath="/"
 >
-  <script type="application/ld+json" is:inline set:html={personSchema} />
-  <main class="content-shell">
-    <div class="page-hero">
-      <h1 class="visually-hidden">Home</h1>
-      <TypedLede text="A short tagline describing you and what you write about." />
-    </div>
+  <script type="application/ld+json" is:inline set:html={organizationSchema} />
 
-    <section class="section" aria-label="Recent posts">
-      {posts.length === 0 ? (
-        <p class="empty-note">No posts yet, check back soon.</p>
-      ) : (
-        <nav class="commit-tree" aria-label="Recent posts">
-          <a class="commit-tree-head" href="/blog/" title="All posts">Blog</a>
-          {posts.map((post) => (
-            <a href={`/blog/${postSlug(post)}/`}>
-              {post.data.title}
-              <span class="commit-tree-date">{formatPostDate(post.data.date)}</span>
-            </a>
-          ))}
-          <a href="/about/">About</a>
-        </nav>
-      )}
+  <main class="content-shell">
+    <section class="page-hero">
+      <h1 class="visually-hidden">GetFOSS</h1>
+      <TypedLede text={siteDescription} />
     </section>
 
-    <SkillsMarquee />
+    <section class="section" aria-label="Recent articles">
+      <nav class="commit-tree" aria-label="Site navigation">
+        <a class="commit-tree-head" href="/blog/" title="All articles">
+          Latest articles
+        </a>
+
+        {posts.length === 0 ? (
+          <p class="empty-note">No articles published yet. Check back soon.</p>
+        ) : (
+          posts.map((post) => (
+            <a href={`/blog/${postSlug(post)}/`}>
+              {post.data.title}
+              <span class="commit-tree-date">
+                {formatPostDate(post.data.date)}
+              </span>
+            </a>
+          ))
+        )}
+
+        <a href="/blog/">All articles</a>
+        <a href="/tags/">Browse tags</a>
+        <a href="/about/">About GetFOSS</a>
+      </nav>
+    </section>
   </main>
 </Layout>
 
 <style is:global>
-  /* Recent commits on main: the same branch-line tree as the post-page TOC.
-   One line per commit, node on the line, Init as the root at the bottom. */
   .commit-tree {
     display: grid;
     gap: 1.15rem;
@@ -101,8 +106,6 @@ const personSchema = JSON.stringify({
     border-color: var(--accent);
   }
 
-  /* The branch label heads the tree: filled node on the same line, like the
-   company labels once were. */
   .commit-tree .commit-tree-head {
     color: var(--accent);
     font-size: 0.95rem;
@@ -128,6 +131,8 @@ const personSchema = JSON.stringify({
   }
 
   .empty-note {
+    margin: 0;
+    padding-left: 1.25rem;
     color: var(--muted);
     font-family: var(--mono);
   }
