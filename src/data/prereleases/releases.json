@@ -1,431 +1,14 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-26T17:48:53.462Z",
+  "updatedAt": "2026-11-26T17:57:05.183Z",
   "applications": [
     {
-      "id": "blender",
-      "name": "Blender",
-      "slug": "blender",
-      "releaseCount": 26,
-      "releases": [
-        {
-          "version": "blender-5.4.0-alpha+main.abbc01090359-windows.arm64-release.zip",
-          "tag": "blender-5.4.0-alpha+main.abbc01090359-windows.arm64-release.zip",
-          "name": "Blender Daily Build 1",
-          "releaseType": "Nightly",
-          "date": "0109-03-59",
-          "url": "https://cdn.builder.blender.org/download/daily/blender-5.4.0-alpha+main.abbc01090359-windows.arm64-release.zip",
-          "source": "Blender Daily Builds",
-          "prerelease": true,
-          "assets": [
-            {
-              "name": "blender-5.4.0-alpha+main.abbc01090359-windows.arm64-release.zip",
-              "url": "https://cdn.builder.blender.org/download/daily/blender-5.4.0-alpha+main.abbc01090359-windows.arm64-release.zip"
-            }
-          ]
-        },
-        {
-          "version": "blender-5.4.0-alpha+main.abbc01090359-windows.amd64-release.zip",
-          "tag": "blender-5.4.0-alpha+main.abbc01090359-windows.amd64-release.zip",
-          "name": "Blender Daily Build 2",
-          "releaseType": "Nightly",
-          "date": "0109-03-59",
-          "url": "https://cdn.builder.blender.org/download/daily/blender-5.4.0-alpha+main.abbc01090359-windows.amd64-release.zip",
-          "source": "Blender Daily Builds",
-          "prerelease": true,
-          "assets": [
-            {
-              "name": "blender-5.4.0-alpha+main.abbc01090359-windows.amd64-release.zip",
-              "url": "https://cdn.builder.blender.org/download/daily/blender-5.4.0-alpha+main.abbc01090359-windows.amd64-release.zip"
-            }
-          ]
-        },
-        {
-          "version": "blender-5.4.0-alpha+main.abbc01090359-linux.x86_64-release.tar.xz",
-          "tag": "blender-5.4.0-alpha+main.abbc01090359-linux.x86_64-release.tar.xz",
-          "name": "Blender Daily Build 18",
-          "releaseType": "Nightly",
-          "date": "0109-03-59",
-          "url": "https://cdn.builder.blender.org/download/daily/blender-5.4.0-alpha+main.abbc01090359-linux.x86_64-release.tar.xz",
-          "source": "Blender Daily Builds",
-          "prerelease": true,
-          "assets": [
-            {
-              "name": "blender-5.4.0-alpha+main.abbc01090359-linux.x86_64-release.tar.xz",
-              "url": "https://cdn.builder.blender.org/download/daily/blender-5.4.0-alpha+main.abbc01090359-linux.x86_64-release.tar.xz"
-            }
-          ]
-        },
-        {
-          "version": "blender-5.3.1-candidate+v53.7eac5d92fa3a-windows.amd64-release.zip",
-          "tag": "blender-5.3.1-candidate+v53.7eac5d92fa3a-windows.amd64-release.zip",
-          "name": "Blender Daily Build 3",
-          "releaseType": "Nightly",
-          "date": null,
-          "url": "https://cdn.builder.blender.org/download/daily/blender-5.3.1-candidate+v53.7eac5d92fa3a-windows.amd64-release.zip",
-          "source": "Blender Daily Builds",
-          "prerelease": true,
-          "assets": [
-            {
-              "name": "blender-5.3.1-candidate+v53.7eac5d92fa3a-windows.amd64-release.zip",
-              "url": "https://cdn.builder.blender.org/download/daily/blender-5.3.1-candidate+v53.7eac5d92fa3a-windows.amd64-release.zip"
-            }
-          ]
-        },
-        {
-          "version": "blender-5.3.1-candidate+v53.7eac5d92fa3a-windows.arm64-release.zip",
-          "tag": "blender-5.3.1-candidate+v53.7eac5d92fa3a-windows.arm64-release.zip",
-          "name": "Blender Daily Build 4",
-          "releaseType": "Nightly",
-          "date": null,
-          "url": "https://cdn.builder.blender.org/download/daily/blender-5.3.1-candidate+v53.7eac5d92fa3a-windows.arm64-release.zip",
-          "source": "Blender Daily Builds",
-          "prerelease": true,
-          "assets": [
-            {
-              "name": "blender-5.3.1-candidate+v53.7eac5d92fa3a-windows.arm64-release.zip",
-              "url": "https://cdn.builder.blender.org/download/daily/blender-5.3.1-candidate+v53.7eac5d92fa3a-windows.arm64-release.zip"
-            }
-          ]
-        },
-        {
-          "version": "blender-5.2.5-stable+v52.5f2fd03c4701-windows.arm64-release.zip",
-          "tag": "blender-5.2.5-stable+v52.5f2fd03c4701-windows.arm64-release.zip",
-          "name": "Blender Daily Build 5",
-          "releaseType": "Nightly",
-          "date": null,
-          "url": "https://cdn.builder.blender.org/download/daily/blender-5.2.5-stable+v52.5f2fd03c4701-windows.arm64-release.zip",
-          "source": "Blender Daily Builds",
-          "prerelease": true,
-          "assets": [
-            {
-              "name": "blender-5.2.5-stable+v52.5f2fd03c4701-windows.arm64-release.zip",
-              "url": "https://cdn.builder.blender.org/download/daily/blender-5.2.5-stable+v52.5f2fd03c4701-windows.arm64-release.zip"
-            }
-          ]
-        },
-        {
-          "version": "blender-5.2.5-stable+v52.5f2fd03c4701-windows.amd64-release.zip",
-          "tag": "blender-5.2.5-stable+v52.5f2fd03c4701-windows.amd64-release.zip",
-          "name": "Blender Daily Build 6",
-          "releaseType": "Nightly",
-          "date": null,
-          "url": "https://cdn.builder.blender.org/download/daily/blender-5.2.5-stable+v52.5f2fd03c4701-windows.amd64-release.zip",
-          "source": "Blender Daily Builds",
-          "prerelease": true,
-          "assets": [
-            {
-              "name": "blender-5.2.5-stable+v52.5f2fd03c4701-windows.amd64-release.zip",
-              "url": "https://cdn.builder.blender.org/download/daily/blender-5.2.5-stable+v52.5f2fd03c4701-windows.amd64-release.zip"
-            }
-          ]
-        },
-        {
-          "version": "blender-5.1.2-stable+v51.ec6e62d40fa9-windows.arm64-release.zip",
-          "tag": "blender-5.1.2-stable+v51.ec6e62d40fa9-windows.arm64-release.zip",
-          "name": "Blender Daily Build 7",
-          "releaseType": "Nightly",
-          "date": null,
-          "url": "https://cdn.builder.blender.org/download/daily/blender-5.1.2-stable+v51.ec6e62d40fa9-windows.arm64-release.zip",
-          "source": "Blender Daily Builds",
-          "prerelease": true,
-          "assets": [
-            {
-              "name": "blender-5.1.2-stable+v51.ec6e62d40fa9-windows.arm64-release.zip",
-              "url": "https://cdn.builder.blender.org/download/daily/blender-5.1.2-stable+v51.ec6e62d40fa9-windows.arm64-release.zip"
-            }
-          ]
-        },
-        {
-          "version": "blender-5.1.2-stable+v51.ec6e62d40fa9-windows.amd64-release.zip",
-          "tag": "blender-5.1.2-stable+v51.ec6e62d40fa9-windows.amd64-release.zip",
-          "name": "Blender Daily Build 8",
-          "releaseType": "Nightly",
-          "date": null,
-          "url": "https://cdn.builder.blender.org/download/daily/blender-5.1.2-stable+v51.ec6e62d40fa9-windows.amd64-release.zip",
-          "source": "Blender Daily Builds",
-          "prerelease": true,
-          "assets": [
-            {
-              "name": "blender-5.1.2-stable+v51.ec6e62d40fa9-windows.amd64-release.zip",
-              "url": "https://cdn.builder.blender.org/download/daily/blender-5.1.2-stable+v51.ec6e62d40fa9-windows.amd64-release.zip"
-            }
-          ]
-        },
-        {
-          "version": "blender-5.0.1-stable+v50.a3db93c5b259-windows.arm64-release.zip",
-          "tag": "blender-5.0.1-stable+v50.a3db93c5b259-windows.arm64-release.zip",
-          "name": "Blender Daily Build 9",
-          "releaseType": "Nightly",
-          "date": null,
-          "url": "https://cdn.builder.blender.org/download/daily/blender-5.0.1-stable+v50.a3db93c5b259-windows.arm64-release.zip",
-          "source": "Blender Daily Builds",
-          "prerelease": true,
-          "assets": [
-            {
-              "name": "blender-5.0.1-stable+v50.a3db93c5b259-windows.arm64-release.zip",
-              "url": "https://cdn.builder.blender.org/download/daily/blender-5.0.1-stable+v50.a3db93c5b259-windows.arm64-release.zip"
-            }
-          ]
-        },
-        {
-          "version": "blender-5.0.1-stable+v50.a3db93c5b259-windows.amd64-release.zip",
-          "tag": "blender-5.0.1-stable+v50.a3db93c5b259-windows.amd64-release.zip",
-          "name": "Blender Daily Build 10",
-          "releaseType": "Nightly",
-          "date": null,
-          "url": "https://cdn.builder.blender.org/download/daily/blender-5.0.1-stable+v50.a3db93c5b259-windows.amd64-release.zip",
-          "source": "Blender Daily Builds",
-          "prerelease": true,
-          "assets": [
-            {
-              "name": "blender-5.0.1-stable+v50.a3db93c5b259-windows.amd64-release.zip",
-              "url": "https://cdn.builder.blender.org/download/daily/blender-5.0.1-stable+v50.a3db93c5b259-windows.amd64-release.zip"
-            }
-          ]
-        },
-        {
-          "version": "blender-4.5.17-stable+v45.2f5ec98689b8-windows.amd64-release.zip",
-          "tag": "blender-4.5.17-stable+v45.2f5ec98689b8-windows.amd64-release.zip",
-          "name": "Blender Daily Build 11",
-          "releaseType": "Nightly",
-          "date": null,
-          "url": "https://cdn.builder.blender.org/download/daily/blender-4.5.17-stable+v45.2f5ec98689b8-windows.amd64-release.zip",
-          "source": "Blender Daily Builds",
-          "prerelease": true,
-          "assets": [
-            {
-              "name": "blender-4.5.17-stable+v45.2f5ec98689b8-windows.amd64-release.zip",
-              "url": "https://cdn.builder.blender.org/download/daily/blender-4.5.17-stable+v45.2f5ec98689b8-windows.amd64-release.zip"
-            }
-          ]
-        },
-        {
-          "version": "blender-4.5.17-stable+v45.2f5ec98689b8-windows.arm64-release.zip",
-          "tag": "blender-4.5.17-stable+v45.2f5ec98689b8-windows.arm64-release.zip",
-          "name": "Blender Daily Build 12",
-          "releaseType": "Nightly",
-          "date": null,
-          "url": "https://cdn.builder.blender.org/download/daily/blender-4.5.17-stable+v45.2f5ec98689b8-windows.arm64-release.zip",
-          "source": "Blender Daily Builds",
-          "prerelease": true,
-          "assets": [
-            {
-              "name": "blender-4.5.17-stable+v45.2f5ec98689b8-windows.arm64-release.zip",
-              "url": "https://cdn.builder.blender.org/download/daily/blender-4.5.17-stable+v45.2f5ec98689b8-windows.arm64-release.zip"
-            }
-          ]
-        },
-        {
-          "version": "blender-4.4.3-stable+v44.802179c51ccc-windows.amd64-release.zip",
-          "tag": "blender-4.4.3-stable+v44.802179c51ccc-windows.amd64-release.zip",
-          "name": "Blender Daily Build 13",
-          "releaseType": "Nightly",
-          "date": null,
-          "url": "https://cdn.builder.blender.org/download/daily/blender-4.4.3-stable+v44.802179c51ccc-windows.amd64-release.zip",
-          "source": "Blender Daily Builds",
-          "prerelease": true,
-          "assets": [
-            {
-              "name": "blender-4.4.3-stable+v44.802179c51ccc-windows.amd64-release.zip",
-              "url": "https://cdn.builder.blender.org/download/daily/blender-4.4.3-stable+v44.802179c51ccc-windows.amd64-release.zip"
-            }
-          ]
-        },
-        {
-          "version": "blender-4.4.3-stable+v44.802179c51ccc-windows.arm64-release.zip",
-          "tag": "blender-4.4.3-stable+v44.802179c51ccc-windows.arm64-release.zip",
-          "name": "Blender Daily Build 14",
-          "releaseType": "Nightly",
-          "date": null,
-          "url": "https://cdn.builder.blender.org/download/daily/blender-4.4.3-stable+v44.802179c51ccc-windows.arm64-release.zip",
-          "source": "Blender Daily Builds",
-          "prerelease": true,
-          "assets": [
-            {
-              "name": "blender-4.4.3-stable+v44.802179c51ccc-windows.arm64-release.zip",
-              "url": "https://cdn.builder.blender.org/download/daily/blender-4.4.3-stable+v44.802179c51ccc-windows.arm64-release.zip"
-            }
-          ]
-        },
-        {
-          "version": "blender-4.3.2-stable+v43.32f5fdce0a0a-windows.amd64-release.zip",
-          "tag": "blender-4.3.2-stable+v43.32f5fdce0a0a-windows.amd64-release.zip",
-          "name": "Blender Daily Build 15",
-          "releaseType": "Nightly",
-          "date": null,
-          "url": "https://cdn.builder.blender.org/download/daily/blender-4.3.2-stable+v43.32f5fdce0a0a-windows.amd64-release.zip",
-          "source": "Blender Daily Builds",
-          "prerelease": true,
-          "assets": [
-            {
-              "name": "blender-4.3.2-stable+v43.32f5fdce0a0a-windows.amd64-release.zip",
-              "url": "https://cdn.builder.blender.org/download/daily/blender-4.3.2-stable+v43.32f5fdce0a0a-windows.amd64-release.zip"
-            }
-          ]
-        },
-        {
-          "version": "blender-4.3.2-stable+v43.32f5fdce0a0a-windows.arm64-release.zip",
-          "tag": "blender-4.3.2-stable+v43.32f5fdce0a0a-windows.arm64-release.zip",
-          "name": "Blender Daily Build 16",
-          "releaseType": "Nightly",
-          "date": null,
-          "url": "https://cdn.builder.blender.org/download/daily/blender-4.3.2-stable+v43.32f5fdce0a0a-windows.arm64-release.zip",
-          "source": "Blender Daily Builds",
-          "prerelease": true,
-          "assets": [
-            {
-              "name": "blender-4.3.2-stable+v43.32f5fdce0a0a-windows.arm64-release.zip",
-              "url": "https://cdn.builder.blender.org/download/daily/blender-4.3.2-stable+v43.32f5fdce0a0a-windows.arm64-release.zip"
-            }
-          ]
-        },
-        {
-          "version": "blender-4.2.23-stable+v42.d0cbe84903e8-windows.amd64-release.zip",
-          "tag": "blender-4.2.23-stable+v42.d0cbe84903e8-windows.amd64-release.zip",
-          "name": "Blender Daily Build 17",
-          "releaseType": "Nightly",
-          "date": null,
-          "url": "https://cdn.builder.blender.org/download/daily/blender-4.2.23-stable+v42.d0cbe84903e8-windows.amd64-release.zip",
-          "source": "Blender Daily Builds",
-          "prerelease": true,
-          "assets": [
-            {
-              "name": "blender-4.2.23-stable+v42.d0cbe84903e8-windows.amd64-release.zip",
-              "url": "https://cdn.builder.blender.org/download/daily/blender-4.2.23-stable+v42.d0cbe84903e8-windows.amd64-release.zip"
-            }
-          ]
-        },
-        {
-          "version": "blender-5.3.1-candidate+v53.7eac5d92fa3a-linux.x86_64-release.tar.xz",
-          "tag": "blender-5.3.1-candidate+v53.7eac5d92fa3a-linux.x86_64-release.tar.xz",
-          "name": "Blender Daily Build 19",
-          "releaseType": "Nightly",
-          "date": null,
-          "url": "https://cdn.builder.blender.org/download/daily/blender-5.3.1-candidate+v53.7eac5d92fa3a-linux.x86_64-release.tar.xz",
-          "source": "Blender Daily Builds",
-          "prerelease": true,
-          "assets": [
-            {
-              "name": "blender-5.3.1-candidate+v53.7eac5d92fa3a-linux.x86_64-release.tar.xz",
-              "url": "https://cdn.builder.blender.org/download/daily/blender-5.3.1-candidate+v53.7eac5d92fa3a-linux.x86_64-release.tar.xz"
-            }
-          ]
-        },
-        {
-          "version": "blender-5.2.5-stable+v52.5f2fd03c4701-linux.x86_64-release.tar.xz",
-          "tag": "blender-5.2.5-stable+v52.5f2fd03c4701-linux.x86_64-release.tar.xz",
-          "name": "Blender Daily Build 20",
-          "releaseType": "Nightly",
-          "date": null,
-          "url": "https://cdn.builder.blender.org/download/daily/blender-5.2.5-stable+v52.5f2fd03c4701-linux.x86_64-release.tar.xz",
-          "source": "Blender Daily Builds",
-          "prerelease": true,
-          "assets": [
-            {
-              "name": "blender-5.2.5-stable+v52.5f2fd03c4701-linux.x86_64-release.tar.xz",
-              "url": "https://cdn.builder.blender.org/download/daily/blender-5.2.5-stable+v52.5f2fd03c4701-linux.x86_64-release.tar.xz"
-            }
-          ]
-        },
-        {
-          "version": "blender-5.1.2-stable+v51.ec6e62d40fa9-linux.x86_64-release.tar.xz",
-          "tag": "blender-5.1.2-stable+v51.ec6e62d40fa9-linux.x86_64-release.tar.xz",
-          "name": "Blender Daily Build 21",
-          "releaseType": "Nightly",
-          "date": null,
-          "url": "https://cdn.builder.blender.org/download/daily/blender-5.1.2-stable+v51.ec6e62d40fa9-linux.x86_64-release.tar.xz",
-          "source": "Blender Daily Builds",
-          "prerelease": true,
-          "assets": [
-            {
-              "name": "blender-5.1.2-stable+v51.ec6e62d40fa9-linux.x86_64-release.tar.xz",
-              "url": "https://cdn.builder.blender.org/download/daily/blender-5.1.2-stable+v51.ec6e62d40fa9-linux.x86_64-release.tar.xz"
-            }
-          ]
-        },
-        {
-          "version": "blender-5.0.1-stable+v50.a3db93c5b259-linux.x86_64-release.tar.xz",
-          "tag": "blender-5.0.1-stable+v50.a3db93c5b259-linux.x86_64-release.tar.xz",
-          "name": "Blender Daily Build 22",
-          "releaseType": "Nightly",
-          "date": null,
-          "url": "https://cdn.builder.blender.org/download/daily/blender-5.0.1-stable+v50.a3db93c5b259-linux.x86_64-release.tar.xz",
-          "source": "Blender Daily Builds",
-          "prerelease": true,
-          "assets": [
-            {
-              "name": "blender-5.0.1-stable+v50.a3db93c5b259-linux.x86_64-release.tar.xz",
-              "url": "https://cdn.builder.blender.org/download/daily/blender-5.0.1-stable+v50.a3db93c5b259-linux.x86_64-release.tar.xz"
-            }
-          ]
-        },
-        {
-          "version": "blender-4.5.17-stable+v45.2f5ec98689b8-linux.x86_64-release.tar.xz",
-          "tag": "blender-4.5.17-stable+v45.2f5ec98689b8-linux.x86_64-release.tar.xz",
-          "name": "Blender Daily Build 23",
-          "releaseType": "Nightly",
-          "date": null,
-          "url": "https://cdn.builder.blender.org/download/daily/blender-4.5.17-stable+v45.2f5ec98689b8-linux.x86_64-release.tar.xz",
-          "source": "Blender Daily Builds",
-          "prerelease": true,
-          "assets": [
-            {
-              "name": "blender-4.5.17-stable+v45.2f5ec98689b8-linux.x86_64-release.tar.xz",
-              "url": "https://cdn.builder.blender.org/download/daily/blender-4.5.17-stable+v45.2f5ec98689b8-linux.x86_64-release.tar.xz"
-            }
-          ]
-        },
-        {
-          "version": "blender-4.4.3-stable+v44.802179c51ccc-linux.x86_64-release.tar.xz",
-          "tag": "blender-4.4.3-stable+v44.802179c51ccc-linux.x86_64-release.tar.xz",
-          "name": "Blender Daily Build 24",
-          "releaseType": "Nightly",
-          "date": null,
-          "url": "https://cdn.builder.blender.org/download/daily/blender-4.4.3-stable+v44.802179c51ccc-linux.x86_64-release.tar.xz",
-          "source": "Blender Daily Builds",
-          "prerelease": true,
-          "assets": [
-            {
-              "name": "blender-4.4.3-stable+v44.802179c51ccc-linux.x86_64-release.tar.xz",
-              "url": "https://cdn.builder.blender.org/download/daily/blender-4.4.3-stable+v44.802179c51ccc-linux.x86_64-release.tar.xz"
-            }
-          ]
-        },
-        {
-          "version": "blender-4.3.2-stable+v43.32f5fdce0a0a-linux.x86_64-release.tar.xz",
-          "tag": "blender-4.3.2-stable+v43.32f5fdce0a0a-linux.x86_64-release.tar.xz",
-          "name": "Blender Daily Build 25",
-          "releaseType": "Nightly",
-          "date": null,
-          "url": "https://cdn.builder.blender.org/download/daily/blender-4.3.2-stable+v43.32f5fdce0a0a-linux.x86_64-release.tar.xz",
-          "source": "Blender Daily Builds",
-          "prerelease": true,
-          "assets": [
-            {
-              "name": "blender-4.3.2-stable+v43.32f5fdce0a0a-linux.x86_64-release.tar.xz",
-              "url": "https://cdn.builder.blender.org/download/daily/blender-4.3.2-stable+v43.32f5fdce0a0a-linux.x86_64-release.tar.xz"
-            }
-          ]
-        },
-        {
-          "version": "blender-4.2.23-stable+v42.d0cbe84903e8-linux.x86_64-release.tar.xz",
-          "tag": "blender-4.2.23-stable+v42.d0cbe84903e8-linux.x86_64-release.tar.xz",
-          "name": "Blender Daily Build 26",
-          "releaseType": "Nightly",
-          "date": null,
-          "url": "https://cdn.builder.blender.org/download/daily/blender-4.2.23-stable+v42.d0cbe84903e8-linux.x86_64-release.tar.xz",
-          "source": "Blender Daily Builds",
-          "prerelease": true,
-          "assets": [
-            {
-              "name": "blender-4.2.23-stable+v42.d0cbe84903e8-linux.x86_64-release.tar.xz",
-              "url": "https://cdn.builder.blender.org/download/daily/blender-4.2.23-stable+v42.d0cbe84903e8-linux.x86_64-release.tar.xz"
-            }
-          ]
-        }
-      ],
-      "updatedAt": "2026-11-26T17:47:41.308Z"
+      "id": "penpot",
+      "name": "Penpot",
+      "slug": "penpot",
+      "releaseCount": 0,
+      "releases": [],
+      "updatedAt": "2026-11-26T17:55:53.791Z"
     },
     {
       "id": "krita",
@@ -433,7 +16,7 @@
       "slug": "krita",
       "releaseCount": 0,
       "releases": [],
-      "updatedAt": "2026-11-26T17:47:43.403Z"
+      "updatedAt": "2026-11-26T17:55:55.467Z"
     },
     {
       "id": "gimp",
@@ -441,7 +24,7 @@
       "slug": "gimp",
       "releaseCount": 0,
       "releases": [],
-      "updatedAt": "2026-11-26T17:47:45.466Z"
+      "updatedAt": "2026-11-26T17:55:56.718Z"
     },
     {
       "id": "inkscape",
@@ -524,7 +107,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T17:47:46.369Z"
+      "updatedAt": "2026-11-26T17:55:57.547Z"
     },
     {
       "id": "freecad",
@@ -2865,7 +2448,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T17:47:47.674Z"
+      "updatedAt": "2026-11-26T17:55:59.381Z"
     },
     {
       "id": "kicad",
@@ -2873,7 +2456,7 @@
       "slug": "kicad",
       "releaseCount": 0,
       "releases": [],
-      "updatedAt": "2026-11-26T17:47:48.586Z"
+      "updatedAt": "2026-11-26T17:56:00.105Z"
     },
     {
       "id": "prusaslicer",
@@ -3630,7 +3213,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T17:47:49.691Z"
+      "updatedAt": "2026-11-26T17:56:01.197Z"
     },
     {
       "id": "orcaslicer",
@@ -4803,7 +4386,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T17:47:50.967Z"
+      "updatedAt": "2026-11-26T17:56:02.620Z"
     },
     {
       "id": "openscad",
@@ -4904,7 +4487,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T17:47:51.566Z"
+      "updatedAt": "2026-11-26T17:56:03.260Z"
     },
     {
       "id": "scribus",
@@ -4912,7 +4495,7 @@
       "slug": "scribus",
       "releaseCount": 0,
       "releases": [],
-      "updatedAt": "2026-11-26T17:47:52.474Z"
+      "updatedAt": "2026-11-26T17:56:04.070Z"
     },
     {
       "id": "obs-studio",
@@ -6841,7 +6424,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T17:47:53.947Z"
+      "updatedAt": "2026-11-26T17:56:05.413Z"
     },
     {
       "id": "audacity",
@@ -7521,7 +7104,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T17:47:54.809Z"
+      "updatedAt": "2026-11-26T17:56:06.239Z"
     },
     {
       "id": "kdenlive",
@@ -7529,7 +7112,7 @@
       "slug": "kdenlive",
       "releaseCount": 0,
       "releases": [],
-      "updatedAt": "2026-11-26T17:47:56.838Z"
+      "updatedAt": "2026-11-26T17:56:07.946Z"
     },
     {
       "id": "shotcut",
@@ -9098,7 +8681,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T17:47:57.960Z"
+      "updatedAt": "2026-11-26T17:56:09.128Z"
     },
     {
       "id": "handbrake",
@@ -9135,16 +8718,600 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T17:47:58.928Z"
+      "updatedAt": "2026-11-26T17:56:10.154Z"
     },
     {
       "id": "darktable",
       "name": "darktable",
       "slug": "darktable",
-      "releaseCount": 0,
-      "releases": [],
-      "updatedAt": null,
-      "error": "HTTP 404: https://github.com/api/v4/projects/darktable-org%2Fdarktable/repository/tags?per_page=100"
+      "releaseCount": 21,
+      "releases": [
+        {
+          "version": "nightly",
+          "tag": "nightly",
+          "name": "Darktable nightly build 20261126",
+          "releaseType": "Nightly",
+          "date": "2026-11-26T00:47:43Z",
+          "url": "https://github.com/darktable-org/darktable/releases/tag/nightly",
+          "source": "GitHub",
+          "prerelease": true,
+          "assets": [
+            {
+              "name": "Darktable-5.7.0+2406.g2e777184fe-aarch64.AppImage",
+              "url": "https://github.com/darktable-org/darktable/releases/download/nightly/Darktable-5.7.0%2B2406.g2e777184fe-aarch64.AppImage"
+            },
+            {
+              "name": "Darktable-5.7.0+2406.g2e777184fe-aarch64.AppImage.zsync",
+              "url": "https://github.com/darktable-org/darktable/releases/download/nightly/Darktable-5.7.0%2B2406.g2e777184fe-aarch64.AppImage.zsync"
+            },
+            {
+              "name": "darktable-5.7.0+2406.g2e777184fe-arm64.dmg",
+              "url": "https://github.com/darktable-org/darktable/releases/download/nightly/darktable-5.7.0%2B2406.g2e777184fe-arm64.dmg"
+            },
+            {
+              "name": "darktable-5.7.0+2406.g2e777184fe-win64.exe",
+              "url": "https://github.com/darktable-org/darktable/releases/download/nightly/darktable-5.7.0%2B2406.g2e777184fe-win64.exe"
+            },
+            {
+              "name": "darktable-5.7.0+2406.g2e777184fe-woa64.exe",
+              "url": "https://github.com/darktable-org/darktable/releases/download/nightly/darktable-5.7.0%2B2406.g2e777184fe-woa64.exe"
+            },
+            {
+              "name": "Darktable-5.7.0+2406.g2e777184fe-x86_64.AppImage",
+              "url": "https://github.com/darktable-org/darktable/releases/download/nightly/Darktable-5.7.0%2B2406.g2e777184fe-x86_64.AppImage"
+            },
+            {
+              "name": "Darktable-5.7.0+2406.g2e777184fe-x86_64.AppImage.zsync",
+              "url": "https://github.com/darktable-org/darktable/releases/download/nightly/Darktable-5.7.0%2B2406.g2e777184fe-x86_64.AppImage.zsync"
+            }
+          ]
+        },
+        {
+          "version": "release-3.0.0rc2",
+          "tag": "release-3.0.0rc2",
+          "name": "darktable 3.0.0rc2 released",
+          "releaseType": "Nightly",
+          "date": "2019-11-28T12:53:41Z",
+          "url": "https://github.com/darktable-org/darktable/releases/tag/release-3.0.0rc2",
+          "source": "GitHub",
+          "prerelease": true,
+          "assets": [
+            {
+              "name": "darktable-3.0.0.rc2.dmg",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-3.0.0rc2/darktable-3.0.0.rc2.dmg"
+            },
+            {
+              "name": "darktable-3.0.0.rc2.tar.xz",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-3.0.0rc2/darktable-3.0.0.rc2.tar.xz"
+            },
+            {
+              "name": "darktable-3.0.0.rc2.tar.xz.asc",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-3.0.0rc2/darktable-3.0.0.rc2.tar.xz.asc"
+            },
+            {
+              "name": "darktable-3.0.0rc2-win64.exe",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-3.0.0rc2/darktable-3.0.0rc2-win64.exe"
+            }
+          ]
+        },
+        {
+          "version": "release-3.0.0rc1",
+          "tag": "release-3.0.0rc1",
+          "name": "darktable 3.0.0rc1 released",
+          "releaseType": "Nightly",
+          "date": "2019-11-14T10:50:28Z",
+          "url": "https://github.com/darktable-org/darktable/releases/tag/release-3.0.0rc1",
+          "source": "GitHub",
+          "prerelease": true,
+          "assets": [
+            {
+              "name": "darktable-3.0.0.rc1.tar.xz",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-3.0.0rc1/darktable-3.0.0.rc1.tar.xz"
+            },
+            {
+              "name": "darktable-3.0.0.rc1.tar.xz.asc",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-3.0.0rc1/darktable-3.0.0.rc1.tar.xz.asc"
+            },
+            {
+              "name": "darktable-3.0.0rc1-win64.exe",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-3.0.0rc1/darktable-3.0.0rc1-win64.exe"
+            },
+            {
+              "name": "darktable-3.0.0rc1.dmg",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-3.0.0rc1/darktable-3.0.0rc1.dmg"
+            }
+          ]
+        },
+        {
+          "version": "release-3.0.0rc0",
+          "tag": "release-3.0.0rc0",
+          "name": "darktable 3.0.0rc0 released",
+          "releaseType": "Nightly",
+          "date": "2019-11-04T17:35:56Z",
+          "url": "https://github.com/darktable-org/darktable/releases/tag/release-3.0.0rc0",
+          "source": "GitHub",
+          "prerelease": true,
+          "assets": [
+            {
+              "name": "darktable-3.0.0.rc0.dmg",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-3.0.0rc0/darktable-3.0.0.rc0.dmg"
+            },
+            {
+              "name": "darktable-3.0.0.rc0.tar.xz",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-3.0.0rc0/darktable-3.0.0.rc0.tar.xz"
+            },
+            {
+              "name": "darktable-3.0.0.rc0.tar.xz.asc",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-3.0.0rc0/darktable-3.0.0.rc0.tar.xz.asc"
+            },
+            {
+              "name": "darktable-3.0.0rc0-win64.exe",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-3.0.0rc0/darktable-3.0.0rc0-win64.exe"
+            }
+          ]
+        },
+        {
+          "version": "release-2.6.0rc2",
+          "tag": "release-2.6.0rc2",
+          "name": "darktable 2.6.0 release candidate 2",
+          "releaseType": "Alpha",
+          "date": "2018-12-15T11:46:32Z",
+          "url": "https://github.com/darktable-org/darktable/releases/tag/release-2.6.0rc2",
+          "source": "GitHub",
+          "prerelease": true,
+          "assets": [
+            {
+              "name": "darktable-2.6.0-rc2-win64.exe",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.6.0rc2/darktable-2.6.0-rc2-win64.exe"
+            },
+            {
+              "name": "darktable-2.6.0.rc2.dmg",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.6.0rc2/darktable-2.6.0.rc2.dmg"
+            },
+            {
+              "name": "darktable-2.6.0.rc2.tar.xz",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.6.0rc2/darktable-2.6.0.rc2.tar.xz"
+            }
+          ]
+        },
+        {
+          "version": "release-2.6.0rc1",
+          "tag": "release-2.6.0rc1",
+          "name": "darktable 2.6.0 release candidate 1",
+          "releaseType": "Alpha",
+          "date": "2018-12-08T11:01:39Z",
+          "url": "https://github.com/darktable-org/darktable/releases/tag/release-2.6.0rc1",
+          "source": "GitHub",
+          "prerelease": true,
+          "assets": [
+            {
+              "name": "darktable-2.6.0.rc1.tar.xz",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.6.0rc1/darktable-2.6.0.rc1.tar.xz"
+            },
+            {
+              "name": "darktable-2.6.0rc1+2.dmg",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.6.0rc1/darktable-2.6.0rc1%2B2.dmg"
+            },
+            {
+              "name": "darktable-2.6.0rc1-win64.exe",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.6.0rc1/darktable-2.6.0rc1-win64.exe"
+            }
+          ]
+        },
+        {
+          "version": "release-2.6.0rc0",
+          "tag": "release-2.6.0rc0",
+          "name": "darktable 2.6.0 release candidate 0",
+          "releaseType": "Alpha",
+          "date": "2018-12-02T14:22:46Z",
+          "url": "https://github.com/darktable-org/darktable/releases/tag/release-2.6.0rc0",
+          "source": "GitHub",
+          "prerelease": true,
+          "assets": [
+            {
+              "name": "darktable-2.6.0.rc0.tar.xz",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.6.0rc0/darktable-2.6.0.rc0.tar.xz"
+            }
+          ]
+        },
+        {
+          "version": "release-2.4.0rc2",
+          "tag": "release-2.4.0rc2",
+          "name": "darktable 2.4.0rc2 released",
+          "releaseType": "Nightly",
+          "date": "2017-12-16T12:05:13Z",
+          "url": "https://github.com/darktable-org/darktable/releases/tag/release-2.4.0rc2",
+          "source": "GitHub",
+          "prerelease": true,
+          "assets": [
+            {
+              "name": "darktable-2.4.0.rc2.dmg",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.4.0rc2/darktable-2.4.0.rc2.dmg"
+            },
+            {
+              "name": "darktable-2.4.0.rc2.dmg.asc",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.4.0rc2/darktable-2.4.0.rc2.dmg.asc"
+            },
+            {
+              "name": "darktable-2.4.0.rc2.tar.xz",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.4.0rc2/darktable-2.4.0.rc2.tar.xz"
+            },
+            {
+              "name": "darktable-2.4.0.rc2.tar.xz.asc",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.4.0rc2/darktable-2.4.0.rc2.tar.xz.asc"
+            },
+            {
+              "name": "darktable-2.4.0rc2.dirty-win64.exe",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.4.0rc2/darktable-2.4.0rc2.dirty-win64.exe"
+            },
+            {
+              "name": "darktable-2.4.0rc2.dirty-win64.exe.asc",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.4.0rc2/darktable-2.4.0rc2.dirty-win64.exe.asc"
+            }
+          ]
+        },
+        {
+          "version": "release-2.4.0rc1",
+          "tag": "release-2.4.0rc1",
+          "name": "darktable 2.4.0 release candidate 1",
+          "releaseType": "Nightly",
+          "date": "2017-12-10T20:08:28Z",
+          "url": "https://github.com/darktable-org/darktable/releases/tag/release-2.4.0rc1",
+          "source": "GitHub",
+          "prerelease": true,
+          "assets": [
+            {
+              "name": "darktable-2.4.0.rc1.dmg",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.4.0rc1/darktable-2.4.0.rc1.dmg"
+            },
+            {
+              "name": "darktable-2.4.0.rc1.dmg.asc",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.4.0rc1/darktable-2.4.0.rc1.dmg.asc"
+            },
+            {
+              "name": "darktable-2.4.0.rc1.tar.xz",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.4.0rc1/darktable-2.4.0.rc1.tar.xz"
+            },
+            {
+              "name": "darktable-2.4.0.rc1.tar.xz.asc",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.4.0rc1/darktable-2.4.0.rc1.tar.xz.asc"
+            },
+            {
+              "name": "darktable-2.4.0rc1-win64.exe",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.4.0rc1/darktable-2.4.0rc1-win64.exe"
+            },
+            {
+              "name": "darktable-2.4.0rc1-win64.exe.asc",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.4.0rc1/darktable-2.4.0rc1-win64.exe.asc"
+            }
+          ]
+        },
+        {
+          "version": "release-2.4.0rc0",
+          "tag": "release-2.4.0rc0",
+          "name": "darktable 2.4.0 release candidate 0",
+          "releaseType": "Nightly",
+          "date": "2017-11-27T20:25:18Z",
+          "url": "https://github.com/darktable-org/darktable/releases/tag/release-2.4.0rc0",
+          "source": "GitHub",
+          "prerelease": true,
+          "assets": [
+            {
+              "name": "darktable-2.4.0.rc0.tar.xz",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.4.0rc0/darktable-2.4.0.rc0.tar.xz"
+            },
+            {
+              "name": "darktable-2.4.0.rc0.tar.xz.asc",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.4.0rc0/darktable-2.4.0.rc0.tar.xz.asc"
+            },
+            {
+              "name": "darktable-2.4.0rc0-win64.exe",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.4.0rc0/darktable-2.4.0rc0-win64.exe"
+            },
+            {
+              "name": "darktable-2.4.0rc0-win64.exe.asc",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.4.0rc0/darktable-2.4.0rc0-win64.exe.asc"
+            },
+            {
+              "name": "darktable-2.4.0rc0.11.dmg",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.4.0rc0/darktable-2.4.0rc0.11.dmg"
+            },
+            {
+              "name": "darktable-2.4.0rc0.11.dmg.asc",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.4.0rc0/darktable-2.4.0rc0.11.dmg.asc"
+            }
+          ]
+        },
+        {
+          "version": "release-2.2.0rc3",
+          "tag": "release-2.2.0rc3",
+          "name": "darktable-2.2.0rc3",
+          "releaseType": "Alpha",
+          "date": "2016-12-12T10:04:55Z",
+          "url": "https://github.com/darktable-org/darktable/releases/tag/release-2.2.0rc3",
+          "source": "GitHub",
+          "prerelease": true,
+          "assets": [
+            {
+              "name": "darktable-2.2.0.rc3.3.g9af0d4fcb.dmg",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.2.0rc3/darktable-2.2.0.rc3.3.g9af0d4fcb.dmg"
+            },
+            {
+              "name": "darktable-2.2.0.rc3.3.g9af0d4fcb.dmg.asc",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.2.0rc3/darktable-2.2.0.rc3.3.g9af0d4fcb.dmg.asc"
+            },
+            {
+              "name": "darktable-2.2.0.rc3.tar.xz",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.2.0rc3/darktable-2.2.0.rc3.tar.xz"
+            },
+            {
+              "name": "darktable-2.2.0.rc3.tar.xz.asc",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.2.0rc3/darktable-2.2.0.rc3.tar.xz.asc"
+            }
+          ]
+        },
+        {
+          "version": "release-2.2.0rc2",
+          "tag": "release-2.2.0rc2",
+          "name": "darktable-2.2.0rc2",
+          "releaseType": "Alpha",
+          "date": "2016-12-04T18:32:42Z",
+          "url": "https://github.com/darktable-org/darktable/releases/tag/release-2.2.0rc2",
+          "source": "GitHub",
+          "prerelease": true,
+          "assets": [
+            {
+              "name": "darktable-2.2.0.rc2.39.g684e8af41.dmg",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.2.0rc2/darktable-2.2.0.rc2.39.g684e8af41.dmg"
+            },
+            {
+              "name": "darktable-2.2.0.rc2.39.g684e8af41.dmg.asc",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.2.0rc2/darktable-2.2.0.rc2.39.g684e8af41.dmg.asc"
+            },
+            {
+              "name": "darktable-2.2.0.rc2.tar.xz",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.2.0rc2/darktable-2.2.0.rc2.tar.xz"
+            },
+            {
+              "name": "darktable-2.2.0.rc2.tar.xz.asc",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.2.0rc2/darktable-2.2.0.rc2.tar.xz.asc"
+            }
+          ]
+        },
+        {
+          "version": "release-2.2.0rc1",
+          "tag": "release-2.2.0rc1",
+          "name": "darktable 2.2.0 rc1 ",
+          "releaseType": "Alpha",
+          "date": "2016-11-20T14:55:28Z",
+          "url": "https://github.com/darktable-org/darktable/releases/tag/release-2.2.0rc1",
+          "source": "GitHub",
+          "prerelease": true,
+          "assets": [
+            {
+              "name": "darktable-2.2.0.rc1.tar.xz",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.2.0rc1/darktable-2.2.0.rc1.tar.xz"
+            },
+            {
+              "name": "darktable-2.2.0.rc1.tar.xz.asc",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.2.0rc1/darktable-2.2.0.rc1.tar.xz.asc"
+            }
+          ]
+        },
+        {
+          "version": "release-2.2.0rc0",
+          "tag": "release-2.2.0rc0",
+          "name": "darktable 2.2.0 rc0",
+          "releaseType": "Alpha",
+          "date": "2016-11-06T13:10:27Z",
+          "url": "https://github.com/darktable-org/darktable/releases/tag/release-2.2.0rc0",
+          "source": "GitHub",
+          "prerelease": true,
+          "assets": [
+            {
+              "name": "darktable-2.2.0.rc0.tar.xz",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.2.0rc0/darktable-2.2.0.rc0.tar.xz"
+            },
+            {
+              "name": "darktable-2.2.0.rc0.tar.xz.asc",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.2.0rc0/darktable-2.2.0.rc0.tar.xz.asc"
+            }
+          ]
+        },
+        {
+          "version": "release-2.0rc4",
+          "tag": "release-2.0rc4",
+          "name": "release-2.0~rc4",
+          "releaseType": "Alpha",
+          "date": "2015-12-14T15:57:38Z",
+          "url": "https://github.com/darktable-org/darktable/releases/tag/release-2.0rc4",
+          "source": "GitHub",
+          "prerelease": true,
+          "assets": [
+            {
+              "name": "darktable-2.0.rc4.dmg",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.0rc4/darktable-2.0.rc4.dmg"
+            },
+            {
+              "name": "darktable-2.0.rc4.dmg.asc",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.0rc4/darktable-2.0.rc4.dmg.asc"
+            },
+            {
+              "name": "darktable-2.0.rc4.tar.xz",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.0rc4/darktable-2.0.rc4.tar.xz"
+            },
+            {
+              "name": "darktable-2.0.rc4.tar.xz.asc",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.0rc4/darktable-2.0.rc4.tar.xz.asc"
+            }
+          ]
+        },
+        {
+          "version": "release-2.0rc3",
+          "tag": "release-2.0rc3",
+          "name": "darktable-2.0~rc3",
+          "releaseType": "Release Candidate",
+          "date": "2015-11-29T19:48:19Z",
+          "url": "https://github.com/darktable-org/darktable/releases/tag/release-2.0rc3",
+          "source": "GitHub",
+          "prerelease": true,
+          "assets": [
+            {
+              "name": "darktable-2.0.rc3.dmg",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.0rc3/darktable-2.0.rc3.dmg"
+            },
+            {
+              "name": "darktable-2.0.rc3.dmg.asc",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.0rc3/darktable-2.0.rc3.dmg.asc"
+            },
+            {
+              "name": "darktable-2.0.rc3.tar.xz",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.0rc3/darktable-2.0.rc3.tar.xz"
+            },
+            {
+              "name": "darktable-2.0.rc3.tar.xz.asc",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.0rc3/darktable-2.0.rc3.tar.xz.asc"
+            },
+            {
+              "name": "darktable.pot",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.0rc3/darktable.pot"
+            }
+          ]
+        },
+        {
+          "version": "release-2.0rc2",
+          "tag": "release-2.0rc2",
+          "name": "darktable-2.0~rc2",
+          "releaseType": "Release Candidate",
+          "date": "2015-11-16T17:23:58Z",
+          "url": "https://github.com/darktable-org/darktable/releases/tag/release-2.0rc2",
+          "source": "GitHub",
+          "prerelease": true,
+          "assets": [
+            {
+              "name": "darktable-2.0.rc2.dmg",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.0rc2/darktable-2.0.rc2.dmg"
+            },
+            {
+              "name": "darktable-2.0.rc2.dmg.asc",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.0rc2/darktable-2.0.rc2.dmg.asc"
+            },
+            {
+              "name": "darktable-2.0.rc2.tar.xz",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.0rc2/darktable-2.0.rc2.tar.xz"
+            },
+            {
+              "name": "darktable-2.0.rc2.tar.xz.asc",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.0rc2/darktable-2.0.rc2.tar.xz.asc"
+            }
+          ]
+        },
+        {
+          "version": "release-2.0rc1",
+          "tag": "release-2.0rc1",
+          "name": "darktable-2.0~rc1",
+          "releaseType": "Release Candidate",
+          "date": "2015-11-01T19:00:37Z",
+          "url": "https://github.com/darktable-org/darktable/releases/tag/release-2.0rc1",
+          "source": "GitHub",
+          "prerelease": true,
+          "assets": [
+            {
+              "name": "darktable-2.0.rc1.dmg",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.0rc1/darktable-2.0.rc1.dmg"
+            },
+            {
+              "name": "darktable-2.0.rc1.dmg.asc",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.0rc1/darktable-2.0.rc1.dmg.asc"
+            },
+            {
+              "name": "darktable-2.0.rc1.tar.xz",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.0rc1/darktable-2.0.rc1.tar.xz"
+            },
+            {
+              "name": "darktable-2.0.rc1.tar.xz.asc",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-2.0rc1/darktable-2.0.rc1.tar.xz.asc"
+            }
+          ]
+        },
+        {
+          "version": "release-1.5.3",
+          "tag": "release-1.5.3",
+          "name": "darktable 1.6 release candidate 3",
+          "releaseType": "Release Candidate",
+          "date": "2014-11-30T17:32:58Z",
+          "url": "https://github.com/darktable-org/darktable/releases/tag/release-1.5.3",
+          "source": "GitHub",
+          "prerelease": true,
+          "assets": [
+            {
+              "name": "darktable-1.5.3.5.dmg",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-1.5.3/darktable-1.5.3.5.dmg"
+            },
+            {
+              "name": "darktable-1.5.3.5.dmg.asc",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-1.5.3/darktable-1.5.3.5.dmg.asc"
+            },
+            {
+              "name": "darktable-1.5.3.tar.xz",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-1.5.3/darktable-1.5.3.tar.xz"
+            },
+            {
+              "name": "darktable-1.5.3.tar.xz.asc",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-1.5.3/darktable-1.5.3.tar.xz.asc"
+            }
+          ]
+        },
+        {
+          "version": "release-1.5.2",
+          "tag": "release-1.5.2",
+          "name": "darktable 1.6 release candidate 2",
+          "releaseType": "Release Candidate",
+          "date": "2014-11-25T18:27:37Z",
+          "url": "https://github.com/darktable-org/darktable/releases/tag/release-1.5.2",
+          "source": "GitHub",
+          "prerelease": true,
+          "assets": [
+            {
+              "name": "darktable-1.5.2.tar.xz",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-1.5.2/darktable-1.5.2.tar.xz"
+            },
+            {
+              "name": "darktable-1.5.2.tar.xz.asc",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-1.5.2/darktable-1.5.2.tar.xz.asc"
+            }
+          ]
+        },
+        {
+          "version": "release-1.5.1",
+          "tag": "release-1.5.1",
+          "name": "darktable 1.6 release candidate 1",
+          "releaseType": "Alpha",
+          "date": "2014-11-16T19:31:16Z",
+          "url": "https://github.com/darktable-org/darktable/releases/tag/release-1.5.1",
+          "source": "GitHub",
+          "prerelease": true,
+          "assets": [
+            {
+              "name": "darktable-1.5.1.dmg",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-1.5.1/darktable-1.5.1.dmg"
+            },
+            {
+              "name": "darktable-1.5.1.dmg.asc",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-1.5.1/darktable-1.5.1.dmg.asc"
+            },
+            {
+              "name": "darktable-1.5.1.tar.xz",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-1.5.1/darktable-1.5.1.tar.xz"
+            },
+            {
+              "name": "darktable-1.5.1.tar.xz.asc",
+              "url": "https://github.com/darktable-org/darktable/releases/download/release-1.5.1/darktable-1.5.1.tar.xz.asc"
+            }
+          ]
+        }
+      ],
+      "updatedAt": "2026-11-26T17:56:11.259Z"
     },
     {
       "id": "digikam",
@@ -9197,7 +9364,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T17:48:00.609Z"
+      "updatedAt": "2026-11-26T17:56:12.829Z"
     },
     {
       "id": "rawtherapee",
@@ -9777,7 +9944,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T17:48:01.475Z"
+      "updatedAt": "2026-11-26T17:56:13.921Z"
     },
     {
       "id": "ardour",
@@ -9785,7 +9952,7 @@
       "slug": "ardour",
       "releaseCount": 0,
       "releases": [],
-      "updatedAt": "2026-11-26T17:48:01.930Z"
+      "updatedAt": "2026-11-26T17:56:14.400Z"
     },
     {
       "id": "musescore",
@@ -10560,7 +10727,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T17:48:02.917Z"
+      "updatedAt": "2026-11-26T17:56:15.378Z"
     },
     {
       "id": "godot",
@@ -10568,7 +10735,7 @@
       "slug": "godot",
       "releaseCount": 0,
       "releases": [],
-      "updatedAt": "2026-11-26T17:48:03.937Z"
+      "updatedAt": "2026-11-26T17:56:16.489Z"
     },
     {
       "id": "openmw",
@@ -11001,7 +11168,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T17:48:04.686Z"
+      "updatedAt": "2026-11-26T17:56:17.311Z"
     },
     {
       "id": "dolphin-emu",
@@ -11009,7 +11176,7 @@
       "slug": "dolphin-emu",
       "releaseCount": 0,
       "releases": [],
-      "updatedAt": "2026-11-26T17:48:05.155Z"
+      "updatedAt": "2026-11-26T17:56:17.802Z"
     },
     {
       "id": "pcsx2",
@@ -11978,7 +12145,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T17:48:06.133Z"
+      "updatedAt": "2026-11-26T17:56:18.854Z"
     },
     {
       "id": "rpcs3",
@@ -11986,7 +12153,7 @@
       "slug": "rpcs3",
       "releaseCount": 0,
       "releases": [],
-      "updatedAt": "2026-11-26T17:48:06.827Z"
+      "updatedAt": "2026-11-26T17:56:19.551Z"
     },
     {
       "id": "ppsspp",
@@ -12035,7 +12202,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T17:48:07.528Z"
+      "updatedAt": "2026-11-26T17:56:20.270Z"
     },
     {
       "id": "retroarch",
@@ -12043,7 +12210,7 @@
       "slug": "retroarch",
       "releaseCount": 0,
       "releases": [],
-      "updatedAt": "2026-11-26T17:48:08.200Z"
+      "updatedAt": "2026-11-26T17:56:20.983Z"
     },
     {
       "id": "luanti",
@@ -12228,7 +12395,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T17:48:08.899Z"
+      "updatedAt": "2026-11-26T17:56:21.665Z"
     },
     {
       "id": "supertuxkart",
@@ -12653,7 +12820,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T17:48:09.758Z"
+      "updatedAt": "2026-11-26T17:56:22.491Z"
     },
     {
       "id": "openra",
@@ -14390,7 +14557,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T17:48:10.797Z"
+      "updatedAt": "2026-11-26T17:56:23.453Z"
     },
     {
       "id": "zed",
@@ -16439,7 +16606,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T17:48:12.234Z"
+      "updatedAt": "2026-11-26T17:56:25.007Z"
     },
     {
       "id": "vscodium",
@@ -16447,7 +16614,7 @@
       "slug": "vscodium",
       "releaseCount": 0,
       "releases": [],
-      "updatedAt": "2026-11-26T17:48:18.959Z"
+      "updatedAt": "2026-11-26T17:56:31.450Z"
     },
     {
       "id": "neovim",
@@ -16520,7 +16687,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T17:48:19.971Z"
+      "updatedAt": "2026-11-26T17:56:32.452Z"
     },
     {
       "id": "helix",
@@ -16528,7 +16695,7 @@
       "slug": "helix",
       "releaseCount": 0,
       "releases": [],
-      "updatedAt": "2026-11-26T17:48:20.783Z"
+      "updatedAt": "2026-11-26T17:56:33.218Z"
     },
     {
       "id": "wezterm",
@@ -17077,7 +17244,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T17:48:22.602Z"
+      "updatedAt": "2026-11-26T17:56:35.195Z"
     },
     {
       "id": "zellij",
@@ -17110,7 +17277,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T17:48:23.741Z"
+      "updatedAt": "2026-11-26T17:56:36.161Z"
     },
     {
       "id": "podman",
@@ -18651,7 +18818,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T17:48:25.212Z"
+      "updatedAt": "2026-11-26T17:56:37.669Z"
     },
     {
       "id": "qemu",
@@ -18659,7 +18826,7 @@
       "slug": "qemu",
       "releaseCount": 0,
       "releases": [],
-      "updatedAt": "2026-11-26T17:48:26.020Z"
+      "updatedAt": "2026-11-26T17:56:38.489Z"
     },
     {
       "id": "deno",
@@ -18667,7 +18834,7 @@
       "slug": "deno",
       "releaseCount": 0,
       "releases": [],
-      "updatedAt": "2026-11-26T17:48:28.041Z"
+      "updatedAt": "2026-11-26T17:56:40.749Z"
     },
     {
       "id": "bevy",
@@ -18896,7 +19063,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T17:48:28.628Z"
+      "updatedAt": "2026-11-26T17:56:41.394Z"
     },
     {
       "id": "nextcloud",
@@ -19235,7 +19402,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T17:48:29.241Z"
+      "updatedAt": "2026-11-26T17:56:42.043Z"
     },
     {
       "id": "immich",
@@ -19920,7 +20087,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T17:48:30.670Z"
+      "updatedAt": "2026-11-26T17:56:43.246Z"
     },
     {
       "id": "home-assistant",
@@ -20259,7 +20426,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T17:48:31.330Z"
+      "updatedAt": "2026-11-26T17:56:43.939Z"
     },
     {
       "id": "jellyfin",
@@ -20576,7 +20743,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T17:48:32.295Z"
+      "updatedAt": "2026-11-26T17:56:45.059Z"
     },
     {
       "id": "kodi",
@@ -20915,7 +21082,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T17:48:32.987Z"
+      "updatedAt": "2026-11-26T17:56:45.736Z"
     },
     {
       "id": "syncthing",
@@ -23684,7 +23851,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T17:48:34.647Z"
+      "updatedAt": "2026-11-26T17:56:47.496Z"
     },
     {
       "id": "element",
@@ -24173,7 +24340,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T17:48:35.516Z"
+      "updatedAt": "2026-11-26T17:56:48.315Z"
     },
     {
       "id": "joplin",
@@ -26854,7 +27021,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T17:48:36.896Z"
+      "updatedAt": "2026-11-26T17:56:49.680Z"
     },
     {
       "id": "keepassxc",
@@ -27403,7 +27570,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T17:48:37.876Z"
+      "updatedAt": "2026-11-26T17:56:50.709Z"
     },
     {
       "id": "appflowy",
@@ -27584,7 +27751,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T17:48:39.103Z"
+      "updatedAt": "2026-11-26T17:56:52.162Z"
     },
     {
       "id": "brave",
@@ -30193,7 +30360,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T17:48:43.992Z"
+      "updatedAt": "2026-11-26T17:56:56.519Z"
     },
     {
       "id": "floorp",
@@ -30638,7 +30805,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T17:48:45.191Z"
+      "updatedAt": "2026-11-26T17:56:57.624Z"
     },
     {
       "id": "tor-browser",
@@ -30646,7 +30813,7 @@
       "slug": "tor-browser",
       "releaseCount": 0,
       "releases": [],
-      "updatedAt": "2026-11-26T17:48:46.392Z"
+      "updatedAt": "2026-11-26T17:56:58.663Z"
     },
     {
       "id": "cosmic",
@@ -30654,7 +30821,7 @@
       "slug": "cosmic",
       "releaseCount": 0,
       "releases": [],
-      "updatedAt": "2026-11-26T17:48:46.965Z"
+      "updatedAt": "2026-11-26T17:56:59.257Z"
     },
     {
       "id": "kde-plasma",
@@ -30662,7 +30829,7 @@
       "slug": "kde-plasma",
       "releaseCount": 0,
       "releases": [],
-      "updatedAt": "2026-11-26T17:48:48.967Z"
+      "updatedAt": "2026-11-26T17:57:00.907Z"
     },
     {
       "id": "gnome-shell",
@@ -31001,7 +31168,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T17:48:50.333Z"
+      "updatedAt": "2026-11-26T17:57:01.970Z"
     },
     {
       "id": "openwrt",
@@ -31175,7 +31342,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T17:48:51.040Z"
+      "updatedAt": "2026-11-26T17:57:02.670Z"
     },
     {
       "id": "nix",
@@ -31183,7 +31350,7 @@
       "slug": "nix",
       "releaseCount": 0,
       "releases": [],
-      "updatedAt": "2026-11-26T17:48:51.495Z"
+      "updatedAt": "2026-11-26T17:57:03.171Z"
     },
     {
       "id": "incus",
@@ -31191,7 +31358,7 @@
       "slug": "incus",
       "releaseCount": 0,
       "releases": [],
-      "updatedAt": "2026-11-26T17:48:52.443Z"
+      "updatedAt": "2026-11-26T17:57:04.156Z"
     },
     {
       "id": "distrobox",
@@ -31291,7 +31458,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T17:48:53.111Z"
+      "updatedAt": "2026-11-26T17:57:04.833Z"
     }
   ]
 }
