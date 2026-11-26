@@ -24,7 +24,7 @@ async function writeJson(filePath, data) {
 async function fetchResponse(url, headers = {}) {
   const response = await fetch(url, {
     headers: {
-      Accept: 'application/json, text/html',
+      Accept: 'application/json, application/xml, text/html',
       'User-Agent': 'GetFOSS-Release-Tracker',
       ...headers,
     },
@@ -39,13 +39,34 @@ async function fetchResponse(url, headers = {}) {
 }
 
 async function fetchJson(url, headers = {}) {
-  const response = await fetchResponse(url, headers);
-  return response.json();
+  return (await fetchResponse(url, headers)).json();
 }
 
 async function fetchText(url) {
-  const response = await fetchResponse(url);
-  return response.text();
+  return (await fetchResponse(url)).text();
+}
+
+function decodeHtml(value = '') {
+  return value
+    .replace(/&amp;/g, '&')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;|&apos;/g, "'")
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&#(\d+);/g, (_, code) => String.fromCodePoint(Number(code)))
+    .replace(/&#x([0-9a-f]+);/gi, (_, code) =>
+      String.fromCodePoint(parseInt(code, 16)),
+    );
+}
+
+function cleanText(value = '') {
+  return decodeHtml(
+    value
+      .replace(/<script[\s\S]*?<\/script>/gi, '')
+      .replace(/<style[\s\S]*?<\/style>/gi, '')
+      .replace(/<[^>]+>/g, ' ')
+      .replace(/\s+/g, ' '),
+  ).trim();
 }
 
 function isStableVersion(version) {
@@ -175,7 +196,12 @@ async function getGitLabReleases(source) {
 
 async function getGiteaReleases(source) {
   const url = `${source.host}/api/v1/repos/${source.owner}/${source.repository}/releases?limit=100`;
-  const data = await fetchJson(url);
+
+  const headers = process.env.GITEA_API_TOKEN
+    ? { Authorization: `token ${process.env.GITEA_API_TOKEN}` }
+    : {};
+
+  const data = await fetchJson(url, headers);
 
   if (!Array.isArray(data)) {
     throw new Error('Unexpected Gitea API response.');
@@ -192,6 +218,104 @@ async function getGiteaReleases(source) {
       }),
     )
     .filter(Boolean);
+}
+
+// KDE application release feeds: Krita and Kdenlive.
+async function getKdeReleases(application) {
+  const app = application.id;
+  const url = `https://apps.kde.org/${app}/index.xml`;
+  const xml = await fetchText(url);
+  const items = xml.match(/<item\b[^>]*>[\s\S]*?<\/item>/gi) || [];
+
+  const releases = [];
+
+  for (const item of items) {
+    const title = item.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1];
+    const link = item.match(/<link[^>]*>([\s\S]*?)<\/link>/i)?.[1];
+    const date = item.match(/<pubDate[^>]*>([\s\S]*?)<\/pubDate>/i)?.[1];
+    const description = item.match(/<description[^>]*>([\s\S]*?)<\/description>/i)?.[1];
+
+    const versionMatch = cleanText(title || '').match(/\b(\d+\.\d+(?:\.\d+){0,2})\b/);
+
+    if (!versionMatch) continue;
+
+    const release = normalizeRelease({
+      version: versionMatch[1],
+      date: cleanText(date || ''),
+      url: cleanText(link || '') || `https://apps.kde.org/${app}/`,
+      notes: cleanText(description || ''),
+    });
+
+    if (release) releases.push(release);
+  }
+
+  if (releases.length === 0) {
+    throw new Error('KDE release feed did not contain stable releases.');
+  }
+
+  return releases;
+}
+
+// Blender official release history page.
+async function getBlenderReleases() {
+  const url = 'https://www.blender.org/download/releases/';
+  const html = await fetchText(url);
+  const text = cleanText(html);
+  const releases = [];
+
+  const pattern = /Blender\s+(\d+\.\d+(?:\.\d+)?)(?:\s+LTS)?[\s\S]{0,180}?(?:Released(?:\s+on)?|Released)\s+([A-Za-z]+\s+\d{1,2}(?:st|nd|rd|th)?,?\s+\d{4})/gi;
+
+  for (const match of text.matchAll(pattern)) {
+    const date = match[2].replace(/(\d+)(st|nd|rd|th)/, '$1');
+
+    const release = normalizeRelease({
+      version: match[1],
+      date,
+      url,
+    });
+
+    if (release) releases.push(release);
+  }
+
+  if (releases.length === 0) {
+    throw new Error('Could not read Blender stable release history.');
+  }
+
+  return releases;
+}
+
+// Official VideoLAN download archive.
+async function getVlcReleases() {
+  const url = 'https://download.videolan.org/pub/videolan/vlc/';
+  const html = await fetchText(url);
+  const rows = html.match(/<tr\b[^>]*>[\s\S]*?<\/tr>/gi) || [];
+  const releases = [];
+
+  for (const row of rows) {
+    const link = row.match(/href=["'](\d+\.\d+(?:\.\d+){0,2})\/["']/i);
+
+    if (!link) continue;
+
+    const version = link[1];
+    const dateMatch = cleanText(row).match(/\b(\d{2}-[A-Za-z]{3}-\d{4})\b/);
+    const date = dateMatch
+      ? new Date(`${dateMatch[1]} UTC`)
+      : null;
+
+    const release = normalizeRelease({
+      version,
+      date: date && !Number.isNaN(date.valueOf()) ? date : null,
+      url: new URL(`${version}/`, url).href,
+    });
+
+    if (release) releases.push(release);
+  }
+
+  if (releases.length === 0) {
+    throw new Error('Could not read stable versions from the VideoLAN archive.');
+  }
+
+  return releases;
 }
 
 async function getMozillaReleases(source) {
@@ -238,8 +362,8 @@ async function getMozillaReleases(source) {
 
 async function getLibreOfficeReleases(source) {
   const html = await fetchText(source.url);
-  const releases = [];
   const rows = html.match(/<tr\b[^>]*>[\s\S]*?<\/tr>/gi) || [];
+  const releases = [];
 
   for (const row of rows) {
     const link = row.match(/href=["']([^"']*?)(\d+\.\d+\.\d+)\/?["']/i);
@@ -247,13 +371,12 @@ async function getLibreOfficeReleases(source) {
     if (!link) continue;
 
     const version = link[2];
-    const dateMatch = row.match(/\b(\d{4}-\d{2}-\d{2})\b/);
-    const releaseUrl = new URL(link[1], source.url).href;
+    const dateMatch = cleanText(row).match(/\b(\d{4}-\d{2}-\d{2})\b/);
 
     const release = normalizeRelease({
       version,
       date: dateMatch?.[1] || null,
-      url: releaseUrl,
+      url: new URL(link[1], source.url).href,
     });
 
     if (release) releases.push(release);
@@ -271,6 +394,25 @@ async function getReleases(application) {
 
   if (!source?.type) {
     throw new Error('Release source is not configured.');
+  }
+
+  // Use official project release feeds and archives where available.
+  switch (application.id) {
+    case 'blender':
+      try {
+        return await getGiteaReleases(source);
+      } catch (error) {
+        console.warn(`[INFO] Blender API unavailable: ${error.message}`);
+        console.log('[INFO] Trying Blender official release history.');
+        return getBlenderReleases();
+      }
+
+    case 'krita':
+    case 'kdenlive':
+      return getKdeReleases(application);
+
+    case 'vlc':
+      return getVlcReleases();
   }
 
   switch (source.type) {
