@@ -1,40 +1,121 @@
 ---
 import Layout from '../components/Layout.astro';
+
+const title = '404 — Page Not Found | GetFOSS';
+const description =
+  'The page you are looking for could not be found. Explore the latest open-source software, browse articles, or return to GetFOSS.';
 ---
 
 <Layout
-  title="404 — Palette"
-  description="Page not found."
+  title={title}
+  description={description}
   canonicalPath="/404/"
 >
   <main class="content-shell">
-    <div class="page-hero">
-      <p class="eyebrow"><span class="status-dot dot-blue"></span>page not found</p>
-      <h1>404</h1>
-      <p class="hero-lede">
-        This page doesn't exist. It may have been moved, deleted, or never published.
-      </p>
-      <div class="hero-actions">
-        <a class="button button-primary" href="/">Go home</a>
-        <a class="button button-secondary" href="/blog/">Browse the blog</a>
+    <section class="error-page">
+      <div class="error-code" aria-hidden="true">404</div>
+
+      <div class="error-content">
+        <p class="eyebrow">
+          <span class="status-dot dot-blue"></span>
+          Page not found
+        </p>
+
+        <h1>This page is off the grid.</h1>
+
+        <p class="hero-lede">
+          The page you're looking for doesn't exist or may have moved.
+          The good news? There's plenty of open-source software left to explore.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="/">Back to GetFOSS</a>
+          <a class="button button-secondary" href="/blog/">Explore the blog</a>
+        </div>
+
+        <p class="error-hint">
+          <span>Looking for something specific?</span>
+          Try browsing our <a href="/tags/">topics and tags</a>.
+        </p>
       </div>
-    </div>
+    </section>
   </main>
 </Layout>
 
-<style is:global>
+<style>
+  .error-page {
+    max-width: 850px;
+    min-height: 540px;
+    margin: 0 auto;
+    padding: 5rem 1.25rem 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .error-code {
+    color: var(--line);
+    font-family: var(--mono);
+    font-size: clamp(8rem, 25vw, 16rem);
+    font-weight: 700;
+    line-height: 0.85;
+    letter-spacing: -0.1em;
+    user-select: none;
+  }
+
+  .error-content {
+    max-width: 600px;
+    margin-top: 2.5rem;
+  }
+
+  .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0 0 1rem;
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .error-content h1 {
+    margin: 0;
+    color: var(--text);
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1.12;
+    letter-spacing: -0.045em;
+  }
+
+  .hero-lede {
+    max-width: 540px;
+    margin: 1.2rem 0 0;
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-top: 1.75rem;
+  }
+
   .button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 2.6rem;
-    padding: 0.6rem 1.1rem;
+    min-height: 2.7rem;
+    padding: 0.65rem 1.1rem;
+    border: 1px solid transparent;
     border-radius: var(--radius-md);
     font-family: var(--mono);
+    font-size: 0.85rem;
     font-weight: 600;
-    font-size: 0.9rem;
-    border: 1px solid transparent;
-    transition: all 0.12s ease;
+    text-decoration: none;
+    transition: all 0.15s ease;
   }
 
   .button-primary {
@@ -55,14 +136,48 @@ import Layout from '../components/Layout.astro';
 
   .button-secondary:hover {
     border-color: var(--accent);
-    color: var(--accent);
     background: var(--accent-soft);
+    color: var(--accent);
   }
 
-  .hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.6rem;
-    margin-top: 1.75rem;
+  .error-hint {
+    margin: 2.5rem 0 0;
+    color: var(--muted);
+    font-size: 0.85rem;
+    line-height: 1.8;
+  }
+
+  .error-hint span {
+    display: block;
+    margin-bottom: 0.2rem;
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  .error-hint a {
+    color: var(--text);
+    text-decoration: underline;
+    text-decoration-color: var(--line-strong);
+    text-underline-offset: 3px;
+  }
+
+  .error-hint a:hover {
+    color: var(--accent);
+  }
+
+  @media (max-width: 640px) {
+    .error-page {
+      min-height: 460px;
+      padding-top: 3.5rem;
+      padding-bottom: 4rem;
+    }
+
+    .error-content {
+      margin-top: 2rem;
+    }
+
+    .error-code {
+      font-size: clamp(7rem, 30vw, 10rem);
+    }
   }
 </style>
