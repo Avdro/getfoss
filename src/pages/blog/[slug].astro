@@ -1,3 +1,4 @@
+
 ---
 import { getCollection, render } from 'astro:content';
 import Layout from '../../components/Layout.astro';
@@ -21,7 +22,6 @@ export async function getStaticPaths() {
 const { post, slug } = Astro.props;
 const { Content, headings } = await render(post);
 const sectionHeadings = headings.filter((heading) => heading.depth === 2);
-// Tags whose slug is empty have no archive page; skip their chips.
 const tags = post.data.tags.filter((tag) => slugifyTag(tag) !== '');
 
 const postSchema = JSON.stringify({
@@ -32,11 +32,15 @@ const postSchema = JSON.stringify({
   datePublished: post.data.date.toISOString(),
   url: new URL(`/blog/${slug}/`, Astro.site).toString(),
   author: {
-    '@type': 'Person',
-    name: 'Your Name',
-    url: new URL('/about/', SITE_URL).toString(),
+    '@type': 'Organization',
+    name: 'GetFOSS',
+    url: SITE_URL,
   },
-  // Escape < so a post title/description can never close the <script> tag.
+  publisher: {
+    '@type': 'Organization',
+    name: 'GetFOSS',
+    url: SITE_URL,
+  },
 }).replace(/</g, '\\u003c');
 ---
 
@@ -47,13 +51,16 @@ const postSchema = JSON.stringify({
   ogType="article"
 >
   <script type="application/ld+json" is:inline set:html={postSchema} />
+
   <main class="content-shell">
     <div class="article-layout section" style="max-width: var(--max); padding-inline: 1.25rem;">
       <aside class="article-toc" aria-label="Article sections">
         {sectionHeadings.length > 0 && (
           <nav>
             {sectionHeadings.map((heading) => (
-              <a href={`#${heading.slug}`} data-heading-link={heading.slug}>{heading.text}</a>
+              <a href={`#${heading.slug}`} data-heading-link={heading.slug}>
+                {heading.text}
+              </a>
             ))}
           </nav>
         )}
@@ -65,133 +72,86 @@ const postSchema = JSON.stringify({
             <time datetime={post.data.date.toISOString()}>
               {formatPostDate(post.data.date)}
             </time>
-            {/* data-pagefind-ignore keeps tag labels out of the search index. */}
+
+            <span class="post-category">{post.data.category}</span>
+
             {tags.map((tag) => (
-              <a href={`/tags/${slugifyTag(tag)}/`} data-pagefind-ignore>#{tag}</a>
+              <a href={`/tags/${slugifyTag(tag)}/`} data-pagefind-ignore>
+                #{tag}
+              </a>
             ))}
           </p>
+
           <h1>{post.data.title}</h1>
           <p>{post.data.description}</p>
         </header>
+
         <div class="article-prose">
           <Content />
         </div>
-        <section class="article-comments" aria-label="Comments">
-          <div id="remark42"></div>
-        </section>
       </article>
     </div>
   </main>
 
   <script>
-    // Optional Remark42 comments. Point these at your own instance, or
-    // remove the #remark42 section above to disable comments entirely.
-    const REMARK_HOST = 'https://comments.example.com';
-
-    type Remark42 = {
-      createInstance: (config: Record<string, unknown>) => { destroy: () => void };
-      changeTheme: (theme: 'light' | 'dark') => void;
-    };
-    const w = window as typeof window & {
-      remark_config?: Record<string, unknown>;
-      REMARK42?: Remark42;
-    };
-
     let tocObserver: IntersectionObserver | undefined;
-    let commentsInstance: { destroy: () => void } | undefined;
-    let embedRequested = false;
 
     function initToc() {
       tocObserver?.disconnect();
-      const headings = Array.from(document.querySelectorAll('.article-prose h2[id]'));
+
+      const headings = Array.from(
+        document.querySelectorAll('.article-prose h2[id]'),
+      );
+
       const links = new Map(
         Array.from(document.querySelectorAll('[data-heading-link]')).map((link) => [
           link.getAttribute('data-heading-link'),
           link,
         ]),
       );
+
       if (headings.length === 0 || links.size === 0) return;
 
       function setActive(id: string) {
-        for (const link of links.values()) link.removeAttribute('aria-current');
+        for (const link of links.values()) {
+          link.removeAttribute('aria-current');
+        }
+
         links.get(id)?.setAttribute('aria-current', 'true');
       }
 
       setActive(headings[0].id);
+
       tocObserver = new IntersectionObserver(
         (entries) => {
           const visible = entries
             .filter((entry) => entry.isIntersecting)
-            .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
-          if (visible?.target instanceof HTMLElement) setActive(visible.target.id);
+            .sort(
+              (a, b) =>
+                a.boundingClientRect.top - b.boundingClientRect.top,
+            )[0];
+
+          if (visible?.target instanceof HTMLElement) {
+            setActive(visible.target.id);
+          }
         },
-        { rootMargin: '-18% 0px -68% 0px', threshold: 0 },
+        {
+          rootMargin: '-18% 0px -68% 0px',
+          threshold: 0,
+        },
       );
-      for (const heading of headings) tocObserver.observe(heading);
-    }
 
-    // Map the active palette to Remark42's light/dark themes by the
-    // luminance of --bg, so all palettes work without a hard-coded list.
-    function paletteTheme(): 'light' | 'dark' {
-      const bg = getComputedStyle(document.documentElement).getPropertyValue('--bg').trim();
-      const hex = bg.replace('#', '');
-      const full = hex.length === 3 ? [...hex].map((c) => c + c).join('') : hex;
-      const luma =
-        0.2126 * parseInt(full.slice(0, 2), 16) +
-        0.7152 * parseInt(full.slice(2, 4), 16) +
-        0.0722 * parseInt(full.slice(4, 6), 16);
-      return luma > 128 ? 'light' : 'dark';
-    }
-
-    function initComments() {
-      const node = document.getElementById('remark42');
-      if (!node) {
-        try {
-          commentsInstance?.destroy();
-        } catch {}
-        commentsInstance = undefined;
-        return;
-      }
-      // The comments service only exists on the public origin.
-      if (window.location.hostname !== 'example.com') return;
-
-      w.remark_config = {
-        host: REMARK_HOST,
-        site_id: 'example',
-        url: window.location.origin + window.location.pathname,
-        theme: paletteTheme(),
-        show_email_subscription: false,
-      };
-
-      if (w.REMARK42) {
-        try {
-          commentsInstance?.destroy();
-        } catch {}
-        commentsInstance = w.REMARK42.createInstance(w.remark_config);
-      } else if (!embedRequested) {
-        // embed.mjs self-initializes against #remark42 using remark_config.
-        embedRequested = true;
-        const script = document.createElement('script');
-        script.src = `${REMARK_HOST}/web/embed.mjs`;
-        script.type = 'module';
-        document.head.append(script);
+      for (const heading of headings) {
+        tocObserver.observe(heading);
       }
     }
-
-    // <html> survives view transitions, so one observer follows palette
-    // switches for the life of the session.
-    new MutationObserver(() => {
-      w.REMARK42?.changeTheme(paletteTheme());
-    }).observe(document.documentElement, { attributeFilter: ['data-palette'] });
 
     function init() {
       initToc();
-      initComments();
     }
 
     init();
-    // Module scripts run once per session; re-init after view-transition
-    // navigations (e.g. post → post through the archive tree).
+
     document.addEventListener('astro:page-load', init);
   </script>
 </Layout>
@@ -217,6 +177,10 @@ const postSchema = JSON.stringify({
     color: var(--line-strong);
   }
 
+  .post-category {
+    color: var(--accent);
+  }
+
   .article-layout {
     position: relative;
     display: grid;
@@ -224,7 +188,6 @@ const postSchema = JSON.stringify({
     gap: clamp(2rem, 6vw, 4rem);
     align-items: start;
     padding-top: 4rem;
-    /* Sits directly under the sticky header's border — avoid a double line. */
     border-top: 0;
   }
 
@@ -241,9 +204,6 @@ const postSchema = JSON.stringify({
     font-size: 0.78rem;
   }
 
-  /* Git-tree TOC: a branch line with one node per section; the node of the
-   section currently in view fills with the accent color (scroll spy sets
-   aria-current on the links). */
   .article-toc nav {
     display: grid;
     gap: 0.9rem;
@@ -317,7 +277,9 @@ const postSchema = JSON.stringify({
     line-height: 1.82;
   }
 
-  .article-prose > *:first-child { margin-top: 0; }
+  .article-prose > *:first-child {
+    margin-top: 0;
+  }
 
   .article-prose h1,
   .article-prose h2,
@@ -355,7 +317,9 @@ const postSchema = JSON.stringify({
     padding-left: 1.35rem;
   }
 
-  .article-prose li + li { margin-top: 0.42rem; }
+  .article-prose li + li {
+    margin-top: 0.42rem;
+  }
 
   .article-prose blockquote {
     margin: 1.2rem 0;
@@ -369,7 +333,9 @@ const postSchema = JSON.stringify({
     line-height: 1.7;
   }
 
-  .article-prose blockquote p { margin: 0; }
+  .article-prose blockquote p {
+    margin: 0;
+  }
 
   .article-prose a {
     color: var(--accent);
@@ -397,8 +363,6 @@ const postSchema = JSON.stringify({
     padding: 1rem;
   }
 
-  /* Shiki (theme: 'css-variables') token colors, mapped onto the palette
-   variables so syntax highlighting follows the active theme. */
   :root {
     --astro-code-foreground: var(--ink-soft);
     --astro-code-background: var(--bg-elevated);
@@ -418,12 +382,6 @@ const postSchema = JSON.stringify({
     background: transparent;
     color: inherit;
     padding: 0;
-  }
-
-  .article-comments {
-    margin-top: 3.2rem;
-    padding-top: 2.2rem;
-    border-top: 1px solid var(--line);
   }
 
   @media (max-width: 1040px) {
