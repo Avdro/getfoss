@@ -1,643 +1,693 @@
+#!/usr/bin/env node
+/**
+ * GetFOSS Stable Release Tracker — Updater
+ * ===========================================
+ *
+ * Fetches stable release data for every application listed in the catalog
+ * (src/data/releases/software.json) and writes the consolidated result to
+ * src/data/releases/releases.json.
+ *
+ * Supported release source types:
+ *   - github                 → GitHub Releases API
+ *   - gitlab                 → GitLab Releases API (gitlab.com and self-hosted instances)
+ *   - gitea                  → Gitea Releases API
+ *   - forgejo                → Forgejo Releases API (same shape as Gitea)
+ *   - libreoffice-directory  → LibreOffice download directory listing (Apache autoindex)
+ *   - mozilla-product-details → Mozilla product-details JSON API (Firefox)
+ *   - ubuntu-cloud-images    → Ubuntu SimpleStreams JSON
+ *   - blender-releases-page  → Blender.org RSS feed (release announcements)
+ *
+ * Behavior:
+ *   - Filters out drafts and prereleases (stable releases only).
+ *   - Limits history to 20 entries per application.
+ *   - On per-application failure, preserves existing release history if present.
+ *   - Never replaces valid historical data with an empty result.
+ *   - Records the fetch timestamp and source URL for each application.
+ *   - Reports per-application failures without stopping the whole run.
+ *
+ * Environment variables:
+ *   - GITHUB_TOKEN (optional but strongly recommended for the GitHub API;
+ *     the unauthenticated rate limit is 60 requests/hour, which is far below
+ *     what this script needs).
+ *
+ * Exit codes:
+ *   - 0  successful run (at least one application fetched successfully
+ *        OR all failures preserved existing data)
+ *   - 1  fatal error (catalog missing, JSON invalid, or every application
+ *        failed with no existing data to preserve)
+ */
+
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 
-const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const CATALOG_PATH = path.join(ROOT, 'src/data/releases/software.json');
-const RELEASES_PATH = path.join(ROOT, 'src/data/releases/releases.json');
+// ---------------------------------------------------------------------------
+// Configuration
+// ---------------------------------------------------------------------------
 
-const HISTORY_LIMIT = 20;
-const REQUEST_DELAY_MS = 300;
-const MAX_RELEASE_PAGES = 5;
-const MAX_NOTES_LENGTH = 800;
+const ROOT = process.cwd();
+const CATALOG_PATH = path.join(
+  ROOT,
+  process.env.GETFOSS_CATALOG_PATH || 'src/data/releases/software.json'
+);
+const RELEASES_PATH = path.join(
+  ROOT,
+  process.env.GETFOSS_RELEASES_PATH || 'src/data/releases/releases.json'
+);
 
-const USER_AGENT = 'GetFOSS-Release-Tracker/1.0';
+const MAX_HISTORY = 20;
+const FETCH_TIMEOUT_MS = 30_000;
+const HTTP_USER_AGENT = 'GetFOSS-Release-Tracker/1.0 (+https://www.getfoss.org/)';
 
-const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+// ---------------------------------------------------------------------------
+// Catalog / releases I/O
+// ---------------------------------------------------------------------------
 
-function decodeHtml(value = '') {
-  return String(value)
-    .replace(/&amp;/g, '&')
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;|&apos;/g, "'")
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/&#(\d+);/g, (_, code) => String.fromCodePoint(Number(code)))
-    .replace(/&#x([0-9a-f]+);/gi, (_, code) => String.fromCodePoint(parseInt(code, 16)));
-}
-
-function cleanText(value = '') {
-  return decodeHtml(
-    String(value)
-      .replace(/<script[\s\S]*?<\/script>/gi, ' ')
-      .replace(/<style[\s\S]*?<\/style>/gi, ' ')
-      .replace(/<[^>]*>/g, ' ')
-      .replace(/\s+/g, ' ')
-  ).trim();
-}
-
-async function fetchResponse(url, options = {}) {
-  const response = await fetch(url, {
-    ...options,
-    headers: {
-      'User-Agent': USER_AGENT,
-      Accept: 'application/json, application/xml, text/xml, text/html, text/plain, */*',
-      ...options.headers,
-    },
-    signal: AbortSignal.timeout(30000),
-  });
-
-  if (!response.ok) {
-    throw new Error(`HTTP ${response.status}: ${url}`);
+async function loadCatalog() {
+  let text;
+  try {
+    text = await fs.readFile(CATALOG_PATH, 'utf8');
+  } catch (e) {
+    throw new Error(`cannot read catalog at ${CATALOG_PATH}: ${e.message}`);
   }
+  let data;
+  try {
+    data = JSON.parse(text);
+  } catch (e) {
+    throw new Error(`catalog is not valid JSON: ${e.message}`);
+  }
+  if (!data || !Array.isArray(data.applications)) {
+    throw new Error(
+      'catalog is not iterable: expected shape { "schemaVersion": 1, "applications": [...] }'
+    );
+  }
+  return data.applications;
+}
 
-  return response;
+async function loadExistingReleases() {
+  try {
+    const text = await fs.readFile(RELEASES_PATH, 'utf8');
+    const data = JSON.parse(text);
+    if (data && typeof data === 'object' && data.applications) {
+      return data;
+    }
+  } catch {
+    // File missing or invalid — return empty structure
+  }
+  return { schemaVersion: 1, lastUpdated: null, applications: {} };
+}
+
+// ---------------------------------------------------------------------------
+// HTTP helpers
+// ---------------------------------------------------------------------------
+
+async function fetchWithTimeout(url, options = {}, timeoutMs = FETCH_TIMEOUT_MS) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    // NOTE: we deliberately do NOT set a default User-Agent here.
+    // Some servers (notably download.documentfoundation.org / LibreOffice)
+    // reject requests that carry a non-browser User-Agent. Node's built-in
+    // fetch sends a default UA that those servers accept. Callers that need
+    // a specific UA (GitHub requires one) must set it in options.headers.
+    const res = await fetch(url, { ...options, signal: controller.signal });
+    return res;
+  } finally {
+    clearTimeout(timer);
+  }
 }
 
 async function fetchJson(url, options = {}) {
-  const response = await fetchResponse(url, options);
-  return response.json();
+  const res = await fetchWithTimeout(url, {
+    ...options,
+    headers: {
+      Accept: 'application/json',
+      ...(options.headers || {}),
+    },
+  });
+  if (!res.ok) {
+    throw new Error(`HTTP ${res.status} ${res.statusText} — ${url}`);
+  }
+  return res.json();
 }
 
 async function fetchText(url, options = {}) {
-  const response = await fetchResponse(url, options);
-  return response.text();
-}
-
-function isStableRelease(release) {
-  const text = [
-    release.tag_name,
-    release.name,
-    release.version,
-    release.title,
-  ].filter(Boolean).join(' ');
-
-  if (release.draft === true || release.prerelease === true) {
-    return false;
+  // Don't set Accept or User-Agent by default — let Node use its defaults,
+  // which are accepted by strict servers like download.documentfoundation.org.
+  const res = await fetchWithTimeout(url, options);
+  if (!res.ok) {
+    throw new Error(`HTTP ${res.status} ${res.statusText} — ${url}`);
   }
-
-  return !/(^|[\s._-])(alpha|beta|nightly|canary|dev|development|preview|pre-release|prerelease|rc\d*|release-candidate)([\s._-]|$)/i.test(text);
+  return res.text();
 }
 
-function parseDate(value) {
-  if (!value) return null;
+// ---------------------------------------------------------------------------
+// GitHub Releases
+// ---------------------------------------------------------------------------
 
-  const date = new Date(value);
-
-  if (Number.isNaN(date.getTime())) {
-    return null;
-  }
-
-  return date.toISOString();
-}
-
-function normalizeRelease(release) {
-  const version = String(
-    release.version ??
-    release.tag_name ??
-    release.tag ??
-    release.name ??
-    ''
-  ).trim();
-
-  if (!version) return null;
-
-  const date = parseDate(
-    release.published_at ??
-    release.released_at ??
-    release.created_at ??
-    release.date ??
-    release.timestamp
-  );
-
-  const url =
-    release.html_url ??
-    release.url ??
-    release.release_notes_url ??
-    release.download_url ??
-    null;
-
-  const notes = cleanText(
-    release.body ??
-    release.description ??
-    release.notes ??
-    ''
-  ).slice(0, MAX_NOTES_LENGTH);
-
-  return {
-    version,
-    date,
-    url,
-    notes,
+function githubHeaders() {
+  // GitHub API requires a User-Agent header — set it explicitly here.
+  const headers = {
+    Accept: 'application/vnd.github+json',
+    'User-Agent': HTTP_USER_AGENT,
   };
-}
-
-function compareVersions(a, b) {
-  const parse = (value) => {
-    const numbers = String(value).match(/\d+/g);
-    return numbers ? numbers.map(Number) : [0];
-  };
-
-  const left = parse(a);
-  const right = parse(b);
-  const length = Math.max(left.length, right.length);
-
-  for (let i = 0; i < length; i += 1) {
-    const difference = (right[i] ?? 0) - (left[i] ?? 0);
-    if (difference !== 0) return difference;
+  if (process.env.GITHUB_TOKEN) {
+    headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
   }
-
-  return String(b).localeCompare(String(a));
+  return headers;
 }
 
-function sortAndLimit(releases) {
-  const unique = new Map();
+async function fetchGitHubReleases(rs) {
+  // GitHub returns up to 100 per page; we need 20 stable, so 1 page of 100 is plenty.
+  const url = `https://api.github.com/repos/${rs.owner}/${rs.repository}/releases?per_page=100`;
+  const data = await fetchJson(url, { headers: githubHeaders() });
+  if (!Array.isArray(data)) {
+    throw new Error('GitHub response is not an array');
+  }
+  return data
+    .filter((r) => r && !r.draft && !r.prerelease)
+    .map((r) => ({
+      version: r.tag_name,
+      name: r.name || r.tag_name,
+      releaseDate: r.published_at || r.created_at || null,
+      releaseUrl: r.html_url || `https://github.com/${rs.owner}/${rs.repository}/releases/tag/${r.tag_name}`,
+      releaseNotes: typeof r.body === 'string' ? r.body : '',
+    }))
+    .sort((a, b) => (b.releaseDate || '').localeCompare(a.releaseDate || ''))
+    .slice(0, MAX_HISTORY);
+}
 
-  for (const release of releases) {
-    if (!release?.version) continue;
+// ---------------------------------------------------------------------------
+// GitLab Releases
+// ---------------------------------------------------------------------------
 
-    const key = release.version.toLowerCase();
+async function fetchGitLabReleases(rs) {
+  // URL-encode the project path (e.g. "inkscape/inkscape" → "inkscape%2Finkscape")
+  const encodedProject = encodeURIComponent(rs.project);
+  const url = `${rs.host}/api/v4/projects/${encodedProject}/releases?per_page=100`;
+  const data = await fetchJson(url);
+  if (!Array.isArray(data)) {
+    throw new Error('GitLab response is not an array');
+  }
+  return data
+    .filter((r) => r && !r.upcoming_release)
+    .map((r) => ({
+      version: r.tag_name,
+      name: r.name || r.tag_name,
+      releaseDate: r.released_at || r.created_at || null,
+      releaseUrl:
+        (r._links && r._links.self) ||
+        `${rs.host}/${rs.project}/-/releases/${r.tag_name}`,
+      releaseNotes: typeof r.description === 'string' ? r.description : '',
+    }))
+    .sort((a, b) => (b.releaseDate || '').localeCompare(a.releaseDate || ''))
+    .slice(0, MAX_HISTORY);
+}
 
-    if (!unique.has(key)) {
-      unique.set(key, release);
+// ---------------------------------------------------------------------------
+// Gitea Releases
+// ---------------------------------------------------------------------------
+
+async function fetchGiteaReleases(rs) {
+  // Gitea API supports `draft` and `pre-release` filters, but not every fork does.
+  // We fetch with a high limit and filter in JS.
+  const url = `${rs.host}/api/v1/repos/${rs.owner}/${rs.repository}/releases?limit=50&page=1&draft=false&pre-release=false`;
+  const data = await fetchJson(url);
+  if (!Array.isArray(data)) {
+    throw new Error('Gitea response is not an array');
+  }
+  return data
+    .filter((r) => r && !r.draft && !r.prerelease)
+    .map((r) => ({
+      version: r.tag_name,
+      name: r.name || r.tag_name,
+      releaseDate: r.created_at || r.published_at || null,
+      releaseUrl:
+        r.html_url ||
+        `${rs.host}/${rs.owner}/${rs.repository}/releases/tag/${r.tag_name}`,
+      releaseNotes: typeof r.body === 'string' ? r.body : '',
+    }))
+    .sort((a, b) => (b.releaseDate || '').localeCompare(a.releaseDate || ''))
+    .slice(0, MAX_HISTORY);
+}
+
+// ---------------------------------------------------------------------------
+// Forgejo Releases (same API shape as Gitea)
+// ---------------------------------------------------------------------------
+
+async function fetchForgejoReleases(rs) {
+  return fetchGiteaReleases(rs);
+}
+
+// ---------------------------------------------------------------------------
+// LibreOffice download directory (Apache autoindex HTML)
+// ---------------------------------------------------------------------------
+
+async function fetchLibreOfficeReleases(rs) {
+  // The LibreOffice stable releases are published as folders under
+  // https://download.documentfoundation.org/libreoffice/stable/
+  // Apache autoindex returns HTML table rows like:
+  //   <tr><td>&nbsp;</td><td><a href="26.8.3/">26.8.3/</a></td>
+  //       <td align="right">11-Nov-2026 18:34  </td><td align="right">  - </td></tr>
+  // We parse this stable, predictable format. This is the official LibreOffice
+  // release source — there is no JSON API. Not random website scraping.
+  const html = await fetchText(rs.url);
+  // Match: href="VERSION/" ... </a></td>...<td...>DD-Mon-YYYY HH:MM
+  const versionRegex =
+    /href="(\d+\.\d+\.\d+)\/"[^<]*<\/a>[^<]*?<td[^>]*>\s*(\d{2}-[A-Za-z]{3}-\d{4}\s+\d{2}:\d{2})/g;
+  const releases = [];
+  let match;
+  while ((match = versionRegex.exec(html)) !== null) {
+    const version = match[1];
+    const dateStr = match[2];
+    // Parse "11-Nov-2026 18:34" as UTC
+    const parsed = new Date(dateStr + ' UTC');
+    const isoDate = isNaN(parsed.getTime()) ? null : parsed.toISOString();
+    releases.push({
+      version,
+      name: `LibreOffice ${version}`,
+      releaseDate: isoDate,
+      releaseUrl: `${rs.url}${version}/`,
+      releaseNotes: '',
+    });
+  }
+  // Fallback: if the date-aware regex didn't catch anything, try version-only
+  if (releases.length === 0) {
+    const simpleRegex = /href="(\d+\.\d+\.\d+)\/"/g;
+    let m;
+    while ((m = simpleRegex.exec(html)) !== null) {
+      releases.push({
+        version: m[1],
+        name: `LibreOffice ${m[1]}`,
+        releaseDate: null,
+        releaseUrl: `${rs.url}${m[1]}/`,
+        releaseNotes: '',
+      });
     }
   }
-
-  return [...unique.values()]
-    .sort((a, b) => {
-      if (a.date && b.date && a.date !== b.date) {
-        return b.date.localeCompare(a.date);
-      }
-
-      return compareVersions(a.version, b.version);
-    })
-    .slice(0, HISTORY_LIMIT);
+  // Sort versions in descending order (semver-like string sort works for x.y.z)
+  releases.sort((a, b) => b.version.localeCompare(a.version, undefined, { numeric: true }));
+  return releases.slice(0, MAX_HISTORY);
 }
 
-function parseAutoIndex(html) {
-  const entries = [];
-  const anchorRegex = /<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi;
+// ---------------------------------------------------------------------------
+// Mozilla product-details (Firefox)
+// ---------------------------------------------------------------------------
 
-  for (const match of html.matchAll(anchorRegex)) {
-    const href = decodeHtml(match[1]).trim();
-    const label = cleanText(match[2]);
+async function fetchMozillaReleases(rs) {
+  // product-details.mozilla.org/1.0/firefox.json returns:
+  //   { "releases": { "<key>": { "category": "...", "date": "...", "version": "...", ... } } }
+  // Categories:
+  //   major     → major version bumps (e.g. 161.0) — KEEP
+  //   stability → minor stability updates (e.g. 160.0.1) — KEEP
+  //   dev       → beta releases (e.g. 162.0b2) — SKIP (prerelease)
+  //   esr       → Extended Support Release train (separate product variant) — SKIP
+  // Additionally, "stability" entries whose KEY contains "esr" (e.g.
+  // "firefox-115.46.0esr") are ESR point releases of an older major train — SKIP.
+  const data = await fetchJson(rs.url);
+  const releasesObj = data && data.releases ? data.releases : {};
+  const releases = [];
+  for (const [key, info] of Object.entries(releasesObj)) {
+    if (!info || typeof info !== 'object') continue;
+    const category = info.category || '';
+    if (category !== 'major' && category !== 'stability') continue;
+    // Exclude ESR train and ESR point releases (key contains "esr")
+    if (key.toLowerCase().includes('esr')) continue;
+    const version = info.version || key;
+    // Skip beta/dev versions that slipped into stability (defensive)
+    if (/[ab]\d$/.test(version) || version.toLowerCase().includes('beta')) continue;
+    releases.push({
+      version,
+      name: `Firefox ${version}`,
+      releaseDate: info.date || null,
+      releaseUrl: `https://www.mozilla.org/firefox/${version}/releasenotes/`,
+      releaseNotes: '',
+    });
+  }
+  return releases
+    .sort((a, b) => (b.releaseDate || '').localeCompare(a.releaseDate || ''))
+    .slice(0, MAX_HISTORY);
+}
 
-    if (!href || href === '../' || href.startsWith('?')) continue;
+// ---------------------------------------------------------------------------
+// Ubuntu cloud images SimpleStreams
+// ---------------------------------------------------------------------------
 
-    const start = match.index + match[0].length;
-    const followingText = cleanText(html.slice(start, start + 180));
+async function fetchUbuntuReleases(rs) {
+  // SimpleStreams JSON shape:
+  //   {
+  //     "products": {
+  //       "com.ubuntu.cloud:server:22.04:amd64": {
+  //         "release": "jammy", "release_codename": "Jammy Jellyfish",
+  //         "release_title": "22.04 LTS",
+  //         "versions": {
+  //           "20240110": { "pubname": "ubuntu-jammy-...", "label": "release", ... },
+  //           ...
+  //         }
+  //       }, ...
+  //     }
+  //   }
+  // We extract one release entry per Ubuntu version (amd64 server only, to
+  // avoid duplicates for i386/arm64/etc.). Sort by version number descending
+  // (so 24.04 comes before 22.04, not by pubname which would put 17.04 first).
+  const data = await fetchJson(rs.url);
+  const products = data && data.products ? data.products : {};
+  const releases = [];
 
-    entries.push({
-      href,
-      label,
-      followingText,
+  for (const [pid, product] of Object.entries(products)) {
+    if (!product || !product.versions) continue;
+    // Only amd64 server releases (one entry per Ubuntu version)
+    if (!pid.includes(':server:') || !pid.endsWith(':amd64')) continue;
+
+    // Extract version number from product id (e.g., "22.04" from "...:server:22.04:amd64")
+    const m = pid.match(/server:(\d+\.\d+):amd64$/);
+    if (!m) continue;
+    const versionNumber = m[1];
+
+    // Find the newest build for this version — vkey is YYYYMMDD, so lexical sort works.
+    const versionEntries = Object.entries(product.versions);
+    if (versionEntries.length === 0) continue;
+
+    let newestKey = '';
+    for (const [vkey] of versionEntries) {
+      if (vkey > newestKey) newestKey = vkey;
+    }
+    const newest = product.versions[newestKey];
+
+    // Convert vkey (YYYYMMDD) to ISO date
+    let isoDate = null;
+    if (/^\d{8}$/.test(newestKey)) {
+      isoDate = `${newestKey.slice(0, 4)}-${newestKey.slice(4, 6)}-${newestKey.slice(6, 8)}T00:00:00Z`;
+    }
+
+    const releaseTitle = product.release_title || `Ubuntu ${versionNumber}`;
+    releases.push({
+      version: `Ubuntu ${versionNumber}`,
+      name: releaseTitle,
+      releaseDate: isoDate,
+      releaseUrl: `https://cloud-images.ubuntu.com/releases/${versionNumber}/`,
+      releaseNotes: '',
+      _sortKey: parseFloat(versionNumber), // internal — stripped before output
     });
   }
 
-  return entries;
+  // Sort by version number descending (24.04 > 22.04 > 20.04 > ...)
+  releases.sort((a, b) => b._sortKey - a._sortKey);
+
+  // Strip internal sort key from output
+  return releases.slice(0, MAX_HISTORY).map(({ _sortKey, ...rest }) => rest);
 }
 
-function parseArchiveDate(value) {
-  const match = String(value).match(
-    /\b(\d{1,2})-([A-Za-z]{3})-(\d{4})\s+(\d{2}):(\d{2})\b/
-  );
+// ---------------------------------------------------------------------------
+// Blender releases page (Blender.org RSS feed)
+// ---------------------------------------------------------------------------
 
-  if (!match) return null;
-
-  const months = {
-    jan: '01', feb: '02', mar: '03', apr: '04',
-    may: '05', jun: '06', jul: '07', aug: '08',
-    sep: '09', oct: '10', nov: '11', dec: '12',
-  };
-
-  const month = months[match[2].toLowerCase()];
-  if (!month) return null;
-
-  return `${match[3]}-${month}-${match[1].padStart(2, '0')}T${match[4]}:${match[5]}:00.000Z`;
-}
-
-function isPreReleaseVersion(version) {
-  return /(alpha|beta|nightly|canary|dev|preview|pre|rc)/i.test(version);
-}
-
-async function getGitHubReleases(application) {
-  const { owner, repository } = application.releaseSource;
-
+async function fetchBlenderReleasesPage(rs) {
+  // The Blender.org /download/releases/ HTML page is protected by Cloudflare's
+  // JavaScript challenge and cannot be fetched by a plain HTTP client.
+  // However, the WordPress RSS feed at /feed/ is accessible and contains
+  // release announcements tagged with category "release". We paginate through
+  // the feed to collect up to 20 historical releases.
+  //
+  // Each RSS <item> for a release looks like:
+  //   <item>
+  //     <title>Blender 5.3 Release</title>
+  //     <link>https://www.blender.org/press/blender-5-3-release/</link>
+  //     <pubDate>Tue, 10 Nov 2026 17:58:03 +0000</pubDate>
+  //     <category><![CDATA[release]]></category>
+  //     ...
+  //   </item>
   const releases = [];
+  const MAX_PAGES = 20; // Safety limit — feed yields ~19 releases across ~14 pages
+  let consecutiveEmpty = 0;
 
-  for (let page = 1; page <= MAX_RELEASE_PAGES; page += 1) {
-    const url = `https://api.github.com/repos/${owner}/${repository}/releases?per_page=100&page=${page}`;
-
-    const data = await fetchJson(url, {
-      headers: {
-        Accept: 'application/vnd.github+json',
-      },
-    });
-
-    if (!Array.isArray(data) || data.length === 0) break;
-
-    for (const item of data) {
-      if (!isStableRelease(item)) continue;
-
-      const release = normalizeRelease(item);
-      if (release) releases.push(release);
-    }
-
-    if (data.length < 100) break;
-    await sleep(REQUEST_DELAY_MS);
-  }
-
-  return sortAndLimit(releases);
-}
-
-async function getGitLabReleases(application) {
-  const { host, project } = application.releaseSource;
-  const encodedProject = encodeURIComponent(project);
-  const baseUrl = `${host.replace(/\/$/, '')}/api/v4/projects/${encodedProject}/releases`;
-
-  const releases = [];
-
-  for (let page = 1; page <= MAX_RELEASE_PAGES; page += 1) {
-    const url = `${baseUrl}?per_page=100&page=${page}`;
-
-    const data = await fetchJson(url);
-
-    if (!Array.isArray(data) || data.length === 0) break;
-
-    for (const item of data) {
-      if (!isStableRelease(item)) continue;
-
-      const release = normalizeRelease({
-        version: item.tag_name,
-        name: item.name,
-        description: item.description,
-        released_at: item.released_at,
-        created_at: item.created_at,
-        url: item._links?.self,
-      });
-
-      if (release) {
-        release.url = `${host.replace(/\/$/, '')}/${project}/-/releases/${encodeURIComponent(item.tag_name)}`;
-        releases.push(release);
-      }
-    }
-
-    if (data.length < 100) break;
-    await sleep(REQUEST_DELAY_MS);
-  }
-
-  return sortAndLimit(releases);
-}
-
-async function getGiteaReleases(application) {
-  const { host, owner, repository } = application.releaseSource;
-  const baseUrl = `${host.replace(/\/$/, '')}/api/v1/repos/${owner}/${repository}/releases`;
-
-  const releases = [];
-
-  for (let page = 1; page <= MAX_RELEASE_PAGES; page += 1) {
-    const url = `${baseUrl}?limit=50&page=${page}`;
-    const data = await fetchJson(url);
-
-    if (!Array.isArray(data) || data.length === 0) break;
-
-    for (const item of data) {
-      if (!isStableRelease(item)) continue;
-
-      const release = normalizeRelease({
-        tag_name: item.tag_name,
-        name: item.name,
-        body: item.body,
-        published_at: item.published_at,
-        created_at: item.created_at,
-        html_url: item.html_url,
-      });
-
-      if (release) releases.push(release);
-    }
-
-    if (data.length < 50) break;
-    await sleep(REQUEST_DELAY_MS);
-  }
-
-  return sortAndLimit(releases);
-}
-
-/*
- * Blender:
- * The releases API currently returns 404, so use Blender's official
- * download archive instead of the unavailable API.
- */
-async function getBlenderReleases() {
-  const archiveRoot = 'https://download.blender.org/release/';
-  const rootHtml = await fetchText(archiveRoot);
-  const directories = parseAutoIndex(rootHtml);
-
-  const blenderDirectories = directories
-    .filter((entry) => /^Blender\d+\.\d+\/$/i.test(entry.href))
-    .map((entry) => entry.href);
-
-  const releases = [];
-
-  for (const directory of blenderDirectories) {
-    const series = directory.match(/Blender(\d+\.\d+)/i)?.[1];
-    if (!series) continue;
-
+  for (let page = 1; page <= MAX_PAGES; page++) {
+    const url = page === 1 ? rs.url : `${rs.url}?paged=${page}`;
+    let xml;
     try {
-      const html = await fetchText(`${archiveRoot}${directory}`);
-      const entries = parseAutoIndex(html);
-
-      for (const entry of entries) {
-        const filename = entry.href.split('/').pop();
-
-        if (!/^blender-/i.test(filename)) continue;
-        if (!/\.(tar\.xz|tar\.bz2|zip|dmg|msi|exe)$/i.test(filename)) continue;
-        if (isPreReleaseVersion(filename)) continue;
-
-        const versionMatch = filename.match(
-          /blender-(\d+\.\d+(?:\.\d+)?)(?:[-_])/i
-        );
-
-        if (!versionMatch) continue;
-
-        const version = versionMatch[1];
-        const date = parseArchiveDate(entry.followingText);
-
-        releases.push({
-          version,
-          date,
-          url: `${archiveRoot}${directory}`,
-          notes: `Blender ${version} stable release.`,
-        });
-      }
-    } catch (error) {
-      console.log(`[INFO] Blender ${series}: ${error.message}`);
+      xml = await fetchText(url);
+    } catch (e) {
+      // Fetch error on this page — stop paginating, use what we have.
+      break;
+    }
+    if (!xml || !xml.includes('<item>')) {
+      // No items at all on this page — end of feed.
+      break;
     }
 
-    await sleep(REQUEST_DELAY_MS);
+    // Extract all <item> blocks
+    const itemRegex = /<item>([\s\S]*?)<\/item>/g;
+    let match;
+    let releasesThisPage = 0;
+    while ((match = itemRegex.exec(xml)) !== null) {
+      const item = match[1];
+
+      // Extract categories
+      const catMatches = [...item.matchAll(/<category><!\[CDATA\[(.*?)\]\]><\/category>/g)];
+      const cats = catMatches.map((m) => m[1].toLowerCase());
+
+      // Filter: only items tagged with "release" category
+      if (!cats.includes('release')) continue;
+
+      // Extract title, date, link
+      const titleM = item.match(/<title>(.*?)<\/title>/);
+      const dateM = item.match(/<pubDate>(.*?)<\/pubDate>/);
+      const linkM = item.match(/<link>(.*?)<\/link>/);
+
+      const title = titleM ? titleM[1].trim() : '';
+      const dateStr = dateM ? dateM[1].trim() : '';
+      const link = linkM ? linkM[1].trim() : '';
+
+      // Extract version from title:
+      //   "Blender 5.3 Release"       → "5.3"
+      //   "Blender 5.2 LTS Release"   → "5.2 LTS"
+      //   "Blender 2.83.1 LTS"        → "2.83.1 LTS"
+      const versionMatch = title.match(/Blender\s+(\d+\.\d+(?:\.\d+)?)(?:\s+(LTS))?/i);
+      let version;
+      if (versionMatch) {
+        version = versionMatch[1];
+        if (versionMatch[2]) version += ` ${versionMatch[2]}`;
+      } else {
+        version = title; // Fallback: use full title
+      }
+
+      // Parse RSS date (e.g., "Tue, 10 Nov 2026 17:58:03 +0000")
+      const parsed = new Date(dateStr);
+      const isoDate = isNaN(parsed.getTime()) ? null : parsed.toISOString();
+
+      releases.push({
+        version,
+        name: title,
+        releaseDate: isoDate,
+        releaseUrl: link,
+        releaseNotes: '',
+      });
+      releasesThisPage++;
+    }
+
+    // Stop if we have enough releases
+    if (releases.length >= MAX_HISTORY) break;
+
+    // Track consecutive empty pages — if 3 in a row have no release items,
+    // assume we've passed the last release in the archive and stop.
+    if (releasesThisPage === 0) {
+      consecutiveEmpty++;
+      if (consecutiveEmpty >= 3) break;
+    } else {
+      consecutiveEmpty = 0;
+    }
   }
 
-  const result = sortAndLimit(releases);
-
-  if (result.length === 0) {
-    throw new Error('No stable Blender versions found in the official archive.');
-  }
-
-  return result;
+  return releases
+    .sort((a, b) => (b.releaseDate || '').localeCompare(a.releaseDate || ''))
+    .slice(0, MAX_HISTORY);
 }
 
-/*
- * Krita and Kdenlive:
- * Their official KDE application RSS feeds provide stable release history.
- */
-async function getKdeReleases(application) {
-  const feedUrl = `https://apps.kde.org/${application.id}/index.xml`;
-  const xml = await fetchText(feedUrl);
+// ---------------------------------------------------------------------------
+// Dispatch
+// ---------------------------------------------------------------------------
 
-  const items = [...xml.matchAll(/<item\b[^>]*>([\s\S]*?)<\/item>/gi)];
-  const releases = [];
-
-  for (const match of items) {
-    const item = match[1];
-
-    const getTag = (tag) => {
-      const result = item.match(new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`, 'i'));
-      return result ? cleanText(result[1]) : '';
-    };
-
-    const title = getTag('title');
-    const link = getTag('link');
-    const pubDate = getTag('pubDate');
-    const description = getTag('description');
-
-    const versionMatch = title.match(/\d+\.\d+(?:\.\d+){0,2}/);
-    if (!versionMatch || isPreReleaseVersion(title)) continue;
-
-    const release = normalizeRelease({
-      version: versionMatch[0],
-      date: pubDate,
-      url: link,
-      notes: description,
-    });
-
-    if (release) releases.push(release);
-  }
-
-  const result = sortAndLimit(releases);
-
-  if (result.length === 0) {
-    throw new Error('No stable releases found in the official KDE RSS feed.');
-  }
-
-  return result;
-}
-
-/*
- * VLC:
- * Parse the official VideoLAN archive's Apache-style directory listing.
- * The archive is under /pub/videolan/vlc/, not /vlc/ alone.
- */
-async function getVlcReleases() {
-  const archiveUrl = 'https://download.videolan.org/pub/videolan/vlc/';
-  const html = await fetchText(archiveUrl);
-  const entries = parseAutoIndex(html);
-  const releases = [];
-
-  for (const entry of entries) {
-    const match = entry.href.match(/^(\d+\.\d+(?:\.\d+){0,2})\/$/);
-
-    if (!match) continue;
-
-    const version = match[1];
-    if (isPreReleaseVersion(version)) continue;
-
-    releases.push({
-      version,
-      date: parseArchiveDate(entry.followingText),
-      url: `${archiveUrl}${entry.href}`,
-      notes: `VLC ${version} stable release.`,
-    });
-  }
-
-  const result = sortAndLimit(releases);
-
-  if (result.length === 0) {
-    throw new Error('Could not read stable versions from the official VideoLAN archive.');
-  }
-
-  return result;
-}
-
-async function getLibreOfficeReleases() {
-  const archiveUrl = 'https://download.documentfoundation.org/libreoffice/stable/';
-  const html = await fetchText(archiveUrl);
-  const entries = parseAutoIndex(html);
-  const releases = [];
-
-  for (const entry of entries) {
-    const match = entry.href.match(/^(\d+\.\d+(?:\.\d+)?)\/$/);
-    if (!match) continue;
-
-    const version = match[1];
-
-    releases.push({
-      version,
-      date: parseArchiveDate(entry.followingText),
-      url: `${archiveUrl}${entry.href}`,
-      notes: `LibreOffice ${version} stable release.`,
-    });
-  }
-
-  const result = sortAndLimit(releases);
-
-  if (result.length === 0) {
-    throw new Error('No stable LibreOffice versions found in the official archive.');
-  }
-
-  return result;
-}
-
-async function getFirefoxReleases() {
-  const versionsUrl = 'https://product-details.mozilla.org/1.0/firefox_versions.json';
-  const data = await fetchJson(versionsUrl);
-
-  const version = data.LATEST_FIREFOX_VERSION;
-  if (!version) {
-    throw new Error('Mozilla did not provide the latest Firefox version.');
-  }
-
-  const releases = [{
-    version,
-    date: null,
-    url: 'https://www.mozilla.org/firefox/releases/',
-    notes: `Firefox ${version} stable release.`,
-  }];
-
-  return releases;
-}
-
-async function getReleases(application) {
-  switch (application.id) {
-    case 'blender':
-      return getBlenderReleases();
-
-    case 'krita':
-    case 'kdenlive':
-      return getKdeReleases(application);
-
-    case 'vlc':
-      return getVlcReleases();
-
-    default:
-      break;
-  }
-
-  const source = application.releaseSource;
-
-  if (!source) {
-    throw new Error('Release source is not configured.');
-  }
-
-  switch (source.type) {
+function sourceApiUrl(rs) {
+  switch (rs.type) {
     case 'github':
-      return getGitHubReleases(application);
-
+      return `https://api.github.com/repos/${rs.owner}/${rs.repository}/releases`;
     case 'gitlab':
-      return getGitLabReleases(application);
-
+      return `${rs.host}/api/v4/projects/${encodeURIComponent(rs.project)}/releases`;
     case 'gitea':
-      return getGiteaReleases(application);
-
-    case 'libreoffice-directory':
-      return getLibreOfficeReleases();
-
-    case 'mozilla-product-details':
-      return getFirefoxReleases();
-
+    case 'forgejo':
+      return `${rs.host}/api/v1/repos/${rs.owner}/${rs.repository}/releases`;
     default:
-      throw new Error(`Unsupported release source: ${source.type}`);
+      return rs.url || '';
   }
 }
 
-async function readJson(filePath) {
-  const content = await fs.readFile(filePath, 'utf8');
-  return JSON.parse(content);
+async function fetchReleasesFor(app) {
+  const rs = app.releaseSource;
+  if (!rs || !rs.type) {
+    throw new Error('releaseSource is missing or has no type');
+  }
+  switch (rs.type) {
+    case 'github':
+      return fetchGitHubReleases(rs);
+    case 'gitlab':
+      return fetchGitLabReleases(rs);
+    case 'gitea':
+      return fetchGiteaReleases(rs);
+    case 'forgejo':
+      return fetchForgejoReleases(rs);
+    case 'libreoffice-directory':
+      return fetchLibreOfficeReleases(rs);
+    case 'mozilla-product-details':
+      return fetchMozillaReleases(rs);
+    case 'ubuntu-cloud-images':
+      return fetchUbuntuReleases(rs);
+    case 'blender-releases-page':
+      return fetchBlenderReleasesPage(rs);
+    default:
+      throw new Error(`unsupported releaseSource.type: "${rs.type}"`);
+  }
 }
 
-async function writeJson(filePath, data) {
-  await fs.mkdir(path.dirname(filePath), { recursive: true });
-  await fs.writeFile(filePath, `${JSON.stringify(data, null, 2)}\n`, 'utf8');
-}
+// ---------------------------------------------------------------------------
+// Main
+// ---------------------------------------------------------------------------
 
 async function main() {
-  const catalog = await readJson(CATALOG_PATH);
+  console.log('GetFOSS Stable Release Tracker — Updater');
+  console.log('==========================================');
 
-  let releaseData;
-
-  try {
-    releaseData = await readJson(RELEASES_PATH);
-  } catch {
-    releaseData = {
-      schemaVersion: 1,
-      lastUpdated: null,
-      applications: {},
-    };
+  if (!process.env.GITHUB_TOKEN) {
+    console.log(
+      '⚠ GITHUB_TOKEN is not set. Unauthenticated GitHub API requests are limited to 60/hour,'
+    );
+    console.log('  which will cause most GitHub-hosted apps to fail. Existing data will be preserved.');
+    console.log('  Set GITHUB_TOKEN (e.g. via GitHub Actions secrets) for production use.');
+    console.log();
   }
 
-  if (!releaseData.applications || typeof releaseData.applications !== 'object') {
-    releaseData.applications = {};
-  }
+  const catalog = await loadCatalog();
+  console.log(`Loaded catalog: ${catalog.length} applications from ${CATALOG_PATH}`);
 
-  let successful = 0;
-  let failed = 0;
+  const existing = await loadExistingReleases();
+  const existingCount = Object.keys(existing.applications || {}).length;
+  console.log(`Loaded existing releases: ${existingCount} applications from ${RELEASES_PATH}`);
+  console.log();
 
-  for (const application of catalog) {
+  const result = {
+    schemaVersion: 1,
+    lastUpdated: new Date().toISOString(),
+    applications: {},
+  };
+
+  let successCount = 0;
+  let preservedCount = 0;
+  let emptyCount = 0;
+  let failureCount = 0;
+  const failures = [];
+
+  for (let i = 0; i < catalog.length; i++) {
+    const app = catalog[i];
+    const appId = app.id;
+    const pad = String(i + 1).padStart(String(catalog.length).length, ' ');
+    process.stdout.write(`  [${pad}/${catalog.length}] ${appId.padEnd(28)} `);
+
+    const existingApp = existing.applications && existing.applications[appId];
+    const existingReleases = existingApp && Array.isArray(existingApp.releases) ? existingApp.releases : [];
+
     try {
-      const releases = await getReleases(application);
+      const releases = await fetchReleasesFor(app);
 
-      if (!Array.isArray(releases) || releases.length === 0) {
-        throw new Error('No stable releases returned.');
+      if (Array.isArray(releases) && releases.length > 0) {
+        // Successful fetch with data
+        result.applications[appId] = {
+          name: app.name,
+          lastFetch: new Date().toISOString(),
+          sourceUrl: sourceApiUrl(app.releaseSource),
+          releases,
+        };
+        successCount++;
+        console.log(`✓ ${releases.length} releases (latest: ${releases[0].version})`);
+      } else {
+        // Source returned no data — preserve existing if we have it, else mark empty
+        if (existingReleases.length > 0) {
+          result.applications[appId] = {
+            ...existingApp,
+            lastFetch: existingApp.lastFetch || null,
+            sourceUrl: sourceApiUrl(app.releaseSource),
+            releases: existingReleases,
+          };
+          preservedCount++;
+          console.log(`⊘ empty result — preserved ${existingReleases.length} existing ${existingReleases.length === 1 ? 'entry' : 'entries'}`);
+        } else {
+          result.applications[appId] = {
+            name: app.name,
+            lastFetch: null,
+            sourceUrl: sourceApiUrl(app.releaseSource),
+            releases: [],
+          };
+          emptyCount++;
+          console.log('⊘ empty result — no existing data to preserve');
+        }
       }
-
-      const latest = releases[0];
-
-      releaseData.applications[application.id] = {
-        latestVersion: latest.version,
-        latestDate: latest.date,
-        releases,
-        updatedAt: new Date().toISOString(),
-      };
-
-      console.log(
-        `[OK] ${application.name}: ${latest.version} (${releases.length} releases)`
-      );
-
-      successful += 1;
-    } catch (error) {
-      console.error(`[ERROR] ${application.name}: ${error.message}`);
-      console.log(`[INFO] ${application.name}: keeping previously saved release data.`);
-
-      failed += 1;
+    } catch (e) {
+      // Per-app failure — preserve existing data if available
+      const msg = e && e.message ? e.message : String(e);
+      if (existingReleases.length > 0) {
+        result.applications[appId] = {
+          ...existingApp,
+          lastFetch: existingApp.lastFetch || null,
+          sourceUrl: sourceApiUrl(app.releaseSource),
+          releases: existingReleases,
+        };
+        preservedCount++;
+        console.log(`✗ FAILED — preserved ${existingReleases.length} existing ${existingReleases.length === 1 ? 'entry' : 'entries'} (${msg})`);
+      } else {
+        result.applications[appId] = {
+          name: app.name,
+          lastFetch: null,
+          sourceUrl: sourceApiUrl(app.releaseSource),
+          releases: [],
+        };
+        failureCount++;
+        failures.push({ id: appId, error: msg });
+        console.log(`✗ FAILED — no existing data (${msg})`);
+      }
     }
-
-    await sleep(REQUEST_DELAY_MS);
   }
 
-  if (successful > 0) {
-    releaseData.lastUpdated = new Date().toISOString();
-    await writeJson(RELEASES_PATH, releaseData);
+  // ---- Write releases.json ----
+  const output = JSON.stringify(result, null, 2) + '\n';
+  await fs.mkdir(path.dirname(RELEASES_PATH), { recursive: true });
+  await fs.writeFile(RELEASES_PATH, output, 'utf8');
+  const sizeKb = (Buffer.byteLength(output, 'utf8') / 1024).toFixed(1);
+
+  console.log();
+  console.log('==========================================');
+  console.log('Summary:');
+  console.log(`  ✓ Fetched fresh data:        ${successCount}`);
+  console.log(`  ↻ Preserved existing data:    ${preservedCount} (on failure or empty result)`);
+  console.log(`  ⊘ Empty result, no existing:  ${emptyCount}`);
+  console.log(`  ✗ Failed, no existing data:   ${failureCount}`);
+  console.log(`  Total applications:           ${catalog.length}`);
+  console.log();
+  console.log(`✓ Wrote ${RELEASES_PATH} (${sizeKb} KB)`);
+
+  // ---- Exit code policy ----
+  // Exit 0 if at least one app fetched fresh data, OR all failures had data to preserve.
+  // Exit 1 only if the catalog itself was unreadable (handled by throw above)
+  // or every single app failed with no data to preserve.
+  if (failureCount === catalog.length) {
+    console.error(`\n[FATAL] All ${catalog.length} applications failed with no existing data to preserve.`);
+    if (failures.length > 0) {
+      console.error('First 10 failures:');
+      failures.slice(0, 10).forEach((f) => console.error(`  - ${f.id}: ${f.error}`));
+    }
+    process.exit(1);
   }
 
-  console.log('\nRelease update summary:');
-  console.log(`Successful: ${successful}`);
-  console.log(`Failed: ${failed}`);
-
-  if (failed > 0) {
-    process.exitCode = 1;
-  }
+  process.exit(0);
 }
 
-main().catch((error) => {
-  console.error(`[FATAL] ${error.message}`);
-  process.exitCode = 1;
+main().catch((e) => {
+  console.error(`\n[FATAL] ${e && e.stack ? e.stack : e}`);
+  process.exit(1);
 });
