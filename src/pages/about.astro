@@ -1,63 +1,170 @@
 ---
 import Layout from '../components/Layout.astro';
 import TypedLede from '../components/TypedLede.astro';
-import SkillsMarquee from '../components/SkillsMarquee.astro';
 ---
 
 <Layout
-  title="About — Your Name"
-  description="A one-line summary of who you are and what you do."
+  title="About GetFOSS — Our Mission and Principles"
+  description="Free and open-source software, done right. GetFOSS picks the best FOSS apps — private, secure, and community-driven — for every platform."
   canonicalPath="/about/"
 >
   <main class="content-shell" data-pagefind-body>
-    <div class="page-hero">
-      <h1 class="visually-hidden">About</h1>
-      <TypedLede text="A one-line summary of who you are and what you do." />
-    </div>
+    <section class="page-hero">
+      <h1 class="visually-hidden">About GetFOSS</h1>
+      <TypedLede text="Free and open-source software, done right." />
+    </section>
 
-    <div class="section" style="max-width: var(--max);">
+    <section class="section" style="max-width: var(--max);">
       <div class="about-grid">
-        <div class="about-me">
-          <div class="about-card">
-            <h3>About</h3>
+        <div class="about-main">
+          <article class="about-card">
+            <h2>What is GetFOSS?</h2>
             <div class="about-prose">
-              <p>Introduce yourself here. Say who you are, where you're based, and what kind of work you do. A couple of sentences is plenty for an opener.</p>
-              <p>Use this paragraph for what you're working on right now: projects, interests, the tools you reach for most often.</p>
-              <p>Close with what this site is for and how people can reach you. Replace the social links in the header with your own profiles.</p>
+              <p>
+                GetFOSS is a resource dedicated to discovering and exploring
+                free and open-source software. Our goal is to help people find
+                high-quality applications that respect their privacy, put
+                users in control, and are built around open collaboration.
+              </p>
+
+              <p>
+                We cover FOSS applications and tools across platforms,
+                including Linux, Windows, macOS, Android, and the web.
+                Topics include operating systems, productivity, development,
+                security, privacy, multimedia, self-hosting, and much more.
+              </p>
+
+              <p>
+                Whether you are looking for an alternative to proprietary
+                software or discovering open-source tools for the first time,
+                GetFOSS aims to make that journey easier.
+              </p>
             </div>
-          </div>
+          </article>
+
+          <article class="about-card">
+            <h2>Our principles</h2>
+            <div class="about-prose">
+              <h3>Free and open source</h3>
+              <p>
+                We focus exclusively on software distributed under
+                OSI-approved open-source licenses. Freeware, shareware,
+                proprietary applications, and software without a qualifying
+                open-source license are outside our scope.
+              </p>
+
+              <h3>Privacy and security</h3>
+              <p>
+                We value software that respects user privacy, minimizes
+                unnecessary data collection, and gives people meaningful
+                control over their information. Security practices and
+                transparency matter when evaluating software.
+              </p>
+
+              <h3>Community-driven development</h3>
+              <p>
+                Open development, transparent project governance, and
+                community participation are important parts of the FOSS
+                ecosystem. We value projects that welcome contributions
+                and build in the open.
+              </p>
+
+              <h3>Honest and useful information</h3>
+              <p>
+                Our articles aim to be factual, clear, and practical.
+                We want readers to understand what an application does,
+                which platforms it supports, what makes it useful, and
+                what limitations they should consider.
+              </p>
+            </div>
+          </article>
+
+          <article class="about-card">
+            <h2>What we cover</h2>
+            <div class="about-prose">
+              <p>
+                GetFOSS explores a broad range of free and open-source
+                software categories, including:
+              </p>
+
+              <ul>
+                <li>Operating systems and Linux distributions</li>
+                <li>Audio, video, and image applications</li>
+                <li>Office and productivity software</li>
+                <li>Development tools and system utilities</li>
+                <li>Security and privacy applications</li>
+                <li>Internet, web, and communication tools</li>
+                <li>Design, engineering, and creative software</li>
+                <li>Cloud, self-hosting, and mobile applications</li>
+              </ul>
+
+              <p>
+                Our focus is on helping readers discover useful software
+                rather than promoting products simply because they are popular.
+              </p>
+            </div>
+          </article>
+
+          <article class="about-card">
+            <h2>Our commitment</h2>
+            <div class="about-prose">
+              <p>
+                GetFOSS exists to make the open-source ecosystem easier
+                to explore and understand. We believe people should have
+                the freedom to use, study, modify, and share the software
+                they depend on.
+              </p>
+
+              <p>
+                We aim to support informed choices and encourage a more
+                open, transparent, and user-respecting software ecosystem.
+              </p>
+            </div>
+          </article>
         </div>
 
         <aside>
           <div class="sidebar-card">
-            <h3>Education</h3>
-            <div class="edu-entry">
-              <p class="edu-degree">Degree, Field of Study</p>
-              <p class="edu-school"><a href="https://example.edu" target="_blank" rel="noopener" style="color: var(--accent);">University Name</a> · Year</p>
-            </div>
-            <div class="edu-entry">
-              <p class="edu-degree">Degree, Field of Study</p>
-              <p class="edu-school"><a href="https://example.edu" target="_blank" rel="noopener" style="color: var(--accent);">University Name</a> · Year</p>
-            </div>
+            <h2>GetFOSS</h2>
+            <p class="sidebar-description">
+              Free and open-source software, done right.
+            </p>
 
+            <div class="sidebar-divider"></div>
+
+            <h3>Our focus</h3>
+            <ul class="focus-list">
+              <li>OSI-approved licenses</li>
+              <li>Privacy and security</li>
+              <li>Open development</li>
+              <li>Community-driven projects</li>
+              <li>Cross-platform software</li>
+            </ul>
+
+            <div class="sidebar-divider"></div>
+
+            <a class="sidebar-link" href="/blog/">Explore articles</a>
+            <a class="sidebar-link" href="/tags/">Browse tags</a>
           </div>
         </aside>
       </div>
-    </div>
-
-    <SkillsMarquee />
+    </section>
   </main>
 </Layout>
 
 <style is:global>
   .about-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.4fr);
-    gap: 4rem;
+    grid-template-columns: minmax(0, 1fr) minmax(240px, 0.4fr);
+    gap: 2rem;
     align-items: start;
   }
 
-  /* About card mirrors the Education sidebar card. */
+  .about-main {
+    display: grid;
+    gap: 1.5rem;
+  }
+
   .about-card {
     border: 1px solid var(--line);
     border-radius: var(--radius-lg);
@@ -65,18 +172,17 @@ import SkillsMarquee from '../components/SkillsMarquee.astro';
     padding: 1.5rem;
   }
 
-  .about-card h3 {
-    margin: 0 0 1rem;
+  .about-card h2 {
+    margin: 0 0 1.2rem;
+    color: var(--ink);
     font-family: var(--mono);
-    font-size: 0.72rem;
+    font-size: 1rem;
     font-weight: 700;
-    letter-spacing: 0.14em;
-    color: var(--muted);
   }
 
   .about-prose p {
     margin: 0 0 1.2rem;
-    max-width: 62ch;
+    max-width: 68ch;
     color: color-mix(in srgb, var(--ink) 82%, var(--muted));
     font-size: 1rem;
     line-height: 1.75;
@@ -84,6 +190,27 @@ import SkillsMarquee from '../components/SkillsMarquee.astro';
 
   .about-prose p:last-child {
     margin-bottom: 0;
+  }
+
+  .about-prose h3 {
+    margin: 1.5rem 0 0.5rem;
+    color: var(--ink);
+    font-family: var(--mono);
+    font-size: 0.88rem;
+    font-weight: 700;
+  }
+
+  .about-prose h3:first-child {
+    margin-top: 0;
+  }
+
+  .about-prose ul {
+    display: grid;
+    gap: 0.55rem;
+    margin: 1rem 0 1.2rem;
+    padding-left: 1.4rem;
+    color: color-mix(in srgb, var(--ink) 82%, var(--muted));
+    line-height: 1.65;
   }
 
   .sidebar-card {
@@ -95,42 +222,67 @@ import SkillsMarquee from '../components/SkillsMarquee.astro';
     padding: 1.5rem;
   }
 
+  .sidebar-card h2 {
+    margin: 0;
+    color: var(--accent);
+    font-family: var(--mono);
+    font-size: 1.15rem;
+  }
+
+  .sidebar-description {
+    margin: 0.75rem 0 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .sidebar-divider {
+    height: 1px;
+    margin: 1.3rem 0;
+    background: var(--line);
+  }
+
   .sidebar-card h3 {
-    margin: 0 0 1rem;
+    margin: 0 0 0.9rem;
+    color: var(--muted);
     font-family: var(--mono);
     font-size: 0.72rem;
     font-weight: 700;
-    letter-spacing: 0.14em;
-    color: var(--muted);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
   }
 
-  .edu-entry {
-    margin-bottom: 1rem;
-  }
-
-  .edu-entry:last-child { margin-bottom: 0; }
-
-  .edu-degree {
-    font-weight: 700;
-    font-size: 0.88rem;
+  .focus-list {
+    display: grid;
+    gap: 0.7rem;
+    margin: 0;
+    padding-left: 1.2rem;
     color: var(--ink);
+    font-size: 0.85rem;
+    line-height: 1.5;
   }
 
-  .edu-school {
-    margin: 0.15rem 0 0;
+  .sidebar-link {
+    display: block;
+    margin-top: 0.8rem;
+    color: var(--accent);
     font-family: var(--mono);
-    font-size: 0.75rem;
-    color: var(--muted);
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .sidebar-link:hover {
+    text-decoration: underline;
   }
 
   @media (max-width: 860px) {
     .about-grid {
-      display: block;
+      grid-template-columns: minmax(0, 1fr);
     }
 
     .sidebar-card {
       position: static;
-      margin-top: 3rem;
     }
   }
 </style>
