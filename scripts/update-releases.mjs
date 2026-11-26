@@ -25,7 +25,7 @@ async function fetchResponse(url, headers = {}) {
   const response = await fetch(url, {
     headers: {
       Accept: 'application/json, application/xml, text/html',
-      'User-Agent': 'GetFOSS-Release-Tracker',
+      'User-Agent': 'GetFOSS-Release-Tracker/1.0',
       ...headers,
     },
     signal: AbortSignal.timeout(30000),
@@ -39,11 +39,13 @@ async function fetchResponse(url, headers = {}) {
 }
 
 async function fetchJson(url, headers = {}) {
-  return (await fetchResponse(url, headers)).json();
+  const response = await fetchResponse(url, headers);
+  return response.json();
 }
 
 async function fetchText(url) {
-  return (await fetchResponse(url)).text();
+  const response = await fetchResponse(url);
+  return response.text();
 }
 
 function decodeHtml(value = '') {
@@ -220,7 +222,58 @@ async function getGiteaReleases(source) {
     .filter(Boolean);
 }
 
-// KDE application release feeds: Krita and Kdenlive.
+// Blender official release API.
+async function getBlenderReleases() {
+  const versionSeries = [
+    '5.3', '5.2', '5.1', '5.0',
+    '4.5', '4.4', '4.3', '4.2',
+    '4.1', '4.0', '3.6', '3.3',
+    '3.0', '2.93',
+  ];
+
+  const releases = new Map();
+
+  for (const series of versionSeries) {
+    try {
+      const url = new URL('https://download.blender.org/api/v1/releases/');
+      url.searchParams.set('blender_version', series);
+      url.searchParams.set('platform', 'linux-x86_64');
+
+      const data = await fetchJson(url.href);
+
+      if (!Array.isArray(data)) {
+        throw new Error('Unexpected Blender API response.');
+      }
+
+      for (const item of data) {
+        if (item.cycle && item.cycle !== 'release') continue;
+
+        const release = normalizeRelease({
+          version: item.blender_version || item.version,
+          date: item.timestamp,
+          url: item.release_notes_url || item.download_url,
+          notes: item.description || '',
+        });
+
+        if (release) {
+          releases.set(release.version, release);
+        }
+      }
+    } catch (error) {
+      console.warn(`[INFO] Blender ${series}: ${error.message}`);
+    }
+
+    await sleep(150);
+  }
+
+  if (releases.size === 0) {
+    throw new Error('Blender official release API returned no stable releases.');
+  }
+
+  return [...releases.values()];
+}
+
+// KDE release feeds: Krita and Kdenlive.
 async function getKdeReleases(application) {
   const app = application.id;
   const url = `https://apps.kde.org/${app}/index.xml`;
@@ -235,7 +288,9 @@ async function getKdeReleases(application) {
     const date = item.match(/<pubDate[^>]*>([\s\S]*?)<\/pubDate>/i)?.[1];
     const description = item.match(/<description[^>]*>([\s\S]*?)<\/description>/i)?.[1];
 
-    const versionMatch = cleanText(title || '').match(/\b(\d+\.\d+(?:\.\d+){0,2})\b/);
+    const versionMatch = cleanText(title || '').match(
+      /\b(\d+\.\d+(?:\.\d+){0,2})\b/,
+    );
 
     if (!versionMatch) continue;
 
@@ -256,40 +311,27 @@ async function getKdeReleases(application) {
   return releases;
 }
 
-// Blender official release history page.
-async function getBlenderReleases() {
-  const url = 'https://www.blender.org/download/releases/';
-  const html = await fetchText(url);
-  const text = cleanText(html);
-  const releases = [];
-
-  const pattern = /Blender\s+(\d+\.\d+(?:\.\d+)?)(?:\s+LTS)?[\s\S]{0,180}?(?:Released(?:\s+on)?|Released)\s+([A-Za-z]+\s+\d{1,2}(?:st|nd|rd|th)?,?\s+\d{4})/gi;
-
-  for (const match of text.matchAll(pattern)) {
-    const date = match[2].replace(/(\d+)(st|nd|rd|th)/, '$1');
-
-    const release = normalizeRelease({
-      version: match[1],
-      date,
-      url,
-    });
-
-    if (release) releases.push(release);
-  }
-
-  if (releases.length === 0) {
-    throw new Error('Could not read Blender stable release history.');
-  }
-
-  return releases;
-}
-
-// Official VideoLAN download archive.
+// Official VideoLAN release archive.
 async function getVlcReleases() {
-  const url = 'https://download.videolan.org/pub/videolan/vlc/';
+  const url = 'https://download.videolan.org/vlc/';
   const html = await fetchText(url);
   const rows = html.match(/<tr\b[^>]*>[\s\S]*?<\/tr>/gi) || [];
   const releases = [];
+
+  const months = {
+    Jan: '01',
+    Feb: '02',
+    Mar: '03',
+    Apr: '04',
+    May: '05',
+    Jun: '06',
+    Jul: '07',
+    Aug: '08',
+    Sep: '09',
+    Oct: '10',
+    Nov: '11',
+    Dec: '12',
+  };
 
   for (const row of rows) {
     const link = row.match(/href=["'](\d+\.\d+(?:\.\d+){0,2})\/["']/i);
@@ -297,14 +339,19 @@ async function getVlcReleases() {
     if (!link) continue;
 
     const version = link[1];
-    const dateMatch = cleanText(row).match(/\b(\d{2}-[A-Za-z]{3}-\d{4})\b/);
-    const date = dateMatch
-      ? new Date(`${dateMatch[1]} UTC`)
-      : null;
+    const dateMatch = cleanText(row).match(
+      /\b(\d{2})-([A-Za-z]{3})-(\d{4})\b/,
+    );
+
+    let date = null;
+
+    if (dateMatch && months[dateMatch[2]]) {
+      date = `${dateMatch[3]}-${months[dateMatch[2]]}-${dateMatch[1]}`;
+    }
 
     const release = normalizeRelease({
       version,
-      date: date && !Number.isNaN(date.valueOf()) ? date : null,
+      date,
       url: new URL(`${version}/`, url).href,
     });
 
@@ -396,16 +443,9 @@ async function getReleases(application) {
     throw new Error('Release source is not configured.');
   }
 
-  // Use official project release feeds and archives where available.
   switch (application.id) {
     case 'blender':
-      try {
-        return await getGiteaReleases(source);
-      } catch (error) {
-        console.warn(`[INFO] Blender API unavailable: ${error.message}`);
-        console.log('[INFO] Trying Blender official release history.');
-        return getBlenderReleases();
-      }
+      return getBlenderReleases();
 
     case 'krita':
     case 'kdenlive':
