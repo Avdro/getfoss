@@ -82,7 +82,7 @@ if (app.website) {
 }
 
 const pageTitle = `${app.name} Stable Release History — GetFOSS`;
-const pageDescription = `Stable release history for ${app.name}. Browse versions, release dates, and official release notes.`;
+const pageDescription = `Explore the stable release history of ${app.name}. Browse available versions, release dates and links to official releases and release notes.`;
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
@@ -349,6 +349,7 @@ const pageDescription = `Stable release history for ${app.name}. Browse versions
     font-family: var(--mono);
     font-size: 0.72rem;
   }
+
   .app-links a,
   .release-actions a,
   .latest-release a {
@@ -356,7 +357,9 @@ const pageDescription = `Stable release history for ${app.name}. Browse versions
     text-decoration: none;
   }
 
-  .history-section { padding-top: 2.5rem; }
+  .history-section {
+    padding-top: 2.5rem;
+  }
 
   .section-heading {
     display: flex;
@@ -447,7 +450,10 @@ const pageDescription = `Stable release history for ${app.name}. Browse versions
     font-size: 0.7rem;
   }
 
-  .release-content { flex: 1; min-width: 0; }
+  .release-content {
+    flex: 1;
+    min-width: 0;
+  }
 
   .release-main {
     display: flex;
@@ -485,8 +491,15 @@ const pageDescription = `Stable release history for ${app.name}. Browse versions
     font-size: 0.78rem;
   }
 
-  .release-notes { width: 100%; }
-  .release-notes summary { color: var(--accent); cursor: pointer; }
+  .release-notes {
+    width: 100%;
+  }
+
+  .release-notes summary {
+    color: var(--accent);
+    cursor: pointer;
+  }
+
   .release-notes pre {
     max-width: 100%;
     max-height: 420px;
@@ -511,9 +524,18 @@ const pageDescription = `Stable release history for ${app.name}. Browse versions
     border-radius: 10px;
   }
 
-  .empty-state h3 { margin: 0 0 0.5rem; }
-  .empty-state p { color: var(--muted); line-height: 1.6; }
-  .empty-state a { color: var(--accent); }
+  .empty-state h3 {
+    margin: 0 0 0.5rem;
+  }
+
+  .empty-state p {
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .empty-state a {
+    color: var(--accent);
+  }
 
   .history-footer {
     margin-top: 2.5rem;
@@ -523,10 +545,28 @@ const pageDescription = `Stable release history for ${app.name}. Browse versions
   }
 
   @media (max-width: 560px) {
-    .release-history { width: min(100% - 1.25rem, 900px); padding-top: 1.25rem; }
-    .app-icon { flex-basis: 52px; width: 52px; height: 52px; }
-    .release-item { gap: 0.7rem; padding: 0.85rem; }
-    .release-date { white-space: normal; }
-    .latest-release a { margin-left: 0; }
+    .release-history {
+      width: min(100% - 1.25rem, 900px);
+      padding-top: 1.25rem;
+    }
+
+    .app-icon {
+      flex-basis: 52px;
+      width: 52px;
+      height: 52px;
+    }
+
+    .release-item {
+      gap: 0.7rem;
+      padding: 0.85rem;
+    }
+
+    .release-date {
+      white-space: normal;
+    }
+
+    .latest-release a {
+      margin-left: 0;
+    }
   }
 </style>
