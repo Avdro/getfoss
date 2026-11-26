@@ -4,6 +4,12 @@ import { SITE_NAME } from '../lib/site';
 
 <footer class="footer">
   <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="copyright">
+        &copy; {new Date().getFullYear()} {SITE_NAME}. All trademarks mentioned are the property of their respective owners.
+      </span>
+    </div>
+
     <nav class="footer-section" aria-label="Explore">
       <span class="footer-heading">Explore</span>
       <a href="/blog/">Blog</a>
@@ -26,19 +32,13 @@ import { SITE_NAME } from '../lib/site';
       <a href="https://bsky.app/profile/getfoss.org" target="_blank" rel="noopener noreferrer">Bluesky</a>
       <a href="https://x.com/getfoss_org" target="_blank" rel="noopener noreferrer">X</a>
     </nav>
-
-    <div class="footer-bottom">
-      <span>
-        &copy; {new Date().getFullYear()} {SITE_NAME}. All trademarks mentioned are the property of their respective owners.
-      </span>
-    </div>
   </div>
 </footer>
 
 <style is:global>
   .footer {
     width: 100%;
-    padding: 1.5rem 1.25rem 1.25rem;
+    padding: 1.5rem 1.25rem;
     border-top: 1px solid var(--line);
     color: var(--muted);
     font-size: 0.82rem;
@@ -49,9 +49,22 @@ import { SITE_NAME } from '../lib/site';
     max-width: var(--max);
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1.2fr 1fr 1fr 1fr;
     align-items: start;
     gap: 2rem;
+  }
+
+  .footer-brand {
+    display: flex;
+    align-items: flex-start;
+    min-width: 0;
+    padding-top: 0.1rem;
+  }
+
+  .copyright {
+    color: var(--muted);
+    line-height: 1.7;
+    overflow-wrap: anywhere;
   }
 
   .footer-section {
@@ -77,23 +90,17 @@ import { SITE_NAME } from '../lib/site';
     color: var(--text);
   }
 
-  .footer-bottom {
-    grid-column: 1 / -1;
-    padding-top: 1rem;
-    border-top: 1px solid var(--line);
-    color: var(--muted);
-    font-size: 0.72rem;
-    line-height: 1.7;
-  }
-
   @media (max-width: 640px) {
     .footer-inner {
       grid-template-columns: 1fr 1fr;
       gap: 1.5rem;
     }
 
-    .footer-bottom {
+    .footer-brand {
       grid-column: 1 / -1;
+      grid-row: 3;
+      padding-top: 0.5rem;
+      border-top: 1px solid var(--line);
     }
   }
 </style>
