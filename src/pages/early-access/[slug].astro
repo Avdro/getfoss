@@ -1,0 +1,472 @@
+---
+import Layout from '../../components/Layout.astro';
+import softwareData from '../../data/prereleases/software.json';
+import releasesData from '../../data/prereleases/releases.json';
+
+type Release = {
+  version?: string | null;
+  tag?: string | null;
+  name?: string | null;
+  releaseType?: string | null;
+  date?: string | null;
+  url?: string | null;
+  source?: string | null;
+};
+
+type ReleaseApplication = {
+  id: string;
+  releases?: Release[];
+};
+
+export function getStaticPaths() {
+  return softwareData.applications.map((app) => ({
+    params: { slug: app.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+
+const app = softwareData.applications.find(
+  (item) => item.slug === slug
+);
+
+if (!app) {
+  throw new Error(`Early Access application not found: ${slug}`);
+}
+
+const releaseApplication = (
+  releasesData.applications as ReleaseApplication[]
+).find((item) => item.id === app.id);
+
+const releases = [...(releaseApplication?.releases ?? [])].sort(
+  (a, b) => {
+    const dateA = a.date ? new Date(a.date).getTime() : 0;
+    const dateB = b.date ? new Date(b.date).getTime() : 0;
+    return dateB - dateA;
+  }
+);
+
+function formatDate(value?: string | null): string {
+  if (!value) return 'Date unavailable';
+
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) return 'Date unavailable';
+
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    timeZone: 'UTC',
+  });
+}
+
+const latestRelease = releases[0];
+
+const pageTitle = `${app.name} Early Access Builds — GetFOSS`;
+const pageDescription = `Explore the latest alpha, beta, nightly and development builds of ${app.name}.`;
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <main class="early-access-detail">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span>/</span>
+      <a href="/early-access/">Early Access</a>
+      <span>/</span>
+      <span>{app.name}</span>
+    </nav>
+
+    <header class="app-header">
+      <div class="app-heading">
+        <div class="app-icon">
+          {app.name.slice(0, 1).toUpperCase()}
+        </div>
+
+        <div>
+          <p class="app-category">{app.category}</p>
+          <h1>{app.name}</h1>
+          <p class="app-description">{app.description}</p>
+        </div>
+      </div>
+
+      <div class="app-links">
+        <a href={app.website} target="_blank" rel="noopener noreferrer">
+          Official Website ↗
+        </a>
+
+        {app.sourceUrl && (
+          <a href={app.sourceUrl} target="_blank" rel="noopener noreferrer">
+            Source Code ↗
+          </a>
+        )}
+      </div>
+    </header>
+
+    <section class="build-section">
+      <div class="section-heading">
+        <div>
+          <h2>Build History</h2>
+          <p>
+            Development versions and pre-release builds of {app.name}.
+          </p>
+        </div>
+
+        <span class="build-count">
+          {releases.length} builds
+        </span>
+      </div>
+
+      {latestRelease && (
+        <div class="latest-build">
+          <div>
+            <span class="latest-label">Latest build</span>
+            <h3>
+              {latestRelease.version || latestRelease.tag || latestRelease.name || 'Development build'}
+            </h3>
+            <p>
+              {latestRelease.releaseType || 'Development'}
+              <span> · </span>
+              {formatDate(latestRelease.date)}
+            </p>
+          </div>
+
+          {latestRelease.url && (
+            <a
+              class="download-link"
+              href={latestRelease.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Release ↗
+            </a>
+          )}
+        </div>
+      )}
+
+      {releases.length > 0 ? (
+        <div class="release-list">
+          {releases.map((release) => (
+            <article class="release-item">
+              <div class="release-marker"></div>
+
+              <div class="release-content">
+                <div class="release-title-row">
+                  <h3>
+                    {release.version || release.tag || release.name || 'Development build'}
+                  </h3>
+
+                  <span class="release-type">
+                    {release.releaseType || 'Development'}
+                  </span>
+                </div>
+
+                <p class="release-date">
+                  {formatDate(release.date)}
+                </p>
+
+                {release.source && (
+                  <p class="release-source">
+                    Source: {release.source}
+                  </p>
+                )}
+              </div>
+
+              {release.url && (
+                <a
+                  class="release-link"
+                  href={release.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`View ${release.version || release.tag || 'release'}`}
+                >
+                  View ↗
+                </a>
+              )}
+            </article>
+          ))}
+        </div>
+      ) : (
+        <div class="empty-state">
+          <h3>No builds available yet</h3>
+          <p>
+            There are currently no recorded development builds for {app.name}.
+            Check back later for updates.
+          </p>
+        </div>
+      )}
+    </section>
+
+    <div class="back-link">
+      <a href="/early-access/">← Back to Early Access</a>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .early-access-detail {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1rem 4rem;
+  }
+
+  .breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.55rem;
+    margin-bottom: 2rem;
+    color: var(--palette-text-muted, #6b7280);
+    font-size: 0.85rem;
+  }
+
+  .breadcrumb a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    color: var(--palette-primary, #2563eb);
+  }
+
+  .app-header {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--palette-border, #e5e7eb);
+  }
+
+  .app-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  .app-icon {
+    display: flex;
+    width: 64px;
+    height: 64px;
+    flex: 0 0 64px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: var(--palette-bg-hover, #f3f4f6);
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+
+  .app-category {
+    margin: 0 0 0.35rem;
+    color: var(--palette-text-muted, #6b7280);
+    font-size: 0.85rem;
+  }
+
+  .app-heading h1 {
+    margin: 0 0 0.5rem;
+    font-size: clamp(1.7rem, 4vw, 2.3rem);
+  }
+
+  .app-description {
+    max-width: 700px;
+    margin: 0;
+    color: var(--palette-text-muted, #6b7280);
+    line-height: 1.6;
+  }
+
+  .app-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .app-links a,
+  .download-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.6rem 0.9rem;
+    border: 1px solid var(--palette-border, #d1d5db);
+    border-radius: 6px;
+    color: inherit;
+    font-size: 0.85rem;
+    text-decoration: none;
+  }
+
+  .app-links a:hover,
+  .download-link:hover {
+    border-color: var(--palette-primary, #2563eb);
+  }
+
+  .build-section {
+    padding-top: 2.5rem;
+  }
+
+  .section-heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-heading h2 {
+    margin: 0 0 0.4rem;
+    font-size: 1.5rem;
+  }
+
+  .section-heading p {
+    margin: 0;
+    color: var(--palette-text-muted, #6b7280);
+    font-size: 0.9rem;
+  }
+
+  .build-count {
+    padding: 0.35rem 0.7rem;
+    border: 1px solid var(--palette-border, #e5e7eb);
+    border-radius: 6px;
+    color: var(--palette-text-muted, #6b7280);
+    font-size: 0.8rem;
+  }
+
+  .latest-build {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1.25rem;
+    border: 1px solid var(--palette-border, #e5e7eb);
+    border-radius: 9px;
+    background: var(--palette-bg-hover, #f9fafb);
+  }
+
+  .latest-label {
+    color: var(--palette-text-muted, #6b7280);
+    font-size: 0.75rem;
+  }
+
+  .latest-build h3 {
+    margin: 0.3rem 0;
+    font-size: 1.15rem;
+  }
+
+  .latest-build p {
+    margin: 0;
+    color: var(--palette-text-muted, #6b7280);
+    font-size: 0.85rem;
+  }
+
+  .download-link {
+    background: var(--palette-bg, #fff);
+  }
+
+  .release-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .release-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--palette-border, #e5e7eb);
+  }
+
+  .release-marker {
+    width: 10px;
+    height: 10px;
+    flex: 0 0 10px;
+    margin-top: 0.45rem;
+    border-radius: 50%;
+    background: var(--palette-primary, #2563eb);
+  }
+
+  .release-content {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .release-title-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.65rem;
+  }
+
+  .release-title-row h3 {
+    margin: 0;
+    font-size: 1rem;
+    overflow-wrap: anywhere;
+  }
+
+  .release-type {
+    padding: 0.2rem 0.5rem;
+    border: 1px solid var(--palette-border, #e5e7eb);
+    border-radius: 4px;
+    color: var(--palette-text-muted, #6b7280);
+    font-size: 0.7rem;
+  }
+
+  .release-date,
+  .release-source {
+    margin: 0.4rem 0 0;
+    color: var(--palette-text-muted, #6b7280);
+    font-size: 0.8rem;
+  }
+
+  .release-link {
+    flex: 0 0 auto;
+    color: var(--palette-primary, #2563eb);
+    font-size: 0.85rem;
+    text-decoration: none;
+  }
+
+  .release-link:hover {
+    text-decoration: underline;
+  }
+
+  .empty-state {
+    padding: 2.5rem 1rem;
+    border: 1px solid var(--palette-border, #e5e7eb);
+    border-radius: 9px;
+    text-align: center;
+  }
+
+  .empty-state h3 {
+    margin: 0 0 0.5rem;
+  }
+
+  .empty-state p {
+    margin: 0;
+    color: var(--palette-text-muted, #6b7280);
+    line-height: 1.6;
+  }
+
+  .back-link {
+    margin-top: 2.5rem;
+  }
+
+  .back-link a {
+    color: var(--palette-primary, #2563eb);
+    text-decoration: none;
+  }
+
+  .back-link a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 600px) {
+    .app-heading {
+      flex-direction: column;
+    }
+
+    .release-item {
+      gap: 0.7rem;
+    }
+
+    .release-link {
+      font-size: 0.8rem;
+    }
+  }
+</style>
