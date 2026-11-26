@@ -10,6 +10,7 @@ const currentPath = Astro.url.pathname;
 const navLinks = [
   { href: '/', label: 'Home', current: currentPath === '/' },
   { href: '/blog/', label: 'Blog', current: currentPath.startsWith('/blog') },
+  { href: '/tags/', label: 'Tags', current: currentPath.startsWith('/tags') },
   { href: '/about/', label: 'About', current: currentPath === '/about/' },
 ];
 ---
