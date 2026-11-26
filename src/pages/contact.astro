@@ -11,66 +11,260 @@ const description =
   description={description}
   canonicalPath="/contact/"
 >
-  <main class="content-shell">
-    <article class="prose">
-      <header class="page-header">
+  <main class="contact-page">
+    <div class="contact-container">
+      <header class="contact-header">
         <p class="eyebrow">GET IN TOUCH</p>
         <h1>Contact GetFOSS</h1>
-        <p class="lede">
+        <p class="intro">
           Have a FOSS application to recommend, spotted an error, or want
           to help improve GetFOSS? We welcome suggestions, feedback, and
           contributions from the open-source community.
         </p>
       </header>
 
-      <h2>General inquiries</h2>
-      <p>
-        For questions about GetFOSS, editorial feedback, corrections,
-        or other inquiries, contact us by email:
-      </p>
-      <p>
-        <strong>
-          <a href="mailto:info@getfoss.org">info@getfoss.org</a>
-        </strong>
-      </p>
+      <div class="contact-grid">
+        <section class="contact-card contact-card-featured">
+          <span class="card-number">01</span>
+          <div class="card-content">
+            <h2>General inquiries</h2>
+            <p>
+              Questions about GetFOSS, editorial feedback, corrections,
+              or anything else? Get in touch by email.
+            </p>
+            <a class="contact-link" href="mailto:info@getfoss.org">
+              info@getfoss.org
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </section>
 
-      <h2>Recommend open-source software</h2>
-      <p>
-        Know a free and open-source application that should be featured
-        on GetFOSS? We are always interested in discovering useful,
-        actively maintained projects.
-      </p>
-      <p>
-        When making a recommendation, include the application's name,
-        official website, source code repository, supported platforms,
-        and a short explanation of what makes it worth highlighting.
-      </p>
+        <section class="contact-card">
+          <span class="card-number">02</span>
+          <div class="card-content">
+            <h2>Recommend software</h2>
+            <p>
+              Know a free and open-source application that deserves
+              to be featured? We are always interested in discovering
+              useful, actively maintained projects.
+            </p>
+            <p class="card-detail">
+              Include its name, official website, source code repository,
+              supported platforms, and a short explanation of why it
+              is worth highlighting.
+            </p>
+          </div>
+        </section>
 
-      <h2>Report an issue or correction</h2>
-      <p>
-        Accuracy matters. If you find outdated software information,
-        an incorrect version number, a broken link, or another problem,
-        please send us the relevant page URL and a clear description.
-        Where possible, include a link to an official source that
-        confirms the correction.
-      </p>
+        <section class="contact-card">
+          <span class="card-number">03</span>
+          <div class="card-content">
+            <h2>Report an issue</h2>
+            <p>
+              Found outdated software information, an incorrect version
+              number, a broken link, or another problem? Let us know.
+            </p>
+            <p class="card-detail">
+              Include the relevant page URL, a clear description of the
+              issue, and an official source confirming the correction
+              whenever possible.
+            </p>
+          </div>
+        </section>
 
-      <h2>Contribute to GetFOSS</h2>
-      <p>
-        GetFOSS is built around the values of free and open-source
-        software. You can help improve the project by reporting bugs,
-        suggesting features, reviewing information, or contributing
-        directly to the website.
-      </p>
-      <p>
-        Visit our
-        <a
-          href="https://github.com/Avdro/getfoss"
-          target="_blank"
-          rel="noopener noreferrer"
-        >GitHub repository</a>
-        to explore the source code and contribute.
-      </p>
-    </article>
+        <section class="contact-card">
+          <span class="card-number">04</span>
+          <div class="card-content">
+            <h2>Contribute to GetFOSS</h2>
+            <p>
+              Help us improve the project by reporting bugs, suggesting
+              features, reviewing information, or contributing directly
+              to the website.
+            </p>
+            <a
+              class="contact-link"
+              href="https://github.com/Avdro/getfoss"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub repository
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </section>
+      </div>
+
+      <footer class="contact-footer">
+        <p>
+          Every suggestion and contribution helps make GetFOSS better.
+          Thank you for being part of the open-source community.
+        </p>
+      </footer>
+    </div>
   </main>
 </Layout>
+
+<style>
+  .contact-page {
+    width: 100%;
+    padding: 4.5rem 1.5rem 5rem;
+  }
+
+  .contact-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .contact-header {
+    max-width: 700px;
+    margin-bottom: 3rem;
+  }
+
+  .eyebrow {
+    margin: 0 0 1rem;
+    color: var(--accent);
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .contact-header h1 {
+    margin: 0 0 1.25rem;
+    color: var(--text);
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    line-height: 1.12;
+    letter-spacing: -0.045em;
+  }
+
+  .intro {
+    max-width: 660px;
+    margin: 0;
+    color: var(--muted);
+    font-size: 1.08rem;
+    line-height: 1.8;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .contact-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    min-width: 0;
+    padding: 1.75rem;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--surface);
+  }
+
+  .contact-card-featured {
+    border-color: var(--accent);
+    background: var(--surface);
+  }
+
+  .card-number {
+    flex: 0 0 auto;
+    padding-top: 0.25rem;
+    color: var(--accent);
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
+  .card-content {
+    min-width: 0;
+  }
+
+  .card-content h2 {
+    margin: 0 0 0.85rem;
+    color: var(--text);
+    font-size: 1.2rem;
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+  }
+
+  .card-content p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.94rem;
+    line-height: 1.75;
+  }
+
+  .card-content .card-detail {
+    margin-top: 0.85rem;
+    padding-top: 0.85rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.88rem;
+  }
+
+  .contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.15rem;
+    color: var(--accent);
+    font-family: var(--mono);
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    transition: opacity 0.2s ease;
+  }
+
+  .contact-link:hover {
+    opacity: 0.75;
+  }
+
+  .contact-link span {
+    font-size: 1rem;
+  }
+
+  .contact-footer {
+    max-width: 700px;
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+  }
+
+  .contact-footer p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.75;
+  }
+
+  @media (max-width: 640px) {
+    .contact-page {
+      padding: 3rem 1.1rem 3.5rem;
+    }
+
+    .contact-header {
+      margin-bottom: 2rem;
+    }
+
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 0.85rem;
+    }
+
+    .contact-card {
+      padding: 1.35rem;
+      gap: 1rem;
+    }
+
+    .contact-header h1 {
+      font-size: 2.35rem;
+    }
+
+    .intro {
+      font-size: 1rem;
+    }
+  }
+</style>
