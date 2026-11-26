@@ -129,7 +129,7 @@ const pageTitle = safePage === 1
   : `Early Access — Page ${safePage} — GetFOSS`;
 
 const pageDescription =
-  `Explore ${TOTAL_APPS} free and open-source applications with early access, beta, alpha, nightly and development builds.`;
+  'Discover alpha, beta, release candidate, nightly and development builds of free and open-source software. Explore pre-release versions, track development progress and find official project links.';
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
@@ -138,14 +138,10 @@ const pageDescription =
       <h1>Early Access</h1>
 
       <p class="early-access__subtitle">
-        Explore upcoming releases, beta versions and development builds
-        of free and open-source software.
+        Discover pre-release versions of free and open-source software,
+        from alpha and beta releases to release candidates, nightly builds
+        and ongoing development versions.
       </p>
-
-      <div class="early-access__stats">
-        <span>{TOTAL_APPS} applications</span>
-        <span>{TOTAL_PAGES} pages</span>
-      </div>
     </header>
 
     <section class="early-access__controls" aria-label="Search and filters">
@@ -361,21 +357,6 @@ const pageDescription =
     color: var(--palette-text-muted, #6b7280);
     font-size: 1.05rem;
     line-height: 1.6;
-  }
-
-  .early-access__stats {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.6rem;
-    margin-top: 1rem;
-  }
-
-  .early-access__stats span {
-    padding: 0.35rem 0.7rem;
-    border: 1px solid var(--palette-border, #e5e7eb);
-    border-radius: 6px;
-    color: var(--palette-text-muted, #6b7280);
-    font-size: 0.8rem;
   }
 
   .early-access__controls {
