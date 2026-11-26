@@ -115,6 +115,18 @@ const blog = defineCollection({
       return tags.filter((_, index) => slugs.indexOf(slugs[index]) === index);
     }),
     draft: z.boolean().default(false),
+  }).superRefine((data, ctx) => {
+    const allowedTags = categoryTags[data.category] as readonly string[];
+
+    data.tags.forEach((tag, index) => {
+      if (!allowedTags.includes(tag)) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['tags', index],
+          message: `Tag "${tag}" is not allowed for category "${data.category}".`,
+        });
+      }
+    });
   }),
 });
 
