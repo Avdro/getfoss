@@ -1,6 +1,5 @@
 ---
 import { EMAIL, GITHUB_URL, SITE_NAME } from '../../lib/site';
-
 import EmailIcon from './EmailIcon.astro';
 import GitHubIcon from './GitHubIcon.astro';
 import RssIcon from './RssIcon.astro';
@@ -23,8 +22,8 @@ import SearchIcon from './SearchIcon.astro';
       <button
         class="icon-button search-trigger"
         type="button"
+        id="search-open"
         aria-label="Open search"
-        data-search-trigger
       >
         <SearchIcon />
       </button>
