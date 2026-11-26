@@ -46,6 +46,20 @@ if (!app) {
   throw new Error(`Early Access application not found: ${slug}`);
 }
 
+function getWebsiteIcon(website?: string): string | null {
+  if (!website) return null;
+
+  try {
+    const hostname = new URL(website).hostname;
+
+    return `https://www.google.com/s2/favicons?domain=${encodeURIComponent(hostname)}&sz=128`;
+  } catch {
+    return null;
+  }
+}
+
+const appIcon = getWebsiteIcon(app.website);
+
 const releaseApplication = (
   releasesData.applications as ReleaseApplication[]
 ).find((item) => item.id === app.id);
@@ -91,9 +105,19 @@ const pageDescription = `Explore the latest alpha, beta, nightly and development
 
     <header class="app-header">
       <div class="app-heading">
-        <div class="app-icon">
-          {app.name.slice(0, 1).toUpperCase()}
-        </div>
+        {appIcon ? (
+          <img
+            class="app-icon"
+            src={appIcon}
+            alt={`${app.name} logo`}
+            width="64"
+            height="64"
+          />
+        ) : (
+          <div class="app-icon app-icon-fallback">
+            {app.name.slice(0, 1).toUpperCase()}
+          </div>
+        )}
 
         <div>
           <p class="app-category">{app.category}</p>
@@ -271,14 +295,19 @@ const pageDescription = `Explore the latest alpha, beta, nightly and development
   }
 
   .app-icon {
-    display: flex;
+    display: block;
     width: 64px;
     height: 64px;
     flex: 0 0 64px;
-    align-items: center;
-    justify-content: center;
+    object-fit: contain;
     border-radius: 12px;
     background: var(--palette-bg-hover, #f3f4f6);
+  }
+
+  .app-icon-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1.8rem;
     font-weight: 700;
   }
@@ -316,7 +345,7 @@ const pageDescription = `Explore the latest alpha, beta, nightly and development
   }
 
   .meta-label {
-    color: var(--palette-text-muted, #6b7280);
+    color: var(--muted);
     font-family: var(--mono);
     font-size: 0.68rem;
     font-weight: 700;
@@ -335,9 +364,9 @@ const pageDescription = `Explore the latest alpha, beta, nightly and development
     align-items: center;
     min-height: 1.8rem;
     padding: 0.3rem 0.65rem;
-    color: var(--palette-text-muted, #6b7280);
-    background: var(--palette-bg-hover, #f3f4f6);
-    border: 1px solid var(--palette-border, #e5e7eb);
+    color: var(--muted);
+    background: var(--line);
+    border: 1px solid var(--line);
     border-radius: 6px;
     font-family: var(--mono);
     font-size: 0.7rem;
@@ -345,8 +374,9 @@ const pageDescription = `Explore the latest alpha, beta, nightly and development
   }
 
   .license-chip {
-    color: var(--palette-text, #111827);
-    background: var(--palette-bg, #fff);
+    color: var(--ink);
+    background: color-mix(in srgb, var(--accent) 7%, var(--bg));
+    border-color: color-mix(in srgb, var(--accent) 22%, var(--line));
   }
 
   .app-links {
