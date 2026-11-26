@@ -11,9 +11,10 @@ import XIcon from './XIcon.astro';
 const currentPath = Astro.url.pathname;
 
 const navLinks = [
-  { href: '/', label: 'Home', current: currentPath === '/' },
   { href: '/blog/', label: 'Blog', current: currentPath.startsWith('/blog') },
   { href: '/tags/', label: 'Tags', current: currentPath.startsWith('/tags') },
+  { href: '/releases/', label: 'Latest Versions', current: currentPath.startsWith('/releases') },
+  { href: '/early-access/', label: 'Upcoming Releases', current: currentPath.startsWith('/early-access') },
   { href: '/about/', label: 'About', current: currentPath === '/about/' },
 ];
 ---
