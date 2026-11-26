@@ -1,4 +1,4 @@
-import { readFile, writeFile } from 'node:fs/promises';
+import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -11,22 +11,38 @@ const REQUEST_DELAY_MS = 300;
 const MAX_RELEASE_PAGES = 5;
 const MAX_NOTES_LENGTH = 800;
 
+const USER_AGENT = 'GetFOSS-Release-Tracker/1.0';
+
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-async function readJson(filePath) {
-  return JSON.parse(await readFile(filePath, 'utf8'));
+function decodeHtml(value = '') {
+  return String(value)
+    .replace(/&amp;/g, '&')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;|&apos;/g, "'")
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&#(\d+);/g, (_, code) => String.fromCodePoint(Number(code)))
+    .replace(/&#x([0-9a-f]+);/gi, (_, code) => String.fromCodePoint(parseInt(code, 16)));
 }
 
-async function writeJson(filePath, data) {
-  await writeFile(filePath, `${JSON.stringify(data, null, 2)}\n`, 'utf8');
+function cleanText(value = '') {
+  return decodeHtml(
+    String(value)
+      .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+      .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+      .replace(/<[^>]*>/g, ' ')
+      .replace(/\s+/g, ' ')
+  ).trim();
 }
 
-async function fetchResponse(url, headers = {}) {
+async function fetchResponse(url, options = {}) {
   const response = await fetch(url, {
+    ...options,
     headers: {
-      Accept: 'application/json, application/xml, text/html',
-      'User-Agent': 'GetFOSS-Release-Tracker/1.0',
-      ...headers,
+      'User-Agent': USER_AGENT,
+      Accept: 'application/json, application/xml, text/xml, text/html, text/plain, */*',
+      ...options.headers,
     },
     signal: AbortSignal.timeout(30000),
   });
@@ -38,89 +54,112 @@ async function fetchResponse(url, headers = {}) {
   return response;
 }
 
-async function fetchJson(url, headers = {}) {
-  const response = await fetchResponse(url, headers);
+async function fetchJson(url, options = {}) {
+  const response = await fetchResponse(url, options);
   return response.json();
 }
 
-async function fetchText(url) {
-  const response = await fetchResponse(url);
+async function fetchText(url, options = {}) {
+  const response = await fetchResponse(url, options);
   return response.text();
 }
 
-function decodeHtml(value = '') {
-  return value
-    .replace(/&amp;/g, '&')
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;|&apos;/g, "'")
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/&#(\d+);/g, (_, code) => String.fromCodePoint(Number(code)))
-    .replace(/&#x([0-9a-f]+);/gi, (_, code) =>
-      String.fromCodePoint(parseInt(code, 16)),
-    );
+function isStableRelease(release) {
+  const text = [
+    release.tag_name,
+    release.name,
+    release.version,
+    release.title,
+  ].filter(Boolean).join(' ');
+
+  if (release.draft === true || release.prerelease === true) {
+    return false;
+  }
+
+  return !/(^|[\s._-])(alpha|beta|nightly|canary|dev|development|preview|pre-release|prerelease|rc\d*|release-candidate)([\s._-]|$)/i.test(text);
 }
 
-function cleanText(value = '') {
-  return decodeHtml(
-    value
-      .replace(/<script[\s\S]*?<\/script>/gi, '')
-      .replace(/<style[\s\S]*?<\/style>/gi, '')
-      .replace(/<[^>]+>/g, ' ')
-      .replace(/\s+/g, ' '),
+function parseDate(value) {
+  if (!value) return null;
+
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) {
+    return null;
+  }
+
+  return date.toISOString();
+}
+
+function normalizeRelease(release) {
+  const version = String(
+    release.version ??
+    release.tag_name ??
+    release.tag ??
+    release.name ??
+    ''
   ).trim();
-}
 
-function isStableVersion(version) {
-  if (!version) return false;
+  if (!version) return null;
 
-  const value = String(version).trim().replace(/^v/i, '');
+  const date = parseDate(
+    release.published_at ??
+    release.released_at ??
+    release.created_at ??
+    release.date ??
+    release.timestamp
+  );
 
-  if (!/\d/.test(value)) return false;
+  const url =
+    release.html_url ??
+    release.url ??
+    release.release_notes_url ??
+    release.download_url ??
+    null;
 
-  return !/(^|[._+-])(alpha|beta|rc|nightly|dev|development|preview|pre|canary|snapshot|unstable|testing)([._+-]|\d|$)/i.test(value)
-    && !/(?:a|b|rc)\d+$/i.test(value);
-}
-
-function normalizeRelease({ version, date, url, notes = '' }) {
-  if (!version || !isStableVersion(version)) return null;
-
-  const parsedDate = date ? new Date(date) : null;
-  const validDate = parsedDate && !Number.isNaN(parsedDate.valueOf());
+  const notes = cleanText(
+    release.body ??
+    release.description ??
+    release.notes ??
+    ''
+  ).slice(0, MAX_NOTES_LENGTH);
 
   return {
-    version: String(version).trim().replace(/^v/i, ''),
-    date: validDate ? parsedDate.toISOString().slice(0, 10) : null,
-    url: url || null,
-    notes: typeof notes === 'string'
-      ? notes.trim().slice(0, MAX_NOTES_LENGTH)
-      : '',
+    version,
+    date,
+    url,
+    notes,
   };
 }
 
 function compareVersions(a, b) {
-  const first = String(a).match(/\d+/g)?.map(Number) || [];
-  const second = String(b).match(/\d+/g)?.map(Number) || [];
-  const length = Math.max(first.length, second.length);
+  const parse = (value) => {
+    const numbers = String(value).match(/\d+/g);
+    return numbers ? numbers.map(Number) : [0];
+  };
 
-  for (let i = 0; i < length; i++) {
-    const difference = (first[i] || 0) - (second[i] || 0);
+  const left = parse(a);
+  const right = parse(b);
+  const length = Math.max(left.length, right.length);
+
+  for (let i = 0; i < length; i += 1) {
+    const difference = (right[i] ?? 0) - (left[i] ?? 0);
     if (difference !== 0) return difference;
   }
 
-  return 0;
+  return String(b).localeCompare(String(a));
 }
 
 function sortAndLimit(releases) {
   const unique = new Map();
 
   for (const release of releases) {
-    if (!release?.version || !isStableVersion(release.version)) continue;
+    if (!release?.version) continue;
 
-    const existing = unique.get(release.version);
+    const key = release.version.toLowerCase();
 
-    if (!existing || (release.date && !existing.date)) {
-      unique.set(release.version, release);
+    if (!unique.has(key)) {
+      unique.set(key, release);
     }
   }
 
@@ -130,319 +169,354 @@ function sortAndLimit(releases) {
         return b.date.localeCompare(a.date);
       }
 
-      if (a.date && !b.date) return -1;
-      if (!a.date && b.date) return 1;
-
-      return compareVersions(b.version, a.version);
+      return compareVersions(a.version, b.version);
     })
     .slice(0, HISTORY_LIMIT);
 }
 
-async function getGitHubReleases(source) {
-  const headers = process.env.GITHUB_TOKEN
-    ? { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` }
-    : {};
+function parseAutoIndex(html) {
+  const entries = [];
+  const anchorRegex = /<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi;
 
-  const releases = [];
+  for (const match of html.matchAll(anchorRegex)) {
+    const href = decodeHtml(match[1]).trim();
+    const label = cleanText(match[2]);
 
-  for (let page = 1; page <= MAX_RELEASE_PAGES; page++) {
-    const url = `https://api.github.com/repos/${source.owner}/${source.repository}/releases?per_page=100&page=${page}`;
-    const data = await fetchJson(url, headers);
+    if (!href || href === '../' || href.startsWith('?')) continue;
 
-    if (!Array.isArray(data)) {
-      throw new Error('Unexpected GitHub API response.');
-    }
+    const start = match.index + match[0].length;
+    const followingText = cleanText(html.slice(start, start + 180));
 
-    releases.push(
-      ...data
-        .filter((release) => !release.draft && !release.prerelease)
-        .map((release) =>
-          normalizeRelease({
-            version: release.tag_name,
-            date: release.published_at,
-            url: release.html_url,
-            notes: release.body,
-          }),
-        )
-        .filter(Boolean),
-    );
-
-    if (data.length < 100) break;
-  }
-
-  return releases;
-}
-
-async function getGitLabReleases(source) {
-  const project = encodeURIComponent(source.project);
-  const url = `${source.host}/api/v4/projects/${project}/releases?per_page=100&order_by=released_at&sort=desc`;
-  const data = await fetchJson(url);
-
-  if (!Array.isArray(data)) {
-    throw new Error('Unexpected GitLab API response.');
-  }
-
-  return data
-    .filter((release) => !release.upcoming_release)
-    .map((release) =>
-      normalizeRelease({
-        version: release.tag_name,
-        date: release.released_at,
-        url: release._links?.self
-          || `${source.host}/${source.project}/-/releases/${encodeURIComponent(release.tag_name)}`,
-        notes: release.description,
-      }),
-    )
-    .filter(Boolean);
-}
-
-async function getGiteaReleases(source) {
-  const url = `${source.host}/api/v1/repos/${source.owner}/${source.repository}/releases?limit=100`;
-
-  const headers = process.env.GITEA_API_TOKEN
-    ? { Authorization: `token ${process.env.GITEA_API_TOKEN}` }
-    : {};
-
-  const data = await fetchJson(url, headers);
-
-  if (!Array.isArray(data)) {
-    throw new Error('Unexpected Gitea API response.');
-  }
-
-  return data
-    .filter((release) => !release.draft && !release.prerelease)
-    .map((release) =>
-      normalizeRelease({
-        version: release.tag_name,
-        date: release.published_at || release.created_at,
-        url: release.html_url,
-        notes: release.body,
-      }),
-    )
-    .filter(Boolean);
-}
-
-// Blender official release API.
-async function getBlenderReleases() {
-  const versionSeries = [
-    '5.3', '5.2', '5.1', '5.0',
-    '4.5', '4.4', '4.3', '4.2',
-    '4.1', '4.0', '3.6', '3.3',
-    '3.0', '2.93',
-  ];
-
-  const releases = new Map();
-
-  for (const series of versionSeries) {
-    try {
-      const url = new URL('https://download.blender.org/api/v1/releases/');
-      url.searchParams.set('blender_version', series);
-      url.searchParams.set('platform', 'linux-x86_64');
-
-      const data = await fetchJson(url.href);
-
-      if (!Array.isArray(data)) {
-        throw new Error('Unexpected Blender API response.');
-      }
-
-      for (const item of data) {
-        if (item.cycle && item.cycle !== 'release') continue;
-
-        const release = normalizeRelease({
-          version: item.blender_version || item.version,
-          date: item.timestamp,
-          url: item.release_notes_url || item.download_url,
-          notes: item.description || '',
-        });
-
-        if (release) {
-          releases.set(release.version, release);
-        }
-      }
-    } catch (error) {
-      console.warn(`[INFO] Blender ${series}: ${error.message}`);
-    }
-
-    await sleep(150);
-  }
-
-  if (releases.size === 0) {
-    throw new Error('Blender official release API returned no stable releases.');
-  }
-
-  return [...releases.values()];
-}
-
-// KDE release feeds: Krita and Kdenlive.
-async function getKdeReleases(application) {
-  const app = application.id;
-  const url = `https://apps.kde.org/${app}/index.xml`;
-  const xml = await fetchText(url);
-  const items = xml.match(/<item\b[^>]*>[\s\S]*?<\/item>/gi) || [];
-
-  const releases = [];
-
-  for (const item of items) {
-    const title = item.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1];
-    const link = item.match(/<link[^>]*>([\s\S]*?)<\/link>/i)?.[1];
-    const date = item.match(/<pubDate[^>]*>([\s\S]*?)<\/pubDate>/i)?.[1];
-    const description = item.match(/<description[^>]*>([\s\S]*?)<\/description>/i)?.[1];
-
-    const versionMatch = cleanText(title || '').match(
-      /\b(\d+\.\d+(?:\.\d+){0,2})\b/,
-    );
-
-    if (!versionMatch) continue;
-
-    const release = normalizeRelease({
-      version: versionMatch[1],
-      date: cleanText(date || ''),
-      url: cleanText(link || '') || `https://apps.kde.org/${app}/`,
-      notes: cleanText(description || ''),
+    entries.push({
+      href,
+      label,
+      followingText,
     });
-
-    if (release) releases.push(release);
   }
 
-  if (releases.length === 0) {
-    throw new Error('KDE release feed did not contain stable releases.');
-  }
-
-  return releases;
+  return entries;
 }
 
-// Official VideoLAN release archive.
-async function getVlcReleases() {
-  const url = 'https://download.videolan.org/vlc/';
-  const html = await fetchText(url);
-  const rows = html.match(/<tr\b[^>]*>[\s\S]*?<\/tr>/gi) || [];
-  const releases = [];
+function parseArchiveDate(value) {
+  const match = String(value).match(
+    /\b(\d{1,2})-([A-Za-z]{3})-(\d{4})\s+(\d{2}):(\d{2})\b/
+  );
+
+  if (!match) return null;
 
   const months = {
-    Jan: '01',
-    Feb: '02',
-    Mar: '03',
-    Apr: '04',
-    May: '05',
-    Jun: '06',
-    Jul: '07',
-    Aug: '08',
-    Sep: '09',
-    Oct: '10',
-    Nov: '11',
-    Dec: '12',
+    jan: '01', feb: '02', mar: '03', apr: '04',
+    may: '05', jun: '06', jul: '07', aug: '08',
+    sep: '09', oct: '10', nov: '11', dec: '12',
   };
 
-  for (const row of rows) {
-    const link = row.match(/href=["'](\d+\.\d+(?:\.\d+){0,2})\/["']/i);
+  const month = months[match[2].toLowerCase()];
+  if (!month) return null;
 
-    if (!link) continue;
-
-    const version = link[1];
-    const dateMatch = cleanText(row).match(
-      /\b(\d{2})-([A-Za-z]{3})-(\d{4})\b/,
-    );
-
-    let date = null;
-
-    if (dateMatch && months[dateMatch[2]]) {
-      date = `${dateMatch[3]}-${months[dateMatch[2]]}-${dateMatch[1]}`;
-    }
-
-    const release = normalizeRelease({
-      version,
-      date,
-      url: new URL(`${version}/`, url).href,
-    });
-
-    if (release) releases.push(release);
-  }
-
-  if (releases.length === 0) {
-    throw new Error('Could not read stable versions from the VideoLAN archive.');
-  }
-
-  return releases;
+  return `${match[3]}-${month}-${match[1].padStart(2, '0')}T${match[4]}:${match[5]}:00.000Z`;
 }
 
-async function getMozillaReleases(source) {
-  const baseUrl = new URL('.', source.url).href;
-
-  const [versions, majorHistory, stabilityHistory] = await Promise.all([
-    fetchJson(source.versionsUrl),
-    fetchJson(new URL('firefox_history_major_releases.json', baseUrl)),
-    fetchJson(new URL('firefox_history_stability_releases.json', baseUrl)),
-  ]);
-
-  const releases = new Map();
-
-  for (const history of [majorHistory, stabilityHistory]) {
-    for (const [version, date] of Object.entries(history)) {
-      const release = normalizeRelease({
-        version,
-        date,
-        url: `https://www.mozilla.org/firefox/${version}/releasenotes/`,
-      });
-
-      if (release) releases.set(release.version, release);
-    }
-  }
-
-  const latestVersion = versions.LATEST_FIREFOX_VERSION;
-
-  if (latestVersion && isStableVersion(latestVersion)) {
-    const existing = releases.get(latestVersion);
-
-    if (!existing) {
-      const release = normalizeRelease({
-        version: latestVersion,
-        date: versions.LAST_RELEASE_DATE,
-        url: `https://www.mozilla.org/firefox/${latestVersion}/releasenotes/`,
-      });
-
-      if (release) releases.set(release.version, release);
-    }
-  }
-
-  return [...releases.values()];
+function isPreReleaseVersion(version) {
+  return /(alpha|beta|nightly|canary|dev|preview|pre|rc)/i.test(version);
 }
 
-async function getLibreOfficeReleases(source) {
-  const html = await fetchText(source.url);
-  const rows = html.match(/<tr\b[^>]*>[\s\S]*?<\/tr>/gi) || [];
+async function getGitHubReleases(application) {
+  const { owner, repository } = application.releaseSource;
+
   const releases = [];
 
-  for (const row of rows) {
-    const link = row.match(/href=["']([^"']*?)(\d+\.\d+\.\d+)\/?["']/i);
+  for (let page = 1; page <= MAX_RELEASE_PAGES; page += 1) {
+    const url = `https://api.github.com/repos/${owner}/${repository}/releases?per_page=100&page=${page}`;
 
-    if (!link) continue;
+    const data = await fetchJson(url, {
+      headers: {
+        Accept: 'application/vnd.github+json',
+      },
+    });
 
-    const version = link[2];
-    const dateMatch = cleanText(row).match(/\b(\d{4}-\d{2}-\d{2})\b/);
+    if (!Array.isArray(data) || data.length === 0) break;
+
+    for (const item of data) {
+      if (!isStableRelease(item)) continue;
+
+      const release = normalizeRelease(item);
+      if (release) releases.push(release);
+    }
+
+    if (data.length < 100) break;
+    await sleep(REQUEST_DELAY_MS);
+  }
+
+  return sortAndLimit(releases);
+}
+
+async function getGitLabReleases(application) {
+  const { host, project } = application.releaseSource;
+  const encodedProject = encodeURIComponent(project);
+  const baseUrl = `${host.replace(/\/$/, '')}/api/v4/projects/${encodedProject}/releases`;
+
+  const releases = [];
+
+  for (let page = 1; page <= MAX_RELEASE_PAGES; page += 1) {
+    const url = `${baseUrl}?per_page=100&page=${page}`;
+
+    const data = await fetchJson(url);
+
+    if (!Array.isArray(data) || data.length === 0) break;
+
+    for (const item of data) {
+      if (!isStableRelease(item)) continue;
+
+      const release = normalizeRelease({
+        version: item.tag_name,
+        name: item.name,
+        description: item.description,
+        released_at: item.released_at,
+        created_at: item.created_at,
+        url: item._links?.self,
+      });
+
+      if (release) {
+        release.url = `${host.replace(/\/$/, '')}/${project}/-/releases/${encodeURIComponent(item.tag_name)}`;
+        releases.push(release);
+      }
+    }
+
+    if (data.length < 100) break;
+    await sleep(REQUEST_DELAY_MS);
+  }
+
+  return sortAndLimit(releases);
+}
+
+async function getGiteaReleases(application) {
+  const { host, owner, repository } = application.releaseSource;
+  const baseUrl = `${host.replace(/\/$/, '')}/api/v1/repos/${owner}/${repository}/releases`;
+
+  const releases = [];
+
+  for (let page = 1; page <= MAX_RELEASE_PAGES; page += 1) {
+    const url = `${baseUrl}?limit=50&page=${page}`;
+    const data = await fetchJson(url);
+
+    if (!Array.isArray(data) || data.length === 0) break;
+
+    for (const item of data) {
+      if (!isStableRelease(item)) continue;
+
+      const release = normalizeRelease({
+        tag_name: item.tag_name,
+        name: item.name,
+        body: item.body,
+        published_at: item.published_at,
+        created_at: item.created_at,
+        html_url: item.html_url,
+      });
+
+      if (release) releases.push(release);
+    }
+
+    if (data.length < 50) break;
+    await sleep(REQUEST_DELAY_MS);
+  }
+
+  return sortAndLimit(releases);
+}
+
+/*
+ * Blender:
+ * The releases API currently returns 404, so use Blender's official
+ * download archive instead of the unavailable API.
+ */
+async function getBlenderReleases() {
+  const archiveRoot = 'https://download.blender.org/release/';
+  const rootHtml = await fetchText(archiveRoot);
+  const directories = parseAutoIndex(rootHtml);
+
+  const blenderDirectories = directories
+    .filter((entry) => /^Blender\d+\.\d+\/$/i.test(entry.href))
+    .map((entry) => entry.href);
+
+  const releases = [];
+
+  for (const directory of blenderDirectories) {
+    const series = directory.match(/Blender(\d+\.\d+)/i)?.[1];
+    if (!series) continue;
+
+    try {
+      const html = await fetchText(`${archiveRoot}${directory}`);
+      const entries = parseAutoIndex(html);
+
+      for (const entry of entries) {
+        const filename = entry.href.split('/').pop();
+
+        if (!/^blender-/i.test(filename)) continue;
+        if (!/\.(tar\.xz|tar\.bz2|zip|dmg|msi|exe)$/i.test(filename)) continue;
+        if (isPreReleaseVersion(filename)) continue;
+
+        const versionMatch = filename.match(
+          /blender-(\d+\.\d+(?:\.\d+)?)(?:[-_])/i
+        );
+
+        if (!versionMatch) continue;
+
+        const version = versionMatch[1];
+        const date = parseArchiveDate(entry.followingText);
+
+        releases.push({
+          version,
+          date,
+          url: `${archiveRoot}${directory}`,
+          notes: `Blender ${version} stable release.`,
+        });
+      }
+    } catch (error) {
+      console.log(`[INFO] Blender ${series}: ${error.message}`);
+    }
+
+    await sleep(REQUEST_DELAY_MS);
+  }
+
+  const result = sortAndLimit(releases);
+
+  if (result.length === 0) {
+    throw new Error('No stable Blender versions found in the official archive.');
+  }
+
+  return result;
+}
+
+/*
+ * Krita and Kdenlive:
+ * Their official KDE application RSS feeds provide stable release history.
+ */
+async function getKdeReleases(application) {
+  const feedUrl = `https://apps.kde.org/${application.id}/index.xml`;
+  const xml = await fetchText(feedUrl);
+
+  const items = [...xml.matchAll(/<item\b[^>]*>([\s\S]*?)<\/item>/gi)];
+  const releases = [];
+
+  for (const match of items) {
+    const item = match[1];
+
+    const getTag = (tag) => {
+      const result = item.match(new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`, 'i'));
+      return result ? cleanText(result[1]) : '';
+    };
+
+    const title = getTag('title');
+    const link = getTag('link');
+    const pubDate = getTag('pubDate');
+    const description = getTag('description');
+
+    const versionMatch = title.match(/\d+\.\d+(?:\.\d+){0,2}/);
+    if (!versionMatch || isPreReleaseVersion(title)) continue;
 
     const release = normalizeRelease({
-      version,
-      date: dateMatch?.[1] || null,
-      url: new URL(link[1], source.url).href,
+      version: versionMatch[0],
+      date: pubDate,
+      url: link,
+      notes: description,
     });
 
     if (release) releases.push(release);
   }
 
-  if (releases.length === 0) {
-    throw new Error('Could not find stable versions in the LibreOffice directory.');
+  const result = sortAndLimit(releases);
+
+  if (result.length === 0) {
+    throw new Error('No stable releases found in the official KDE RSS feed.');
   }
+
+  return result;
+}
+
+/*
+ * VLC:
+ * Parse the official VideoLAN archive's Apache-style directory listing.
+ * The archive is under /pub/videolan/vlc/, not /vlc/ alone.
+ */
+async function getVlcReleases() {
+  const archiveUrl = 'https://download.videolan.org/pub/videolan/vlc/';
+  const html = await fetchText(archiveUrl);
+  const entries = parseAutoIndex(html);
+  const releases = [];
+
+  for (const entry of entries) {
+    const match = entry.href.match(/^(\d+\.\d+(?:\.\d+){0,2})\/$/);
+
+    if (!match) continue;
+
+    const version = match[1];
+    if (isPreReleaseVersion(version)) continue;
+
+    releases.push({
+      version,
+      date: parseArchiveDate(entry.followingText),
+      url: `${archiveUrl}${entry.href}`,
+      notes: `VLC ${version} stable release.`,
+    });
+  }
+
+  const result = sortAndLimit(releases);
+
+  if (result.length === 0) {
+    throw new Error('Could not read stable versions from the official VideoLAN archive.');
+  }
+
+  return result;
+}
+
+async function getLibreOfficeReleases() {
+  const archiveUrl = 'https://download.documentfoundation.org/libreoffice/stable/';
+  const html = await fetchText(archiveUrl);
+  const entries = parseAutoIndex(html);
+  const releases = [];
+
+  for (const entry of entries) {
+    const match = entry.href.match(/^(\d+\.\d+(?:\.\d+)?)\/$/);
+    if (!match) continue;
+
+    const version = match[1];
+
+    releases.push({
+      version,
+      date: parseArchiveDate(entry.followingText),
+      url: `${archiveUrl}${entry.href}`,
+      notes: `LibreOffice ${version} stable release.`,
+    });
+  }
+
+  const result = sortAndLimit(releases);
+
+  if (result.length === 0) {
+    throw new Error('No stable LibreOffice versions found in the official archive.');
+  }
+
+  return result;
+}
+
+async function getFirefoxReleases() {
+  const versionsUrl = 'https://product-details.mozilla.org/1.0/firefox_versions.json';
+  const data = await fetchJson(versionsUrl);
+
+  const version = data.LATEST_FIREFOX_VERSION;
+  if (!version) {
+    throw new Error('Mozilla did not provide the latest Firefox version.');
+  }
+
+  const releases = [{
+    version,
+    date: null,
+    url: 'https://www.mozilla.org/firefox/releases/',
+    notes: `Firefox ${version} stable release.`,
+  }];
 
   return releases;
 }
 
 async function getReleases(application) {
-  const source = application.releaseSource;
-
-  if (!source?.type) {
-    throw new Error('Release source is not configured.');
-  }
-
   switch (application.id) {
     case 'blender':
       return getBlenderReleases();
@@ -453,83 +527,105 @@ async function getReleases(application) {
 
     case 'vlc':
       return getVlcReleases();
+
+    default:
+      break;
+  }
+
+  const source = application.releaseSource;
+
+  if (!source) {
+    throw new Error('Release source is not configured.');
   }
 
   switch (source.type) {
     case 'github':
-      return getGitHubReleases(source);
+      return getGitHubReleases(application);
 
     case 'gitlab':
-      return getGitLabReleases(source);
+      return getGitLabReleases(application);
 
     case 'gitea':
-      return getGiteaReleases(source);
-
-    case 'mozilla-product-details':
-      return getMozillaReleases(source);
+      return getGiteaReleases(application);
 
     case 'libreoffice-directory':
-      return getLibreOfficeReleases(source);
+      return getLibreOfficeReleases();
+
+    case 'mozilla-product-details':
+      return getFirefoxReleases();
 
     default:
-      throw new Error(`Unsupported release source type: ${source.type}`);
+      throw new Error(`Unsupported release source: ${source.type}`);
   }
+}
+
+async function readJson(filePath) {
+  const content = await fs.readFile(filePath, 'utf8');
+  return JSON.parse(content);
+}
+
+async function writeJson(filePath, data) {
+  await fs.mkdir(path.dirname(filePath), { recursive: true });
+  await fs.writeFile(filePath, `${JSON.stringify(data, null, 2)}\n`, 'utf8');
 }
 
 async function main() {
   const catalog = await readJson(CATALOG_PATH);
-  const stored = await readJson(RELEASES_PATH);
 
-  if (!Array.isArray(catalog.applications)) {
-    throw new Error('The software catalog does not contain an applications array.');
+  let releaseData;
+
+  try {
+    releaseData = await readJson(RELEASES_PATH);
+  } catch {
+    releaseData = {
+      schemaVersion: 1,
+      lastUpdated: null,
+      applications: {},
+    };
   }
 
-  stored.applications ||= {};
+  if (!releaseData.applications || typeof releaseData.applications !== 'object') {
+    releaseData.applications = {};
+  }
 
   let successful = 0;
   let failed = 0;
 
-  for (const application of catalog.applications) {
-    const previous = stored.applications[application.id];
-
+  for (const application of catalog) {
     try {
-      await sleep(REQUEST_DELAY_MS);
+      const releases = await getReleases(application);
 
-      const fetched = await getReleases(application);
-
-      if (fetched.length === 0) {
-        throw new Error('No stable releases found. Existing data was preserved.');
+      if (!Array.isArray(releases) || releases.length === 0) {
+        throw new Error('No stable releases returned.');
       }
 
-      const history = sortAndLimit([
-        ...fetched,
-        ...(previous?.history || []),
-      ]);
+      const latest = releases[0];
 
-      if (history.length === 0) {
-        throw new Error('Could not determine stable release history.');
-      }
-
-      stored.applications[application.id] = {
-        latestStable: history[0],
-        history,
-        lastChecked: new Date().toISOString(),
+      releaseData.applications[application.id] = {
+        latestVersion: latest.version,
+        latestDate: latest.date,
+        releases,
+        updatedAt: new Date().toISOString(),
       };
 
       console.log(
-        `[OK] ${application.name}: ${history[0].version} (${history.length} releases)`,
+        `[OK] ${application.name}: ${latest.version} (${releases.length} releases)`
       );
 
-      successful++;
+      successful += 1;
     } catch (error) {
       console.error(`[ERROR] ${application.name}: ${error.message}`);
-      failed++;
+      console.log(`[INFO] ${application.name}: keeping previously saved release data.`);
+
+      failed += 1;
     }
+
+    await sleep(REQUEST_DELAY_MS);
   }
 
   if (successful > 0) {
-    stored.lastUpdated = new Date().toISOString();
-    await writeJson(RELEASES_PATH, stored);
+    releaseData.lastUpdated = new Date().toISOString();
+    await writeJson(RELEASES_PATH, releaseData);
   }
 
   console.log('\nRelease update summary:');
@@ -542,6 +638,6 @@ async function main() {
 }
 
 main().catch((error) => {
-  console.error('Release update failed:', error);
+  console.error(`[FATAL] ${error.message}`);
   process.exitCode = 1;
 });
