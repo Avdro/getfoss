@@ -19,6 +19,7 @@ type PrereleaseEntry = {
   url?: string | null;
   source?: string | null;
 };
+
 type ReleaseApplication = {
   id: string;
   releases?: PrereleaseEntry[];
@@ -37,6 +38,7 @@ const releaseApplications = new Map(
 
 function getWebsiteIcon(website?: string): string | undefined {
   if (!website) return undefined;
+
   try {
     const hostname = new URL(website).hostname;
     return `https://www.google.com/s2/favicons?domain=${encodeURIComponent(hostname)}&sz=128`;
@@ -51,6 +53,7 @@ function formatDate(value?: string | null): string {
   const date = new Date(value);
 
   if (Number.isNaN(date.getTime())) return 'Date unavailable';
+
   return date.toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'short',
@@ -67,6 +70,7 @@ const allApps = softwareData.applications.map((app) => {
     : [];
 
   const latestRelease = releases[0] ?? null;
+
   return {
     ...app,
     releases,
@@ -82,6 +86,7 @@ const TOTAL_APPS = allApps.length;
 const TOTAL_PAGES = Math.ceil(TOTAL_APPS / APPS_PER_PAGE);
 
 const categories = [...new Set(allApps.map((app) => app.category))].sort();
+
 const releaseTypes = [
   'Alpha',
   'Beta',
@@ -107,6 +112,7 @@ export function getStaticPaths() {
 
   return paths;
 }
+
 const { page } = Astro.params;
 const pageStr = Array.isArray(page) ? page[0] : page;
 const currentPage = pageStr ? parseInt(pageStr, 10) : 1;
@@ -121,8 +127,9 @@ const endIdx = startIdx + APPS_PER_PAGE;
 const pageTitle = safePage === 1
   ? 'Early Access — GetFOSS'
   : `Early Access — Page ${safePage} — GetFOSS`;
+
 const pageDescription =
-  'Discover alpha, beta, release candidate, nightly and development builds of free and open-source software. Explore pre-release versions, track development progress and find official project links.';
+  'Explore early access releases of free and open-source software on GetFOSS. Discover alpha, beta, release candidate, nightly and development builds, with version details, build dates and links to official projects.';
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
@@ -130,11 +137,12 @@ const pageDescription =
     <header class="early-access__header">
       <h1>Early Access</h1>
       <p class="early-access__subtitle">
-        Discover pre-release versions of free and open-source software,
-        from alpha and beta releases to release candidates, nightly builds
-        and ongoing development versions.
+        Discover alpha, beta, release candidate, nightly and development builds
+        of free and open-source software. Follow upcoming versions and explore
+        what's being tested before the next stable release.
       </p>
     </header>
+
     <section class="early-access__controls" aria-label="Search and filters">
       <div class="early-access__search-row">
         <input
@@ -146,6 +154,7 @@ const pageDescription =
           aria-label="Search applications"
         />
       </div>
+
       <div class="early-access__filter-row">
         <select
           id="early-access-category"
@@ -153,18 +162,17 @@ const pageDescription =
           aria-label="Filter by category"
         >
           <option value="">All Categories</option>
-
           {categories.map((category) => (
             <option value={category}>{category}</option>
           ))}
         </select>
+
         <select
           id="early-access-type"
           class="early-access__select"
           aria-label="Filter by build type"
         >
           <option value="">All Build Types</option>
-
           {releaseTypes.map((type) => (
             <option value={type}>{type}</option>
           ))}
@@ -179,6 +187,7 @@ const pageDescription =
         </button>
       </div>
     </section>
+
     <p
       id="early-access-results"
       class="early-access__results"
@@ -191,8 +200,9 @@ const pageDescription =
       class="early-access__empty"
       style="display: none;"
     >
-      No applications match your search. Try changing your filters.
+      No applications match your search. Try adjusting your filters.
     </p>
+
     <section
       class="early-access__grid"
       id="early-access-grid"
@@ -234,7 +244,24 @@ const pageDescription =
                   <span>{app.name.slice(0, 1).toUpperCase()}</span>
                 )}
               </div>
-              <span class="early-access-card__type">
+
+              <span
+                class:list={[
+                  'early-access-card__type',
+                  {
+                    'early-access-card__type--alpha':
+                      app.latestType === 'Alpha',
+                    'early-access-card__type--beta':
+                      app.latestType === 'Beta',
+                    'early-access-card__type--rc':
+                      app.latestType === 'Release Candidate',
+                    'early-access-card__type--nightly':
+                      app.latestType === 'Nightly',
+                    'early-access-card__type--development':
+                      app.latestType === 'Development',
+                  },
+                ]}
+              >
                 {app.latestType}
               </span>
             </div>
@@ -250,6 +277,7 @@ const pageDescription =
                 {app.description}
               </p>
             </div>
+
             <div class="early-access-card__meta">
               <div>
                 <span class="early-access-card__label">Latest build</span>
@@ -261,6 +289,7 @@ const pageDescription =
                 <strong>{formatDate(app.latestDate)}</strong>
               </div>
             </div>
+
             <div class="early-access-card__footer">
               <span>
                 {app.releases.length} recorded builds
@@ -274,6 +303,7 @@ const pageDescription =
         </article>
       ))}
     </section>
+
     <nav
       class="early-access__pagination"
       id="early-access-pagination"
@@ -288,6 +318,7 @@ const pageDescription =
           ← Previous
         </a>
       )}
+
       <span class="early-access__page-numbers">
         {Array.from({ length: TOTAL_PAGES }, (_, index) => index + 1).map((number) => (
           <a
@@ -304,6 +335,7 @@ const pageDescription =
           </a>
         ))}
       </span>
+
       {safePage < TOTAL_PAGES && (
         <a
           href={`/early-access/${safePage + 1}/`}
@@ -412,8 +444,8 @@ const pageDescription =
 
   .early-access__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
     margin-bottom: 2.5rem;
   }
 
@@ -477,17 +509,52 @@ const pageDescription =
     display: inline-flex;
     align-items: center;
     padding: 0.3rem 0.6rem;
-    border: 1px solid var(--palette-border, #e5e7eb);
+    border: 1px solid transparent;
     border-radius: 5px;
     font-size: 0.75rem;
     font-weight: 600;
+  }
+
+  .early-access-card__type--alpha {
+    color: #7c3aed;
+    background: #f3e8ff;
+    border-color: #d8b4fe;
+  }
+
+  .early-access-card__type--beta {
+    color: #1d4ed8;
+    background: #dbeafe;
+    border-color: #93c5fd;
+  }
+
+  .early-access-card__type--rc {
+    color: #0f766e;
+    background: #ccfbf1;
+    border-color: #5eead4;
+  }
+
+  .early-access-card__type--nightly {
+    color: #b45309;
+    background: #fef3c7;
+    border-color: #fcd34d;
+  }
+
+  .early-access-card__type--development {
+    color: #4b5563;
+    background: #f3f4f6;
+    border-color: #d1d5db;
   }
 
   .early-access-card__content {
     flex: 1;
   }
 
-  /* Category label — exactly matches ReleaseCard.astro */
+  .early-access-card h2 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+
+  /* Category label — matches ReleaseCard.astro */
   .early-access-card__category {
     display: inline-block;
     margin: 0.3rem 0 0;
@@ -495,11 +562,6 @@ const pageDescription =
     font-family: var(--mono);
     font-size: 0.7rem;
     line-height: 1.4;
-  }
-
-  .early-access-card h2 {
-    margin: 0;
-    font-size: 1.2rem;
   }
 
   .early-access-card__description {
@@ -640,6 +702,7 @@ const pageDescription =
   const grid = document.getElementById(
     'early-access-grid'
   ) as HTMLElement;
+
   const resultsInfo = document.getElementById(
     'early-access-results'
   ) as HTMLParagraphElement;
@@ -683,6 +746,7 @@ const pageDescription =
     }
 
     let matchCount = 0;
+
     allCards.forEach((card) => {
       const name = (card.dataset.name || '').toLowerCase();
       const description = (card.dataset.description || '').toLowerCase();
@@ -692,6 +756,7 @@ const pageDescription =
       const license = (card.dataset.license || '').toLowerCase();
 
       let matches = true;
+
       if (query) {
         matches =
           name.includes(query) ||
@@ -732,5 +797,13 @@ const pageDescription =
     categoryFilter.value = '';
     typeFilter.value = '';
     performFilter();
+    searchInput.focus();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === '/' && document.activeElement !== searchInput) {
+      e.preventDefault();
+      searchInput.focus();
+    }
   });
 </script>
