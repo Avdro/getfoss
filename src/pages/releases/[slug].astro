@@ -111,9 +111,17 @@ const pageDescription = `Stable release history for ${app.name}. Browse versions
         </div>
       </div>
       <p class="app-description">{app.description}</p>
-      <div class="app-meta">
-        <span>{app.platforms.join(' · ')}</span>
-        <span>{app.license}</span>
+      <div class="app-meta" aria-label="Application details">
+        <div class="meta-group">
+          <span class="meta-label">Platforms</span>
+          <div class="meta-values">
+            {app.platforms.map((platform) => <span class="meta-chip">{platform}</span>)}
+          </div>
+        </div>
+        <div class="meta-group">
+          <span class="meta-label">License</span>
+          <span class="meta-chip license-chip">{app.license}</span>
+        </div>
       </div>
       <div class="app-links">
         {app.website && <a href={app.website} target="_blank" rel="noopener noreferrer">Official Website ↗</a>}
@@ -284,17 +292,63 @@ const pageDescription = `Stable release history for ${app.name}. Browse versions
     line-height: 1.7;
   }
 
-  .app-meta,
+  .app-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 1rem 2rem;
+    margin-top: 1.25rem;
+  }
+
+  .meta-group {
+    display: grid;
+    justify-items: start;
+    gap: 0.5rem;
+  }
+
+  .meta-label {
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .meta-values {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .meta-chip {
+    display: inline-flex;
+    align-items: center;
+    min-height: 1.8rem;
+    padding: 0.3rem 0.65rem;
+    color: var(--muted);
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    line-height: 1.2;
+  }
+
+  .license-chip {
+    color: var(--ink);
+    background: color-mix(in srgb, var(--accent) 7%, var(--bg));
+    border-color: color-mix(in srgb, var(--accent) 22%, var(--line));
+  }
+
   .app-links {
     display: flex;
     flex-wrap: wrap;
     gap: 0.6rem 1rem;
-    margin-top: 1rem;
+    margin-top: 1.25rem;
     font-family: var(--mono);
     font-size: 0.72rem;
   }
-
-  .app-meta { color: var(--muted); }
   .app-links a,
   .release-actions a,
   .latest-release a {
