@@ -69,6 +69,18 @@ function formatDate(value?: string | null) {
 }
 
 const latestRelease = releases[0];
+
+// Use the application's official website favicon as its icon, matching the catalogue cards.
+let appIconUrl: string | undefined;
+if (app.website) {
+  try {
+    const websiteUrl = new URL(app.website);
+    appIconUrl = `https://www.google.com/s2/favicons?domain=${encodeURIComponent(websiteUrl.hostname)}&sz=128`;
+  } catch {
+    appIconUrl = undefined;
+  }
+}
+
 const pageTitle = `${app.name} Stable Release History — GetFOSS`;
 const pageDescription = `Stable release history for ${app.name}. Browse versions, release dates, and official release notes.`;
 ---
@@ -86,7 +98,13 @@ const pageDescription = `Stable release history for ${app.name}. Browse versions
     <header class="history-header">
       <a class="back-link" href="/releases/">← Back to Stable Releases</a>
       <div class="app-title-row">
-        <div class="app-icon" aria-hidden="true">{app.name.slice(0, 1).toUpperCase()}</div>
+        <div class="app-icon">
+          {appIconUrl ? (
+            <img src={appIconUrl} alt={`${app.name} icon`} width="64" height="64" loading="eager" referrerpolicy="no-referrer" />
+          ) : (
+            <span aria-hidden="true">{app.name.slice(0, 1).toUpperCase()}</span>
+          )}
+        </div>
         <div>
           <p class="eyebrow">{app.category}</p>
           <h1>{app.name}</h1>
@@ -226,12 +244,21 @@ const pageDescription = `Stable release history for ${app.name}. Browse versions
     width: 64px;
     height: 64px;
     place-items: center;
+    overflow: hidden;
     color: var(--accent);
     background: var(--line);
     border-radius: 14px;
     font-family: var(--mono);
     font-size: 1.7rem;
     font-weight: 800;
+  }
+
+  .app-icon img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0.45rem;
+    object-fit: contain;
   }
 
   .eyebrow {
