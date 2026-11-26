@@ -1,4 +1,170 @@
 {
   "schemaVersion": 1,
-  "applications": []
+  "applications": [
+    {
+      "id": "blender",
+      "name": "Blender",
+      "slug": "blender",
+      "description": "A complete 3D creation suite for modeling, sculpting, animation, rendering, compositing and video editing.",
+      "category": "Image & Graphics",
+      "platforms": ["Windows", "macOS", "Linux"],
+      "license": "GPL-3.0-or-later",
+      "website": "https://www.blender.org/",
+      "sourceUrl": "https://projects.blender.org/blender/blender"
+    },
+    {
+      "id": "gimp",
+      "name": "GIMP",
+      "slug": "gimp",
+      "description": "A powerful image editor for photo retouching, image composition and graphic design.",
+      "category": "Image & Graphics",
+      "platforms": ["Windows", "macOS", "Linux"],
+      "license": "GPL-3.0-or-later",
+      "website": "https://www.gimp.org/",
+      "sourceUrl": "https://gitlab.gnome.org/GNOME/gimp"
+    },
+    {
+      "id": "inkscape",
+      "name": "Inkscape",
+      "slug": "inkscape",
+      "description": "A professional vector graphics editor for creating illustrations, logos, diagrams and SVG artwork.",
+      "category": "Image & Graphics",
+      "platforms": ["Windows", "macOS", "Linux"],
+      "license": "GPL-2.0-or-later",
+      "website": "https://inkscape.org/",
+      "sourceUrl": "https://gitlab.com/inkscape/inkscape"
+    },
+    {
+      "id": "krita",
+      "name": "Krita",
+      "slug": "krita",
+      "description": "A professional digital painting application for illustration, concept art, comics and animation.",
+      "category": "Image & Graphics",
+      "platforms": ["Windows", "macOS", "Linux", "Android"],
+      "license": "GPL-3.0-or-later",
+      "website": "https://krita.org/",
+      "sourceUrl": "https://invent.kde.org/graphics/krita"
+    },
+    {
+      "id": "obs-studio",
+      "name": "OBS Studio",
+      "slug": "obs-studio",
+      "description": "Free and open-source software for video recording and live streaming.",
+      "category": "Video Software",
+      "platforms": ["Windows", "macOS", "Linux"],
+      "license": "GPL-2.0-or-later",
+      "website": "https://obsproject.com/",
+      "sourceUrl": "https://github.com/obsproject/obs-studio"
+    },
+    {
+      "id": "audacity",
+      "name": "Audacity",
+      "slug": "audacity",
+      "description": "A multi-track audio editor and recorder for recording, editing and processing sound.",
+      "category": "Audio Software",
+      "platforms": ["Windows", "macOS", "Linux"],
+      "license": "GPL-3.0-or-later",
+      "website": "https://www.audacityteam.org/",
+      "sourceUrl": "https://github.com/audacity/audacity"
+    },
+    {
+      "id": "kdenlive",
+      "name": "Kdenlive",
+      "slug": "kdenlive",
+      "description": "A non-linear video editor with multi-track editing, effects, transitions and proxy workflows.",
+      "category": "Video Software",
+      "platforms": ["Windows", "macOS", "Linux"],
+      "license": "GPL-3.0-or-later",
+      "website": "https://kdenlive.org/",
+      "sourceUrl": "https://invent.kde.org/multimedia/kdenlive"
+    },
+    {
+      "id": "libreoffice",
+      "name": "LibreOffice",
+      "slug": "libreoffice",
+      "description": "A full-featured office suite for documents, spreadsheets, presentations and more.",
+      "category": "Office & Productivity",
+      "platforms": ["Windows", "macOS", "Linux"],
+      "license": "MPL-2.0",
+      "website": "https://www.libreoffice.org/",
+      "sourceUrl": "https://www.libreoffice.org/download/download-libreoffice/"
+    },
+    {
+      "id": "keepassxc",
+      "name": "KeePassXC",
+      "slug": "keepassxc",
+      "description": "A secure offline password manager that stores encrypted credentials in local databases.",
+      "category": "Security & Privacy",
+      "platforms": ["Windows", "macOS", "Linux"],
+      "license": "GPL-2.0-or-later",
+      "website": "https://keepassxc.org/",
+      "sourceUrl": "https://github.com/keepassxreboot/keepassxc"
+    },
+    {
+      "id": "joplin",
+      "name": "Joplin",
+      "slug": "joplin",
+      "description": "An open-source note-taking and task management application with synchronization support.",
+      "category": "Office & Productivity",
+      "platforms": ["Windows", "macOS", "Linux", "Android", "iOS"],
+      "license": "AGPL-3.0-or-later",
+      "website": "https://joplinapp.org/",
+      "sourceUrl": "https://github.com/laurent22/joplin"
+    },
+    {
+      "id": "qbittorrent",
+      "name": "qBittorrent",
+      "slug": "qbittorrent",
+      "description": "A free and open-source BitTorrent client with search, bandwidth controls and remote management.",
+      "category": "Internet & Web",
+      "platforms": ["Windows", "macOS", "Linux"],
+      "license": "GPL-2.0-or-later",
+      "website": "https://www.qbittorrent.org/",
+      "sourceUrl": "https://github.com/qbittorrent/qBittorrent"
+    },
+    {
+      "id": "syncthing",
+      "name": "Syncthing",
+      "slug": "syncthing",
+      "description": "A continuous file synchronization tool that keeps files synchronized between devices.",
+      "category": "System Utilities",
+      "platforms": ["Windows", "macOS", "Linux", "BSD"],
+      "license": "MPL-2.0",
+      "website": "https://syncthing.net/",
+      "sourceUrl": "https://github.com/syncthing/syncthing"
+    },
+    {
+      "id": "nextcloud-server",
+      "name": "Nextcloud Server",
+      "slug": "nextcloud-server",
+      "description": "A self-hosted collaboration platform for file storage, sharing, calendars and communication.",
+      "category": "Cloud & Self-Hosting",
+      "platforms": ["Web", "Self-hosted"],
+      "license": "AGPL-3.0",
+      "website": "https://nextcloud.com/",
+      "sourceUrl": "https://github.com/nextcloud/server"
+    },
+    {
+      "id": "vlc",
+      "name": "VLC",
+      "slug": "vlc",
+      "description": "A versatile multimedia player supporting a wide range of audio, video and streaming formats.",
+      "category": "Video Software",
+      "platforms": ["Windows", "macOS", "Linux", "Android", "iOS"],
+      "license": "GPL-2.0-or-later",
+      "website": "https://www.videolan.org/vlc/",
+      "sourceUrl": "https://code.videolan.org/videolan/vlc"
+    },
+    {
+      "id": "firefox",
+      "name": "Firefox",
+      "slug": "firefox",
+      "description": "An open-source web browser focused on user control, privacy and web standards.",
+      "category": "Internet & Web",
+      "platforms": ["Windows", "macOS", "Linux", "Android", "iOS"],
+      "license": "MPL-2.0",
+      "website": "https://www.mozilla.org/firefox/",
+      "sourceUrl": "https://hg.mozilla.org/mozilla-central"
+    }
+  ]
 }
