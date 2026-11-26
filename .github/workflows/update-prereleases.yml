@@ -2,11 +2,8 @@ name: Update Pre-release Builds
 
 on:
   schedule:
-    # Every day at 03:20 UTC
     - cron: "20 3 * * *"
-
   workflow_dispatch:
-
   push:
     paths:
       - "src/data/prereleases/software.json"
@@ -37,15 +34,15 @@ jobs:
           node-version: 22
 
       - name: Update pre-release data
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/update-prereleases.mjs
 
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
           git add src/data/prereleases/releases.json
-
           if git diff --cached --quiet; then
             echo "No pre-release data changes."
           else
