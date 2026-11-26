@@ -10,7 +10,13 @@
       "platforms": ["Windows", "macOS", "Linux"],
       "license": "GPL-3.0-or-later",
       "website": "https://www.blender.org/",
-      "sourceUrl": "https://projects.blender.org/blender/blender"
+      "sourceUrl": "https://projects.blender.org/blender/blender",
+      "releaseSource": {
+        "type": "gitea",
+        "host": "https://projects.blender.org",
+        "owner": "blender",
+        "repository": "blender"
+      }
     },
     {
       "id": "gimp",
@@ -21,7 +27,12 @@
       "platforms": ["Windows", "macOS", "Linux"],
       "license": "GPL-3.0-or-later",
       "website": "https://www.gimp.org/",
-      "sourceUrl": "https://gitlab.gnome.org/GNOME/gimp"
+      "sourceUrl": "https://gitlab.gnome.org/GNOME/gimp",
+      "releaseSource": {
+        "type": "gitlab",
+        "host": "https://gitlab.gnome.org",
+        "project": "GNOME/gimp"
+      }
     },
     {
       "id": "inkscape",
@@ -32,7 +43,12 @@
       "platforms": ["Windows", "macOS", "Linux"],
       "license": "GPL-2.0-or-later",
       "website": "https://inkscape.org/",
-      "sourceUrl": "https://gitlab.com/inkscape/inkscape"
+      "sourceUrl": "https://gitlab.com/inkscape/inkscape",
+      "releaseSource": {
+        "type": "gitlab",
+        "host": "https://gitlab.com",
+        "project": "inkscape/inkscape"
+      }
     },
     {
       "id": "krita",
@@ -43,7 +59,12 @@
       "platforms": ["Windows", "macOS", "Linux", "Android"],
       "license": "GPL-3.0-or-later",
       "website": "https://krita.org/",
-      "sourceUrl": "https://invent.kde.org/graphics/krita"
+      "sourceUrl": "https://invent.kde.org/graphics/krita",
+      "releaseSource": {
+        "type": "gitlab",
+        "host": "https://invent.kde.org",
+        "project": "graphics/krita"
+      }
     },
     {
       "id": "obs-studio",
@@ -54,7 +75,12 @@
       "platforms": ["Windows", "macOS", "Linux"],
       "license": "GPL-2.0-or-later",
       "website": "https://obsproject.com/",
-      "sourceUrl": "https://github.com/obsproject/obs-studio"
+      "sourceUrl": "https://github.com/obsproject/obs-studio",
+      "releaseSource": {
+        "type": "github",
+        "owner": "obsproject",
+        "repository": "obs-studio"
+      }
     },
     {
       "id": "audacity",
@@ -65,7 +91,12 @@
       "platforms": ["Windows", "macOS", "Linux"],
       "license": "GPL-3.0-or-later",
       "website": "https://www.audacityteam.org/",
-      "sourceUrl": "https://github.com/audacity/audacity"
+      "sourceUrl": "https://github.com/audacity/audacity",
+      "releaseSource": {
+        "type": "github",
+        "owner": "audacity",
+        "repository": "audacity"
+      }
     },
     {
       "id": "kdenlive",
@@ -76,7 +107,12 @@
       "platforms": ["Windows", "macOS", "Linux"],
       "license": "GPL-3.0-or-later",
       "website": "https://kdenlive.org/",
-      "sourceUrl": "https://invent.kde.org/multimedia/kdenlive"
+      "sourceUrl": "https://invent.kde.org/multimedia/kdenlive",
+      "releaseSource": {
+        "type": "gitlab",
+        "host": "https://invent.kde.org",
+        "project": "multimedia/kdenlive"
+      }
     },
     {
       "id": "libreoffice",
@@ -87,7 +123,11 @@
       "platforms": ["Windows", "macOS", "Linux"],
       "license": "MPL-2.0",
       "website": "https://www.libreoffice.org/",
-      "sourceUrl": "https://www.libreoffice.org/download/download-libreoffice/"
+      "sourceUrl": "https://www.libreoffice.org/download/download-libreoffice/",
+      "releaseSource": {
+        "type": "libreoffice-directory",
+        "url": "https://download.documentfoundation.org/libreoffice/stable/"
+      }
     },
     {
       "id": "keepassxc",
@@ -98,7 +138,12 @@
       "platforms": ["Windows", "macOS", "Linux"],
       "license": "GPL-2.0-or-later",
       "website": "https://keepassxc.org/",
-      "sourceUrl": "https://github.com/keepassxreboot/keepassxc"
+      "sourceUrl": "https://github.com/keepassxreboot/keepassxc",
+      "releaseSource": {
+        "type": "github",
+        "owner": "keepassxreboot",
+        "repository": "keepassxc"
+      }
     },
     {
       "id": "joplin",
@@ -109,7 +154,12 @@
       "platforms": ["Windows", "macOS", "Linux", "Android", "iOS"],
       "license": "AGPL-3.0-or-later",
       "website": "https://joplinapp.org/",
-      "sourceUrl": "https://github.com/laurent22/joplin"
+      "sourceUrl": "https://github.com/laurent22/joplin",
+      "releaseSource": {
+        "type": "github",
+        "owner": "laurent22",
+        "repository": "joplin"
+      }
     },
     {
       "id": "qbittorrent",
@@ -120,7 +170,12 @@
       "platforms": ["Windows", "macOS", "Linux"],
       "license": "GPL-2.0-or-later",
       "website": "https://www.qbittorrent.org/",
-      "sourceUrl": "https://github.com/qbittorrent/qBittorrent"
+      "sourceUrl": "https://github.com/qbittorrent/qBittorrent",
+      "releaseSource": {
+        "type": "github",
+        "owner": "qbittorrent",
+        "repository": "qBittorrent"
+      }
     },
     {
       "id": "syncthing",
@@ -131,7 +186,12 @@
       "platforms": ["Windows", "macOS", "Linux", "BSD"],
       "license": "MPL-2.0",
       "website": "https://syncthing.net/",
-      "sourceUrl": "https://github.com/syncthing/syncthing"
+      "sourceUrl": "https://github.com/syncthing/syncthing",
+      "releaseSource": {
+        "type": "github",
+        "owner": "syncthing",
+        "repository": "syncthing"
+      }
     },
     {
       "id": "nextcloud-server",
@@ -142,7 +202,12 @@
       "platforms": ["Web", "Self-hosted"],
       "license": "AGPL-3.0",
       "website": "https://nextcloud.com/",
-      "sourceUrl": "https://github.com/nextcloud/server"
+      "sourceUrl": "https://github.com/nextcloud/server",
+      "releaseSource": {
+        "type": "github",
+        "owner": "nextcloud",
+        "repository": "server"
+      }
     },
     {
       "id": "vlc",
@@ -153,7 +218,12 @@
       "platforms": ["Windows", "macOS", "Linux", "Android", "iOS"],
       "license": "GPL-2.0-or-later",
       "website": "https://www.videolan.org/vlc/",
-      "sourceUrl": "https://code.videolan.org/videolan/vlc"
+      "sourceUrl": "https://code.videolan.org/videolan/vlc",
+      "releaseSource": {
+        "type": "gitlab",
+        "host": "https://code.videolan.org",
+        "project": "videolan/vlc"
+      }
     },
     {
       "id": "firefox",
@@ -164,7 +234,12 @@
       "platforms": ["Windows", "macOS", "Linux", "Android", "iOS"],
       "license": "MPL-2.0",
       "website": "https://www.mozilla.org/firefox/",
-      "sourceUrl": "https://hg.mozilla.org/mozilla-central"
+      "sourceUrl": "https://hg.mozilla.org/mozilla-central",
+      "releaseSource": {
+        "type": "mozilla-product-details",
+        "url": "https://product-details.mozilla.org/1.0/firefox.json",
+        "versionsUrl": "https://product-details.mozilla.org/1.0/firefox_versions.json"
+      }
     }
   ]
 }
