@@ -23,9 +23,13 @@ const {
   icon,
 } = Astro.props;
 
-const normalizedVersion = version
-  ? (version.startsWith('v') || version.startsWith('V') ? version : `v${version}`)
-  : '—';
+// Some release sources use tags such as "audacious-4.6.2".
+// Remove the application slug and any existing v-prefix before displaying it.
+const cleanVersion = version
+  .trim()
+  .replace(new RegExp(`^${slug}[-_]`, 'i'), '')
+  .replace(/^v/i, '');
+const normalizedVersion = cleanVersion ? `v${cleanVersion}` : '—';
 
 const parsedReleaseDate = releaseDate ? new Date(`${releaseDate}T00:00:00Z`) : null;
 const formattedDate =
