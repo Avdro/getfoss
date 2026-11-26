@@ -2357,12 +2357,10 @@
       ],
       "license": "GPL-3.0-or-later",
       "website": "https://www.blender.org/",
-      "sourceUrl": "https://projects.blender.org/blender/blender",
+      "sourceUrl": "https://www.blender.org/download/releases/",
       "releaseSource": {
-        "type": "gitea",
-        "host": "https://projects.blender.org",
-        "owner": "blender",
-        "repository": "blender"
+        "type": "blender-releases-page",
+        "url": "https://www.blender.org/feed/"
       }
     },
     {
@@ -4307,6 +4305,26 @@
       }
     },
     {
+      "id": "etcher",
+      "name": "balenaEtcher",
+      "slug": "etcher",
+      "description": "A tool for flashing OS images to SD cards and USB drives for creating bootable installation media across desktop platforms.",
+      "category": "Operating Systems & Distributions",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "license": "Apache-2.0",
+      "website": "https://etcher.balena.io/",
+      "sourceUrl": "https://github.com/balena-io/etcher",
+      "releaseSource": {
+        "type": "github",
+        "owner": "balena-io",
+        "repository": "etcher"
+      }
+    },
+    {
       "id": "bedrock-linux",
       "name": "Bedrock Linux",
       "slug": "bedrock-linux",
@@ -4322,23 +4340,6 @@
         "type": "github",
         "owner": "bedrocklinux",
         "repository": "bedrocklinux-userland"
-      }
-    },
-    {
-      "id": "debian",
-      "name": "Debian",
-      "slug": "debian",
-      "description": "One of the oldest Linux distributions, serving as the upstream for Ubuntu and many other distros, with a commitment to free software principles.",
-      "category": "Operating Systems & Distributions",
-      "platforms": [
-        "Linux"
-      ],
-      "license": "GPL-2.0-or-later",
-      "website": "https://www.debian.org",
-      "sourceUrl": "https://salsa.debian.org/debian",
-      "releaseSource": {
-        "type": "debian-cloud-images",
-        "url": "https://cloud.debian.org/images/cloud/bookworm/latest/debian-12-genericcloud-amd64.json"
       }
     },
     {
@@ -4393,23 +4394,6 @@
         "type": "github",
         "owner": "elementary",
         "repository": "os"
-      }
-    },
-    {
-      "id": "fedora",
-      "name": "Fedora",
-      "slug": "fedora",
-      "description": "Community-driven Linux distribution sponsored by Red Hat, serving as the upstream for RHEL with cutting-edge software and six-month release cycles.",
-      "category": "Operating Systems & Distributions",
-      "platforms": [
-        "Linux"
-      ],
-      "license": "GPL-2.0-or-later",
-      "website": "https://fedoraproject.org",
-      "sourceUrl": "https://src.fedoraproject.org",
-      "releaseSource": {
-        "type": "fedora-bodhi",
-        "url": "https://bodhi.fedoraproject.org/releases/?rows_per_page=20&state=current"
       }
     },
     {
@@ -4633,6 +4617,25 @@
       "releaseSource": {
         "type": "ubuntu-cloud-images",
         "url": "https://cloud-images.ubuntu.com/releases/streams/v1/com.ubuntu.cloud:released:download.json"
+      }
+    },
+    {
+      "id": "ventoy",
+      "name": "Ventoy",
+      "slug": "ventoy",
+      "description": "A tool for creating multiboot USB drives that can boot multiple ISO, WIM, IMG, and VHD files without reformatting the drive.",
+      "category": "Operating Systems & Distributions",
+      "platforms": [
+        "Windows",
+        "Linux"
+      ],
+      "license": "GPL-3.0-or-later",
+      "website": "https://ventoy.net/",
+      "sourceUrl": "https://github.com/ventoy/Ventoy",
+      "releaseSource": {
+        "type": "github",
+        "owner": "ventoy",
+        "repository": "Ventoy"
       }
     },
     {
