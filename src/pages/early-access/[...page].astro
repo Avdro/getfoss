@@ -62,6 +62,21 @@ function formatDate(value?: string | null): string {
   });
 }
 
+function getReleaseTypeClass(type?: string | null): string {
+  switch (type?.toLowerCase()) {
+    case 'alpha':
+      return 'early-access-card__type--alpha';
+    case 'beta':
+      return 'early-access-card__type--beta';
+    case 'release candidate':
+      return 'early-access-card__type--rc';
+    case 'nightly':
+      return 'early-access-card__type--nightly';
+    default:
+      return 'early-access-card__type--development';
+  }
+}
+
 const allApps = softwareData.applications.map((app) => {
   const releaseData = releaseApplications.get(app.id);
 
@@ -200,7 +215,7 @@ const pageDescription =
       class="early-access__empty"
       style="display: none;"
     >
-      No applications match your search. Try adjusting your filters.
+      No applications match your search. Try changing your filters.
     </p>
 
     <section
@@ -245,38 +260,26 @@ const pageDescription =
                 )}
               </div>
 
+              <div class="early-access-card__heading">
+                <h2>{app.name}</h2>
+                <p class="early-access-card__category">
+                  {app.category}
+                </p>
+              </div>
+
               <span
                 class:list={[
                   'early-access-card__type',
-                  {
-                    'early-access-card__type--alpha':
-                      app.latestType === 'Alpha',
-                    'early-access-card__type--beta':
-                      app.latestType === 'Beta',
-                    'early-access-card__type--rc':
-                      app.latestType === 'Release Candidate',
-                    'early-access-card__type--nightly':
-                      app.latestType === 'Nightly',
-                    'early-access-card__type--development':
-                      app.latestType === 'Development',
-                  },
+                  getReleaseTypeClass(app.latestType),
                 ]}
               >
                 {app.latestType}
               </span>
             </div>
 
-            <div class="early-access-card__content">
-              <h2>{app.name}</h2>
-
-              <p class="early-access-card__category">
-                {app.category}
-              </p>
-
-              <p class="early-access-card__description">
-                {app.description}
-              </p>
-            </div>
+            <p class="early-access-card__description">
+              {app.description}
+            </p>
 
             <div class="early-access-card__meta">
               <div>
@@ -480,9 +483,8 @@ const pageDescription =
   .early-access-card__top {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    gap: 0.85rem;
+    margin-bottom: 0;
   }
 
   .early-access-card__icon {
@@ -505,14 +507,37 @@ const pageDescription =
     object-fit: contain;
   }
 
+  .early-access-card__heading {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .early-access-card h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    overflow-wrap: anywhere;
+  }
+
+  /* Category label — matches ReleaseCard.astro */
+  .early-access-card__category {
+    display: inline-block;
+    margin: 0.3rem 0 0;
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    line-height: 1.4;
+  }
+
   .early-access-card__type {
     display: inline-flex;
+    flex: 0 0 auto;
     align-items: center;
     padding: 0.3rem 0.6rem;
-    border: 1px solid transparent;
+    border: 1px solid var(--palette-border, #e5e7eb);
     border-radius: 5px;
     font-size: 0.75rem;
     font-weight: 600;
+    white-space: nowrap;
   }
 
   .early-access-card__type--alpha {
@@ -545,29 +570,10 @@ const pageDescription =
     border-color: #d1d5db;
   }
 
-  .early-access-card__content {
-    flex: 1;
-  }
-
-  .early-access-card h2 {
-    margin: 0;
-    font-size: 1.2rem;
-  }
-
-  /* Category label — matches ReleaseCard.astro */
-  .early-access-card__category {
-    display: inline-block;
-    margin: 0.3rem 0 0;
-    color: var(--muted);
-    font-family: var(--mono);
-    font-size: 0.7rem;
-    line-height: 1.4;
-  }
-
   .early-access-card__description {
     display: -webkit-box;
     overflow: hidden;
-    margin: 0.55rem 0 0;
+    margin: 0.85rem 0 0;
     color: var(--palette-text-muted, #6b7280);
     font-size: 0.9rem;
     line-height: 1.5;
@@ -797,13 +803,5 @@ const pageDescription =
     categoryFilter.value = '';
     typeFilter.value = '';
     performFilter();
-    searchInput.focus();
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === '/' && document.activeElement !== searchInput) {
-      e.preventDefault();
-      searchInput.focus();
-    }
   });
 </script>
