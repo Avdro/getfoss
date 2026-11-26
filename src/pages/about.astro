@@ -1,131 +1,196 @@
 ---
 import Layout from '../components/Layout.astro';
 import TypedLede from '../components/TypedLede.astro';
+
+const title = 'About GetFOSS — Discover Free and Open-Source Software';
+const description =
+  'Discover what GetFOSS stands for: carefully selected free and open-source software, with a focus on privacy, security, transparency, and community-driven development.';
 ---
 
 <Layout
-  title="About GetFOSS — Our Mission and Principles"
-  description="Free and open-source software, done right. GetFOSS picks the best FOSS apps — private, secure, and community-driven — for every platform."
+  title={title}
+  description={description}
   canonicalPath="/about/"
 >
   <main class="content-shell" data-pagefind-body>
     <section class="page-hero">
       <h1 class="visually-hidden">About GetFOSS</h1>
       <TypedLede text="Free and open-source software, done right." />
+      <p class="about-intro">
+        Discover software that puts people first. Explore open-source
+        applications built around freedom, privacy, transparency, and
+        community.
+      </p>
     </section>
 
-    <section class="section" style="max-width: var(--max);">
+    <section class="section about-section">
       <div class="about-grid">
         <div class="about-main">
           <article class="about-card">
+            <p class="section-label">01 / ABOUT THE PROJECT</p>
             <h2>What is GetFOSS?</h2>
+
             <div class="about-prose">
               <p>
-                GetFOSS is a resource dedicated to discovering and exploring
-                free and open-source software. Our goal is to help people find
-                high-quality applications that respect their privacy, put
-                users in control, and are built around open collaboration.
+                GetFOSS is an independent resource for discovering free
+                and open-source software. We help people find useful,
+                trustworthy applications that respect their freedom,
+                give them control, and make software more transparent.
               </p>
 
               <p>
-                We cover FOSS applications and tools across platforms,
-                including Linux, Windows, macOS, Android, and the web.
-                Topics include operating systems, productivity, development,
-                security, privacy, multimedia, self-hosting, and much more.
+                From everyday desktop applications to powerful development
+                tools, privacy-focused services, and self-hosted solutions,
+                we explore the software that makes the open-source ecosystem
+                valuable.
               </p>
 
               <p>
-                Whether you are looking for an alternative to proprietary
-                software or discovering open-source tools for the first time,
-                GetFOSS aims to make that journey easier.
+                Whether you're moving away from proprietary software,
+                looking for a better tool, or exploring FOSS for the first
+                time, GetFOSS is here to make discovery easier.
               </p>
             </div>
           </article>
 
           <article class="about-card">
+            <p class="section-label">02 / WHAT WE BELIEVE</p>
             <h2>Our principles</h2>
-            <div class="about-prose">
-              <h3>Free and open source</h3>
-              <p>
-                We focus exclusively on software distributed under
-                OSI-approved open-source licenses. Freeware, shareware,
-                proprietary applications, and software without a qualifying
-                open-source license are outside our scope.
-              </p>
 
-              <h3>Privacy and security</h3>
-              <p>
-                We value software that respects user privacy, minimizes
-                unnecessary data collection, and gives people meaningful
-                control over their information. Security practices and
-                transparency matter when evaluating software.
-              </p>
+            <div class="principle">
+              <span class="principle-number">01</span>
+              <div>
+                <h3>Software freedom</h3>
+                <p>
+                  We focus on genuinely free and open-source software.
+                  Projects should provide users with the freedom to use,
+                  study, modify, and share their software under an
+                  appropriate open-source license.
+                </p>
+              </div>
+            </div>
 
-              <h3>Community-driven development</h3>
-              <p>
-                Open development, transparent project governance, and
-                community participation are important parts of the FOSS
-                ecosystem. We value projects that welcome contributions
-                and build in the open.
-              </p>
+            <div class="principle">
+              <span class="principle-number">02</span>
+              <div>
+                <h3>Privacy and security</h3>
+                <p>
+                  We value applications that respect personal privacy,
+                  minimize unnecessary data collection, and provide
+                  meaningful control over user information. Transparency
+                  and responsible security practices matter.
+                </p>
+              </div>
+            </div>
 
-              <h3>Honest and useful information</h3>
-              <p>
-                Our articles aim to be factual, clear, and practical.
-                We want readers to understand what an application does,
-                which platforms it supports, what makes it useful, and
-                what limitations they should consider.
-              </p>
+            <div class="principle">
+              <span class="principle-number">03</span>
+              <div>
+                <h3>Open development</h3>
+                <p>
+                  We appreciate transparent development, accessible
+                  source code, and projects that welcome community
+                  participation. Collaboration is one of the strengths
+                  of the FOSS ecosystem.
+                </p>
+              </div>
+            </div>
+
+            <div class="principle">
+              <span class="principle-number">04</span>
+              <div>
+                <h3>Honest information</h3>
+                <p>
+                  We aim to provide clear, practical, and factual
+                  information. Readers should understand what an
+                  application does, where it works, its licensing,
+                  and any important limitations.
+                </p>
+              </div>
             </div>
           </article>
 
           <article class="about-card">
+            <p class="section-label">03 / THE SOFTWARE</p>
             <h2>What we cover</h2>
+
             <div class="about-prose">
               <p>
-                GetFOSS explores a broad range of free and open-source
-                software categories, including:
+                Open-source software is not limited to one platform
+                or purpose. GetFOSS explores applications and projects
+                across a wide range of categories.
               </p>
+            </div>
 
-              <ul>
-                <li>Operating systems and Linux distributions</li>
-                <li>Audio, video, and image applications</li>
-                <li>Office and productivity software</li>
-                <li>Development tools and system utilities</li>
-                <li>Security and privacy applications</li>
-                <li>Internet, web, and communication tools</li>
-                <li>Design, engineering, and creative software</li>
-                <li>Cloud, self-hosting, and mobile applications</li>
-              </ul>
+            <div class="category-grid">
+              <div class="category-item">
+                <span class="category-index">01</span>
+                <span>Operating systems and distributions</span>
+              </div>
+              <div class="category-item">
+                <span class="category-index">02</span>
+                <span>Audio, video, and graphics</span>
+              </div>
+              <div class="category-item">
+                <span class="category-index">03</span>
+                <span>Office and productivity</span>
+              </div>
+              <div class="category-item">
+                <span class="category-index">04</span>
+                <span>Development tools and utilities</span>
+              </div>
+              <div class="category-item">
+                <span class="category-index">05</span>
+                <span>Security and privacy</span>
+              </div>
+              <div class="category-item">
+                <span class="category-index">06</span>
+                <span>Internet and communication</span>
+              </div>
+              <div class="category-item">
+                <span class="category-index">07</span>
+                <span>Design and engineering</span>
+              </div>
+              <div class="category-item">
+                <span class="category-index">08</span>
+                <span>Cloud, self-hosting, and mobile</span>
+              </div>
+            </div>
 
+            <div class="about-prose category-note">
               <p>
-                Our focus is on helping readers discover useful software
-                rather than promoting products simply because they are popular.
+                We cover software for Linux, Windows, macOS, Android,
+                and the web, helping readers discover tools that fit
+                their needs and workflows.
               </p>
             </div>
           </article>
 
-          <article class="about-card">
-            <h2>Our commitment</h2>
+          <article class="about-card commitment-card">
+            <p class="section-label">04 / OUR PURPOSE</p>
+            <h2>Why GetFOSS exists</h2>
+
             <div class="about-prose">
               <p>
-                GetFOSS exists to make the open-source ecosystem easier
-                to explore and understand. We believe people should have
-                the freedom to use, study, modify, and share the software
-                they depend on.
+                Software shapes how we work, communicate, create,
+                and manage our digital lives. We believe people
+                deserve meaningful choices about the tools they use.
               </p>
 
               <p>
-                We aim to support informed choices and encourage a more
-                open, transparent, and user-respecting software ecosystem.
+                Our goal is to make free and open-source software
+                easier to discover, understand, and adopt — and to
+                support a digital ecosystem built on openness,
+                user freedom, and community.
               </p>
             </div>
           </article>
         </div>
 
-        <aside>
+        <aside class="about-sidebar">
           <div class="sidebar-card">
-            <h2>GetFOSS</h2>
+            <p class="sidebar-kicker">INDEPENDENT FOSS RESOURCE</p>
+            <h2>GetFOSS<span>.</span></h2>
             <p class="sidebar-description">
               Free and open-source software, done right.
             </p>
@@ -134,17 +199,36 @@ import TypedLede from '../components/TypedLede.astro';
 
             <h3>Our focus</h3>
             <ul class="focus-list">
-              <li>OSI-approved licenses</li>
-              <li>Privacy and security</li>
+              <li>Free and open-source licenses</li>
+              <li>Privacy-conscious software</li>
+              <li>Security and transparency</li>
               <li>Open development</li>
               <li>Community-driven projects</li>
-              <li>Cross-platform software</li>
+              <li>Multiple platforms</li>
             </ul>
 
             <div class="sidebar-divider"></div>
 
-            <a class="sidebar-link" href="/blog/">Explore articles</a>
-            <a class="sidebar-link" href="/tags/">Browse tags</a>
+            <h3>Explore GetFOSS</h3>
+            <a class="sidebar-link" href="/releases/">
+              Latest Versions <span>↗</span>
+            </a>
+            <a class="sidebar-link" href="/early-access/">
+              Upcoming Releases <span>↗</span>
+            </a>
+            <a class="sidebar-link" href="/blog/">
+              Read the blog <span>↗</span>
+            </a>
+            <a class="sidebar-link" href="/tags/">
+              Browse all tags <span>↗</span>
+            </a>
+
+            <div class="sidebar-divider"></div>
+
+            <p class="sidebar-contact">
+              Have a suggestion or want to contribute?
+              <a href="/contact/">Get in touch</a>.
+            </p>
           </div>
         </aside>
       </div>
@@ -152,93 +236,178 @@ import TypedLede from '../components/TypedLede.astro';
   </main>
 </Layout>
 
-<style is:global>
+<style>
+  .about-intro {
+    max-width: 650px;
+    margin: 1.25rem 0 0;
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .about-section {
+    max-width: var(--max);
+  }
+
   .about-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(240px, 0.4fr);
+    grid-template-columns: minmax(0, 1fr) minmax(240px, 0.36fr);
     gap: 2rem;
     align-items: start;
   }
 
   .about-main {
     display: grid;
-    gap: 1.5rem;
+    gap: 1.25rem;
+    min-width: 0;
   }
 
-  .about-card {
+  .about-card,
+  .sidebar-card {
     border: 1px solid var(--line);
     border-radius: var(--radius-lg);
     background: var(--bg-elevated);
-    padding: 1.5rem;
+    padding: 1.6rem;
+  }
+
+  .section-label {
+    margin: 0 0 0.8rem;
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
   }
 
   .about-card h2 {
-    margin: 0 0 1.2rem;
+    margin: 0 0 1.15rem;
     color: var(--ink);
-    font-family: var(--mono);
-    font-size: 1rem;
-    font-weight: 700;
+    font-size: 1.35rem;
+    line-height: 1.35;
+    letter-spacing: -0.025em;
   }
 
   .about-prose p {
-    margin: 0 0 1.2rem;
     max-width: 68ch;
+    margin: 0 0 1rem;
     color: color-mix(in srgb, var(--ink) 82%, var(--muted));
-    font-size: 1rem;
-    line-height: 1.75;
+    font-size: 0.96rem;
+    line-height: 1.8;
   }
 
   .about-prose p:last-child {
     margin-bottom: 0;
   }
 
-  .about-prose h3 {
-    margin: 1.5rem 0 0.5rem;
-    color: var(--ink);
+  .principle {
+    display: grid;
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+    gap: 0.9rem;
+    padding: 1.2rem 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .principle:first-of-type {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .principle-number,
+  .category-index {
+    color: var(--accent);
     font-family: var(--mono);
-    font-size: 0.88rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .principle h3 {
+    margin: 0 0 0.45rem;
+    color: var(--ink);
+    font-size: 0.98rem;
     font-weight: 700;
   }
 
-  .about-prose h3:first-child {
-    margin-top: 0;
+  .principle p {
+    margin: 0;
+    color: color-mix(in srgb, var(--ink) 78%, var(--muted));
+    font-size: 0.91rem;
+    line-height: 1.75;
   }
 
-  .about-prose ul {
+  .category-grid {
     display: grid;
-    gap: 0.55rem;
-    margin: 1rem 0 1.2rem;
-    padding-left: 1.4rem;
-    color: color-mix(in srgb, var(--ink) 82%, var(--muted));
-    line-height: 1.65;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--line);
+  }
+
+  .category-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    min-height: 4rem;
+    padding: 1rem 0.8rem 1rem 0;
+    border-bottom: 1px solid var(--line);
+    color: var(--ink);
+    font-size: 0.86rem;
+    line-height: 1.5;
+  }
+
+  .category-index {
+    flex-shrink: 0;
+    padding-top: 0.1rem;
+  }
+
+  .category-note {
+    margin-top: 1.25rem;
+  }
+
+  .commitment-card {
+    background: var(--bg);
+  }
+
+  .about-sidebar {
+    min-width: 0;
   }
 
   .sidebar-card {
     position: sticky;
     top: 6rem;
-    border: 1px solid var(--line);
-    border-radius: var(--radius-lg);
-    background: var(--bg-elevated);
-    padding: 1.5rem;
+  }
+
+  .sidebar-kicker {
+    margin: 0 0 0.65rem;
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
   }
 
   .sidebar-card h2 {
     margin: 0;
-    color: var(--accent);
+    color: var(--ink);
     font-family: var(--mono);
-    font-size: 1.15rem;
+    font-size: 1.8rem;
+    letter-spacing: -0.07em;
+  }
+
+  .sidebar-card h2 span {
+    color: var(--accent);
   }
 
   .sidebar-description {
-    margin: 0.75rem 0 0;
+    margin: 0.6rem 0 0;
     color: var(--muted);
     font-size: 0.9rem;
-    line-height: 1.6;
+    line-height: 1.7;
   }
 
   .sidebar-divider {
     height: 1px;
-    margin: 1.3rem 0;
+    margin: 1.4rem 0;
     background: var(--line);
   }
 
@@ -246,9 +415,9 @@ import TypedLede from '../components/TypedLede.astro';
     margin: 0 0 0.9rem;
     color: var(--muted);
     font-family: var(--mono);
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     font-weight: 700;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
   }
 
@@ -256,24 +425,51 @@ import TypedLede from '../components/TypedLede.astro';
     display: grid;
     gap: 0.7rem;
     margin: 0;
-    padding-left: 1.2rem;
+    padding-left: 1.1rem;
     color: var(--ink);
-    font-size: 0.85rem;
-    line-height: 1.5;
+    font-size: 0.83rem;
+    line-height: 1.55;
   }
 
   .sidebar-link {
-    display: block;
-    margin-top: 0.8rem;
-    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-top: 0.85rem;
+    color: var(--ink);
     font-family: var(--mono);
-    font-size: 0.82rem;
+    font-size: 0.78rem;
     font-weight: 600;
     text-decoration: none;
+    transition: color 0.15s ease;
   }
 
-  .sidebar-link:hover {
+  .sidebar-link span {
+    color: var(--muted);
+  }
+
+  .sidebar-link:hover,
+  .sidebar-link:hover span {
+    color: var(--accent);
+  }
+
+  .sidebar-contact {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.85rem;
+    line-height: 1.7;
+  }
+
+  .sidebar-contact a {
+    color: var(--ink);
     text-decoration: underline;
+    text-decoration-color: var(--line-strong);
+    text-underline-offset: 3px;
+  }
+
+  .sidebar-contact a:hover {
+    color: var(--accent);
   }
 
   @media (max-width: 860px) {
@@ -283,6 +479,22 @@ import TypedLede from '../components/TypedLede.astro';
 
     .sidebar-card {
       position: static;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .about-card,
+    .sidebar-card {
+      padding: 1.2rem;
+    }
+
+    .category-grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .principle {
+      grid-template-columns: 2rem minmax(0, 1fr);
+      gap: 0.65rem;
     }
   }
 </style>
