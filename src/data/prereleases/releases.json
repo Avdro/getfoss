@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-26T18:18:19.523Z",
+  "updatedAt": "2026-11-27T12:48:56.316Z",
   "applications": [
     {
       "id": "penpot",
@@ -339,7 +339,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:17:01.995Z"
+      "updatedAt": "2026-11-27T12:47:30.702Z"
     },
     {
       "id": "krita",
@@ -656,7 +656,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:17:03.296Z"
+      "updatedAt": "2026-11-27T12:47:32.396Z"
     },
     {
       "id": "gimp",
@@ -868,7 +868,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:17:04.257Z"
+      "updatedAt": "2026-11-27T12:47:33.828Z"
     },
     {
       "id": "inkscape",
@@ -1152,7 +1152,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:17:05.079Z"
+      "updatedAt": "2026-11-27T12:47:35.361Z"
     },
     {
       "id": "freecad",
@@ -1160,6 +1160,58 @@
       "slug": "freecad",
       "releaseCount": 30,
       "releases": [
+        {
+          "version": "26.3rc3",
+          "tag": "26.3rc3",
+          "name": "FreeCAD 26.3 Release Candidate 3",
+          "releaseType": "Release Candidate",
+          "date": "2026-11-27T07:28:15.000Z",
+          "url": "https://github.com/FreeCAD/FreeCAD/releases/tag/26.3rc3",
+          "source": "GitHub",
+          "prerelease": true,
+          "assets": [
+            {
+              "name": "FreeCAD_26.3rc3-Linux-aarch64.AppImage",
+              "url": "https://github.com/FreeCAD/FreeCAD/releases/download/26.3rc3/FreeCAD_26.3rc3-Linux-aarch64.AppImage"
+            },
+            {
+              "name": "FreeCAD_26.3rc3-Linux-aarch64.AppImage.zsync",
+              "url": "https://github.com/FreeCAD/FreeCAD/releases/download/26.3rc3/FreeCAD_26.3rc3-Linux-aarch64.AppImage.zsync"
+            },
+            {
+              "name": "FreeCAD_26.3rc3-Linux-x86_64.AppImage",
+              "url": "https://github.com/FreeCAD/FreeCAD/releases/download/26.3rc3/FreeCAD_26.3rc3-Linux-x86_64.AppImage"
+            },
+            {
+              "name": "FreeCAD_26.3rc3-Linux-x86_64.AppImage.zsync",
+              "url": "https://github.com/FreeCAD/FreeCAD/releases/download/26.3rc3/FreeCAD_26.3rc3-Linux-x86_64.AppImage.zsync"
+            },
+            {
+              "name": "FreeCAD_26.3rc3-macOS10-x86_64.dmg",
+              "url": "https://github.com/FreeCAD/FreeCAD/releases/download/26.3rc3/FreeCAD_26.3rc3-macOS10-x86_64.dmg"
+            },
+            {
+              "name": "FreeCAD_26.3rc3-macOS11-arm64.dmg",
+              "url": "https://github.com/FreeCAD/FreeCAD/releases/download/26.3rc3/FreeCAD_26.3rc3-macOS11-arm64.dmg"
+            },
+            {
+              "name": "FreeCAD_26.3rc3-macOS15-arm64.dmg",
+              "url": "https://github.com/FreeCAD/FreeCAD/releases/download/26.3rc3/FreeCAD_26.3rc3-macOS15-arm64.dmg"
+            },
+            {
+              "name": "FreeCAD_26.3rc3-Windows-x86_64-installer.exe",
+              "url": "https://github.com/FreeCAD/FreeCAD/releases/download/26.3rc3/FreeCAD_26.3rc3-Windows-x86_64-installer.exe"
+            },
+            {
+              "name": "FreeCAD_26.3rc3-Windows-x86_64.7z",
+              "url": "https://github.com/FreeCAD/FreeCAD/releases/download/26.3rc3/FreeCAD_26.3rc3-Windows-x86_64.7z"
+            },
+            {
+              "name": "freecad_source_26.3rc3.tar.gz",
+              "url": "https://github.com/FreeCAD/FreeCAD/releases/download/26.3rc3/freecad_source_26.3rc3.tar.gz"
+            }
+          ]
+        },
         {
           "version": "weekly-2026.11.26",
           "tag": "weekly-2026.11.26",
@@ -3447,53 +3499,9 @@
               "url": "https://github.com/FreeCAD/FreeCAD/releases/download/weekly-2026.06.20/FreeCAD_weekly-2026.06.20-Windows-x86_64.7z-SHA256.txt"
             }
           ]
-        },
-        {
-          "version": "weekly-2026.06.17",
-          "tag": "weekly-2026.06.17",
-          "name": "Development Build weekly-2026.06.17",
-          "releaseType": "Development",
-          "date": "2026-06-17T01:20:27.000Z",
-          "url": "https://github.com/FreeCAD/FreeCAD/releases/tag/weekly-2026.06.17",
-          "source": "GitHub",
-          "prerelease": true,
-          "assets": [
-            {
-              "name": "freecad_source_weekly-2026.06.17.tar.gz",
-              "url": "https://github.com/FreeCAD/FreeCAD/releases/download/weekly-2026.06.17/freecad_source_weekly-2026.06.17.tar.gz"
-            },
-            {
-              "name": "freecad_source_weekly-2026.06.17.tar.gz-SHA256.txt",
-              "url": "https://github.com/FreeCAD/FreeCAD/releases/download/weekly-2026.06.17/freecad_source_weekly-2026.06.17.tar.gz-SHA256.txt"
-            },
-            {
-              "name": "FreeCAD_weekly-2026.06.17-macOS10-x86_64.dmg",
-              "url": "https://github.com/FreeCAD/FreeCAD/releases/download/weekly-2026.06.17/FreeCAD_weekly-2026.06.17-macOS10-x86_64.dmg"
-            },
-            {
-              "name": "FreeCAD_weekly-2026.06.17-macOS10-x86_64.dmg-SHA256.txt",
-              "url": "https://github.com/FreeCAD/FreeCAD/releases/download/weekly-2026.06.17/FreeCAD_weekly-2026.06.17-macOS10-x86_64.dmg-SHA256.txt"
-            },
-            {
-              "name": "FreeCAD_weekly-2026.06.17-macOS11-arm64.dmg",
-              "url": "https://github.com/FreeCAD/FreeCAD/releases/download/weekly-2026.06.17/FreeCAD_weekly-2026.06.17-macOS11-arm64.dmg"
-            },
-            {
-              "name": "FreeCAD_weekly-2026.06.17-macOS11-arm64.dmg-SHA256.txt",
-              "url": "https://github.com/FreeCAD/FreeCAD/releases/download/weekly-2026.06.17/FreeCAD_weekly-2026.06.17-macOS11-arm64.dmg-SHA256.txt"
-            },
-            {
-              "name": "FreeCAD_weekly-2026.06.17-macOS15-arm64.dmg",
-              "url": "https://github.com/FreeCAD/FreeCAD/releases/download/weekly-2026.06.17/FreeCAD_weekly-2026.06.17-macOS15-arm64.dmg"
-            },
-            {
-              "name": "FreeCAD_weekly-2026.06.17-macOS15-arm64.dmg-SHA256.txt",
-              "url": "https://github.com/FreeCAD/FreeCAD/releases/download/weekly-2026.06.17/FreeCAD_weekly-2026.06.17-macOS15-arm64.dmg-SHA256.txt"
-            }
-          ]
         }
       ],
-      "updatedAt": "2026-11-26T18:17:07.053Z"
+      "updatedAt": "2026-11-27T12:47:37.220Z"
     },
     {
       "id": "kicad",
@@ -3832,7 +3840,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:17:07.753Z"
+      "updatedAt": "2026-11-27T12:47:38.029Z"
     },
     {
       "id": "prusaslicer",
@@ -4589,7 +4597,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T18:17:09.118Z"
+      "updatedAt": "2026-11-27T12:47:39.195Z"
     },
     {
       "id": "orcaslicer",
@@ -5762,7 +5770,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T18:17:10.520Z"
+      "updatedAt": "2026-11-27T12:47:40.711Z"
     },
     {
       "id": "openscad",
@@ -5995,7 +6003,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:17:11.199Z"
+      "updatedAt": "2026-11-27T12:47:41.439Z"
     },
     {
       "id": "scribus",
@@ -6125,7 +6133,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:17:11.915Z"
+      "updatedAt": "2026-11-27T12:47:42.441Z"
     },
     {
       "id": "obs-studio",
@@ -8054,7 +8062,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T18:17:13.444Z"
+      "updatedAt": "2026-11-27T12:47:43.896Z"
     },
     {
       "id": "audacity",
@@ -8888,7 +8896,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:17:14.472Z"
+      "updatedAt": "2026-11-27T12:47:44.939Z"
     },
     {
       "id": "kdenlive",
@@ -8896,7 +8904,7 @@
       "slug": "kdenlive",
       "releaseCount": 0,
       "releases": [],
-      "updatedAt": "2026-11-26T18:17:15.082Z"
+      "updatedAt": "2026-11-27T12:47:45.636Z"
     },
     {
       "id": "shotcut",
@@ -10465,7 +10473,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T18:17:16.711Z"
+      "updatedAt": "2026-11-27T12:47:47.141Z"
     },
     {
       "id": "handbrake",
@@ -10535,7 +10543,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:17:17.844Z"
+      "updatedAt": "2026-11-27T12:47:48.303Z"
     },
     {
       "id": "darktable",
@@ -10546,40 +10554,40 @@
         {
           "version": "nightly",
           "tag": "nightly",
-          "name": "Darktable nightly build 20261126",
+          "name": "Darktable nightly build 20261127",
           "releaseType": "Nightly",
-          "date": "2026-11-26T00:47:43.000Z",
+          "date": "2026-11-27T00:47:35.000Z",
           "url": "https://github.com/darktable-org/darktable/releases/tag/nightly",
           "source": "GitHub",
           "prerelease": true,
           "assets": [
             {
-              "name": "Darktable-5.7.0+2406.g2e777184fe-aarch64.AppImage",
-              "url": "https://github.com/darktable-org/darktable/releases/download/nightly/Darktable-5.7.0%2B2406.g2e777184fe-aarch64.AppImage"
+              "name": "Darktable-5.7.0+2414.gc247126f9a-aarch64.AppImage",
+              "url": "https://github.com/darktable-org/darktable/releases/download/nightly/Darktable-5.7.0%2B2414.gc247126f9a-aarch64.AppImage"
             },
             {
-              "name": "Darktable-5.7.0+2406.g2e777184fe-aarch64.AppImage.zsync",
-              "url": "https://github.com/darktable-org/darktable/releases/download/nightly/Darktable-5.7.0%2B2406.g2e777184fe-aarch64.AppImage.zsync"
+              "name": "Darktable-5.7.0+2414.gc247126f9a-aarch64.AppImage.zsync",
+              "url": "https://github.com/darktable-org/darktable/releases/download/nightly/Darktable-5.7.0%2B2414.gc247126f9a-aarch64.AppImage.zsync"
             },
             {
-              "name": "darktable-5.7.0+2406.g2e777184fe-arm64.dmg",
-              "url": "https://github.com/darktable-org/darktable/releases/download/nightly/darktable-5.7.0%2B2406.g2e777184fe-arm64.dmg"
+              "name": "darktable-5.7.0+2414.gc247126f9a-arm64.dmg",
+              "url": "https://github.com/darktable-org/darktable/releases/download/nightly/darktable-5.7.0%2B2414.gc247126f9a-arm64.dmg"
             },
             {
-              "name": "darktable-5.7.0+2406.g2e777184fe-win64.exe",
-              "url": "https://github.com/darktable-org/darktable/releases/download/nightly/darktable-5.7.0%2B2406.g2e777184fe-win64.exe"
+              "name": "darktable-5.7.0+2414.gc247126f9a-win64.exe",
+              "url": "https://github.com/darktable-org/darktable/releases/download/nightly/darktable-5.7.0%2B2414.gc247126f9a-win64.exe"
             },
             {
-              "name": "darktable-5.7.0+2406.g2e777184fe-woa64.exe",
-              "url": "https://github.com/darktable-org/darktable/releases/download/nightly/darktable-5.7.0%2B2406.g2e777184fe-woa64.exe"
+              "name": "darktable-5.7.0+2414.gc247126f9a-woa64.exe",
+              "url": "https://github.com/darktable-org/darktable/releases/download/nightly/darktable-5.7.0%2B2414.gc247126f9a-woa64.exe"
             },
             {
-              "name": "Darktable-5.7.0+2406.g2e777184fe-x86_64.AppImage",
-              "url": "https://github.com/darktable-org/darktable/releases/download/nightly/Darktable-5.7.0%2B2406.g2e777184fe-x86_64.AppImage"
+              "name": "Darktable-5.7.0+2414.gc247126f9a-x86_64.AppImage",
+              "url": "https://github.com/darktable-org/darktable/releases/download/nightly/Darktable-5.7.0%2B2414.gc247126f9a-x86_64.AppImage"
             },
             {
-              "name": "Darktable-5.7.0+2406.g2e777184fe-x86_64.AppImage.zsync",
-              "url": "https://github.com/darktable-org/darktable/releases/download/nightly/Darktable-5.7.0%2B2406.g2e777184fe-x86_64.AppImage.zsync"
+              "name": "Darktable-5.7.0+2414.gc247126f9a-x86_64.AppImage.zsync",
+              "url": "https://github.com/darktable-org/darktable/releases/download/nightly/Darktable-5.7.0%2B2414.gc247126f9a-x86_64.AppImage.zsync"
             }
           ]
         },
@@ -11227,7 +11235,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:17:19.100Z"
+      "updatedAt": "2026-11-27T12:47:49.504Z"
     },
     {
       "id": "digikam",
@@ -11566,7 +11574,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:17:20.378Z"
+      "updatedAt": "2026-11-27T12:47:51.092Z"
     },
     {
       "id": "rawtherapee",
@@ -12289,7 +12297,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:17:21.429Z"
+      "updatedAt": "2026-11-27T12:47:52.199Z"
     },
     {
       "id": "ardour",
@@ -12551,7 +12559,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:17:22.010Z"
+      "updatedAt": "2026-11-27T12:47:52.819Z"
     },
     {
       "id": "musescore",
@@ -13370,7 +13378,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:17:23.059Z"
+      "updatedAt": "2026-11-27T12:47:53.903Z"
     },
     {
       "id": "godot",
@@ -13445,7 +13453,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:17:24.473Z"
+      "updatedAt": "2026-11-27T12:47:55.225Z"
     },
     {
       "id": "openmw",
@@ -14054,7 +14062,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:17:25.387Z"
+      "updatedAt": "2026-11-27T12:47:56.211Z"
     },
     {
       "id": "dolphin-emu",
@@ -14074,7 +14082,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:17:25.974Z"
+      "updatedAt": "2026-11-27T12:47:56.832Z"
     },
     {
       "id": "pcsx2",
@@ -14082,6 +14090,38 @@
       "slug": "pcsx2",
       "releaseCount": 30,
       "releases": [
+        {
+          "version": "2.9.198",
+          "tag": "v2.9.198",
+          "name": "v2.9.198",
+          "releaseType": "Preview",
+          "date": "2026-11-26T19:56:40.000Z",
+          "url": "https://github.com/PCSX2/pcsx2/releases/tag/v2.9.198",
+          "source": "GitHub",
+          "prerelease": true,
+          "assets": [
+            {
+              "name": "pcsx2-v2.9.198-linux-appimage-x64-Qt.AppImage",
+              "url": "https://github.com/PCSX2/pcsx2/releases/download/v2.9.198/pcsx2-v2.9.198-linux-appimage-x64-Qt.AppImage"
+            },
+            {
+              "name": "pcsx2-v2.9.198-linux-flatpak-x64-Qt.flatpak",
+              "url": "https://github.com/PCSX2/pcsx2/releases/download/v2.9.198/pcsx2-v2.9.198-linux-flatpak-x64-Qt.flatpak"
+            },
+            {
+              "name": "pcsx2-v2.9.198-macos-Qt.tar.xz",
+              "url": "https://github.com/PCSX2/pcsx2/releases/download/v2.9.198/pcsx2-v2.9.198-macos-Qt.tar.xz"
+            },
+            {
+              "name": "pcsx2-v2.9.198-windows-x64-Qt-symbols.7z",
+              "url": "https://github.com/PCSX2/pcsx2/releases/download/v2.9.198/pcsx2-v2.9.198-windows-x64-Qt-symbols.7z"
+            },
+            {
+              "name": "pcsx2-v2.9.198-windows-x64-Qt.7z",
+              "url": "https://github.com/PCSX2/pcsx2/releases/download/v2.9.198/pcsx2-v2.9.198-windows-x64-Qt.7z"
+            }
+          ]
+        },
         {
           "version": "2.9.197",
           "tag": "v2.9.197",
@@ -15009,41 +15049,9 @@
               "url": "https://github.com/PCSX2/pcsx2/releases/download/v2.9.170/pcsx2-v2.9.170-windows-x64-Qt.7z"
             }
           ]
-        },
-        {
-          "version": "2.9.168",
-          "tag": "v2.9.168",
-          "name": "v2.9.168",
-          "releaseType": "Preview",
-          "date": "2026-11-09T15:49:50.000Z",
-          "url": "https://github.com/PCSX2/pcsx2/releases/tag/v2.9.168",
-          "source": "GitHub",
-          "prerelease": true,
-          "assets": [
-            {
-              "name": "pcsx2-v2.9.168-linux-appimage-x64-Qt.AppImage",
-              "url": "https://github.com/PCSX2/pcsx2/releases/download/v2.9.168/pcsx2-v2.9.168-linux-appimage-x64-Qt.AppImage"
-            },
-            {
-              "name": "pcsx2-v2.9.168-linux-flatpak-x64-Qt.flatpak",
-              "url": "https://github.com/PCSX2/pcsx2/releases/download/v2.9.168/pcsx2-v2.9.168-linux-flatpak-x64-Qt.flatpak"
-            },
-            {
-              "name": "pcsx2-v2.9.168-macos-Qt.tar.xz",
-              "url": "https://github.com/PCSX2/pcsx2/releases/download/v2.9.168/pcsx2-v2.9.168-macos-Qt.tar.xz"
-            },
-            {
-              "name": "pcsx2-v2.9.168-windows-x64-Qt-symbols.7z",
-              "url": "https://github.com/PCSX2/pcsx2/releases/download/v2.9.168/pcsx2-v2.9.168-windows-x64-Qt-symbols.7z"
-            },
-            {
-              "name": "pcsx2-v2.9.168-windows-x64-Qt.7z",
-              "url": "https://github.com/PCSX2/pcsx2/releases/download/v2.9.168/pcsx2-v2.9.168-windows-x64-Qt.7z"
-            }
-          ]
         }
       ],
-      "updatedAt": "2026-11-26T18:17:27.186Z"
+      "updatedAt": "2026-11-27T12:47:58.022Z"
     },
     {
       "id": "rpcs3",
@@ -15382,7 +15390,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:17:28.021Z"
+      "updatedAt": "2026-11-27T12:47:58.846Z"
     },
     {
       "id": "ppsspp",
@@ -15431,7 +15439,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T18:17:28.976Z"
+      "updatedAt": "2026-11-27T12:47:59.744Z"
     },
     {
       "id": "retroarch",
@@ -15506,7 +15514,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:17:29.691Z"
+      "updatedAt": "2026-11-27T12:48:00.599Z"
     },
     {
       "id": "luanti",
@@ -15955,7 +15963,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:17:30.498Z"
+      "updatedAt": "2026-11-27T12:48:01.472Z"
     },
     {
       "id": "supertuxkart",
@@ -16446,7 +16454,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:17:31.530Z"
+      "updatedAt": "2026-11-27T12:48:02.466Z"
     },
     {
       "id": "openra",
@@ -18183,7 +18191,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T18:17:33.192Z"
+      "updatedAt": "2026-11-27T12:48:03.589Z"
     },
     {
       "id": "zed",
@@ -20232,7 +20240,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T18:17:34.876Z"
+      "updatedAt": "2026-11-27T12:48:05.060Z"
     },
     {
       "id": "vscodium",
@@ -20240,7 +20248,7 @@
       "slug": "vscodium",
       "releaseCount": 0,
       "releases": [],
-      "updatedAt": "2026-11-26T18:17:42.398Z"
+      "updatedAt": "2026-11-27T12:48:15.143Z"
     },
     {
       "id": "neovim",
@@ -20253,7 +20261,7 @@
           "tag": "nightly",
           "name": "Nvim development (prerelease) build",
           "releaseType": "Nightly",
-          "date": "2026-11-26T05:18:16.000Z",
+          "date": "2026-11-27T05:18:19.000Z",
           "url": "https://github.com/neovim/neovim/releases/tag/nightly",
           "source": "GitHub",
           "prerelease": true,
@@ -20324,7 +20332,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:17:43.440Z"
+      "updatedAt": "2026-11-27T12:48:16.333Z"
     },
     {
       "id": "helix",
@@ -20332,7 +20340,7 @@
       "slug": "helix",
       "releaseCount": 0,
       "releases": [],
-      "updatedAt": "2026-11-26T18:17:44.542Z"
+      "updatedAt": "2026-11-27T12:48:17.216Z"
     },
     {
       "id": "wezterm",
@@ -20936,7 +20944,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:17:46.583Z"
+      "updatedAt": "2026-11-27T12:48:19.154Z"
     },
     {
       "id": "zellij",
@@ -21011,7 +21019,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:17:47.782Z"
+      "updatedAt": "2026-11-27T12:48:20.513Z"
     },
     {
       "id": "podman",
@@ -22552,7 +22560,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T18:17:49.252Z"
+      "updatedAt": "2026-11-27T12:48:22.146Z"
     },
     {
       "id": "qemu",
@@ -22891,7 +22899,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:17:49.962Z"
+      "updatedAt": "2026-11-27T12:48:23.062Z"
     },
     {
       "id": "deno",
@@ -22899,7 +22907,7 @@
       "slug": "deno",
       "releaseCount": 0,
       "releases": [],
-      "updatedAt": "2026-11-26T18:17:52.990Z"
+      "updatedAt": "2026-11-27T12:48:25.360Z"
     },
     {
       "id": "bevy",
@@ -23238,7 +23246,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:17:53.650Z"
+      "updatedAt": "2026-11-27T12:48:26.169Z"
     },
     {
       "id": "nextcloud",
@@ -23577,7 +23585,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:17:54.436Z"
+      "updatedAt": "2026-11-27T12:48:26.919Z"
     },
     {
       "id": "immich",
@@ -24438,7 +24446,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:17:55.895Z"
+      "updatedAt": "2026-11-27T12:48:28.506Z"
     },
     {
       "id": "home-assistant",
@@ -24777,7 +24785,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:17:56.777Z"
+      "updatedAt": "2026-11-27T12:48:29.286Z"
     },
     {
       "id": "jellyfin",
@@ -25116,7 +25124,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:17:57.852Z"
+      "updatedAt": "2026-11-27T12:48:30.397Z"
     },
     {
       "id": "kodi",
@@ -25455,7 +25463,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:17:58.720Z"
+      "updatedAt": "2026-11-27T12:48:31.286Z"
     },
     {
       "id": "syncthing",
@@ -28224,7 +28232,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T18:18:01.814Z"
+      "updatedAt": "2026-11-27T12:48:33.511Z"
     },
     {
       "id": "element",
@@ -28713,7 +28721,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T18:18:02.807Z"
+      "updatedAt": "2026-11-27T12:48:34.550Z"
     },
     {
       "id": "joplin",
@@ -31394,7 +31402,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T18:18:04.323Z"
+      "updatedAt": "2026-11-27T12:48:36.162Z"
     },
     {
       "id": "keepassxc",
@@ -32097,7 +32105,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:18:05.936Z"
+      "updatedAt": "2026-11-27T12:48:37.305Z"
     },
     {
       "id": "appflowy",
@@ -32278,7 +32286,7 @@
           ]
         }
       ],
-      "updatedAt": "2026-11-26T18:18:07.334Z"
+      "updatedAt": "2026-11-27T12:48:38.834Z"
     },
     {
       "id": "brave",
@@ -32286,6 +32294,190 @@
       "slug": "brave",
       "releaseCount": 30,
       "releases": [
+        {
+          "version": "1.101.58",
+          "tag": "v1.101.58",
+          "name": "Beta v1.101.58 (Chromium 159.0.8154.34) \n\n",
+          "releaseType": "Beta",
+          "date": "2026-11-27T05:06:58.000Z",
+          "url": "https://github.com/brave/brave-browser/releases/tag/v1.101.58",
+          "source": "GitHub",
+          "prerelease": true,
+          "assets": [
+            {
+              "name": "brave-browser-beta-1.101.58-1.x86_64.rpm",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.58/brave-browser-beta-1.101.58-1.x86_64.rpm"
+            },
+            {
+              "name": "brave-browser-beta-1.101.58-1.x86_64.rpm.sha256",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.58/brave-browser-beta-1.101.58-1.x86_64.rpm.sha256"
+            },
+            {
+              "name": "brave-browser-beta-1.101.58-1.x86_64.rpm.sha256.asc",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.58/brave-browser-beta-1.101.58-1.x86_64.rpm.sha256.asc"
+            },
+            {
+              "name": "brave-browser-beta-1.101.58-linux-amd64.zip",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.58/brave-browser-beta-1.101.58-linux-amd64.zip"
+            },
+            {
+              "name": "brave-browser-beta-1.101.58-linux-amd64.zip.sha256",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.58/brave-browser-beta-1.101.58-linux-amd64.zip.sha256"
+            },
+            {
+              "name": "brave-browser-beta-1.101.58-linux-amd64.zip.sha256.asc",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.58/brave-browser-beta-1.101.58-linux-amd64.zip.sha256.asc"
+            },
+            {
+              "name": "Brave-Browser-Beta-arm64.dmg",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.58/Brave-Browser-Beta-arm64.dmg"
+            },
+            {
+              "name": "Brave-Browser-Beta-arm64.dmg.sha256",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.58/Brave-Browser-Beta-arm64.dmg.sha256"
+            },
+            {
+              "name": "Brave-Browser-Beta-arm64.dmg.sha256.asc",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.58/Brave-Browser-Beta-arm64.dmg.sha256.asc"
+            },
+            {
+              "name": "Brave-Browser-Beta-arm64.pkg",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.58/Brave-Browser-Beta-arm64.pkg"
+            },
+            {
+              "name": "Brave-Browser-Beta-arm64.pkg.sha256",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.58/Brave-Browser-Beta-arm64.pkg.sha256"
+            },
+            {
+              "name": "Brave-Browser-Beta-arm64.pkg.sha256.asc",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.58/Brave-Browser-Beta-arm64.pkg.sha256.asc"
+            },
+            {
+              "name": "Brave-Browser-Beta-universal.dmg",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.58/Brave-Browser-Beta-universal.dmg"
+            },
+            {
+              "name": "Brave-Browser-Beta-universal.dmg.sha256",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.58/Brave-Browser-Beta-universal.dmg.sha256"
+            },
+            {
+              "name": "Brave-Browser-Beta-universal.dmg.sha256.asc",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.58/Brave-Browser-Beta-universal.dmg.sha256.asc"
+            },
+            {
+              "name": "Brave-Browser-Beta-universal.pkg",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.58/Brave-Browser-Beta-universal.pkg"
+            },
+            {
+              "name": "Brave-Browser-Beta-universal.pkg.sha256",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.58/Brave-Browser-Beta-universal.pkg.sha256"
+            },
+            {
+              "name": "Brave-Browser-Beta-universal.pkg.sha256.asc",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.58/Brave-Browser-Beta-universal.pkg.sha256.asc"
+            },
+            {
+              "name": "Brave-Browser-Beta-x64.dmg",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.58/Brave-Browser-Beta-x64.dmg"
+            },
+            {
+              "name": "Brave-Browser-Beta-x64.dmg.sha256",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.58/Brave-Browser-Beta-x64.dmg.sha256"
+            }
+          ]
+        },
+        {
+          "version": "1.102.45",
+          "tag": "v1.102.45",
+          "name": "Nightly v1.102.45 (Chromium 159.0.8154.34) \n\n",
+          "releaseType": "Nightly",
+          "date": "2026-11-27T01:10:53.000Z",
+          "url": "https://github.com/brave/brave-browser/releases/tag/v1.102.45",
+          "source": "GitHub",
+          "prerelease": true,
+          "assets": [
+            {
+              "name": "brave-browser-nightly-1.102.45-1.x86_64.rpm",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.45/brave-browser-nightly-1.102.45-1.x86_64.rpm"
+            },
+            {
+              "name": "brave-browser-nightly-1.102.45-1.x86_64.rpm.sha256",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.45/brave-browser-nightly-1.102.45-1.x86_64.rpm.sha256"
+            },
+            {
+              "name": "brave-browser-nightly-1.102.45-1.x86_64.rpm.sha256.asc",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.45/brave-browser-nightly-1.102.45-1.x86_64.rpm.sha256.asc"
+            },
+            {
+              "name": "brave-browser-nightly-1.102.45-linux-amd64.zip",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.45/brave-browser-nightly-1.102.45-linux-amd64.zip"
+            },
+            {
+              "name": "brave-browser-nightly-1.102.45-linux-amd64.zip.sha256",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.45/brave-browser-nightly-1.102.45-linux-amd64.zip.sha256"
+            },
+            {
+              "name": "brave-browser-nightly-1.102.45-linux-amd64.zip.sha256.asc",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.45/brave-browser-nightly-1.102.45-linux-amd64.zip.sha256.asc"
+            },
+            {
+              "name": "Brave-Browser-Nightly-arm64.dmg",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.45/Brave-Browser-Nightly-arm64.dmg"
+            },
+            {
+              "name": "Brave-Browser-Nightly-arm64.dmg.sha256",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.45/Brave-Browser-Nightly-arm64.dmg.sha256"
+            },
+            {
+              "name": "Brave-Browser-Nightly-arm64.dmg.sha256.asc",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.45/Brave-Browser-Nightly-arm64.dmg.sha256.asc"
+            },
+            {
+              "name": "Brave-Browser-Nightly-arm64.pkg",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.45/Brave-Browser-Nightly-arm64.pkg"
+            },
+            {
+              "name": "Brave-Browser-Nightly-arm64.pkg.sha256",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.45/Brave-Browser-Nightly-arm64.pkg.sha256"
+            },
+            {
+              "name": "Brave-Browser-Nightly-arm64.pkg.sha256.asc",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.45/Brave-Browser-Nightly-arm64.pkg.sha256.asc"
+            },
+            {
+              "name": "Brave-Browser-Nightly-universal.dmg",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.45/Brave-Browser-Nightly-universal.dmg"
+            },
+            {
+              "name": "Brave-Browser-Nightly-universal.dmg.sha256",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.45/Brave-Browser-Nightly-universal.dmg.sha256"
+            },
+            {
+              "name": "Brave-Browser-Nightly-universal.dmg.sha256.asc",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.45/Brave-Browser-Nightly-universal.dmg.sha256.asc"
+            },
+            {
+              "name": "Brave-Browser-Nightly-universal.pkg",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.45/Brave-Browser-Nightly-universal.pkg"
+            },
+            {
+              "name": "Brave-Browser-Nightly-universal.pkg.sha256",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.45/Brave-Browser-Nightly-universal.pkg.sha256"
+            },
+            {
+              "name": "Brave-Browser-Nightly-universal.pkg.sha256.asc",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.45/Brave-Browser-Nightly-universal.pkg.sha256.asc"
+            },
+            {
+              "name": "Brave-Browser-Nightly-x64.dmg",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.45/Brave-Browser-Nightly-x64.dmg"
+            },
+            {
+              "name": "Brave-Browser-Nightly-x64.dmg.sha256",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.45/Brave-Browser-Nightly-x64.dmg.sha256"
+            }
+          ]
+        },
         {
           "version": "1.102.44",
           "tag": "v1.102.44",
@@ -32321,60 +32513,60 @@
               "url": "https://github.com/brave/brave-browser/releases/download/v1.102.44/brave-browser-nightly-1.102.44-linux-amd64.zip.sha256.asc"
             },
             {
-              "name": "brave-browser-nightly_1.102.44_amd64.deb",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.44/brave-browser-nightly_1.102.44_amd64.deb"
+              "name": "Brave-Browser-Nightly-arm64.dmg",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.44/Brave-Browser-Nightly-arm64.dmg"
             },
             {
-              "name": "brave-browser-nightly_1.102.44_amd64.deb.sha256",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.44/brave-browser-nightly_1.102.44_amd64.deb.sha256"
+              "name": "Brave-Browser-Nightly-arm64.dmg.sha256",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.44/Brave-Browser-Nightly-arm64.dmg.sha256"
             },
             {
-              "name": "brave-browser-nightly_1.102.44_amd64.deb.sha256.asc",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.44/brave-browser-nightly_1.102.44_amd64.deb.sha256.asc"
+              "name": "Brave-Browser-Nightly-arm64.dmg.sha256.asc",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.44/Brave-Browser-Nightly-arm64.dmg.sha256.asc"
             },
             {
-              "name": "brave-origin-nightly-1.102.44-1.x86_64.rpm",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.44/brave-origin-nightly-1.102.44-1.x86_64.rpm"
+              "name": "Brave-Browser-Nightly-arm64.pkg",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.44/Brave-Browser-Nightly-arm64.pkg"
             },
             {
-              "name": "brave-origin-nightly-1.102.44-1.x86_64.rpm.sha256",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.44/brave-origin-nightly-1.102.44-1.x86_64.rpm.sha256"
+              "name": "Brave-Browser-Nightly-arm64.pkg.sha256",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.44/Brave-Browser-Nightly-arm64.pkg.sha256"
             },
             {
-              "name": "brave-origin-nightly-1.102.44-1.x86_64.rpm.sha256.asc",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.44/brave-origin-nightly-1.102.44-1.x86_64.rpm.sha256.asc"
+              "name": "Brave-Browser-Nightly-arm64.pkg.sha256.asc",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.44/Brave-Browser-Nightly-arm64.pkg.sha256.asc"
             },
             {
-              "name": "brave-origin-nightly-1.102.44-linux-amd64.zip",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.44/brave-origin-nightly-1.102.44-linux-amd64.zip"
+              "name": "Brave-Browser-Nightly-universal.dmg",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.44/Brave-Browser-Nightly-universal.dmg"
             },
             {
-              "name": "brave-origin-nightly-1.102.44-linux-amd64.zip.sha256",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.44/brave-origin-nightly-1.102.44-linux-amd64.zip.sha256"
+              "name": "Brave-Browser-Nightly-universal.dmg.sha256",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.44/Brave-Browser-Nightly-universal.dmg.sha256"
             },
             {
-              "name": "brave-origin-nightly-1.102.44-linux-amd64.zip.sha256.asc",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.44/brave-origin-nightly-1.102.44-linux-amd64.zip.sha256.asc"
+              "name": "Brave-Browser-Nightly-universal.dmg.sha256.asc",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.44/Brave-Browser-Nightly-universal.dmg.sha256.asc"
             },
             {
-              "name": "brave-origin-nightly_1.102.44_amd64.deb",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.44/brave-origin-nightly_1.102.44_amd64.deb"
+              "name": "Brave-Browser-Nightly-universal.pkg",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.44/Brave-Browser-Nightly-universal.pkg"
             },
             {
-              "name": "brave-origin-nightly_1.102.44_amd64.deb.sha256",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.44/brave-origin-nightly_1.102.44_amd64.deb.sha256"
+              "name": "Brave-Browser-Nightly-universal.pkg.sha256",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.44/Brave-Browser-Nightly-universal.pkg.sha256"
             },
             {
-              "name": "brave-origin-nightly_1.102.44_amd64.deb.sha256.asc",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.44/brave-origin-nightly_1.102.44_amd64.deb.sha256.asc"
+              "name": "Brave-Browser-Nightly-universal.pkg.sha256.asc",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.44/Brave-Browser-Nightly-universal.pkg.sha256.asc"
             },
             {
-              "name": "brave-origin-v1.102.44-linux-x64-symbols.zip",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.44/brave-origin-v1.102.44-linux-x64-symbols.zip"
+              "name": "Brave-Browser-Nightly-x64.dmg",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.44/Brave-Browser-Nightly-x64.dmg"
             },
             {
-              "name": "brave-origin-v1.102.44-linux-x64-symbols.zip.sha256",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.44/brave-origin-v1.102.44-linux-x64-symbols.zip.sha256"
+              "name": "Brave-Browser-Nightly-x64.dmg.sha256",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.44/Brave-Browser-Nightly-x64.dmg.sha256"
             }
           ]
         },
@@ -32521,36 +32713,36 @@
               "url": "https://github.com/brave/brave-browser/releases/download/v1.102.42/brave-browser-nightly-1.102.42-linux-arm64.zip.sha256.asc"
             },
             {
-              "name": "brave-browser-nightly_1.102.42_amd64.deb",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.42/brave-browser-nightly_1.102.42_amd64.deb"
+              "name": "Brave-Browser-Nightly-arm64.dmg",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.42/Brave-Browser-Nightly-arm64.dmg"
             },
             {
-              "name": "brave-browser-nightly_1.102.42_amd64.deb.sha256",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.42/brave-browser-nightly_1.102.42_amd64.deb.sha256"
+              "name": "Brave-Browser-Nightly-arm64.dmg.sha256",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.42/Brave-Browser-Nightly-arm64.dmg.sha256"
             },
             {
-              "name": "brave-browser-nightly_1.102.42_amd64.deb.sha256.asc",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.42/brave-browser-nightly_1.102.42_amd64.deb.sha256.asc"
+              "name": "Brave-Browser-Nightly-arm64.dmg.sha256.asc",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.42/Brave-Browser-Nightly-arm64.dmg.sha256.asc"
             },
             {
-              "name": "brave-browser-nightly_1.102.42_arm64.deb",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.42/brave-browser-nightly_1.102.42_arm64.deb"
+              "name": "Brave-Browser-Nightly-arm64.pkg",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.42/Brave-Browser-Nightly-arm64.pkg"
             },
             {
-              "name": "brave-browser-nightly_1.102.42_arm64.deb.sha256",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.42/brave-browser-nightly_1.102.42_arm64.deb.sha256"
+              "name": "Brave-Browser-Nightly-arm64.pkg.sha256",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.42/Brave-Browser-Nightly-arm64.pkg.sha256"
             },
             {
-              "name": "brave-browser-nightly_1.102.42_arm64.deb.sha256.asc",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.42/brave-browser-nightly_1.102.42_arm64.deb.sha256.asc"
+              "name": "Brave-Browser-Nightly-arm64.pkg.sha256.asc",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.42/Brave-Browser-Nightly-arm64.pkg.sha256.asc"
             },
             {
-              "name": "brave-core-ios-1.102.42.app.dSYM.zip",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.42/brave-core-ios-1.102.42.app.dSYM.zip"
+              "name": "Brave-Browser-Nightly-universal.dmg",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.42/Brave-Browser-Nightly-universal.dmg"
             },
             {
-              "name": "brave-core-ios-1.102.42.app.dSYM.zip.sha256",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.42/brave-core-ios-1.102.42.app.dSYM.zip.sha256"
+              "name": "Brave-Browser-Nightly-universal.dmg.sha256",
+              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.42/Brave-Browser-Nightly-universal.dmg.sha256"
             }
           ]
         },
@@ -34757,193 +34949,9 @@
               "url": "https://github.com/brave/brave-browser/releases/download/v1.102.23/BraveMonox86.apk.sha256.asc"
             }
           ]
-        },
-        {
-          "version": "1.102.22",
-          "tag": "v1.102.22",
-          "name": "Nightly v1.102.22 (Chromium 158.0.8127.42) \n\n",
-          "releaseType": "Nightly",
-          "date": "2026-11-19T13:25:41.000Z",
-          "url": "https://github.com/brave/brave-browser/releases/tag/v1.102.22",
-          "source": "GitHub",
-          "prerelease": true,
-          "assets": [
-            {
-              "name": "brave-browser-nightly-1.102.22-1.aarch64.rpm",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.22/brave-browser-nightly-1.102.22-1.aarch64.rpm"
-            },
-            {
-              "name": "brave-browser-nightly-1.102.22-1.aarch64.rpm.sha256",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.22/brave-browser-nightly-1.102.22-1.aarch64.rpm.sha256"
-            },
-            {
-              "name": "brave-browser-nightly-1.102.22-1.aarch64.rpm.sha256.asc",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.22/brave-browser-nightly-1.102.22-1.aarch64.rpm.sha256.asc"
-            },
-            {
-              "name": "brave-browser-nightly-1.102.22-1.x86_64.rpm",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.22/brave-browser-nightly-1.102.22-1.x86_64.rpm"
-            },
-            {
-              "name": "brave-browser-nightly-1.102.22-1.x86_64.rpm.sha256",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.22/brave-browser-nightly-1.102.22-1.x86_64.rpm.sha256"
-            },
-            {
-              "name": "brave-browser-nightly-1.102.22-1.x86_64.rpm.sha256.asc",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.22/brave-browser-nightly-1.102.22-1.x86_64.rpm.sha256.asc"
-            },
-            {
-              "name": "brave-browser-nightly-1.102.22-linux-amd64.zip",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.22/brave-browser-nightly-1.102.22-linux-amd64.zip"
-            },
-            {
-              "name": "brave-browser-nightly-1.102.22-linux-amd64.zip.sha256",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.22/brave-browser-nightly-1.102.22-linux-amd64.zip.sha256"
-            },
-            {
-              "name": "brave-browser-nightly-1.102.22-linux-amd64.zip.sha256.asc",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.22/brave-browser-nightly-1.102.22-linux-amd64.zip.sha256.asc"
-            },
-            {
-              "name": "brave-browser-nightly-1.102.22-linux-arm64.zip",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.22/brave-browser-nightly-1.102.22-linux-arm64.zip"
-            },
-            {
-              "name": "brave-browser-nightly-1.102.22-linux-arm64.zip.sha256",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.22/brave-browser-nightly-1.102.22-linux-arm64.zip.sha256"
-            },
-            {
-              "name": "brave-browser-nightly-1.102.22-linux-arm64.zip.sha256.asc",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.22/brave-browser-nightly-1.102.22-linux-arm64.zip.sha256.asc"
-            },
-            {
-              "name": "Brave-Browser-Nightly-arm64.dmg",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.22/Brave-Browser-Nightly-arm64.dmg"
-            },
-            {
-              "name": "Brave-Browser-Nightly-arm64.dmg.sha256",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.22/Brave-Browser-Nightly-arm64.dmg.sha256"
-            },
-            {
-              "name": "Brave-Browser-Nightly-arm64.dmg.sha256.asc",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.22/Brave-Browser-Nightly-arm64.dmg.sha256.asc"
-            },
-            {
-              "name": "Brave-Browser-Nightly-arm64.pkg",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.22/Brave-Browser-Nightly-arm64.pkg"
-            },
-            {
-              "name": "Brave-Browser-Nightly-arm64.pkg.sha256",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.22/Brave-Browser-Nightly-arm64.pkg.sha256"
-            },
-            {
-              "name": "Brave-Browser-Nightly-arm64.pkg.sha256.asc",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.22/Brave-Browser-Nightly-arm64.pkg.sha256.asc"
-            },
-            {
-              "name": "Brave-Browser-Nightly-universal.dmg",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.22/Brave-Browser-Nightly-universal.dmg"
-            },
-            {
-              "name": "Brave-Browser-Nightly-universal.dmg.sha256",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.102.22/Brave-Browser-Nightly-universal.dmg.sha256"
-            }
-          ]
-        },
-        {
-          "version": "1.101.52",
-          "tag": "v1.101.52",
-          "name": "Beta v1.101.52 (Chromium 158.0.8127.42) \n\n",
-          "releaseType": "Beta",
-          "date": "2026-11-19T05:08:21.000Z",
-          "url": "https://github.com/brave/brave-browser/releases/tag/v1.101.52",
-          "source": "GitHub",
-          "prerelease": true,
-          "assets": [
-            {
-              "name": "brave-browser-beta-1.101.52-1.aarch64.rpm",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.52/brave-browser-beta-1.101.52-1.aarch64.rpm"
-            },
-            {
-              "name": "brave-browser-beta-1.101.52-1.aarch64.rpm.sha256",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.52/brave-browser-beta-1.101.52-1.aarch64.rpm.sha256"
-            },
-            {
-              "name": "brave-browser-beta-1.101.52-1.aarch64.rpm.sha256.asc",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.52/brave-browser-beta-1.101.52-1.aarch64.rpm.sha256.asc"
-            },
-            {
-              "name": "brave-browser-beta-1.101.52-1.x86_64.rpm",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.52/brave-browser-beta-1.101.52-1.x86_64.rpm"
-            },
-            {
-              "name": "brave-browser-beta-1.101.52-1.x86_64.rpm.sha256",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.52/brave-browser-beta-1.101.52-1.x86_64.rpm.sha256"
-            },
-            {
-              "name": "brave-browser-beta-1.101.52-1.x86_64.rpm.sha256.asc",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.52/brave-browser-beta-1.101.52-1.x86_64.rpm.sha256.asc"
-            },
-            {
-              "name": "brave-browser-beta-1.101.52-linux-amd64.zip",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.52/brave-browser-beta-1.101.52-linux-amd64.zip"
-            },
-            {
-              "name": "brave-browser-beta-1.101.52-linux-amd64.zip.sha256",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.52/brave-browser-beta-1.101.52-linux-amd64.zip.sha256"
-            },
-            {
-              "name": "brave-browser-beta-1.101.52-linux-amd64.zip.sha256.asc",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.52/brave-browser-beta-1.101.52-linux-amd64.zip.sha256.asc"
-            },
-            {
-              "name": "brave-browser-beta-1.101.52-linux-arm64.zip",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.52/brave-browser-beta-1.101.52-linux-arm64.zip"
-            },
-            {
-              "name": "brave-browser-beta-1.101.52-linux-arm64.zip.sha256",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.52/brave-browser-beta-1.101.52-linux-arm64.zip.sha256"
-            },
-            {
-              "name": "brave-browser-beta-1.101.52-linux-arm64.zip.sha256.asc",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.52/brave-browser-beta-1.101.52-linux-arm64.zip.sha256.asc"
-            },
-            {
-              "name": "Brave-Browser-Beta-arm64.dmg",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.52/Brave-Browser-Beta-arm64.dmg"
-            },
-            {
-              "name": "Brave-Browser-Beta-arm64.dmg.sha256",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.52/Brave-Browser-Beta-arm64.dmg.sha256"
-            },
-            {
-              "name": "Brave-Browser-Beta-arm64.dmg.sha256.asc",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.52/Brave-Browser-Beta-arm64.dmg.sha256.asc"
-            },
-            {
-              "name": "Brave-Browser-Beta-arm64.pkg",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.52/Brave-Browser-Beta-arm64.pkg"
-            },
-            {
-              "name": "Brave-Browser-Beta-arm64.pkg.sha256",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.52/Brave-Browser-Beta-arm64.pkg.sha256"
-            },
-            {
-              "name": "Brave-Browser-Beta-arm64.pkg.sha256.asc",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.52/Brave-Browser-Beta-arm64.pkg.sha256.asc"
-            },
-            {
-              "name": "Brave-Browser-Beta-universal.dmg",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.52/Brave-Browser-Beta-universal.dmg"
-            },
-            {
-              "name": "Brave-Browser-Beta-universal.dmg.sha256",
-              "url": "https://github.com/brave/brave-browser/releases/download/v1.101.52/Brave-Browser-Beta-universal.dmg.sha256"
-            }
-          ]
         }
       ],
-      "updatedAt": "2026-11-26T18:18:11.515Z"
+      "updatedAt": "2026-11-27T12:48:46.646Z"
     },
     {
       "id": "floorp",
@@ -35410,7 +35418,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:18:12.791Z"
+      "updatedAt": "2026-11-27T12:48:48.135Z"
     },
     {
       "id": "tor-browser",
@@ -35507,7 +35515,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:18:13.749Z"
+      "updatedAt": "2026-11-27T12:48:48.906Z"
     },
     {
       "id": "cosmic",
@@ -35714,7 +35722,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:18:14.421Z"
+      "updatedAt": "2026-11-27T12:48:49.668Z"
     },
     {
       "id": "kde-plasma",
@@ -35722,7 +35730,7 @@
       "slug": "kde-plasma",
       "releaseCount": 0,
       "releases": [],
-      "updatedAt": "2026-11-26T18:18:15.026Z"
+      "updatedAt": "2026-11-27T12:48:50.603Z"
     },
     {
       "id": "gnome-shell",
@@ -36061,7 +36069,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:18:16.125Z"
+      "updatedAt": "2026-11-27T12:48:52.482Z"
     },
     {
       "id": "openwrt",
@@ -36400,7 +36408,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:18:16.823Z"
+      "updatedAt": "2026-11-27T12:48:53.288Z"
     },
     {
       "id": "nix",
@@ -36408,7 +36416,7 @@
       "slug": "nix",
       "releaseCount": 0,
       "releases": [],
-      "updatedAt": "2026-11-26T18:18:17.424Z"
+      "updatedAt": "2026-11-27T12:48:53.922Z"
     },
     {
       "id": "incus",
@@ -36416,7 +36424,7 @@
       "slug": "incus",
       "releaseCount": 0,
       "releases": [],
-      "updatedAt": "2026-11-26T18:18:18.436Z"
+      "updatedAt": "2026-11-27T12:48:55.155Z"
     },
     {
       "id": "distrobox",
@@ -36571,7 +36579,7 @@
           "assets": []
         }
       ],
-      "updatedAt": "2026-11-26T18:18:19.172Z"
+      "updatedAt": "2026-11-27T12:48:55.966Z"
     }
   ]
 }
