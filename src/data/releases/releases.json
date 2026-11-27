@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "lastUpdated": "2026-11-26T16:49:07.229Z",
+  "lastUpdated": "2026-11-27T16:51:39.434Z",
   "applications": {
     "audacious": {
       "name": "Audacious",
-      "lastFetch": "2026-11-26T16:49:08.134Z",
+      "lastFetch": "2026-11-27T16:51:40.031Z",
       "sourceUrl": "https://api.github.com/repos/audacious-media-player/audacious/releases",
       "releases": [
         {
@@ -67,7 +67,7 @@
     },
     "audacity": {
       "name": "Audacity",
-      "lastFetch": "2026-11-26T16:49:08.943Z",
+      "lastFetch": "2026-11-27T16:51:40.630Z",
       "sourceUrl": "https://api.github.com/repos/audacity/audacity/releases",
       "releases": [
         {
@@ -214,7 +214,7 @@
     },
     "bespokesynth": {
       "name": "BespokeSynth",
-      "lastFetch": "2026-11-26T16:49:09.306Z",
+      "lastFetch": "2026-11-27T16:51:40.978Z",
       "sourceUrl": "https://api.github.com/repos/BespokeSynth/BespokeSynth/releases",
       "releases": [
         {
@@ -256,7 +256,7 @@
     },
     "cardinal": {
       "name": "Cardinal",
-      "lastFetch": "2026-11-26T16:49:10.038Z",
+      "lastFetch": "2026-11-27T16:51:41.499Z",
       "sourceUrl": "https://api.github.com/repos/DISTRHO/Cardinal/releases",
       "releases": [
         {
@@ -403,7 +403,7 @@
     },
     "carla": {
       "name": "Carla",
-      "lastFetch": "2026-11-26T16:49:10.607Z",
+      "lastFetch": "2026-11-27T16:51:41.918Z",
       "sourceUrl": "https://api.github.com/repos/falkTX/Carla/releases",
       "releases": [
         {
@@ -550,7 +550,7 @@
     },
     "clementine": {
       "name": "Clementine",
-      "lastFetch": "2026-11-26T16:49:13.641Z",
+      "lastFetch": "2026-11-27T16:51:44.124Z",
       "sourceUrl": "https://api.github.com/repos/clementine-player/Clementine/releases",
       "releases": [
         {
@@ -585,7 +585,7 @@
     },
     "cmus": {
       "name": "cmus",
-      "lastFetch": "2026-11-26T16:49:13.948Z",
+      "lastFetch": "2026-11-27T16:51:44.443Z",
       "sourceUrl": "https://api.github.com/repos/cmus/cmus/releases",
       "releases": [
         {
@@ -655,7 +655,7 @@
     },
     "giada": {
       "name": "Giada",
-      "lastFetch": "2026-11-26T16:49:14.463Z",
+      "lastFetch": "2026-11-27T16:51:44.989Z",
       "sourceUrl": "https://api.github.com/repos/monocasual/giada/releases",
       "releases": [
         {
@@ -802,7 +802,7 @@
     },
     "guitarix": {
       "name": "Guitarix",
-      "lastFetch": "2026-11-26T16:49:14.817Z",
+      "lastFetch": "2026-11-27T16:51:45.310Z",
       "sourceUrl": "https://api.github.com/repos/brummer10/guitarix/releases",
       "releases": [
         {
@@ -892,7 +892,7 @@
     },
     "hydrogen": {
       "name": "Hydrogen",
-      "lastFetch": "2026-11-26T16:49:15.808Z",
+      "lastFetch": "2026-11-27T16:51:46.102Z",
       "sourceUrl": "https://api.github.com/repos/hydrogen-music/hydrogen/releases",
       "releases": [
         {
@@ -1011,7 +1011,7 @@
     },
     "lmms": {
       "name": "LMMS",
-      "lastFetch": "2026-11-26T16:49:16.340Z",
+      "lastFetch": "2026-11-27T16:51:46.574Z",
       "sourceUrl": "https://api.github.com/repos/LMMS/lmms/releases",
       "releases": [
         {
@@ -1158,7 +1158,7 @@
     },
     "mixxx": {
       "name": "Mixxx",
-      "lastFetch": "2026-11-26T16:49:16.658Z",
+      "lastFetch": "2026-11-27T16:51:46.836Z",
       "sourceUrl": "https://api.github.com/repos/mixxxdj/mixxx/releases",
       "releases": [
         {
@@ -1305,7 +1305,7 @@
     },
     "muse": {
       "name": "MusE",
-      "lastFetch": "2026-11-26T16:49:17.061Z",
+      "lastFetch": "2026-11-27T16:51:47.141Z",
       "sourceUrl": "https://api.github.com/repos/muse-sequencer/muse/releases",
       "releases": [
         {
@@ -1361,7 +1361,7 @@
     },
     "musescore": {
       "name": "MuseScore",
-      "lastFetch": "2026-11-26T16:49:17.898Z",
+      "lastFetch": "2026-11-27T16:51:47.838Z",
       "sourceUrl": "https://api.github.com/repos/musescore/MuseScore/releases",
       "releases": [
         {
@@ -1508,7 +1508,7 @@
     },
     "picard": {
       "name": "MusicBrainz Picard",
-      "lastFetch": "2026-11-26T16:49:18.811Z",
+      "lastFetch": "2026-11-27T16:51:48.821Z",
       "sourceUrl": "https://api.github.com/repos/metabrainz/picard/releases",
       "releases": [
         {
@@ -1655,7 +1655,7 @@
     },
     "qmplay2": {
       "name": "QMPlay2",
-      "lastFetch": "2026-11-26T16:49:19.488Z",
+      "lastFetch": "2026-11-27T16:51:49.462Z",
       "sourceUrl": "https://api.github.com/repos/zaps166/QMPlay2/releases",
       "releases": [
         {
@@ -1802,7 +1802,7 @@
     },
     "strawberry": {
       "name": "Strawberry",
-      "lastFetch": "2026-11-26T16:49:21.310Z",
+      "lastFetch": "2026-11-27T16:51:51.108Z",
       "sourceUrl": "https://api.github.com/repos/strawberrymusicplayer/strawberry/releases",
       "releases": [
         {
@@ -1949,7 +1949,7 @@
     },
     "surge": {
       "name": "Surge",
-      "lastFetch": "2026-11-26T16:49:21.640Z",
+      "lastFetch": "2026-11-27T16:51:51.373Z",
       "sourceUrl": "https://api.github.com/repos/surge-synthesizer/surge/releases",
       "releases": [
         {
@@ -1957,13 +1957,13 @@
           "name": "Nightly",
           "releaseDate": "2024-08-07T14:35:52Z",
           "releaseUrl": "https://github.com/surge-synthesizer/surge/releases/tag/Nightly",
-          "releaseNotes": "## SurgeXT Nightly Release\n\nThis is the nightly release of SurgeXT. Surge nightlies are usually quite stable, but they may contain bugs or incomplete features. Please use caution running this beta software.\n\nWe have a draft of our changelog available [here](https://surge-synthesizer.github.io/nightlychangelog/) although the change log can lag the nightly substantially.\n\nIf you want a stable production release, you can always find the latest stable release at [the Surge Website](https://surge-synthesizer.github.io)\n\nIn addition to these nightlies, we generate nightlies for a variety of flavors of Linux using [OpenBuildService](https://software.opensuse.org//download.html?project=home%3Asurge-synth-team&package=surge-xt-nightly)\n\nRelease updated  Wed Nov 25 22:52:26 UTC 2026\n\n- [583f621](https://github.com/surge-synthesizer/surge/commit/583f621317e071b7dacc9b913530bad9ea7bb747) : (slightly) correct about screen RAM calculation. (#8663)\n- [4470074](https://github.com/surge-synthesizer/surge/commit/4470074a2a57f08432281779417993525454df13) : Start the window oscillator sample test from the grain start (#8662)\n- [90a36ad](https://github.com/surge-synthesizer/surge/commit/90a36ad54bc51ed4ba6c950457cb4887b6e07c83) : Report OSC input as unavailable when the host sandbox blocks it (#8661)\n- [7064006](https://github.com/surge-synthesizer/surge/commit/7064006acf08ccfc0d97260ce9326a8ef5da6e19) : Prefer ~/Music for user data on macOS (#8659)\n- [a419fda](https://github.com/surge-synthesizer/surge/commit/a419fdad6ce3d8b1a0af9d69b521c970f810b019) : Purge both scenes' hold buffers when the pedal is released in single mode (#8657)"
+          "releaseNotes": "## SurgeXT Nightly Release\n\nThis is the nightly release of SurgeXT. Surge nightlies are usually quite stable, but they may contain bugs or incomplete features. Please use caution running this beta software.\n\nWe have a draft of our changelog available [here](https://surge-synthesizer.github.io/nightlychangelog/) although the change log can lag the nightly substantially.\n\nIf you want a stable production release, you can always find the latest stable release at [the Surge Website](https://surge-synthesizer.github.io)\n\nIn addition to these nightlies, we generate nightlies for a variety of flavors of Linux using [OpenBuildService](https://software.opensuse.org//download.html?project=home%3Asurge-synth-team&package=surge-xt-nightly)\n\nRelease updated  Fri Nov 27 02:31:18 UTC 2026\n\n- [223f049](https://github.com/surge-synthesizer/surge/commit/223f049075bb40feeb2b53554979938b9e2437b3) : Say when the patch has unsaved edits to screen readers (#8664)\n- [ffbcb65](https://github.com/surge-synthesizer/surge/commit/ffbcb65ffbbfdb7a8b2338e452a3db500e25cd86) : Make slider changes made through the accessibility API undoable (#8665)\n- [9ed6f98](https://github.com/surge-synthesizer/surge/commit/9ed6f98fd1266b169eacef54ed7cc60ce2ce389f) : Stop momentary buttons reporting an on or off state (#8666)\n- [788a9a7](https://github.com/surge-synthesizer/surge/commit/788a9a70d838e32a8cf7427377f2b14364435b48) : Name each macro slider after its macro for screen readers (#8667)\n- [583f621](https://github.com/surge-synthesizer/surge/commit/583f621317e071b7dacc9b913530bad9ea7bb747) : (slightly) correct about screen RAM calculation. (#8663)"
         }
       ]
     },
     "zynaddsubfx": {
       "name": "ZynAddSubFX",
-      "lastFetch": "2026-11-26T16:49:21.943Z",
+      "lastFetch": "2026-11-27T16:51:51.644Z",
       "sourceUrl": "https://api.github.com/repos/zynaddsubfx/zynaddsubfx/releases",
       "releases": [
         {
@@ -1977,7 +1977,7 @@
     },
     "caddy": {
       "name": "Caddy",
-      "lastFetch": "2026-11-26T16:49:26.128Z",
+      "lastFetch": "2026-11-27T16:51:55.374Z",
       "sourceUrl": "https://api.github.com/repos/caddyserver/caddy/releases",
       "releases": [
         {
@@ -2124,7 +2124,7 @@
     },
     "casaos": {
       "name": "CasaOS",
-      "lastFetch": "2026-11-26T16:49:26.979Z",
+      "lastFetch": "2026-11-27T16:51:56.170Z",
       "sourceUrl": "https://api.github.com/repos/IceWhaleTech/CasaOS/releases",
       "releases": [
         {
@@ -2271,7 +2271,7 @@
     },
     "dockge": {
       "name": "Dockge",
-      "lastFetch": "2026-11-26T16:49:27.325Z",
+      "lastFetch": "2026-11-27T16:51:56.440Z",
       "sourceUrl": "https://api.github.com/repos/louislam/dockge/releases",
       "releases": [
         {
@@ -2376,7 +2376,7 @@
     },
     "forgejo": {
       "name": "Forgejo",
-      "lastFetch": "2026-11-26T16:49:28.650Z",
+      "lastFetch": "2026-11-27T16:51:57.846Z",
       "sourceUrl": "https://codeberg.org/api/v1/repos/forgejo/forgejo/releases",
       "releases": [
         {
@@ -2523,7 +2523,7 @@
     },
     "gitea": {
       "name": "Gitea",
-      "lastFetch": "2026-11-26T16:49:32.384Z",
+      "lastFetch": "2026-11-27T16:52:01.476Z",
       "sourceUrl": "https://api.github.com/repos/go-gitea/gitea/releases",
       "releases": [
         {
@@ -2670,7 +2670,7 @@
     },
     "home-assistant": {
       "name": "Home Assistant",
-      "lastFetch": "2026-11-26T16:49:32.807Z",
+      "lastFetch": "2026-11-27T16:52:01.866Z",
       "sourceUrl": "https://api.github.com/repos/home-assistant/core/releases",
       "releases": [
         {
@@ -2817,7 +2817,7 @@
     },
     "jellyfin": {
       "name": "Jellyfin",
-      "lastFetch": "2026-11-26T16:49:33.595Z",
+      "lastFetch": "2026-11-27T16:52:02.649Z",
       "sourceUrl": "https://api.github.com/repos/jellyfin/jellyfin/releases",
       "releases": [
         {
@@ -2964,7 +2964,7 @@
     },
     "memos": {
       "name": "Memos",
-      "lastFetch": "2026-11-26T16:49:34.353Z",
+      "lastFetch": "2026-11-27T16:52:03.230Z",
       "sourceUrl": "https://api.github.com/repos/usememos/memos/releases",
       "releases": [
         {
@@ -3111,7 +3111,7 @@
     },
     "minio": {
       "name": "MinIO",
-      "lastFetch": "2026-11-26T16:49:36.726Z",
+      "lastFetch": "2026-11-27T16:52:06.387Z",
       "sourceUrl": "https://api.github.com/repos/minio/minio/releases",
       "releases": [
         {
@@ -3258,7 +3258,7 @@
     },
     "nextcloud-server": {
       "name": "Nextcloud Server",
-      "lastFetch": "2026-11-26T16:49:37.175Z",
+      "lastFetch": "2026-11-27T16:52:06.838Z",
       "sourceUrl": "https://api.github.com/repos/nextcloud/server/releases",
       "releases": [
         {
@@ -3405,7 +3405,7 @@
     },
     "openproject": {
       "name": "OpenProject",
-      "lastFetch": "2026-11-26T16:49:37.820Z",
+      "lastFetch": "2026-11-27T16:52:07.558Z",
       "sourceUrl": "https://api.github.com/repos/opf/openproject/releases",
       "releases": [
         {
@@ -3552,7 +3552,7 @@
     },
     "owncast": {
       "name": "Owncast",
-      "lastFetch": "2026-11-26T16:49:38.219Z",
+      "lastFetch": "2026-11-27T16:52:07.949Z",
       "sourceUrl": "https://api.github.com/repos/owncast/owncast/releases",
       "releases": [
         {
@@ -3699,9 +3699,16 @@
     },
     "owncloud-ocis": {
       "name": "ownCloud oCIS",
-      "lastFetch": "2026-11-26T16:49:39.594Z",
+      "lastFetch": "2026-11-27T16:52:09.513Z",
       "sourceUrl": "https://api.github.com/repos/owncloud/ocis/releases",
       "releases": [
+        {
+          "version": "v8.2.4",
+          "name": "v8.2.4",
+          "releaseDate": "2026-11-26T21:07:30Z",
+          "releaseUrl": "https://github.com/owncloud/ocis/releases/tag/v8.2.4",
+          "releaseNotes": "# Table of Contents\n\n* [Changelog for 8.2.4](#changelog-for-824-2026-11-26)\n# Changes in 8.2.4\n\n## Summary\n\n* Security - Update the saml and ws dependencies: [#13575](https://github.com/owncloud/ocis/pull/13575)\n* Bugfix - Use a dedicated ICAP client per scan: [#13387](https://github.com/owncloud/ocis/pull/13387)\n* Bugfix - Fix slow builds with GNU Make 4.4: [#13470](https://github.com/owncloud/ocis/pull/13470)\n* Bugfix - Filter spurious TLS handshake errors from CI test runner output: [#13499](https://github.com/owncloud/ocis/pull/13499)\n* Bugfix - Wait for app registry before running WOPI cs3 validator tests: [#13504](https://github.com/owncloud/ocis/pull/13504)\n* Bugfix - Remove stale group shares in the share manager: [#13561](https://github.com/owncloud/ocis/pull/13561)\n* Bugfix - Only open supported file types in web viewer apps: [#13585](https://github.com/owncloud/ocis/pull/13585)\n* Bugfix - Make the share cache locks cancellable: [#13597](https://github.com/owncloud/ocis/pull/13597)\n* Bugfix - Cache decoded node attributes: [#13597](https://github.com/owncloud/ocis/pull/13597)\n* Bugfix - Reduce the cost of listing storage spaces: [#13597](https://github.com/owncloud/ocis/pull/13597)\n* Bugfix - Expose the etag of shared drives: [#13597](https://github.com/owncloud/ocis/pull/13597)\n* Enhancement - Harden the Collabora deployment examples: [#13389](https://github.com/owncloud/ocis/pull/13389)\n* Enhancement - Update Mockery to 2.53.8: [#13470](https://github.com/owncloud/ocis/pull/13470)\n\n## Details\n\n* Security - Update the saml and ws dependencies: [#13575](https://github.com/owncloud/ocis/pull/13575)\n\n   We updated two indirect Go dependencies to fix known vulnerabilities. The module\n   github.com/crewjam/saml is now v0.5.2. The module github.com/gobwas/ws is now\n   v1.5.0. The module github.com/russellhaering/goxmldsig is now v1.6.1, as the new\n   saml version requires it.\n\n   https://github.com/owncloud/ocis/pull/13575\n\n* Bugfix - Use a dedicated ICAP client per scan: [#13387](https://github.com/owncloud/ocis/pull/13387)\n\n   The antivirus service now creates a dedicated ICAP client for every scan instead\n   of sharing a single client between its workers. This only affects deployments\n   using `ANTIVIRUS_SCANNER_TYPE=icap`.\n\n   https://github.com/owncloud/ocis/pull/13387\n\n* Bugfix - Fix slow builds with GNU Make 4.4: [#13470](https://github.com/owncloud/ocis/pull/13470)\n\n   The file `.make/recursion.mk` now expands the `GO`, `GOPATH`, `GOHOSTOS`,\n   `GOHOSTARCH` and `GOHOSTARM` variables one time only, before its `export`.\n   Before, each use of these variables ran a shell command again. With GNU Make\n   4.4, these commands ran again and again. A `make` call took about two minutes\n   before it started the build, and it printed thousands of \"env: 'GOHOSTOS': No\n   such file or directory\" errors. Ubuntu 26.04 and the `ubuntu-latest` GitHub\n   runner have GNU Make 4.4.\n\n   https://github.com/owncloud/ocis/pull/13470\n\n* Bugfix - Filter spurious TLS handshake errors from CI test runner output: [#13499](https://github.com/owncloud/ocis/pull/13499)\n\n   Go's `net/http` server emits `TLS handshake error from <addr>: ...` to stderr\n   whenever a client connects to an HTTPS port but does not complete the handshake.\n   This happens routinely in acceptance test runs: health-check probes, Playwright\n   browser initialisation, and curl readiness polls all trigger the message even\n   though no test ever fails because of it. The messages accumulate in the hundreds\n   per run and push genuinely interesting output far down the CI log.\n\n   The five Python test-runner scripts (`run-github.py`, `run-litmus.py`,\n   `run-cs3api.py`, `run-wopi.py`) now pipe each long-lived ocis/ociswrapper\n   subprocess's stderr through a background thread that drops lines containing `TLS\n   handshake error` and forwards everything else to the runner's stderr unchanged.\n   Real errors remain fully visible.\n\n   The two Bash scripts (`tests/ldap-smoke/run.sh`,\n   `tests/ldap-smoke-distributed/run.sh`) use a Bash process substitution (`2>\n   >(grep -v \"TLS handshake error\" >&2)`) for the same effect without requiring a\n   log file.\n\n   https://github.com/owncloud/ocis/pull/13499\n\n* Bugfix - Wait for app registry before running WOPI cs3 validator tests: [#13504](https://github.com/owncloud/ocis/pull/13504)\n\n   The WOPI cs3 validator occasionally failed with HTTP 500 on `OpenInApp` calls\n   during the `EditFlows` test group. The gateway logged `error finding app\n   providers` — meaning the app-provider service had not yet finished registering\n   its mime-type entries with the gateway, even though the `ocis_healthy()` check\n   (a graph API call) had already passed.\n\n   A new `app_registry_ready()` probe is added to `run-wopi.py` that calls `GET\n   /app/list` and verifies the response contains at least one mime-type entry. This\n   probe runs after `ocis_healthy()` and before the WOPI service is started,\n   ensuring the gateway's app provider list is populated before the validator\n   begins issuing `OpenInApp` requests.\n\n   https://github.com/owncloud/ocis/pull/13504\n\n* Bugfix - Remove stale group shares in the share manager: [#13561](https://github.com/owncloud/ocis/pull/13561)\n\n   A stale group share is a share ID in the group cache that has no share. On each\n   listing of the received shares, the share manager found the stale ID again and\n   uploaded the received.json file of the user again with the same content. The\n   stale ID stayed, so this repeated on each listing.\n\n   The share manager now removes a stale group share from the group cache. It does\n   this only when it read the share file of the space. It reads each share from the\n   same copy of that file, so a parallel listing cannot make valid shares look\n   stale. A Remove no longer uploads a file when the share is not in it. A listing\n   of the created shares now also reads each share from one copy of the share file.\n   Before, a parallel listing could hide some shares of a space from the creator.\n\n   An update of a share now reads the share again under the space lock. Before, a\n   parallel failed upload in the same space could remove the space from memory. The\n   update then reported success, but it did not write the change. An update now\n   also returns NotFound for a share that a parallel unshare removed. Before, the\n   update could write the removed share again.\n\n   When the upload of a Remove fails, the share manager now reads the file again on\n   the next call. Before, it kept the share out of memory, but the share stayed in\n   the file. A retry then found nothing to remove, did not upload, and reported\n   success. In the received.json file of a user, this also occurred inside one\n   Remove after a temporary upload error. The same applies to an Add. Before, a\n   failed upload of an Add kept the new entry in memory. For example, a client got\n   an error when it accepted a share, but this pod showed the share as accepted.\n\n   An unshare and an update of a share now read the share file of the space again\n   when the share is not in memory. Before, a listing that got a temporary NotFound\n   left an empty copy of the space in memory. An unshare then did not remove the\n   share from the file, but it reported success. An update returned NotFound for a\n   share that existed.\n\n   The share manager removes a stale entry only after a grace period of 5 minutes.\n   During a rolling upgrade, an older version can write the grantee entry before\n   the share. Without the grace period, a listing in this window removed the entry,\n   and no group member saw the share. A listing that finds the share again restarts\n   the grace period. Thus two short losses do not add up to one long loss. Each pod\n   counts the grace period itself. A pod remembers a stale entry for 1 hour after\n   the last listing that found it. Thus the grace period also ends on a pod that\n   finds the entry only once in some minutes. A pod looks for the entries to forget\n   at most once a minute. Thus a listing that finds many stale entries does not\n   hold the lock for a long time. When the removal of a stale entry fails, the next\n   listing tries the removal again at once. The pod forgets the entry only after\n   the removal.\n\n   The share manager now also removes a stale entry when the share file of the\n   space does not exist. A failed first share in a space leaves such an entry. A\n   download that gets NotFound is not enough proof, because the NotFound can be\n   temporary. The share manager checks the file a second time.\n\n   The share manager now writes a share before the entry for the grantee. When a\n   write fails, it removes the entries that it wrote, also the entry for the\n   grantee. The removal also runs when the request was cancelled. Each removal has\n   its own timeout, so a slow removal does not stop the next one. Thus a failed\n   share does not block a new share with the same grantee. The share manager\n   removes the share and the entry of the creator at the same time, so a failed\n   share waits for at most two timeouts. An unshare removes the share also when the\n   entry for the grantee cannot be removed, and it reports success. Before, the\n   client got an error for a share that was gone. The next listing of the grantee\n   removes the stale entry.\n\n   The share manager now removes many shares together, with one upload for each\n   document. A purge of a space with 20 group shares did 41 uploads and now does 3.\n   A listing that finds 20 expired shares did 60 uploads and now does 3. A listing\n   removes the expired shares of all spaces together. The setting\n   SHARING_USER_JSONCS3_MAX_CONCURRENCY limits the parallel removals. Its default\n   does not change and is 1. The removals always use a limit of at least 3. Before,\n   the removal of one share updated its 3 documents in parallel. With a limit of 1,\n   an unshare needed one more round trip to the storage.\n\n   The share cleanup of the ocis shares commands now removes all orphaned shares\n   together, with one upload for each document. Before, it removed the shares one\n   at a time. 20 orphaned shares in one space did 60 uploads and now do 3. A Stat\n   error no longer stops the cleanup with a panic. The cleanup skips that share and\n   checks the next share. The cleanup also stops with an error log when it cannot\n   get a gateway client. Before, it stopped with a panic.\n\n   The share manager now sends one ShareExpired event for each expired share.\n   Before, each listing that found the expired share sent an event, also when the\n   removal failed. Thus the users got many expiry notifications.\n\n   The share manager no longer keeps an empty space entry in the created cache and\n   in the group cache. Before, each listing read the share file of a deleted space\n   again.\n\n   When a space is deleted, the share manager now logs the errors of the share\n   cleanup. Before, it sent them to a disabled logger.\n\n   Each log line of a share listing now has the fields of one share only. Before, a\n   later line had the fields of all earlier shares, and a log search found the\n   wrong share.\n\n   A Remove on the created cache or on the group cache no longer panics when the\n   user or group has no entry for the space of the share, or when the share ID has\n   no delimiter. Before, the panic stopped the sharing service, also in an unshare\n   and in the cleanup of orphaned shares.\n\n   https://github.com/owncloud/ocis/pull/13561\n   https://github.com/owncloud/ocis/pull/13545\n   https://github.com/owncloud/reva/pull/833\n   https://github.com/owncloud/reva/pull/813\n\n* Bugfix - Only open supported file types in web viewer apps: [#13585](https://github.com/owncloud/ocis/pull/13585)\n\n   Viewer apps in the web UI, like the PDF viewer, could be opened for any file by\n   entering its address directly, even when the app does not support that file\n   type. The file was then loaded and shown anyway.\n\n   Viewer apps now check that the file type is supported before loading the file\n   and show an error message otherwise.\n\n   https://github.com/owncloud/ocis/pull/13585\n\n* Bugfix - Make the share cache locks cancellable: [#13597](https://github.com/owncloud/ocis/pull/13597)\n\n   Requests that wait for a lock of the share caches of the jsoncs3 share manager\n   now give up when their context is done, instead of waiting until they get the\n   lock. Requests that the client already abandoned no longer pile up and keep\n   their memory under load. The provider cache also rejects updates with an empty\n   storage, space or share id.\n\n   https://github.com/owncloud/ocis/pull/13597\n   https://github.com/owncloud/reva/pull/866\n   https://github.com/owncloud/reva/pull/862\n\n* Bugfix - Cache decoded node attributes: [#13597](https://github.com/owncloud/ocis/pull/13597)\n\n   The file metadata cache keeps a bounded, process-local layer of already decoded\n   node attributes, so reading cached attributes no longer decodes them on every\n   access. Every read still checks the value in the configured cache store, so the\n   result is the same as before. By default the layer is limited to 16384 entries\n   and about 64 MiB per cache.\n\n   https://github.com/owncloud/ocis/pull/13597\n   https://github.com/owncloud/reva/pull/864\n\n* Bugfix - Reduce the cost of listing storage spaces: [#13597](https://github.com/owncloud/ocis/pull/13597)\n\n   Listing the storage spaces of a user, as done by `/graph/v1.0/me/drives`, no\n   longer reads the type of every space root from disk, and grants are parsed\n   without setting up a csv reader for each grant.\n\n   https://github.com/owncloud/ocis/pull/13597\n   https://github.com/owncloud/reva/pull/865\n\n* Bugfix - Expose the etag of shared drives: [#13597](https://github.com/owncloud/ocis/pull/13597)\n\n   The `mountpoint` drives of received shares in `/graph/v1.0/me/drives` now carry\n   a `root.eTag`, so clients can detect changes in shared folders by comparing the\n   etag of the drive root. The shares jail and mountpoint drives fall back to a\n   stable default etag when the shared resource has no etag.\n\n   https://github.com/owncloud/ocis/pull/13597\n   https://github.com/owncloud/reva/pull/863\n\n* Enhancement - Harden the Collabora deployment examples: [#13389](https://github.com/owncloud/ocis/pull/13389)\n\n   The `ocis_full` and `ocis_ocm` deployment examples now ship a hardened Collabora\n   configuration. Collabora is restricted to the hosts it needs, runs on its own\n   internal network that only the proxy and the collaboration service share, and\n   the admin console requires explicitly configured credentials\n   (`COLLABORA_ADMIN_USER` and `COLLABORA_ADMIN_PASSWORD`). If you copy these\n   examples, make sure to set the credentials in your `.env` file.\n\n   https://github.com/owncloud/ocis/pull/13389\n\n* Enhancement - Update Mockery to 2.53.8: [#13470](https://github.com/owncloud/ocis/pull/13470)\n\n   We updated the mockery tool in `.bingo/mockery.mod` from v2.53.5 to v2.53.8.\n\n   https://github.com/owncloud/ocis/pull/13470\n"
+        },
         {
           "version": "v8.0.11",
           "name": "v8.0.11",
@@ -3834,19 +3841,12 @@
           "releaseDate": "2025-11-25T10:55:27Z",
           "releaseUrl": "https://github.com/owncloud/ocis/releases/tag/v7.3.1",
           "releaseNotes": "# Table of Contents\n\n* [Changelog for 7.3.1](#changelog-for-731-2025-11-24)\n# Changes in 7.3.1\n\n## Summary\n\n* Enhancement - Bump Web to 12.1.1: [#11726](https://github.com/owncloud/ocis/pull/11726)\n* Enhancement - Bump Web to v12.1.2: [#11836](https://github.com/owncloud/ocis/pull/11836)\n\n## Details\n\n* Enhancement - Bump Web to 12.1.1: [#11726](https://github.com/owncloud/ocis/pull/11726)\n\n   This version contains only updated translations.\n\n   https://github.com/owncloud/ocis/pull/11726\n   https://github.com/owncloud/web/releases/tag/v12.1.1\n\n* Enhancement - Bump Web to v12.1.2: [#11836](https://github.com/owncloud/ocis/pull/11836)\n\n   - Bugfix [owncloud/web#13213](https://github.com/owncloud/web/pull/13213): Do\n   not disable sharing of resources when managing spaces via claims\n\n   https://github.com/owncloud/ocis/pull/11836\n   https://github.com/owncloud/web/releases/tag/v12.1.2\n"
-        },
-        {
-          "version": "v7.3.0",
-          "name": "7.3.0",
-          "releaseDate": "2025-10-14T07:07:50Z",
-          "releaseUrl": "https://github.com/owncloud/ocis/releases/tag/v7.3.0",
-          "releaseNotes": "# Table of Contents\n\n* [Changelog for 7.3.0](#changelog-for-730-2025-10-13)\n# Changes in 7.3.0\n\n## Summary\n\n* Bugfix - Fix the expiration date response for links: [#11239](https://github.com/owncloud/ocis/pull/11239)\n* Bugfix - Return translated role definitions: [#11466](https://github.com/owncloud/ocis/pull/11466)\n* Bugfix - Tolerating the empty request body for WebDAV: [#11516](https://github.com/owncloud/ocis/pull/11516)\n* Bugfix - Fix space root handling in a sharedByMe: [#11533](https://github.com/owncloud/ocis/pull/11533)\n* Bugfix - Fix the create link endpoint: [#11542](https://github.com/owncloud/ocis/pull/11542)\n* Bugfix - Limit search only when scope is passed: [#11664](https://github.com/owncloud/ocis/pull/11664)\n* Bugfix - Add OCS v2 capabilities endpoint to public paths: [#11665](https://github.com/owncloud/ocis/pull/11665)\n* Bugfix - Add webdav without trailing slash into proxy default config: [#11677](https://github.com/owncloud/ocis/pull/11677)\n* Bugfix - Fix clean uploads command: [#11693](https://github.com/owncloud/ocis/pull/11693)\n* Bugfix - Fix stale nodes command: [#11704](https://github.com/owncloud/ocis/pull/11704)\n* Enhancement - Add GetPermission API: [#8616](https://github.com/owncloud/ocis/issues/8616)\n* Enhancement - Bump importer app: [#10880](https://github.com/owncloud/ocis/pull/10880)\n* Enhancement - Allow scaling the search service: [#11029](https://github.com/owncloud/ocis/pull/11029)\n* Enhancement - Add Cli to delete personal spaces: [#11555](https://github.com/owncloud/ocis/pull/11555)\n* Enhancement - Add custom labels for app tokens: [#11555](https://github.com/owncloud/ocis/pull/11555)\n* Enhancement - HTTP Strict Transport Security: [#11568](https://github.com/owncloud/ocis/pull/11568)\n* Enhancement - Allow markdown output for unified-roles-table: [#11581](https://github.com/owncloud/ocis/pull/11581)\n* Enhancement - Added the OnlyOffice license support: [#11624](https://github.com/owncloud/ocis/pull/11624)\n* Enhancement - Bump Web to 12.0.4: [#11625](https://github.com/owncloud/ocis/pull/11625)\n* Enhancement - Update the ocis_full deployment example: [#11666](https://github.com/owncloud/ocis/pull/11666)\n* Enhancement - Bump Reva version: [#11669](https://github.com/owncloud/ocis/pull/11669)\n* Enhancement - Added user type upgrade/downgrade: [#11678](https://github.com/owncloud/ocis/pull/11678)\n* Enhancement - Respect changed user type in OIDC claim: [#11684](https://github.com/owncloud/ocis/pull/11684)\n* Enhancement - Drop remote.php prefix: [#11687](https://github.com/owncloud/ocis/pull/11687)\n* Enhancement - Add configurable display attributes: [#11695](https://github.com/owncloud/ocis/pull/11695)\n* Enhancement - Bump Web to 12.1.0: [#11710](https://github.com/owncloud/ocis/pull/11710)\n\n## Details\n\n* Bugfix - Fix the expiration date response for links: [#11239](https://github.com/owncloud/ocis/pull/11239)\n\n   We fixed the inconsistency in the expiration date response for links\n\n   https://github.com/owncloud/ocis/issues/11232\n   https://github.com/owncloud/ocis/pull/11239\n\n* Bugfix - Return translated role definitions: [#11466](https://github.com/owncloud/ocis/pull/11466)\n\n   Instead of always returning the role definitions in English, we now return the\n   role definitions in the language set in the `Accept-Language` header if present.\n\n   https://github.com/owncloud/ocis/pull/11466\n\n* Bugfix - Tolerating the empty request body for WebDAV: [#11516](https://github.com/owncloud/ocis/pull/11516)\n\n   Tolerating the empty request body for WebDAV operations like MKCOL, DELETE,\n   MOVE, COPY.\n\n   https://github.com/owncloud/ocis/issues/10809\n   https://github.com/owncloud/ocis/pull/11516\n\n* Bugfix - Fix space root handling in a sharedByMe: [#11533](https://github.com/owncloud/ocis/pull/11533)\n\n   Fix space root handling in a graph sharedByMe\n\n   https://github.com/owncloud/ocis/pull/11533\n\n* Bugfix - Fix the create link endpoint: [#11542](https://github.com/owncloud/ocis/pull/11542)\n\n   We fixed an issue when Shares drive can be shared via link share with Internal\n   role using permissions endpoint\n\n   https://github.com/owncloud/ocis/issues/11409\n   https://github.com/owncloud/ocis/pull/11542\n\n* Bugfix - Limit search only when scope is passed: [#11664](https://github.com/owncloud/ocis/pull/11664)\n\n   Previously, the search service would limit the search to the according space\n   when searching `/dav/spaces/`. This was not correct, as the search should be\n   limited to the according space when a `scope` is passed in the search pattern\n   instead.\n\n   https://github.com/owncloud/ocis/pull/11664\n\n* Bugfix - Add OCS v2 capabilities endpoint to public paths: [#11665](https://github.com/owncloud/ocis/pull/11665)\n\n   Following the same behavior as OCS v1, we added the OCS v2 capabilities endpoint\n   to the public paths.\n\n   https://github.com/owncloud/ocis/pull/11665\n\n* Bugfix - Add webdav without trailing slash into proxy default config: [#11677](https://github.com/owncloud/ocis/pull/11677)\n\n   We've added the `/webdav` endpoint without a trailing slash into the proxy\n   default config.\n\n   https://github.com/owncloud/ocis/issues/10346\n   https://github.com/owncloud/ocis/issues/10334\n   https://github.com/owncloud/ocis/pull/11677\n\n* Bugfix - Fix clean uploads command: [#11693](https://github.com/owncloud/ocis/pull/11693)\n\n   When using --clean ongoing uploads would be purged but the nodes would not be\n   reverted. This is now fixed.\n\n   https://github.com/owncloud/ocis/pull/11693\n\n* Bugfix - Fix stale nodes command: [#11704](https://github.com/owncloud/ocis/pull/11704)\n\n   Fix delete-stale-nodes command to properly remove or roll-back nodes\n\n   https://github.com/owncloud/ocis/pull/11704\n\n* Enhancement - Add GetPermission API: [#8616](https://github.com/owncloud/ocis/issues/8616)\n\n   Graph service: added GET\n   /v1beta1/drives/{driveId}/items/{itemId}/permissions/{permissionId} (and\n   space-root equivalent) so clients can retrieve a single permission instead of\n   listing all.\n\n   https://github.com/owncloud/ocis/issues/8616\n   https://github.com/owncloud/ocis/pull/11477\n\n* Enhancement - Bump importer app: [#10880](https://github.com/owncloud/ocis/pull/10880)\n\n   The importer app in the ocis_full example has been updated. It's using the\n   upstream Uppy Companion Docker image now.\n\n   https://github.com/owncloud/ocis/pull/10880\n\n* Enhancement - Allow scaling the search service: [#11029](https://github.com/owncloud/ocis/pull/11029)\n\n   Previously, the search service locked the index for its whole lifetime, so any\n   other search service wouldn't be able to access to the index. With this change,\n   the search service can be configure to lock the index per operation, so other\n   search services can access the index as long as there is no operation ongoing.\n\n   https://github.com/owncloud/ocis/pull/11029\n\n* Enhancement - Add Cli to delete personal spaces: [#11555](https://github.com/owncloud/ocis/pull/11555)\n\n   Add Cli to delete the trashed personal spaces.\n\n   https://github.com/owncloud/ocis/pull/11555\n\n* Enhancement - Add custom labels for app tokens: [#11555](https://github.com/owncloud/ocis/pull/11555)\n\n   The ability to set a custom label when creating an app token has been added.\n\n   https://github.com/owncloud/ocis/pull/11555\n\n* Enhancement - HTTP Strict Transport Security: [#11568](https://github.com/owncloud/ocis/pull/11568)\n\n   Added Support for HTTP Strict Transport Security. It reduces surface for\n   Man-in-the-Middle attacks or leakage of sensitive information.\n\n   https://github.com/owncloud/ocis/pull/11568\n\n* Enhancement - Allow markdown output for unified-roles-table: [#11581](https://github.com/owncloud/ocis/pull/11581)\n\n   Allows rendering the `ocis graph list-unified-roles` command in markdown (or\n   colorized)\n\n   https://github.com/owncloud/ocis/pull/11581\n\n* Enhancement - Added the OnlyOffice license support: [#11624](https://github.com/owncloud/ocis/pull/11624)\n\n   Added the OnlyOffice ee license support to the ocis_full deployment.\n\n   https://github.com/owncloud/ocis/pull/11624\n\n* Enhancement - Bump Web to 12.0.4: [#11625](https://github.com/owncloud/ocis/pull/11625)\n\n   - Bugfix [owncloud/web#12943](https://github.com/owncloud/web/pull/12943): Sign\n   public link archiver download URL\n\n   https://github.com/owncloud/ocis/pull/11625\n   https://github.com/owncloud/web/releases/tag/v12.0.4\n\n* Enhancement - Update the ocis_full deployment example: [#11666](https://github.com/owncloud/ocis/pull/11666)\n\n   Fix description texts, move image versions from yaml to .env where applicapable\n\n   https://github.com/owncloud/ocis/pull/11666\n\n* Enhancement - Bump Reva version: [#11669](https://github.com/owncloud/ocis/pull/11669)\n\n   Bumped reva version\n\n   https://github.com/owncloud/ocis/pull/11669\n   https://github.com/owncloud/ocis/pull/11693\n   https://github.com/owncloud/ocis/pull/11704\n\n* Enhancement - Added user type upgrade/downgrade: [#11678](https://github.com/owncloud/ocis/pull/11678)\n\n   Added the mechanism to disable/enable personal spaces on user type\n   upgrade/downgrade\n\n   https://github.com/owncloud/ocis/pull/11678\n\n* Enhancement - Respect changed user type in OIDC claim: [#11684](https://github.com/owncloud/ocis/pull/11684)\n\n   Ensure that OIDC login correctly interprets user type changes to disable/enable\n   personal spaces on user type upgrade/downgrade\n\n   https://github.com/owncloud/ocis/pull/11684\n\n* Enhancement - Drop remote.php prefix: [#11687](https://github.com/owncloud/ocis/pull/11687)\n\n   The `remote.php` prefix is now fully optional in WebDAV endpoints and is never\n   returned in responses.\n\n   https://github.com/owncloud/ocis/pull/11687\n\n* Enhancement - Add configurable display attributes: [#11695](https://github.com/owncloud/ocis/pull/11695)\n\n   We added new configuration options `UserSearchDisplayedAttributes` which allows\n   to configure the attributes that are displayed in the user search results. We\n   are also deprecating the `ShowUserEmailInResults` configuration option.\n\n   https://github.com/owncloud/ocis/pull/11695\n\n* Enhancement - Bump Web to 12.1.0: [#11710](https://github.com/owncloud/ocis/pull/11710)\n\n   - Bugfix [owncloud/web#12768](https://github.com/owncloud/web/pull/12768): Reset\n   selection only when path changes - Bugfix\n   [owncloud/web#12780](https://github.com/owncloud/web/pull/12780): Handle direct\n   admin settings access - Bugfix\n   [owncloud/web#12954](https://github.com/owncloud/web/pull/12954): Add clipboard\n   permissions - Bugfix\n   [owncloud/web#13075](https://github.com/owncloud/web/pull/13075): Set md-editor\n   code block header to have z-index of 0 - Bugfix\n   [owncloud/web#13126](https://github.com/owncloud/web/pull/13126): Make progress\n   bar settings reactive - Bugfix\n   [owncloud/web#13127](https://github.com/owncloud/web/pull/13127): Handle HTML\n   upload error - Bugfix\n   [owncloud/web#13136](https://github.com/owncloud/web/pull/13136): Disallow\n   U+202E character in folder name - Bugfix\n   [owncloud/web#13142](https://github.com/owncloud/web/pull/13142): Use correct\n   color for universal icon - Enhancement\n   [owncloud/web#12788](https://github.com/owncloud/web/pull/12788): Add markdown\n   to PDF export - Enhancement\n   [owncloud/web#12915](https://github.com/owncloud/web/pull/12915): Use switch for\n   full text search filter - Enhancement\n   [owncloud/web#12925](https://github.com/owncloud/web/pull/12925): Add MFA\n   capability - Enhancement\n   [owncloud/web#12933](https://github.com/owncloud/web/pull/12933): Add universal\n   access - Enhancement\n   [owncloud/web#12973](https://github.com/owncloud/web/pull/12973): Add GeoGebra\n   pinboard icon - Enhancement\n   [owncloud/web#12974](https://github.com/owncloud/web/pull/12974): Replace board\n   icon - Enhancement\n   [owncloud/web#13093](https://github.com/owncloud/web/pull/13093): Add\n   OcResponsiveImage component - Enhancement\n   [owncloud/web#13093](https://github.com/owncloud/web/pull/13093): Add topbar\n   mobile logo theme option - Enhancement\n   [owncloud/web#13110](https://github.com/owncloud/web/pull/13110): Add mobile to\n   query param - Enhancement\n   [owncloud/web#13111](https://github.com/owncloud/web/pull/13111): Use OCS v2 API\n   - Enhancement [owncloud/web#13113](https://github.com/owncloud/web/pull/13113):\n   Drop `remote.php` from WebDAV paths - Enhancement\n   [owncloud/web#13144](https://github.com/owncloud/web/pull/13144): Display custom\n   attributes in share autocomplete\n\n   https://github.com/owncloud/ocis/pull/11710\n   https://github.com/owncloud/web/releases/tag/v12.1.0\n"
         }
       ]
     },
     "peertube": {
       "name": "PeerTube",
-      "lastFetch": "2026-11-26T16:49:40.285Z",
+      "lastFetch": "2026-11-27T16:52:10.259Z",
       "sourceUrl": "https://api.github.com/repos/Chocobozzz/PeerTube/releases",
       "releases": [
         {
@@ -3993,7 +3993,7 @@
     },
     "pixelfed": {
       "name": "Pixelfed",
-      "lastFetch": "2026-11-26T16:49:40.787Z",
+      "lastFetch": "2026-11-27T16:52:10.786Z",
       "sourceUrl": "https://api.github.com/repos/pixelfed/pixelfed/releases",
       "releases": [
         {
@@ -4140,7 +4140,7 @@
     },
     "runtipi": {
       "name": "Runtipi",
-      "lastFetch": "2026-11-26T16:49:41.728Z",
+      "lastFetch": "2026-11-27T16:52:11.747Z",
       "sourceUrl": "https://api.github.com/repos/meienberger/runtipi/releases",
       "releases": [
         {
@@ -4287,7 +4287,7 @@
     },
     "seafile": {
       "name": "Seafile",
-      "lastFetch": "2026-11-26T16:49:42.084Z",
+      "lastFetch": "2026-11-27T16:52:12.183Z",
       "sourceUrl": "https://api.github.com/repos/haiwen/seafile/releases",
       "releases": [
         {
@@ -4434,7 +4434,7 @@
     },
     "traefik": {
       "name": "Traefik",
-      "lastFetch": "2026-11-26T16:49:43.706Z",
+      "lastFetch": "2026-11-27T16:52:13.778Z",
       "sourceUrl": "https://api.github.com/repos/traefik/traefik/releases",
       "releases": [
         {
@@ -4581,7 +4581,7 @@
     },
     "vikunja": {
       "name": "Vikunja",
-      "lastFetch": "2026-11-26T16:49:44.549Z",
+      "lastFetch": "2026-11-27T16:52:14.525Z",
       "sourceUrl": "https://api.github.com/repos/go-vikunja/vikunja/releases",
       "releases": [
         {
@@ -4679,7 +4679,7 @@
     },
     "wallabag": {
       "name": "Wallabag",
-      "lastFetch": "2026-11-26T16:49:45.049Z",
+      "lastFetch": "2026-11-27T16:52:15.000Z",
       "sourceUrl": "https://api.github.com/repos/wallabag/wallabag/releases",
       "releases": [
         {
@@ -4826,7 +4826,7 @@
     },
     "akkoma": {
       "name": "Akkoma",
-      "lastFetch": "2026-11-26T16:49:45.623Z",
+      "lastFetch": "2026-11-27T16:52:15.626Z",
       "sourceUrl": "https://akkoma.dev/api/v1/repos/AkkomaGang/akkoma/releases",
       "releases": [
         {
@@ -4973,7 +4973,7 @@
     },
     "bigbluebutton": {
       "name": "BigBlueButton",
-      "lastFetch": "2026-11-26T16:49:46.246Z",
+      "lastFetch": "2026-11-27T16:52:16.235Z",
       "sourceUrl": "https://api.github.com/repos/bigbluebutton/bigbluebutton/releases",
       "releases": [
         {
@@ -5120,7 +5120,7 @@
     },
     "chatwoot": {
       "name": "Chatwoot",
-      "lastFetch": "2026-11-26T16:49:46.722Z",
+      "lastFetch": "2026-11-27T16:52:16.777Z",
       "sourceUrl": "https://api.github.com/repos/chatwoot/chatwoot/releases",
       "releases": [
         {
@@ -5267,7 +5267,7 @@
     },
     "conversations": {
       "name": "Conversations",
-      "lastFetch": "2026-11-26T16:49:47.190Z",
+      "lastFetch": "2026-11-27T16:52:17.338Z",
       "sourceUrl": "https://codeberg.org/api/v1/repos/iNPUTmice/Conversations/releases",
       "releases": [
         {
@@ -5316,7 +5316,7 @@
     },
     "element": {
       "name": "Element",
-      "lastFetch": "2026-11-26T16:49:47.826Z",
+      "lastFetch": "2026-11-27T16:52:18.156Z",
       "sourceUrl": "https://api.github.com/repos/element-hq/element-desktop/releases",
       "releases": [
         {
@@ -5463,7 +5463,7 @@
     },
     "firefish": {
       "name": "Firefish",
-      "lastFetch": "2026-11-26T16:49:48.283Z",
+      "lastFetch": "2026-11-27T16:52:18.724Z",
       "sourceUrl": "https://codeberg.org/api/v1/repos/firefish/firefish/releases",
       "releases": [
         {
@@ -5610,7 +5610,7 @@
     },
     "gotify": {
       "name": "Gotify",
-      "lastFetch": "2026-11-26T16:49:48.952Z",
+      "lastFetch": "2026-11-27T16:52:19.213Z",
       "sourceUrl": "https://api.github.com/repos/gotify/server/releases",
       "releases": [
         {
@@ -5757,7 +5757,7 @@
     },
     "jitsi-meet": {
       "name": "Jitsi Meet",
-      "lastFetch": "2026-11-26T16:49:49.475Z",
+      "lastFetch": "2026-11-27T16:52:19.695Z",
       "sourceUrl": "https://api.github.com/repos/jitsi/jitsi-meet/releases",
       "releases": [
         {
@@ -5904,7 +5904,7 @@
     },
     "mastodon": {
       "name": "Mastodon",
-      "lastFetch": "2026-11-26T16:49:50.019Z",
+      "lastFetch": "2026-11-27T16:52:20.147Z",
       "sourceUrl": "https://api.github.com/repos/mastodon/mastodon/releases",
       "releases": [
         {
@@ -6051,9 +6051,16 @@
     },
     "mattermost": {
       "name": "Mattermost",
-      "lastFetch": "2026-11-26T16:49:50.558Z",
+      "lastFetch": "2026-11-27T16:52:20.753Z",
       "sourceUrl": "https://api.github.com/repos/mattermost/mattermost/releases",
       "releases": [
+        {
+          "version": "v11.11.5",
+          "name": "v11.11.5",
+          "releaseDate": "2026-11-27T08:08:51Z",
+          "releaseUrl": "https://github.com/mattermost/mattermost/releases/tag/v11.11.5",
+          "releaseNotes": "Mattermost Platform Release 11.11.5 contains Medium severity level security fixes."
+        },
         {
           "version": "v12.1.0",
           "name": "v12.1.0",
@@ -6186,19 +6193,12 @@
           "releaseDate": "2026-09-15T07:48:24Z",
           "releaseUrl": "https://github.com/mattermost/mattermost/releases/tag/v11.10.2",
           "releaseNotes": "Mattermost Platform Release 11.10.2 contains Medium to High severity level security fixes."
-        },
-        {
-          "version": "v11.9.2",
-          "name": "v11.9.2",
-          "releaseDate": "2026-09-15T06:26:10Z",
-          "releaseUrl": "https://github.com/mattermost/mattermost/releases/tag/v11.9.2",
-          "releaseNotes": "Mattermost Platform Release 11.9.2 contains Medium to High severity level security fixes."
         }
       ]
     },
     "misskey": {
       "name": "Misskey",
-      "lastFetch": "2026-11-26T16:49:51.021Z",
+      "lastFetch": "2026-11-27T16:52:21.443Z",
       "sourceUrl": "https://api.github.com/repos/misskey-dev/misskey/releases",
       "releases": [
         {
@@ -6324,7 +6324,7 @@
     },
     "movim": {
       "name": "Movim",
-      "lastFetch": "2026-11-26T16:49:51.363Z",
+      "lastFetch": "2026-11-27T16:52:21.851Z",
       "sourceUrl": "https://api.github.com/repos/movim/movim/releases",
       "releases": [
         {
@@ -6471,7 +6471,7 @@
     },
     "nextcloud-talk": {
       "name": "Nextcloud Talk",
-      "lastFetch": "2026-11-26T16:49:51.957Z",
+      "lastFetch": "2026-11-27T16:52:22.472Z",
       "sourceUrl": "https://api.github.com/repos/nextcloud/spreed/releases",
       "releases": [
         {
@@ -6618,7 +6618,7 @@
     },
     "openfire": {
       "name": "Openfire",
-      "lastFetch": "2026-11-26T16:49:52.902Z",
+      "lastFetch": "2026-11-27T16:52:23.234Z",
       "sourceUrl": "https://api.github.com/repos/igniterealtime/Openfire/releases",
       "releases": [
         {
@@ -6765,7 +6765,7 @@
     },
     "profanity": {
       "name": "Profanity",
-      "lastFetch": "2026-11-26T16:49:53.366Z",
+      "lastFetch": "2026-11-27T16:52:23.633Z",
       "sourceUrl": "https://api.github.com/repos/profanity-im/profanity/releases",
       "releases": [
         {
@@ -6912,7 +6912,7 @@
     },
     "rocket-chat": {
       "name": "Rocket.Chat",
-      "lastFetch": "2026-11-26T16:49:53.931Z",
+      "lastFetch": "2026-11-27T16:52:24.070Z",
       "sourceUrl": "https://api.github.com/repos/RocketChat/Rocket.Chat/releases",
       "releases": [
         {
@@ -7059,7 +7059,7 @@
     },
     "signal": {
       "name": "Signal",
-      "lastFetch": "2026-11-26T16:49:54.380Z",
+      "lastFetch": "2026-11-27T16:52:24.606Z",
       "sourceUrl": "https://api.github.com/repos/signalapp/Signal-Desktop/releases",
       "releases": [
         {
@@ -7206,9 +7206,16 @@
     },
     "telegram-desktop": {
       "name": "Telegram Desktop",
-      "lastFetch": "2026-11-26T16:49:55.156Z",
+      "lastFetch": "2026-11-27T16:52:25.425Z",
       "sourceUrl": "https://api.github.com/repos/telegramdesktop/tdesktop/releases",
       "releases": [
+        {
+          "version": "v7.4.7",
+          "name": "v 7.4.7",
+          "releaseDate": "2026-11-26T21:51:27Z",
+          "releaseUrl": "https://github.com/telegramdesktop/tdesktop/releases/tag/v7.4.7",
+          "releaseNotes": "- Add music to stories.\n- Cancel story uploads from the stories list.\n- Improve text rendering on Windows.\n- Several crash fixes.\n- Bug fixes and other minor improvements."
+        },
         {
           "version": "v7.4.6",
           "name": "v 7.4.6",
@@ -7341,19 +7348,12 @@
           "releaseDate": "2026-08-25T04:41:59Z",
           "releaseUrl": "https://github.com/telegramdesktop/tdesktop/releases/tag/v7.1.2",
           "releaseNotes": "- Show who reacted preview next to the cursor.\n- Improve restoring of opened windows and chats on relaunch.\n- Don't hide content from screenshots while the app is passcode-locked.\n- Fix saving of words with the system spellchecker.\n- Fix sorting of unmuted unread chats in folders.\n- Fix quote staying above the field after sending a message.\n- Fix some WEB proxies not working on Windows.\n- Warn about possible risks when adding a WEB proxy.\n- Crash fixes."
-        },
-        {
-          "version": "v7.1.1",
-          "name": "v 7.1.1",
-          "releaseDate": "2026-08-22T14:30:49Z",
-          "releaseUrl": "https://github.com/telegramdesktop/tdesktop/releases/tag/v7.1.1",
-          "releaseNotes": "- Fix broken chats loading for some users.\n- Minor bug fixes."
         }
       ]
     },
     "wire": {
       "name": "Wire",
-      "lastFetch": "2026-11-26T16:49:55.754Z",
+      "lastFetch": "2026-11-27T16:52:25.945Z",
       "sourceUrl": "https://api.github.com/repos/wireapp/wire-desktop/releases",
       "releases": [
         {
@@ -7500,7 +7500,7 @@
     },
     "zulip": {
       "name": "Zulip",
-      "lastFetch": "2026-11-26T16:49:56.396Z",
+      "lastFetch": "2026-11-27T16:52:26.411Z",
       "sourceUrl": "https://api.github.com/repos/zulip/zulip/releases",
       "releases": [
         {
@@ -7647,7 +7647,7 @@
     },
     "brl-cad": {
       "name": "BRL-CAD",
-      "lastFetch": "2026-11-26T16:49:57.065Z",
+      "lastFetch": "2026-11-27T16:52:27.036Z",
       "sourceUrl": "https://api.github.com/repos/BRL-CAD/brlcad/releases",
       "releases": [
         {
@@ -7794,7 +7794,7 @@
     },
     "freecad": {
       "name": "FreeCAD",
-      "lastFetch": "2026-11-26T16:49:58.529Z",
+      "lastFetch": "2026-11-27T16:52:28.366Z",
       "sourceUrl": "https://api.github.com/repos/FreeCAD/FreeCAD/releases",
       "releases": [
         {
@@ -7849,7 +7849,7 @@
     },
     "ghdl": {
       "name": "GHDL",
-      "lastFetch": "2026-11-26T16:49:59.379Z",
+      "lastFetch": "2026-11-27T16:52:29.110Z",
       "sourceUrl": "https://api.github.com/repos/ghdl/ghdl/releases",
       "releases": [
         {
@@ -7954,7 +7954,7 @@
     },
     "horizon-eda": {
       "name": "Horizon EDA",
-      "lastFetch": "2026-11-26T16:49:59.687Z",
+      "lastFetch": "2026-11-27T16:52:29.407Z",
       "sourceUrl": "https://api.github.com/repos/horizon-eda/horizon/releases",
       "releases": [
         {
@@ -8087,7 +8087,7 @@
     },
     "iverilog": {
       "name": "Icarus Verilog",
-      "lastFetch": "2026-11-26T16:50:00.007Z",
+      "lastFetch": "2026-11-27T16:52:29.646Z",
       "sourceUrl": "https://api.github.com/repos/steveicarus/iverilog/releases",
       "releases": [
         {
@@ -8115,16 +8115,9 @@
     },
     "klayout": {
       "name": "KLayout",
-      "lastFetch": "2026-11-26T16:50:00.445Z",
+      "lastFetch": "2026-11-27T16:52:30.000Z",
       "sourceUrl": "https://api.github.com/repos/KLayout/klayout/releases",
       "releases": [
-        {
-          "version": "v0.30.14-1",
-          "name": "0.30.14-1",
-          "releaseDate": "2026-11-24T22:50:34Z",
-          "releaseUrl": "https://github.com/KLayout/klayout/releases/tag/v0.30.14-1",
-          "releaseNotes": "Dummy release to trigger Azure builds for producing Python 3.15 wheels on Windows"
-        },
         {
           "version": "v0.30.14",
           "name": "0.30.14",
@@ -8257,12 +8250,19 @@
           "releaseDate": "2024-12-04T22:20:24Z",
           "releaseUrl": "https://github.com/KLayout/klayout/releases/tag/v0.29.10",
           "releaseNotes": "For release notes see [0.29.10 release notes](http://www.klayout.de/development.html#0.29.10)\r\n\r\nFor downloads of Windows, Linux and MacOS packages see [KLayout download page](http://www.klayout.de/build.html)."
+        },
+        {
+          "version": "v0.29.9",
+          "name": "0.29.9",
+          "releaseDate": "2024-12-01T20:04:39Z",
+          "releaseUrl": "https://github.com/KLayout/klayout/releases/tag/v0.29.9",
+          "releaseNotes": "For release notes see [0.29.9 release notes](http://www.klayout.de/development.html#0.29.9)\r\n\r\nFor downloads of Windows, Linux and MacOS packages see [KLayout download page](http://www.klayout.de/build.html)."
         }
       ]
     },
     "librecad": {
       "name": "LibreCAD",
-      "lastFetch": "2026-11-26T16:50:00.853Z",
+      "lastFetch": "2026-11-27T16:52:30.314Z",
       "sourceUrl": "https://api.github.com/repos/LibreCAD/LibreCAD/releases",
       "releases": [
         {
@@ -8360,7 +8360,7 @@
     },
     "librepcb": {
       "name": "LibrePCB",
-      "lastFetch": "2026-11-26T16:50:01.145Z",
+      "lastFetch": "2026-11-27T16:52:30.646Z",
       "sourceUrl": "https://api.github.com/repos/LibrePCB/LibrePCB/releases",
       "releases": [
         {
@@ -8479,7 +8479,7 @@
     },
     "linuxcnc": {
       "name": "LinuxCNC",
-      "lastFetch": "2026-11-26T16:50:01.576Z",
+      "lastFetch": "2026-11-27T16:52:30.986Z",
       "sourceUrl": "https://api.github.com/repos/LinuxCNC/linuxcnc/releases",
       "releases": [
         {
@@ -8521,7 +8521,7 @@
     },
     "nextpnr": {
       "name": "nextpnr",
-      "lastFetch": "2026-11-26T16:50:01.978Z",
+      "lastFetch": "2026-11-27T16:52:31.284Z",
       "sourceUrl": "https://api.github.com/repos/YosysHQ/nextpnr/releases",
       "releases": [
         {
@@ -8612,7 +8612,7 @@
     },
     "octoprint": {
       "name": "OctoPrint",
-      "lastFetch": "2026-11-26T16:50:02.579Z",
+      "lastFetch": "2026-11-27T16:52:31.906Z",
       "sourceUrl": "https://api.github.com/repos/OctoPrint/OctoPrint/releases",
       "releases": [
         {
@@ -8765,7 +8765,7 @@
     },
     "openscad": {
       "name": "OpenSCAD",
-      "lastFetch": "2026-11-26T16:50:03.369Z",
+      "lastFetch": "2026-11-27T16:52:32.530Z",
       "sourceUrl": "https://api.github.com/repos/openscad/openscad/releases",
       "releases": [
         {
@@ -8849,7 +8849,7 @@
     },
     "prusaslicer": {
       "name": "PrusaSlicer",
-      "lastFetch": "2026-11-26T16:50:04.136Z",
+      "lastFetch": "2026-11-27T16:52:33.265Z",
       "sourceUrl": "https://api.github.com/repos/prusa3d/PrusaSlicer/releases",
       "releases": [
         {
@@ -8996,7 +8996,7 @@
     },
     "qucs-s": {
       "name": "Qucs-S",
-      "lastFetch": "2026-11-26T16:50:04.662Z",
+      "lastFetch": "2026-11-27T16:52:33.682Z",
       "sourceUrl": "https://api.github.com/repos/ra3xdh/qucs_s/releases",
       "releases": [
         {
@@ -9143,7 +9143,7 @@
     },
     "slic3r": {
       "name": "Slic3r",
-      "lastFetch": "2026-11-26T16:50:04.940Z",
+      "lastFetch": "2026-11-27T16:52:34.019Z",
       "sourceUrl": "https://api.github.com/repos/slic3r/Slic3r/releases",
       "releases": [
         {
@@ -9157,7 +9157,7 @@
     },
     "solvespace": {
       "name": "SolveSpace",
-      "lastFetch": "2026-11-26T16:50:05.348Z",
+      "lastFetch": "2026-11-27T16:52:34.356Z",
       "sourceUrl": "https://api.github.com/repos/solvespace/solvespace/releases",
       "releases": [
         {
@@ -9226,7 +9226,7 @@
     },
     "yosys": {
       "name": "Yosys",
-      "lastFetch": "2026-11-26T16:50:06.370Z",
+      "lastFetch": "2026-11-27T16:52:35.143Z",
       "sourceUrl": "https://api.github.com/repos/YosysHQ/yosys/releases",
       "releases": [
         {
@@ -9373,7 +9373,7 @@
     },
     "bat": {
       "name": "bat",
-      "lastFetch": "2026-11-26T16:50:07.023Z",
+      "lastFetch": "2026-11-27T16:52:35.683Z",
       "sourceUrl": "https://api.github.com/repos/sharkdp/bat/releases",
       "releases": [
         {
@@ -9520,7 +9520,7 @@
     },
     "curl": {
       "name": "curl",
-      "lastFetch": "2026-11-26T16:50:07.783Z",
+      "lastFetch": "2026-11-27T16:52:36.316Z",
       "sourceUrl": "https://api.github.com/repos/curl/curl/releases",
       "releases": [
         {
@@ -9667,7 +9667,7 @@
     },
     "eza": {
       "name": "eza",
-      "lastFetch": "2026-11-26T16:50:08.906Z",
+      "lastFetch": "2026-11-27T16:52:37.105Z",
       "sourceUrl": "https://api.github.com/repos/eza-community/eza/releases",
       "releases": [
         {
@@ -9814,7 +9814,7 @@
     },
     "fd": {
       "name": "fd",
-      "lastFetch": "2026-11-26T16:50:09.647Z",
+      "lastFetch": "2026-11-27T16:52:37.744Z",
       "sourceUrl": "https://api.github.com/repos/sharkdp/fd/releases",
       "releases": [
         {
@@ -9961,7 +9961,7 @@
     },
     "fzf": {
       "name": "fzf",
-      "lastFetch": "2026-11-26T16:50:10.752Z",
+      "lastFetch": "2026-11-27T16:52:38.689Z",
       "sourceUrl": "https://api.github.com/repos/junegunn/fzf/releases",
       "releases": [
         {
@@ -10108,7 +10108,7 @@
     },
     "geany": {
       "name": "Geany",
-      "lastFetch": "2026-11-26T16:50:11.168Z",
+      "lastFetch": "2026-11-27T16:52:38.988Z",
       "sourceUrl": "https://api.github.com/repos/geany/geany/releases",
       "releases": [
         {
@@ -10255,7 +10255,7 @@
     },
     "helix": {
       "name": "Helix",
-      "lastFetch": "2026-11-26T16:50:11.694Z",
+      "lastFetch": "2026-11-27T16:52:39.420Z",
       "sourceUrl": "https://api.github.com/repos/helix-editor/helix/releases",
       "releases": [
         {
@@ -10402,7 +10402,7 @@
     },
     "kakoune": {
       "name": "Kakoune",
-      "lastFetch": "2026-11-26T16:50:12.059Z",
+      "lastFetch": "2026-11-27T16:52:39.734Z",
       "sourceUrl": "https://api.github.com/repos/mawww/kakoune/releases",
       "releases": [
         {
@@ -10549,7 +10549,7 @@
     },
     "lapce": {
       "name": "Lapce",
-      "lastFetch": "2026-11-26T16:50:12.727Z",
+      "lastFetch": "2026-11-27T16:52:40.265Z",
       "sourceUrl": "https://api.github.com/repos/lapce/lapce/releases",
       "releases": [
         {
@@ -10696,7 +10696,7 @@
     },
     "lazydocker": {
       "name": "lazydocker",
-      "lastFetch": "2026-11-26T16:50:13.231Z",
+      "lastFetch": "2026-11-27T16:52:40.787Z",
       "sourceUrl": "https://api.github.com/repos/jesseduffield/lazydocker/releases",
       "releases": [
         {
@@ -10843,7 +10843,7 @@
     },
     "lazygit": {
       "name": "lazygit",
-      "lastFetch": "2026-11-26T16:50:14.211Z",
+      "lastFetch": "2026-11-27T16:52:41.994Z",
       "sourceUrl": "https://api.github.com/repos/jesseduffield/lazygit/releases",
       "releases": [
         {
@@ -10990,7 +10990,7 @@
     },
     "lite-xl": {
       "name": "Lite XL",
-      "lastFetch": "2026-11-26T16:50:15.221Z",
+      "lastFetch": "2026-11-27T16:52:42.902Z",
       "sourceUrl": "https://api.github.com/repos/lite-xl/lite-xl/releases",
       "releases": [
         {
@@ -11137,7 +11137,7 @@
     },
     "micro": {
       "name": "micro",
-      "lastFetch": "2026-11-26T16:50:16.317Z",
+      "lastFetch": "2026-11-27T16:52:43.782Z",
       "sourceUrl": "https://api.github.com/repos/zyedidia/micro/releases",
       "releases": [
         {
@@ -11284,7 +11284,7 @@
     },
     "neovim": {
       "name": "Neovim",
-      "lastFetch": "2026-11-26T16:50:17.196Z",
+      "lastFetch": "2026-11-27T16:52:44.431Z",
       "sourceUrl": "https://api.github.com/repos/neovim/neovim/releases",
       "releases": [
         {
@@ -11431,7 +11431,7 @@
     },
     "ripgrep": {
       "name": "ripgrep",
-      "lastFetch": "2026-11-26T16:50:17.973Z",
+      "lastFetch": "2026-11-27T16:52:45.184Z",
       "sourceUrl": "https://api.github.com/repos/BurntSushi/ripgrep/releases",
       "releases": [
         {
@@ -11578,15 +11578,22 @@
     },
     "spyder": {
       "name": "Spyder",
-      "lastFetch": "2026-11-26T16:50:18.837Z",
+      "lastFetch": "2026-11-27T16:52:46.014Z",
       "sourceUrl": "https://api.github.com/repos/spyder-ide/spyder/releases",
       "releases": [
+        {
+          "version": "v6.1.9",
+          "name": "Spyder 6.1.9",
+          "releaseDate": "2026-11-27T02:43:21Z",
+          "releaseUrl": "https://github.com/spyder-ide/spyder/releases/tag/v6.1.9",
+          "releaseNotes": "### Simple installation\r\n\r\nThe easiest way to start using Spyder is by downloading our own installers for Windows, macOS and Linux:\r\n\r\n* **Windows** (Windows 10+): [Spyder-Windows-x86_64.exe](https://github.com/spyder-ide/spyder/releases/download/v6.1.9/Spyder-Windows-x86_64.exe)\r\n\r\n* **macOS**\r\n    * M1 (14.0+): [Spyder-macOS-arm64.pkg](https://github.com/spyder-ide/spyder/releases/download/v6.1.9/Spyder-macOS-arm64.pkg)\r\n    * Intel (13.0+): [Spyder-macOS-x86_64.pkg](https://github.com/spyder-ide/spyder/releases/download/v6.1.9/Spyder-macOS-x86_64.pkg)\r\n\r\n* **Linux** (CentOS 7+): [Spyder-Linux-x86_64.sh](https://github.com/spyder-ide/spyder/releases/download/v6.1.9/Spyder-Linux-x86_64.sh)\r\n\r\n**Notes**:\r\n\r\n* To use packages such as `Scikit-learn` or `Seaborn` with these installers, please read the [following entry](https://docs.spyder-ide.org/current/faq.html#using-packages-installer) in our documentation FAQ.\r\n* To connect the installers to your current conda or pyenv environments, take a look at [this other FAQ ](http://docs.spyder-ide.org/current/faq.html#using-existing-environment).\r\n\r\n### Advanced installation\r\n\r\n<details>\r\n\r\n#### Important Notes\r\n\r\n1. If you are new to Python or the Scientific Python ecosystem, we recommend you to install and use [Anaconda](https://www.anaconda.com/download/). It comes with Spyder and all its dependencies, along with the most important Python scientific libraries (i.e. Numpy, Pandas, Matplotlib, IPython, etc) in a single, easy to use environment.\r\n2. We also support `pip`, but please be aware that `pip` installations are for advanced users with good knowledge of all Spyder dependencies. Because of that, all installation problems you encounter are expected to be solved by you.\r\n\r\n#### Anaconda\r\n\r\nYou can easily install this version if you use Anaconda by closing Spyder and then running the following command in a system terminal (Anaconda Prompt on Windows, `xterm` on Linux or `Terminal.app` on macOS):\r\n\r\n```\r\nconda create -n spyder-env -c conda-forge python=3.11\r\nconda activate spyder-env\r\nconda install -c conda-forge spyder=6.1.9\r\n```\r\n\r\n#### Pip\r\n\r\nYou can also use pip to update Spyder with the following command in a system terminal (`cmd.exe` on Windows, `xterm` on Linux or `Terminal.app` on macOS):\r\n\r\n```\r\npip install -U spyder\r\n```\r\n\r\n*Note*: **Do not** use this command if you are using Anaconda because it will break your installation.\r\n\r\n</details>\r\n\r\n### Contributors\r\n\r\nA big thank you to all the contributors that made this bugfix release possible: @abhiagx @aws-sde @blair49 @shubham069 @kayaal34 @SrkianFardin25 @SimpleZion @eendebakpt @andfoy @ccordoba12  @dalthviz @meeseeksmachine (backport bot) @spyder-bot ([translators](https://crowdin.com/project/spyder/activity-stream)) 🎉\r\n\r\n\r\n### Release notes\r\n\r\nFor the full list of closed issues and merged pull requests in this release, please see our [Changelog](https://github.com/spyder-ide/spyder/blob/master/changelogs/Spyder-6.md#version-619-2026-11-26).\r\n\r\n"
+        },
         {
           "version": "v6.1.8",
           "name": "Spyder 6.1.8",
           "releaseDate": "2026-10-24T00:19:41Z",
           "releaseUrl": "https://github.com/spyder-ide/spyder/releases/tag/v6.1.8",
-          "releaseNotes": "### Simple installation\r\n\r\nThe easiest way to start using Spyder is by downloading our own installers for Windows, macOS and Linux:\r\n\r\n* **Windows** (Windows 10+): [Spyder-Windows-x86_64.exe](https://github.com/spyder-ide/spyder/releases/download/v6.1.8/Spyder-Windows-x86_64.exe)\r\n\r\n* **macOS**\r\n    * M1 (14.0+): [Spyder-macOS-arm64.pkg](https://github.com/spyder-ide/spyder/releases/download/v6.1.8/Spyder-macOS-arm64.pkg)\r\n    * Intel (13.0+): [Spyder-macOS-x86_64.pkg](https://github.com/spyder-ide/spyder/releases/download/v6.1.8/Spyder-macOS-x86_64.pkg)\r\n\r\n* **Linux** (CentOS 7+): [Spyder-Linux-x86_64.sh](https://github.com/spyder-ide/spyder/releases/download/v6.1.8/Spyder-Linux-x86_64.sh)\r\n\r\n**Notes**:\r\n\r\n* To use packages such as `Scikit-learn` or `Seaborn` with these installers, please read the [following entry](https://docs.spyder-ide.org/current/faq.html#using-packages-installer) in our documentation FAQ.\r\n* To connect the installers to your current conda or pyenv environments, take a look at [this other FAQ ](http://docs.spyder-ide.org/current/faq.html#using-existing-environment).\r\n\r\n### Advanced installation\r\n\r\n<details>\r\n\r\n#### Important Notes\r\n\r\n1. If you are new to Python or the Scientific Python ecosystem, we recommend you to install and use [Anaconda](https://www.anaconda.com/download/). It comes with Spyder and all its dependencies, along with the most important Python scientific libraries (i.e. Numpy, Pandas, Matplotlib, IPython, etc) in a single, easy to use environment.\r\n2. We also support `pip`, but please be aware that `pip` installations are for advanced users with good knowledge of all Spyder dependencies. Because of that, all installation problems you encounter are expected to be solved by you.\r\n\r\n#### Anaconda\r\n\r\nYou can easily install this version if you use Anaconda by closing Spyder and then running the following command in a system terminal (Anaconda Prompt on Windows, `xterm` on Linux or `Terminal.app` on macOS):\r\n\r\n```\r\nconda create -n spyder-env -c conda-forge python=3.11\r\nconda activate spyder-env\r\nconda install -c conda-forge spyder=6.1.8\r\n```\r\n\r\n#### Pip\r\n\r\nYou can also use pip to update Spyder with the following command in a system terminal (`cmd.exe` on Windows, `xterm` on Linux or `Terminal.app` on macOS):\r\n\r\n```\r\npip install -U spyder\r\n```\r\n\r\n*Note*: **Do not** use this command if you are using Anaconda because it will break your installation.\r\n\r\n</details>\r\n\r\n### Contributors\r\n\r\nA big thank you to all the contributors that made this bugfix release possible: \r\n@susan-cheng @huili0423 @aws-sde @darkdi @IamRezaMousavi @rear1019 @jsbautista @CAM-Gerlach @conradolandia @ccordoba12 @dalthviz @mrclary @meeseeksmachine (backport bot) @spyder-bot ([translators](https://crowdin.com/project/spyder/activity-stream)) 🎉\r\n\r\n### Release notes\r\n\r\nFor the full list of closed issues and merged pull requests in this release, please see our [Changelog](https://github.com/spyder-ide/spyder/blob/master/changelogs/Spyder-6.md#version-618-2026-10-21).\r\n\r\n"
+          "releaseNotes": "### Contributors\r\n\r\nA big thank you to all the contributors that made this bugfix release possible: \r\n@susan-cheng @huili0423 @aws-sde @darkdi @IamRezaMousavi @rear1019 @jsbautista @CAM-Gerlach @conradolandia @ccordoba12 @dalthviz @mrclary @meeseeksmachine (backport bot) @spyder-bot ([translators](https://crowdin.com/project/spyder/activity-stream)) 🎉\r\n\r\n### Release notes\r\n\r\nFor the full list of closed issues and merged pull requests in this release, please see our [Changelog](https://github.com/spyder-ide/spyder/blob/master/changelogs/Spyder-6.md#version-618-2026-10-21).\r\n\r\n"
         },
         {
           "version": "v6.1.7",
@@ -11713,19 +11720,12 @@
           "releaseDate": "2024-08-27T03:03:05Z",
           "releaseUrl": "https://github.com/spyder-ide/spyder/releases/tag/v5.5.6",
           "releaseNotes": "### Simple installation\r\n\r\nThe easiest way to start using Spyder is by downloading our own installers for Windows, macOS and Linux (**experimental**):\r\n\r\n* **Windows** (Windows 10+): [Spyder_64bit_full.exe](https://github.com/spyder-ide/spyder/releases/download/v5.5.6/Spyder_64bit_full.exe)\r\n\r\n* **macOS**\r\n    * M1 (14.0+): [Spyder_arm64.dmg](https://github.com/spyder-ide/spyder/releases/download/v5.5.6/Spyder_arm64.dmg)\r\n    * Intel (12.0+): [Spyder.dmg](https://github.com/spyder-ide/spyder/releases/download/v5.5.6/Spyder.dmg)\r\n\r\n* **Linux** (CentOS 7+): [Linux-x86_64.sh](https://github.com/spyder-ide/spyder/releases/download/v5.5.6/EXPERIMENTAL-Spyder-5.5.6-Linux-x86_64.sh) (**Experimental**)\r\n\r\n### Advanced installation\r\n\r\n<details>\r\n\r\n#### Important Notes\r\n\r\n1. If you are new to Python or the Scientific Python ecosystem, we *strongly* recommend you to install and use [Anaconda](https://www.anaconda.com/download/). It comes with Spyder and all its dependencies, along with the most important Python scientific libraries (i.e. Numpy, Pandas, Matplotlib, IPython, etc) in a single, easy to use environment.\r\n2. We also support `pip`, but please be aware that `pip` installations are for advanced users with good knowledge of all Spyder dependencies. Because of that, all installation problems you encounter are expected to be solved by you.\r\n\r\n#### Anaconda\r\n\r\nYou can easily install this version if you use Anaconda by closing Spyder and then running the following command in a system terminal (Anaconda Prompt on Windows, `xterm` on Linux or `Terminal.app` on macOS):\r\n\r\n```\r\nconda install spyder=5.5.6\r\n```\r\n\r\n*Notes*:\r\n\r\n* It can take several months for a new Spyder version to be part of Anaconda. Please be patient until then and **do not** report it as a problem because we don't have any control over that.\r\n* If you installed Anaconda for the first time, you need to run the following command first:\r\n\r\n    ```\r\n    conda update anaconda\r\n    ```\r\n\r\n    before running the command above.\r\n\r\n#### Pip\r\n\r\nYou can also use pip to update Spyder with the following command in a system terminal (`cmd.exe` on Windows, `xterm` on Linux or `Terminal.app` on macOS):\r\n\r\n```\r\npip install -U spyder\r\n```\r\n\r\n*Note*: **Do not** use this command if you are using Anaconda because it will break your installation.\r\n\r\n</details>\r\n\r\n### Contributors\r\n\r\nA big thank you to all the contributors that made this release possible: @mrclary @hmaarrfk @ccordoba12 @dalthviz @spyder-bot ([our translators](https://crowdin.com/project/spyder/activity-stream)) 🎉 \r\n\r\n### Release notes\r\n\r\nFor the full list of closed issues and merged pull requests in this release, please see our [Changelog](https://github.com/spyder-ide/spyder/blob/master/changelogs/Spyder-5.md#version-556-2024-08-27)."
-        },
-        {
-          "version": "v5.5.5",
-          "name": "Spyder 5.5.5",
-          "releaseDate": "2024-06-12T01:45:16Z",
-          "releaseUrl": "https://github.com/spyder-ide/spyder/releases/tag/v5.5.5",
-          "releaseNotes": "### Contributors\r\n\r\nA big thank you to all the contributors that made this release possible: @dpizetta @rear1019 @mrclary @ccordoba12 @dalthviz 🎉 \r\n\r\n### Release notes\r\n\r\nFor the full list of closed issues and merged pull requests in this release, please see our [Changelog](https://github.com/spyder-ide/spyder/blob/master/changelogs/Spyder-5.md#version-555-2024-06-12)."
         }
       ]
     },
     "tmux": {
       "name": "tmux",
-      "lastFetch": "2026-11-26T16:50:19.306Z",
+      "lastFetch": "2026-11-27T16:52:46.422Z",
       "sourceUrl": "https://api.github.com/repos/tmux/tmux/releases",
       "releases": [
         {
@@ -11878,7 +11878,7 @@
     },
     "vscodium": {
       "name": "VSCodium",
-      "lastFetch": "2026-11-26T16:50:26.687Z",
+      "lastFetch": "2026-11-27T16:52:53.548Z",
       "sourceUrl": "https://api.github.com/repos/VSCodium/vscodium/releases",
       "releases": [
         {
@@ -12025,7 +12025,7 @@
     },
     "zoxide": {
       "name": "zoxide",
-      "lastFetch": "2026-11-26T16:50:27.414Z",
+      "lastFetch": "2026-11-27T16:52:54.144Z",
       "sourceUrl": "https://api.github.com/repos/ajeetdsouza/zoxide/releases",
       "releases": [
         {
@@ -12172,7 +12172,7 @@
     },
     "actual-budget": {
       "name": "Actual Budget",
-      "lastFetch": "2026-11-26T16:50:27.993Z",
+      "lastFetch": "2026-11-27T16:52:54.802Z",
       "sourceUrl": "https://api.github.com/repos/actualbudget/actual/releases",
       "releases": [
         {
@@ -12325,7 +12325,7 @@
     },
     "bisq": {
       "name": "Bisq",
-      "lastFetch": "2026-11-26T16:50:29.691Z",
+      "lastFetch": "2026-11-27T16:52:56.334Z",
       "sourceUrl": "https://api.github.com/repos/bisq-network/bisq/releases",
       "releases": [
         {
@@ -12472,7 +12472,7 @@
     },
     "bitcoin-core": {
       "name": "Bitcoin Core",
-      "lastFetch": "2026-11-26T16:50:30.070Z",
+      "lastFetch": "2026-11-27T16:52:56.744Z",
       "sourceUrl": "https://api.github.com/repos/bitcoin/bitcoin/releases",
       "releases": [
         {
@@ -12619,7 +12619,7 @@
     },
     "btcpay-server": {
       "name": "BTCPay Server",
-      "lastFetch": "2026-11-26T16:50:30.595Z",
+      "lastFetch": "2026-11-27T16:52:57.340Z",
       "sourceUrl": "https://api.github.com/repos/btcpayserver/btcpayserver/releases",
       "releases": [
         {
@@ -12766,7 +12766,7 @@
     },
     "decred": {
       "name": "Decred",
-      "lastFetch": "2026-11-26T16:50:31.249Z",
+      "lastFetch": "2026-11-27T16:52:57.858Z",
       "sourceUrl": "https://api.github.com/repos/decred/dcrd/releases",
       "releases": [
         {
@@ -12919,7 +12919,7 @@
     },
     "gnucash": {
       "name": "GnuCash",
-      "lastFetch": "2026-11-26T16:50:32.362Z",
+      "lastFetch": "2026-11-27T16:52:58.873Z",
       "sourceUrl": "https://api.github.com/repos/GnuCash/gnucash/releases",
       "releases": [
         {
@@ -13066,7 +13066,7 @@
     },
     "go-ethereum": {
       "name": "Go-Ethereum",
-      "lastFetch": "2026-11-26T16:50:32.911Z",
+      "lastFetch": "2026-11-27T16:52:59.331Z",
       "sourceUrl": "https://api.github.com/repos/ethereum/go-ethereum/releases",
       "releases": [
         {
@@ -13213,7 +13213,7 @@
     },
     "hledger": {
       "name": "hledger",
-      "lastFetch": "2026-11-26T16:50:33.843Z",
+      "lastFetch": "2026-11-27T16:53:00.202Z",
       "sourceUrl": "https://api.github.com/repos/simonmichael/hledger/releases",
       "releases": [
         {
@@ -13360,7 +13360,7 @@
     },
     "joinmarket": {
       "name": "JoinMarket",
-      "lastFetch": "2026-11-26T16:50:34.257Z",
+      "lastFetch": "2026-11-27T16:53:00.621Z",
       "sourceUrl": "https://api.github.com/repos/JoinMarket-Org/joinmarket-clientserver/releases",
       "releases": [
         {
@@ -13507,7 +13507,7 @@
     },
     "kmymoney": {
       "name": "KMyMoney",
-      "lastFetch": "2026-11-26T16:50:34.912Z",
+      "lastFetch": "2026-11-27T16:53:01.374Z",
       "sourceUrl": "https://invent.kde.org/api/v4/projects/office%2Fkmymoney/releases",
       "releases": [
         {
@@ -13535,7 +13535,7 @@
     },
     "ledger": {
       "name": "Ledger",
-      "lastFetch": "2026-11-26T16:50:35.245Z",
+      "lastFetch": "2026-11-27T16:53:01.713Z",
       "sourceUrl": "https://api.github.com/repos/ledger/ledger/releases",
       "releases": [
         {
@@ -13682,7 +13682,7 @@
     },
     "lighthouse": {
       "name": "Lighthouse",
-      "lastFetch": "2026-11-26T16:50:36.454Z",
+      "lastFetch": "2026-11-27T16:53:03.009Z",
       "sourceUrl": "https://api.github.com/repos/sigp/lighthouse/releases",
       "releases": [
         {
@@ -13829,7 +13829,7 @@
     },
     "monero-gui": {
       "name": "Monero GUI Wallet",
-      "lastFetch": "2026-11-26T16:50:36.854Z",
+      "lastFetch": "2026-11-27T16:53:03.495Z",
       "sourceUrl": "https://api.github.com/repos/monero-project/monero-gui/releases",
       "releases": [
         {
@@ -13976,7 +13976,7 @@
     },
     "money-manager-ex": {
       "name": "Money Manager Ex",
-      "lastFetch": "2026-11-26T16:50:37.424Z",
+      "lastFetch": "2026-11-27T16:53:04.028Z",
       "sourceUrl": "https://api.github.com/repos/moneymanagerex/moneymanagerex/releases",
       "releases": [
         {
@@ -14123,7 +14123,7 @@
     },
     "skrooge": {
       "name": "Skrooge",
-      "lastFetch": "2026-11-26T16:50:37.675Z",
+      "lastFetch": "2026-11-27T16:53:04.331Z",
       "sourceUrl": "https://invent.kde.org/api/v4/projects/office%2Fskrooge/releases",
       "releases": [
         {
@@ -14172,7 +14172,7 @@
     },
     "sparrow-wallet": {
       "name": "Sparrow Wallet",
-      "lastFetch": "2026-11-26T16:50:38.628Z",
+      "lastFetch": "2026-11-27T16:53:05.250Z",
       "sourceUrl": "https://api.github.com/repos/sparrowwallet/sparrow/releases",
       "releases": [
         {
@@ -14319,7 +14319,7 @@
     },
     "specter-desktop": {
       "name": "Specter Desktop",
-      "lastFetch": "2026-11-26T16:50:39.758Z",
+      "lastFetch": "2026-11-27T16:53:06.106Z",
       "sourceUrl": "https://api.github.com/repos/cryptoadvance/specter-desktop/releases",
       "releases": [
         {
@@ -14466,7 +14466,7 @@
     },
     "zcash": {
       "name": "Zcash",
-      "lastFetch": "2026-11-26T16:50:40.190Z",
+      "lastFetch": "2026-11-27T16:53:06.562Z",
       "sourceUrl": "https://api.github.com/repos/zcash/zcash/releases",
       "releases": [
         {
@@ -14613,7 +14613,7 @@
     },
     "blender": {
       "name": "Blender",
-      "lastFetch": "2026-11-26T16:50:43.545Z",
+      "lastFetch": "2026-11-27T16:53:18.370Z",
       "sourceUrl": "https://www.blender.org/feed/",
       "releases": [
         {
@@ -14753,7 +14753,7 @@
     },
     "darktable": {
       "name": "darktable",
-      "lastFetch": "2026-11-26T16:50:44.336Z",
+      "lastFetch": "2026-11-27T16:53:19.385Z",
       "sourceUrl": "https://api.github.com/repos/darktable-org/darktable/releases",
       "releases": [
         {
@@ -14900,7 +14900,7 @@
     },
     "flameshot": {
       "name": "Flameshot",
-      "lastFetch": "2026-11-26T16:50:45.033Z",
+      "lastFetch": "2026-11-27T16:53:20.020Z",
       "sourceUrl": "https://api.github.com/repos/flameshot-org/flameshot/releases",
       "releases": [
         {
@@ -15047,7 +15047,7 @@
     },
     "gimp": {
       "name": "GIMP",
-      "lastFetch": "2026-11-26T16:50:45.766Z",
+      "lastFetch": "2026-11-27T16:53:20.833Z",
       "sourceUrl": "https://gitlab.gnome.org/api/v4/projects/GNOME%2Fgimp/releases",
       "releases": [
         {
@@ -15194,7 +15194,7 @@
     },
     "gpick": {
       "name": "GPick",
-      "lastFetch": "2026-11-26T16:50:46.081Z",
+      "lastFetch": "2026-11-27T16:53:21.121Z",
       "sourceUrl": "https://api.github.com/repos/thezbyg/gpick/releases",
       "releases": [
         {
@@ -15215,7 +15215,7 @@
     },
     "inkscape": {
       "name": "Inkscape",
-      "lastFetch": "2026-11-26T16:50:46.712Z",
+      "lastFetch": "2026-11-27T16:53:21.720Z",
       "sourceUrl": "https://gitlab.com/api/v4/projects/inkscape%2Finkscape/releases",
       "releases": [
         {
@@ -15326,7 +15326,7 @@
     },
     "ksnip": {
       "name": "ksnip",
-      "lastFetch": "2026-11-26T16:50:47.680Z",
+      "lastFetch": "2026-11-27T16:53:22.737Z",
       "sourceUrl": "https://api.github.com/repos/ksnip/ksnip/releases",
       "releases": [
         {
@@ -15473,7 +15473,7 @@
     },
     "makehuman": {
       "name": "MakeHuman",
-      "lastFetch": "2026-11-26T16:50:48.011Z",
+      "lastFetch": "2026-11-27T16:53:22.972Z",
       "sourceUrl": "https://api.github.com/repos/makehumancommunity/makehuman/releases",
       "releases": [
         {
@@ -15494,7 +15494,7 @@
     },
     "mypaint": {
       "name": "MyPaint",
-      "lastFetch": "2026-11-26T16:50:48.524Z",
+      "lastFetch": "2026-11-27T16:53:23.776Z",
       "sourceUrl": "https://api.github.com/repos/mypaint/mypaint/releases",
       "releases": [
         {
@@ -15641,7 +15641,7 @@
     },
     "nomacs": {
       "name": "nomacs",
-      "lastFetch": "2026-11-26T16:50:49.032Z",
+      "lastFetch": "2026-11-27T16:53:24.174Z",
       "sourceUrl": "https://api.github.com/repos/nomacs/nomacs/releases",
       "releases": [
         {
@@ -15788,7 +15788,7 @@
     },
     "opentoonz": {
       "name": "OpenToonz",
-      "lastFetch": "2026-11-26T16:50:49.385Z",
+      "lastFetch": "2026-11-27T16:53:24.667Z",
       "sourceUrl": "https://api.github.com/repos/opentoonz/opentoonz/releases",
       "releases": [
         {
@@ -15935,7 +15935,7 @@
     },
     "pencil2d": {
       "name": "Pencil2D",
-      "lastFetch": "2026-11-26T16:50:49.739Z",
+      "lastFetch": "2026-11-27T16:53:25.144Z",
       "sourceUrl": "https://api.github.com/repos/pencil2d/pencil/releases",
       "releases": [
         {
@@ -16019,7 +16019,7 @@
     },
     "penpot": {
       "name": "Penpot",
-      "lastFetch": "2026-11-26T16:50:50.213Z",
+      "lastFetch": "2026-11-27T16:53:25.596Z",
       "sourceUrl": "https://api.github.com/repos/penpot/penpot/releases",
       "releases": [
         {
@@ -16166,7 +16166,7 @@
     },
     "photoflare": {
       "name": "PhotoFlare",
-      "lastFetch": "2026-11-26T16:50:50.772Z",
+      "lastFetch": "2026-11-27T16:53:26.065Z",
       "sourceUrl": "https://api.github.com/repos/PhotoFlare/photoflare/releases",
       "releases": [
         {
@@ -16313,7 +16313,7 @@
     },
     "pinta": {
       "name": "Pinta",
-      "lastFetch": "2026-11-26T16:50:51.279Z",
+      "lastFetch": "2026-11-27T16:53:26.491Z",
       "sourceUrl": "https://api.github.com/repos/PintaProject/Pinta/releases",
       "releases": [
         {
@@ -16453,7 +16453,7 @@
     },
     "qview": {
       "name": "qView",
-      "lastFetch": "2026-11-26T16:50:51.717Z",
+      "lastFetch": "2026-11-27T16:53:26.877Z",
       "sourceUrl": "https://api.github.com/repos/jurplel/qView/releases",
       "releases": [
         {
@@ -16523,7 +16523,7 @@
     },
     "rawtherapee": {
       "name": "RawTherapee",
-      "lastFetch": "2026-11-26T16:50:52.620Z",
+      "lastFetch": "2026-11-27T16:53:27.673Z",
       "sourceUrl": "https://api.github.com/repos/Beep6581/RawTherapee/releases",
       "releases": [
         {
@@ -16662,7 +16662,7 @@
     },
     "synfig": {
       "name": "Synfig Studio",
-      "lastFetch": "2026-11-26T16:50:53.434Z",
+      "lastFetch": "2026-11-27T16:53:28.293Z",
       "sourceUrl": "https://api.github.com/repos/synfig/synfig/releases",
       "releases": [
         {
@@ -16809,7 +16809,7 @@
     },
     "aria2": {
       "name": "aria2",
-      "lastFetch": "2026-11-26T16:50:53.855Z",
+      "lastFetch": "2026-11-27T16:53:28.732Z",
       "sourceUrl": "https://api.github.com/repos/aria2/aria2/releases",
       "releases": [
         {
@@ -16956,7 +16956,7 @@
     },
     "firefox": {
       "name": "Firefox",
-      "lastFetch": "2026-11-26T16:50:54.122Z",
+      "lastFetch": "2026-11-27T16:53:28.987Z",
       "sourceUrl": "https://product-details.mozilla.org/1.0/firefox.json",
       "releases": [
         {
@@ -17103,7 +17103,7 @@
     },
     "fluent-reader": {
       "name": "Fluent Reader",
-      "lastFetch": "2026-11-26T16:50:54.677Z",
+      "lastFetch": "2026-11-27T16:53:29.526Z",
       "sourceUrl": "https://api.github.com/repos/yang991178/fluent-reader/releases",
       "releases": [
         {
@@ -17256,7 +17256,7 @@
     },
     "freshrss": {
       "name": "FreshRSS",
-      "lastFetch": "2026-11-26T16:50:56.345Z",
+      "lastFetch": "2026-11-27T16:53:31.119Z",
       "sourceUrl": "https://api.github.com/repos/FreshRSS/FreshRSS/releases",
       "releases": [
         {
@@ -17403,7 +17403,7 @@
     },
     "gallery-dl": {
       "name": "gallery-dl",
-      "lastFetch": "2026-11-26T16:50:57.174Z",
+      "lastFetch": "2026-11-27T16:53:31.955Z",
       "sourceUrl": "https://api.github.com/repos/mikf/gallery-dl/releases",
       "releases": [
         {
@@ -17550,7 +17550,7 @@
     },
     "hexchat": {
       "name": "Hexchat",
-      "lastFetch": "2026-11-26T16:50:57.541Z",
+      "lastFetch": "2026-11-27T16:53:32.237Z",
       "sourceUrl": "https://api.github.com/repos/hexchat/hexchat/releases",
       "releases": [
         {
@@ -17662,7 +17662,7 @@
     },
     "invidious": {
       "name": "Invidious",
-      "lastFetch": "2026-11-26T16:50:57.973Z",
+      "lastFetch": "2026-11-27T16:53:32.588Z",
       "sourceUrl": "https://api.github.com/repos/iv-org/invidious/releases",
       "releases": [
         {
@@ -17809,7 +17809,7 @@
     },
     "min-browser": {
       "name": "Min Browser",
-      "lastFetch": "2026-11-26T16:50:58.713Z",
+      "lastFetch": "2026-11-27T16:53:33.517Z",
       "sourceUrl": "https://api.github.com/repos/minbrowser/min/releases",
       "releases": [
         {
@@ -17956,7 +17956,7 @@
     },
     "miniflux": {
       "name": "Miniflux",
-      "lastFetch": "2026-11-26T16:50:59.768Z",
+      "lastFetch": "2026-11-27T16:53:34.386Z",
       "sourceUrl": "https://api.github.com/repos/miniflux/v2/releases",
       "releases": [
         {
@@ -18103,7 +18103,7 @@
     },
     "newpipe": {
       "name": "NewPipe",
-      "lastFetch": "2026-11-26T16:51:00.318Z",
+      "lastFetch": "2026-11-27T16:53:34.819Z",
       "sourceUrl": "https://api.github.com/repos/TeamNewPipe/NewPipe/releases",
       "releases": [
         {
@@ -18250,7 +18250,7 @@
     },
     "nyxt": {
       "name": "Nyxt",
-      "lastFetch": "2026-11-26T16:51:01.019Z",
+      "lastFetch": "2026-11-27T16:53:35.457Z",
       "sourceUrl": "https://api.github.com/repos/atlas-engineer/nyxt/releases",
       "releases": [
         {
@@ -18397,7 +18397,7 @@
     },
     "qbittorrent": {
       "name": "qBittorrent",
-      "lastFetch": "2026-11-26T16:51:01.398Z",
+      "lastFetch": "2026-11-27T16:53:36.310Z",
       "sourceUrl": "https://api.github.com/repos/qbittorrent/qBittorrent/releases",
       "releases": [
         {
@@ -18453,7 +18453,7 @@
     },
     "qutebrowser": {
       "name": "qutebrowser",
-      "lastFetch": "2026-11-26T16:51:02.339Z",
+      "lastFetch": "2026-11-27T16:53:37.378Z",
       "sourceUrl": "https://api.github.com/repos/qutebrowser/qutebrowser/releases",
       "releases": [
         {
@@ -18600,7 +18600,7 @@
     },
     "rss-guard": {
       "name": "RSS Guard",
-      "lastFetch": "2026-11-26T16:51:03.221Z",
+      "lastFetch": "2026-11-27T16:53:38.317Z",
       "sourceUrl": "https://api.github.com/repos/martinrotter/rssguard/releases",
       "releases": [
         {
@@ -18747,7 +18747,7 @@
     },
     "thunderbird-android": {
       "name": "Thunderbird for Android",
-      "lastFetch": "2026-11-26T16:51:03.727Z",
+      "lastFetch": "2026-11-27T16:53:38.890Z",
       "sourceUrl": "https://api.github.com/repos/thunderbird/thunderbird-android/releases",
       "releases": [
         {
@@ -18894,7 +18894,7 @@
     },
     "transmission": {
       "name": "Transmission",
-      "lastFetch": "2026-11-26T16:51:04.289Z",
+      "lastFetch": "2026-11-27T16:53:39.504Z",
       "sourceUrl": "https://api.github.com/repos/transmission/transmission/releases",
       "releases": [
         {
@@ -19041,7 +19041,7 @@
     },
     "tusky": {
       "name": "Tusky",
-      "lastFetch": "2026-11-26T16:51:04.847Z",
+      "lastFetch": "2026-11-27T16:53:40.084Z",
       "sourceUrl": "https://api.github.com/repos/tuskyapp/Tusky/releases",
       "releases": [
         {
@@ -19188,9 +19188,16 @@
     },
     "weechat": {
       "name": "WeeChat",
-      "lastFetch": "2026-11-26T16:51:05.337Z",
+      "lastFetch": "2026-11-27T16:53:40.518Z",
       "sourceUrl": "https://api.github.com/repos/weechat/weechat/releases",
       "releases": [
+        {
+          "version": "v4.10.5",
+          "name": "v4.10.5",
+          "releaseDate": "2026-11-26T20:05:47Z",
+          "releaseUrl": "https://github.com/weechat/weechat/releases/tag/v4.10.5",
+          "releaseNotes": "### Fixed\n\n- core: fix loss of secured data still encrypted in file sec.conf after a partial decryption with command `/secure decrypt`\n- core: fix decryption of secured data with a comma in name with command `/secure decrypt`\n- core: keep secured data encrypted when it cannot be decrypted with the passphrase on reload of file sec.conf, instead of deleting it\n- core: fix memory leak in completion of plugin commands when the plugin is not found\n- core: fix crash when a plugin is unloaded or reloaded with command `/plugin` executed by a plugin or script, delay the command ([#2380](https://github.com/weechat/weechat/issues/2380))\n- core: fix crash when command `/upgrade` is executed by a script, execute the upgrade in the main loop ([#2380](https://github.com/weechat/weechat/issues/2380))\n- irc: display reply to CTCP PING with a single argument, which was ignored\n- irc: add missing tag \"irc_ctcp\" in display of CTCP reply without arguments\n- irc: ignore text after a received CTCP, which was parsed as another CTCP (one message could trigger two CTCP replies)\n- irc: fix display of own CTCP when there is text after the CTCP\n- perl: fix warnings \"Subroutine redefined\" when loading multiple scripts with Perl built without multiplicity\n- ruby: restore the current script when a function of a script fails\n- scripts: fix crash when a script is unloaded or reloaded while one of its functions is running, delay the unload until the function has returned ([#2380](https://github.com/weechat/weechat/issues/2380))\n- xfer: fix possible removal of an unrelated hook when a transfer lasts longer than the timeout (option xfer.network.timeout)\n- xfer: fail a file receive when DCC ACCEPT is not received after a resume request, after the timeout (option xfer.network.timeout), and release the socket and port of a passive receive\n- xfer: fail the transfer when option xfer.network.port_range contains a port lower than 1 or greater than 65535, instead of binding an unexpected port or looping forever\n\n### Security\n\n- core: fix decoding of incomplete WeeChat color codes in functions string_remove_color and string_color_code_size, which could remove the sender of an IRC message received with a crafted message tag ([#2382](https://github.com/weechat/weechat/pull/2382))\n- xfer: open the socket of a passive file receive (reverse DCC) only when the transfer is accepted, to prevent a remote peer from exhausting file descriptors with many DCC offers ([#2384](https://github.com/weechat/weechat/pull/2384))\n"
+        },
         {
           "version": "v4.10.4",
           "name": "v4.10.4",
@@ -19323,19 +19330,12 @@
           "releaseDate": "2025-04-18T18:49:20Z",
           "releaseUrl": "https://github.com/weechat/weechat/releases/tag/v4.6.2",
           "releaseNotes": "### Fixed\r\n\r\n- core: fix write of weechat.log to stdout with `weechat-headless --stdout` ([#2247](https://github.com/weechat/weechat/issues/2247))\r\n- core: add refresh of window title on buffer switch, when option weechat.look.window_title is set\r\n\r\n## Download\r\n\r\nhttps://weechat.org/download/weechat/4.6.2/"
-        },
-        {
-          "version": "v4.6.1",
-          "name": "v4.6.1",
-          "releaseDate": "2025-04-09T11:40:57Z",
-          "releaseUrl": "https://github.com/weechat/weechat/releases/tag/v4.6.1",
-          "releaseNotes": "### Fixed\r\n\r\n- core: consider all keys are safe in cursor context ([#2244](https://github.com/weechat/weechat/issues/2244))\r\n- irc: display nick changes and quit messages when option irc.look.ignore_tag_messages is enabled ([#2241](https://github.com/weechat/weechat/issues/2241))\r\n- perl: fix build when multiplicity is not available ([#2243](https://github.com/weechat/weechat/issues/2243))\r\n\r\n## Download\r\n\r\nhttps://weechat.org/download/weechat/4.6.1/"
         }
       ]
     },
     "yt-dlp": {
       "name": "yt-dlp",
-      "lastFetch": "2026-11-26T16:51:06.914Z",
+      "lastFetch": "2026-11-27T16:53:42.167Z",
       "sourceUrl": "https://api.github.com/repos/yt-dlp/yt-dlp/releases",
       "releases": [
         {
@@ -19482,7 +19482,7 @@
     },
     "anki": {
       "name": "Anki",
-      "lastFetch": "2026-11-26T16:51:07.680Z",
+      "lastFetch": "2026-11-27T16:53:42.902Z",
       "sourceUrl": "https://api.github.com/repos/ankitects/anki/releases",
       "releases": [
         {
@@ -19641,7 +19641,7 @@
     },
     "celestia": {
       "name": "Celestia",
-      "lastFetch": "2026-11-26T16:51:09.684Z",
+      "lastFetch": "2026-11-27T16:53:44.623Z",
       "sourceUrl": "https://api.github.com/repos/CelestiaProject/Celestia/releases",
       "releases": [
         {
@@ -19689,7 +19689,7 @@
     },
     "dosbox-staging": {
       "name": "DOSBox Staging",
-      "lastFetch": "2026-11-26T16:51:10.383Z",
+      "lastFetch": "2026-11-27T16:53:45.188Z",
       "sourceUrl": "https://api.github.com/repos/dosbox-staging/dosbox-staging/releases",
       "releases": [
         {
@@ -19836,7 +19836,7 @@
     },
     "freenet": {
       "name": "Freenet",
-      "lastFetch": "2026-11-26T16:51:11.427Z",
+      "lastFetch": "2026-11-27T16:53:46.019Z",
       "sourceUrl": "https://api.github.com/repos/freenet/fred/releases",
       "releases": [
         {
@@ -19983,7 +19983,7 @@
     },
     "freeplane": {
       "name": "Freeplane",
-      "lastFetch": "2026-11-26T16:51:12.242Z",
+      "lastFetch": "2026-11-27T16:53:46.830Z",
       "sourceUrl": "https://api.github.com/repos/freeplane/freeplane/releases",
       "releases": [
         {
@@ -20074,7 +20074,7 @@
     },
     "ipfs-kubo": {
       "name": "IPFS (Kubo)",
-      "lastFetch": "2026-11-26T16:51:15.271Z",
+      "lastFetch": "2026-11-27T16:53:49.716Z",
       "sourceUrl": "https://api.github.com/repos/ipfs/kubo/releases",
       "releases": [
         {
@@ -20221,7 +20221,7 @@
     },
     "mame": {
       "name": "MAME",
-      "lastFetch": "2026-11-26T16:51:15.988Z",
+      "lastFetch": "2026-11-27T16:53:50.362Z",
       "sourceUrl": "https://api.github.com/repos/mamedev/mame/releases",
       "releases": [
         {
@@ -20368,7 +20368,7 @@
     },
     "manyverse": {
       "name": "Manyverse",
-      "lastFetch": "2026-11-26T16:51:16.614Z",
+      "lastFetch": "2026-11-27T16:53:50.813Z",
       "sourceUrl": "https://api.github.com/repos/staltz/manyverse/releases",
       "releases": [
         {
@@ -20515,7 +20515,7 @@
     },
     "mgba": {
       "name": "mGBA",
-      "lastFetch": "2026-11-26T16:51:17.095Z",
+      "lastFetch": "2026-11-27T16:53:51.272Z",
       "sourceUrl": "https://api.github.com/repos/mgba-emu/mgba/releases",
       "releases": [
         {
@@ -20662,7 +20662,7 @@
     },
     "openmw": {
       "name": "OpenMW",
-      "lastFetch": "2026-11-26T16:51:17.925Z",
+      "lastFetch": "2026-11-27T16:53:51.790Z",
       "sourceUrl": "https://api.github.com/repos/OpenMW/openmw/releases",
       "releases": [
         {
@@ -20809,7 +20809,7 @@
     },
     "openra": {
       "name": "OpenRA",
-      "lastFetch": "2026-11-26T16:51:18.795Z",
+      "lastFetch": "2026-11-27T16:53:52.533Z",
       "sourceUrl": "https://api.github.com/repos/OpenRA/OpenRA/releases",
       "releases": [
         {
@@ -20956,7 +20956,7 @@
     },
     "openttd": {
       "name": "OpenTTD",
-      "lastFetch": "2026-11-26T16:51:19.226Z",
+      "lastFetch": "2026-11-27T16:53:52.930Z",
       "sourceUrl": "https://api.github.com/repos/OpenTTD/OpenTTD/releases",
       "releases": [
         {
@@ -21109,7 +21109,7 @@
     },
     "ppsspp": {
       "name": "PPSSPP",
-      "lastFetch": "2026-11-26T16:51:20.361Z",
+      "lastFetch": "2026-11-27T16:53:54.086Z",
       "sourceUrl": "https://api.github.com/repos/hrydgard/ppsspp/releases",
       "releases": [
         {
@@ -21256,7 +21256,7 @@
     },
     "scummvm": {
       "name": "ScummVM",
-      "lastFetch": "2026-11-26T16:51:20.782Z",
+      "lastFetch": "2026-11-27T16:53:54.436Z",
       "sourceUrl": "https://api.github.com/repos/scummvm/scummvm/releases",
       "releases": [
         {
@@ -21368,7 +21368,7 @@
     },
     "stellarium": {
       "name": "Stellarium",
-      "lastFetch": "2026-11-26T16:51:21.690Z",
+      "lastFetch": "2026-11-27T16:53:55.439Z",
       "sourceUrl": "https://api.github.com/repos/Stellarium/stellarium/releases",
       "releases": [
         {
@@ -21515,7 +21515,7 @@
     },
     "supertuxkart": {
       "name": "SuperTuxKart",
-      "lastFetch": "2026-11-26T16:51:22.325Z",
+      "lastFetch": "2026-11-27T16:53:55.966Z",
       "sourceUrl": "https://api.github.com/repos/supertuxkart/stk-code/releases",
       "releases": [
         {
@@ -21578,7 +21578,7 @@
     },
     "adaway": {
       "name": "AdAway",
-      "lastFetch": "2026-11-26T16:51:22.733Z",
+      "lastFetch": "2026-11-27T16:53:56.307Z",
       "sourceUrl": "https://api.github.com/repos/AdAway/AdAway/releases",
       "releases": [
         {
@@ -21725,7 +21725,7 @@
     },
     "aniyomi": {
       "name": "Aniyomi",
-      "lastFetch": "2026-11-26T16:51:23.670Z",
+      "lastFetch": "2026-11-27T16:53:56.969Z",
       "sourceUrl": "https://api.github.com/repos/jmir1/aniyomi/releases",
       "releases": [
         {
@@ -21872,7 +21872,7 @@
     },
     "ankidroid": {
       "name": "AnkiDroid",
-      "lastFetch": "2026-11-26T16:51:24.510Z",
+      "lastFetch": "2026-11-27T16:53:57.592Z",
       "sourceUrl": "https://api.github.com/repos/ankidroid/Anki-Android/releases",
       "releases": [
         {
@@ -21991,7 +21991,7 @@
     },
     "antennapod": {
       "name": "AntennaPod",
-      "lastFetch": "2026-11-26T16:51:24.880Z",
+      "lastFetch": "2026-11-27T16:53:57.996Z",
       "sourceUrl": "https://api.github.com/repos/AntennaPod/AntennaPod/releases",
       "releases": [
         {
@@ -22138,7 +22138,7 @@
     },
     "audiobookshelf": {
       "name": "Audiobookshelf",
-      "lastFetch": "2026-11-26T16:51:25.342Z",
+      "lastFetch": "2026-11-27T16:53:58.382Z",
       "sourceUrl": "https://api.github.com/repos/advplyr/audiobookshelf/releases",
       "releases": [
         {
@@ -22285,7 +22285,7 @@
     },
     "blokada": {
       "name": "Blokada",
-      "lastFetch": "2026-11-26T16:51:25.637Z",
+      "lastFetch": "2026-11-27T16:53:58.671Z",
       "sourceUrl": "https://api.github.com/repos/blokadaorg/blokada/releases",
       "releases": [
         {
@@ -22313,7 +22313,7 @@
     },
     "davx5": {
       "name": "DAVx5",
-      "lastFetch": "2026-11-26T16:51:26.191Z",
+      "lastFetch": "2026-11-27T16:53:59.352Z",
       "sourceUrl": "https://api.github.com/repos/bitfireAT/davx5-ose/releases",
       "releases": [
         {
@@ -22460,7 +22460,7 @@
     },
     "f-droid": {
       "name": "F-Droid",
-      "lastFetch": "2026-11-26T16:51:26.434Z",
+      "lastFetch": "2026-11-27T16:53:59.580Z",
       "sourceUrl": "https://gitlab.com/api/v4/projects/fdroid%2Ffdroidclient/releases",
       "releases": [
         {
@@ -22509,7 +22509,7 @@
     },
     "kiss-launcher": {
       "name": "KISS Launcher",
-      "lastFetch": "2026-11-26T16:51:26.866Z",
+      "lastFetch": "2026-11-27T16:54:00.256Z",
       "sourceUrl": "https://api.github.com/repos/Neamar/KISS/releases",
       "releases": [
         {
@@ -22656,7 +22656,7 @@
     },
     "libre-tube": {
       "name": "LibreTube",
-      "lastFetch": "2026-11-26T16:51:27.472Z",
+      "lastFetch": "2026-11-27T16:54:01.005Z",
       "sourceUrl": "https://api.github.com/repos/libre-tube/LibreTube/releases",
       "releases": [
         {
@@ -22803,7 +22803,7 @@
     },
     "loop-habit-tracker": {
       "name": "Loop Habit Tracker",
-      "lastFetch": "2026-11-26T16:51:27.800Z",
+      "lastFetch": "2026-11-27T16:54:01.388Z",
       "sourceUrl": "https://api.github.com/repos/iSoron/uhabits/releases",
       "releases": [
         {
@@ -22950,7 +22950,7 @@
     },
     "markor": {
       "name": "Markor",
-      "lastFetch": "2026-11-26T16:51:28.194Z",
+      "lastFetch": "2026-11-27T16:54:01.897Z",
       "sourceUrl": "https://api.github.com/repos/gsantner/markor/releases",
       "releases": [
         {
@@ -23097,7 +23097,7 @@
     },
     "netguard": {
       "name": "NetGuard",
-      "lastFetch": "2026-11-26T16:51:28.639Z",
+      "lastFetch": "2026-11-27T16:54:02.420Z",
       "sourceUrl": "https://api.github.com/repos/M66B/NetGuard/releases",
       "releases": [
         {
@@ -23244,7 +23244,7 @@
     },
     "opentracks": {
       "name": "OpenTracks",
-      "lastFetch": "2026-11-26T16:51:29.135Z",
+      "lastFetch": "2026-11-27T16:54:02.916Z",
       "sourceUrl": "https://api.github.com/repos/OpenTracksApp/OpenTracks/releases",
       "releases": [
         {
@@ -23391,7 +23391,7 @@
     },
     "orbot": {
       "name": "Orbot",
-      "lastFetch": "2026-11-26T16:51:30.342Z",
+      "lastFetch": "2026-11-27T16:54:03.761Z",
       "sourceUrl": "https://api.github.com/repos/guardianproject/orbot/releases",
       "releases": [
         {
@@ -23538,7 +23538,7 @@
     },
     "organic-maps": {
       "name": "Organic Maps",
-      "lastFetch": "2026-11-26T16:51:31.139Z",
+      "lastFetch": "2026-11-27T16:54:04.554Z",
       "sourceUrl": "https://api.github.com/repos/organicmaps/organicmaps/releases",
       "releases": [
         {
@@ -23685,7 +23685,7 @@
     },
     "orgzly": {
       "name": "Orgzly",
-      "lastFetch": "2026-11-26T16:51:31.705Z",
+      "lastFetch": "2026-11-27T16:54:05.173Z",
       "sourceUrl": "https://api.github.com/repos/orgzly/orgzly-android/releases",
       "releases": [
         {
@@ -23832,7 +23832,7 @@
     },
     "seal": {
       "name": "Seal",
-      "lastFetch": "2026-11-26T16:51:32.221Z",
+      "lastFetch": "2026-11-27T16:54:05.808Z",
       "sourceUrl": "https://api.github.com/repos/JunkFood02/Seal/releases",
       "releases": [
         {
@@ -23979,7 +23979,7 @@
     },
     "shelter": {
       "name": "Shelter",
-      "lastFetch": "2026-11-26T16:51:32.588Z",
+      "lastFetch": "2026-11-27T16:54:06.041Z",
       "sourceUrl": "https://api.github.com/repos/PeterCxy/Shelter/releases",
       "releases": [
         {
@@ -23993,7 +23993,7 @@
     },
     "spotube": {
       "name": "Spotube",
-      "lastFetch": "2026-11-26T16:51:33.689Z",
+      "lastFetch": "2026-11-27T16:54:06.842Z",
       "sourceUrl": "https://api.github.com/repos/KRTirtho/spotube/releases",
       "releases": [
         {
@@ -24140,7 +24140,7 @@
     },
     "bookstack": {
       "name": "BookStack",
-      "lastFetch": "2026-11-26T16:51:34.706Z",
+      "lastFetch": "2026-11-27T16:54:08.147Z",
       "sourceUrl": "https://codeberg.org/api/v1/repos/BookStack/BookStack/releases",
       "releases": [
         {
@@ -24287,7 +24287,7 @@
     },
     "calibre": {
       "name": "calibre",
-      "lastFetch": "2026-11-26T16:51:35.167Z",
+      "lastFetch": "2026-11-27T16:54:08.631Z",
       "sourceUrl": "https://api.github.com/repos/kovidgoyal/calibre/releases",
       "releases": [
         {
@@ -24434,7 +24434,7 @@
     },
     "cherrytree": {
       "name": "CherryTree",
-      "lastFetch": "2026-11-26T16:51:35.792Z",
+      "lastFetch": "2026-11-27T16:54:09.323Z",
       "sourceUrl": "https://api.github.com/repos/giuspen/cherrytree/releases",
       "releases": [
         {
@@ -24581,7 +24581,7 @@
     },
     "etherpad": {
       "name": "Etherpad",
-      "lastFetch": "2026-11-26T16:51:36.669Z",
+      "lastFetch": "2026-11-27T16:54:10.221Z",
       "sourceUrl": "https://api.github.com/repos/ether/etherpad-lite/releases",
       "releases": [
         {
@@ -24728,7 +24728,7 @@
     },
     "ghost": {
       "name": "Ghost",
-      "lastFetch": "2026-11-26T16:51:37.230Z",
+      "lastFetch": "2026-11-27T16:54:10.681Z",
       "sourceUrl": "https://api.github.com/repos/TryGhost/Ghost/releases",
       "releases": [
         {
@@ -24875,7 +24875,7 @@
     },
     "hedgedoc": {
       "name": "HedgeDoc",
-      "lastFetch": "2026-11-26T16:51:37.636Z",
+      "lastFetch": "2026-11-27T16:54:11.029Z",
       "sourceUrl": "https://api.github.com/repos/hedgedoc/hedgedoc/releases",
       "releases": [
         {
@@ -25022,7 +25022,7 @@
     },
     "jabref": {
       "name": "JabRef",
-      "lastFetch": "2026-11-26T16:51:38.316Z",
+      "lastFetch": "2026-11-27T16:54:11.709Z",
       "sourceUrl": "https://api.github.com/repos/JabRef/jabref/releases",
       "releases": [
         {
@@ -25169,7 +25169,7 @@
     },
     "joplin": {
       "name": "Joplin",
-      "lastFetch": "2026-11-26T16:51:39.449Z",
+      "lastFetch": "2026-11-27T16:54:12.830Z",
       "sourceUrl": "https://api.github.com/repos/laurent22/joplin/releases",
       "releases": [
         {
@@ -25316,7 +25316,7 @@
     },
     "libreoffice": {
       "name": "LibreOffice",
-      "lastFetch": "2026-11-26T16:51:40.488Z",
+      "lastFetch": "2026-11-27T16:54:14.080Z",
       "sourceUrl": "https://download.documentfoundation.org/libreoffice/stable/",
       "releases": [
         {
@@ -25351,7 +25351,7 @@
     },
     "logseq": {
       "name": "Logseq",
-      "lastFetch": "2026-11-26T16:51:41.794Z",
+      "lastFetch": "2026-11-27T16:54:15.241Z",
       "sourceUrl": "https://api.github.com/repos/logseq/logseq/releases",
       "releases": [
         {
@@ -25498,7 +25498,7 @@
     },
     "marktext": {
       "name": "MarkText",
-      "lastFetch": "2026-11-26T16:51:42.772Z",
+      "lastFetch": "2026-11-27T16:54:16.184Z",
       "sourceUrl": "https://api.github.com/repos/marktext/marktext/releases",
       "releases": [
         {
@@ -25651,7 +25651,7 @@
     },
     "pandoc": {
       "name": "pandoc",
-      "lastFetch": "2026-11-26T16:51:44.366Z",
+      "lastFetch": "2026-11-27T16:54:17.547Z",
       "sourceUrl": "https://api.github.com/repos/jgm/pandoc/releases",
       "releases": [
         {
@@ -25798,7 +25798,7 @@
     },
     "pdfarranger": {
       "name": "PDF Arranger",
-      "lastFetch": "2026-11-26T16:51:44.819Z",
+      "lastFetch": "2026-11-27T16:54:17.882Z",
       "sourceUrl": "https://api.github.com/repos/pdfarranger/pdfarranger/releases",
       "releases": [
         {
@@ -25945,7 +25945,7 @@
     },
     "pdfsam": {
       "name": "PDFsam",
-      "lastFetch": "2026-11-26T16:51:45.680Z",
+      "lastFetch": "2026-11-27T16:54:18.826Z",
       "sourceUrl": "https://api.github.com/repos/torakiki/pdfsam/releases",
       "releases": [
         {
@@ -26092,7 +26092,7 @@
     },
     "simplenote": {
       "name": "Simplenote",
-      "lastFetch": "2026-11-26T16:51:47.178Z",
+      "lastFetch": "2026-11-27T16:54:19.986Z",
       "sourceUrl": "https://api.github.com/repos/Automattic/simplenote-electron/releases",
       "releases": [
         {
@@ -26239,7 +26239,7 @@
     },
     "stirling-pdf": {
       "name": "Stirling-PDF",
-      "lastFetch": "2026-11-26T16:51:48.172Z",
+      "lastFetch": "2026-11-27T16:54:21.105Z",
       "sourceUrl": "https://api.github.com/repos/Stirling-Tools/Stirling-PDF/releases",
       "releases": [
         {
@@ -26386,7 +26386,7 @@
     },
     "trilium": {
       "name": "Trilium Notes",
-      "lastFetch": "2026-11-26T16:51:49.614Z",
+      "lastFetch": "2026-11-27T16:54:22.384Z",
       "sourceUrl": "https://api.github.com/repos/zadam/trilium/releases",
       "releases": [
         {
@@ -26533,7 +26533,7 @@
     },
     "xournalpp": {
       "name": "Xournal++",
-      "lastFetch": "2026-11-26T16:51:50.301Z",
+      "lastFetch": "2026-11-27T16:54:23.019Z",
       "sourceUrl": "https://api.github.com/repos/xournalpp/xournalpp/releases",
       "releases": [
         {
@@ -26686,7 +26686,7 @@
     },
     "etcher": {
       "name": "balenaEtcher",
-      "lastFetch": "2026-11-26T16:51:51.815Z",
+      "lastFetch": "2026-11-27T16:54:24.451Z",
       "sourceUrl": "https://api.github.com/repos/balena-io/etcher/releases",
       "releases": [
         {
@@ -26826,7 +26826,7 @@
     },
     "bedrock-linux": {
       "name": "Bedrock Linux",
-      "lastFetch": "2026-11-26T16:51:52.727Z",
+      "lastFetch": "2026-11-27T16:54:25.377Z",
       "sourceUrl": "https://api.github.com/repos/bedrocklinux/bedrocklinux-userland/releases",
       "releases": [
         {
@@ -26973,7 +26973,7 @@
     },
     "dietpi": {
       "name": "DietPi",
-      "lastFetch": "2026-11-26T16:51:53.114Z",
+      "lastFetch": "2026-11-27T16:54:25.739Z",
       "sourceUrl": "https://api.github.com/repos/MichaIng/DietPi/releases",
       "releases": [
         {
@@ -27112,7 +27112,7 @@
     },
     "elementary-os": {
       "name": "elementary OS",
-      "lastFetch": "2026-11-26T16:51:53.697Z",
+      "lastFetch": "2026-11-27T16:54:26.244Z",
       "sourceUrl": "https://api.github.com/repos/elementary/os/releases",
       "releases": [
         {
@@ -27265,7 +27265,7 @@
     },
     "libreelec": {
       "name": "LibreELEC",
-      "lastFetch": "2026-11-26T16:51:54.409Z",
+      "lastFetch": "2026-11-27T16:54:26.781Z",
       "sourceUrl": "https://api.github.com/repos/LibreELEC/LibreELEC.tv/releases",
       "releases": [
         {
@@ -27418,7 +27418,7 @@
     },
     "openwrt": {
       "name": "OpenWrt",
-      "lastFetch": "2026-11-26T16:51:55.249Z",
+      "lastFetch": "2026-11-27T16:54:27.402Z",
       "sourceUrl": "https://api.github.com/repos/openwrt/openwrt/releases",
       "releases": [
         {
@@ -27577,42 +27577,42 @@
     },
     "puppy-linux": {
       "name": "Puppy Linux",
-      "lastFetch": "2026-11-26T16:51:56.222Z",
+      "lastFetch": "2026-11-27T16:54:28.089Z",
       "sourceUrl": "https://api.github.com/repos/puppylinux-woof-CE/woof-CE/releases",
       "releases": [
         {
-          "version": "Puppy-Kernel-6.18-x86-usrmerge/release-261118",
-          "name": "Puppy-Kernels-6.18-x86-usrmerge",
-          "releaseDate": "2026-11-18T17:39:23Z",
-          "releaseUrl": "https://github.com/puppylinux-woof-CE/woof-CE/releases/tag/Puppy-Kernel-6.18-x86-usrmerge/release-261118",
-          "releaseNotes": ""
-        },
-        {
-          "version": "Puppy-Kernel-6.18-x86_64-usrmerge/release-261118",
-          "name": "Puppy-Kernels-6.18-x86_64-usrmerge",
-          "releaseDate": "2026-11-18T17:39:07Z",
-          "releaseUrl": "https://github.com/puppylinux-woof-CE/woof-CE/releases/tag/Puppy-Kernel-6.18-x86_64-usrmerge/release-261118",
-          "releaseNotes": ""
-        },
-        {
-          "version": "Puppy-Kernel-6.18-x86_64/release-261118",
+          "version": "Puppy-Kernel-6.18-x86_64/release-261127",
           "name": "Puppy-Kernels-6.18-x86_64",
-          "releaseDate": "2026-11-18T17:39:04Z",
-          "releaseUrl": "https://github.com/puppylinux-woof-CE/woof-CE/releases/tag/Puppy-Kernel-6.18-x86_64/release-261118",
+          "releaseDate": "2026-11-27T09:17:49Z",
+          "releaseUrl": "https://github.com/puppylinux-woof-CE/woof-CE/releases/tag/Puppy-Kernel-6.18-x86_64/release-261127",
           "releaseNotes": ""
         },
         {
-          "version": "Puppy-Kernel-6.18-x86/release-261118",
+          "version": "Puppy-Kernel-6.18-x86-usrmerge/release-261127",
+          "name": "Puppy-Kernels-6.18-x86-usrmerge",
+          "releaseDate": "2026-11-27T09:17:48Z",
+          "releaseUrl": "https://github.com/puppylinux-woof-CE/woof-CE/releases/tag/Puppy-Kernel-6.18-x86-usrmerge/release-261127",
+          "releaseNotes": ""
+        },
+        {
+          "version": "Puppy-Kernel-6.18-x86/release-261127",
           "name": "Puppy-Kernels-6.18-x86",
-          "releaseDate": "2026-11-18T17:39:04Z",
-          "releaseUrl": "https://github.com/puppylinux-woof-CE/woof-CE/releases/tag/Puppy-Kernel-6.18-x86/release-261118",
+          "releaseDate": "2026-11-27T09:17:37Z",
+          "releaseUrl": "https://github.com/puppylinux-woof-CE/woof-CE/releases/tag/Puppy-Kernel-6.18-x86/release-261127",
+          "releaseNotes": ""
+        },
+        {
+          "version": "Puppy-Kernel-6.18-x86_64-usrmerge/release-261127",
+          "name": "Puppy-Kernels-6.18-x86_64-usrmerge",
+          "releaseDate": "2026-11-27T09:17:33Z",
+          "releaseUrl": "https://github.com/puppylinux-woof-CE/woof-CE/releases/tag/Puppy-Kernel-6.18-x86_64-usrmerge/release-261127",
           "releaseNotes": ""
         }
       ]
     },
     "raspberry-pi-imager": {
       "name": "Raspberry Pi Imager",
-      "lastFetch": "2026-11-26T16:51:56.931Z",
+      "lastFetch": "2026-11-27T16:54:28.594Z",
       "sourceUrl": "https://api.github.com/repos/raspberrypi/rpi-imager/releases",
       "releases": [
         {
@@ -27759,7 +27759,7 @@
     },
     "reactos": {
       "name": "ReactOS",
-      "lastFetch": "2026-11-26T16:51:57.319Z",
+      "lastFetch": "2026-11-27T16:54:28.844Z",
       "sourceUrl": "https://api.github.com/repos/reactos/reactos/releases",
       "releases": [
         {
@@ -27836,7 +27836,7 @@
     },
     "redox-os": {
       "name": "Redox OS",
-      "lastFetch": "2026-11-26T16:51:57.774Z",
+      "lastFetch": "2026-11-27T16:54:29.172Z",
       "sourceUrl": "https://api.github.com/repos/redox-os/redox/releases",
       "releases": [
         {
@@ -27968,13 +27968,13 @@
     },
     "ubuntu": {
       "name": "Ubuntu",
-      "lastFetch": "2026-11-26T16:51:59.822Z",
+      "lastFetch": "2026-11-27T16:54:31.439Z",
       "sourceUrl": "https://cloud-images.ubuntu.com/releases/streams/v1/com.ubuntu.cloud:released:download.json",
       "releases": [
         {
           "version": "Ubuntu 26.10",
           "name": "26.10",
-          "releaseDate": "2026-11-05T00:00:00Z",
+          "releaseDate": "2026-11-23T00:00:00Z",
           "releaseUrl": "https://cloud-images.ubuntu.com/releases/26.10/",
           "releaseNotes": ""
         },
@@ -28115,7 +28115,7 @@
     },
     "ventoy": {
       "name": "Ventoy",
-      "lastFetch": "2026-11-26T16:52:00.440Z",
+      "lastFetch": "2026-11-27T16:54:32.270Z",
       "sourceUrl": "https://api.github.com/repos/ventoy/Ventoy/releases",
       "releases": [
         {
@@ -28274,7 +28274,7 @@
     },
     "adguard-home": {
       "name": "AdGuard Home",
-      "lastFetch": "2026-11-26T16:52:02.416Z",
+      "lastFetch": "2026-11-27T16:54:34.210Z",
       "sourceUrl": "https://api.github.com/repos/AdguardTeam/AdGuardHome/releases",
       "releases": [
         {
@@ -28421,7 +28421,7 @@
     },
     "aircrack-ng": {
       "name": "Aircrack-ng",
-      "lastFetch": "2026-11-26T16:52:02.733Z",
+      "lastFetch": "2026-11-27T16:54:34.468Z",
       "sourceUrl": "https://api.github.com/repos/aircrack-ng/aircrack-ng/releases",
       "releases": [
         {
@@ -28491,7 +28491,7 @@
     },
     "certbot": {
       "name": "Certbot",
-      "lastFetch": "2026-11-26T16:52:03.487Z",
+      "lastFetch": "2026-11-27T16:54:35.144Z",
       "sourceUrl": "https://api.github.com/repos/certbot/certbot/releases",
       "releases": [
         {
@@ -28638,7 +28638,7 @@
     },
     "endlessh": {
       "name": "endlessh",
-      "lastFetch": "2026-11-26T16:52:03.799Z",
+      "lastFetch": "2026-11-27T16:54:35.425Z",
       "sourceUrl": "https://api.github.com/repos/skeeto/endlessh/releases",
       "releases": [
         {
@@ -28652,7 +28652,7 @@
     },
     "fail2ban": {
       "name": "Fail2ban",
-      "lastFetch": "2026-11-26T16:52:04.221Z",
+      "lastFetch": "2026-11-27T16:54:35.811Z",
       "sourceUrl": "https://api.github.com/repos/fail2ban/fail2ban/releases",
       "releases": [
         {
@@ -28799,7 +28799,7 @@
     },
     "gobuster": {
       "name": "Gobuster",
-      "lastFetch": "2026-11-26T16:52:04.669Z",
+      "lastFetch": "2026-11-27T16:54:36.223Z",
       "sourceUrl": "https://api.github.com/repos/OJ/gobuster/releases",
       "releases": [
         {
@@ -28897,7 +28897,7 @@
     },
     "hashcat": {
       "name": "Hashcat",
-      "lastFetch": "2026-11-26T16:52:05.034Z",
+      "lastFetch": "2026-11-27T16:54:36.575Z",
       "sourceUrl": "https://api.github.com/repos/hashcat/hashcat/releases",
       "releases": [
         {
@@ -29044,7 +29044,7 @@
     },
     "keepassxc": {
       "name": "KeePassXC",
-      "lastFetch": "2026-11-26T16:52:05.946Z",
+      "lastFetch": "2026-11-27T16:54:37.384Z",
       "sourceUrl": "https://api.github.com/repos/keepassxreboot/keepassxc/releases",
       "releases": [
         {
@@ -29191,7 +29191,7 @@
     },
     "masscan": {
       "name": "Masscan",
-      "lastFetch": "2026-11-26T16:52:06.293Z",
+      "lastFetch": "2026-11-27T16:54:37.693Z",
       "sourceUrl": "https://api.github.com/repos/robertdavidgraham/masscan/releases",
       "releases": [
         {
@@ -29254,7 +29254,7 @@
     },
     "onionshare": {
       "name": "OnionShare",
-      "lastFetch": "2026-11-26T16:52:06.802Z",
+      "lastFetch": "2026-11-27T16:54:38.240Z",
       "sourceUrl": "https://api.github.com/repos/onionshare/onionshare/releases",
       "releases": [
         {
@@ -29401,7 +29401,7 @@
     },
     "owasp-zap": {
       "name": "OWASP ZAP",
-      "lastFetch": "2026-11-26T16:52:07.302Z",
+      "lastFetch": "2026-11-27T16:54:38.778Z",
       "sourceUrl": "https://api.github.com/repos/zaproxy/zaproxy/releases",
       "releases": [
         {
@@ -29429,7 +29429,7 @@
     },
     "pi-hole": {
       "name": "Pi-hole",
-      "lastFetch": "2026-11-26T16:52:07.782Z",
+      "lastFetch": "2026-11-27T16:54:39.156Z",
       "sourceUrl": "https://api.github.com/repos/pi-hole/pi-hole/releases",
       "releases": [
         {
@@ -29576,7 +29576,7 @@
     },
     "privacy-badger": {
       "name": "Privacy Badger",
-      "lastFetch": "2026-11-26T16:52:08.319Z",
+      "lastFetch": "2026-11-27T16:54:39.661Z",
       "sourceUrl": "https://api.github.com/repos/EFForg/privacybadger/releases",
       "releases": [
         {
@@ -29723,7 +29723,7 @@
     },
     "sqlmap": {
       "name": "sqlmap",
-      "lastFetch": "2026-11-26T16:52:09.154Z",
+      "lastFetch": "2026-11-27T16:54:39.932Z",
       "sourceUrl": "https://api.github.com/repos/sqlmapproject/sqlmap/releases",
       "releases": [
         {
@@ -29807,7 +29807,7 @@
     },
     "suricata": {
       "name": "Suricata",
-      "lastFetch": "2026-11-26T16:52:09.626Z",
+      "lastFetch": "2026-11-27T16:54:40.449Z",
       "sourceUrl": "https://api.github.com/repos/OISF/suricata/releases",
       "releases": [
         {
@@ -29954,9 +29954,16 @@
     },
     "ublock-origin": {
       "name": "uBlock Origin",
-      "lastFetch": "2026-11-26T16:52:10.330Z",
+      "lastFetch": "2026-11-27T16:54:41.352Z",
       "sourceUrl": "https://api.github.com/repos/gorhill/uBlock/releases",
       "releases": [
+        {
+          "version": "1.77.4",
+          "name": "1.77.4",
+          "releaseDate": "2026-11-27T13:57:47Z",
+          "releaseUrl": "https://github.com/gorhill/uBlock/releases/tag/1.77.4",
+          "releaseNotes": "[Commits to master since this release](https://github.com/gorhill/uBlock/compare/1.77.4...master)\r\n[Commits since last release](https://github.com/gorhill/uBlock/compare/1.77.2...1.77.4)\r\n\r\nTo install the stable build:\r\n\r\n- **Firefox**: Install from AMO: <https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/>\r\n    [uBO works best on Firefox](https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox)\r\n- **Chromium**: Install directly from [signed CRX package](https://github.com/gorhill/uBlock/releases/download/1.77.4/uBlock0_1.77.4.chromium.crx)\r\n- **Edge**: Install from Microsoft Store: <https://microsoftedge.microsoft.com/addons/detail/odfafepnkmbhccpbejgmiehpchacaeak>\r\n- **Opera**: Install from Opera addons: <https://addons.opera.com/en/extensions/details/ublock/>\r\n\r\n---\r\n\r\n[[picker] Fix element picker for older browser versions](https://github.com/gorhill/uBlock/commit/640660d5a4)\r\n"
+        },
         {
           "version": "1.77.2",
           "name": "1.77.2",
@@ -30089,19 +30096,12 @@
           "releaseDate": "2025-09-15T13:58:13Z",
           "releaseUrl": "https://github.com/gorhill/uBlock/releases/tag/1.66.4",
           "releaseNotes": "[Commits to master since this release](https://github.com/gorhill/uBlock/compare/1.66.4...master)\r\n[Commits since last release](https://github.com/gorhill/uBlock/compare/1.66.0...1.66.4)\r\n\r\nTo install the stable build:\r\n\r\n- **Firefox**: Click [uBlock0_1.66.4.firefox.signed.xpi](https://addons.mozilla.org/firefox/downloads/file/4578681/ublock_origin-1.66.4.xpi)\r\n    [uBO works best on Firefox](https://github.com/gorhill/uBlock/wiki/uBlock-Origin-works-best-on-Firefox)\r\n- **Chromium**: Install from the Chrome store: <https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm>\r\n    - [About Google Chrome's \"This extension may soon no longer be supported\"](https://github.com/uBlockOrigin/uBlock-issues/wiki/About-Google-Chrome's-%22This-extension-may-soon-no-longer-be-supported%22)\r\n    - As per [latest update from Google Chrome](https://developer.chrome.com/docs/extensions/develop/migrate/mv2-deprecation-timeline), MV2 support will be completely removed in [version 139](https://chromiumdash.appspot.com/schedule).\r\n- **Edge**: Install from Microsoft Store: <https://microsoftedge.microsoft.com/addons/detail/odfafepnkmbhccpbejgmiehpchacaeak>\r\n- **Opera**: Install from Opera addons: <https://addons.opera.com/en/extensions/details/ublock/>\r\n\r\n---\r\n\r\n- [Fix potential  infinite loop when scanning for `$` anchor](https://github.com/gorhill/uBlock/commit/889c0eb208)\r\n- [Allow generic exception for `replace=` option](https://github.com/gorhill/uBlock/commit/52dba4116e)\r\n"
-        },
-        {
-          "version": "1.66.2",
-          "name": "1.66.2",
-          "releaseDate": "2025-09-08T18:14:47Z",
-          "releaseUrl": "https://github.com/gorhill/uBlock/releases/tag/1.66.2",
-          "releaseNotes": "[Commits to master since this release](https://github.com/gorhill/uBlock/compare/1.66.2...master)\r\n[Commits since last release](https://github.com/gorhill/uBlock/compare/1.66.0...1.66.2)\r\n\r\nTo install the stable build:\r\n\r\n- **Edge**: Install from Microsoft Store: <https://microsoftedge.microsoft.com/addons/detail/odfafepnkmbhccpbejgmiehpchacaeak>\r\n\r\n---\r\n\r\n- [Fix version snafu](https://github.com/gorhill/uBlock/commit/50cb780107)\r\n    - The issue was affecting only new installations from Edge Add-ons Store"
         }
       ]
     },
     "vaultwarden": {
       "name": "Vaultwarden",
-      "lastFetch": "2026-11-26T16:52:10.769Z",
+      "lastFetch": "2026-11-27T16:54:41.749Z",
       "sourceUrl": "https://api.github.com/repos/dani-garcia/vaultwarden/releases",
       "releases": [
         {
@@ -30248,7 +30248,7 @@
     },
     "veracrypt": {
       "name": "VeraCrypt",
-      "lastFetch": "2026-11-26T16:52:11.601Z",
+      "lastFetch": "2026-11-27T16:54:42.499Z",
       "sourceUrl": "https://api.github.com/repos/veracrypt/VeraCrypt/releases",
       "releases": [
         {
@@ -30395,7 +30395,7 @@
     },
     "wazuh": {
       "name": "Wazuh",
-      "lastFetch": "2026-11-26T16:52:12.106Z",
+      "lastFetch": "2026-11-27T16:54:43.091Z",
       "sourceUrl": "https://api.github.com/repos/wazuh/wazuh/releases",
       "releases": [
         {
@@ -30542,7 +30542,7 @@
     },
     "zeek": {
       "name": "Zeek",
-      "lastFetch": "2026-11-26T16:52:12.827Z",
+      "lastFetch": "2026-11-27T16:54:43.999Z",
       "sourceUrl": "https://api.github.com/repos/zeek/zeek/releases",
       "releases": [
         {
@@ -30689,7 +30689,7 @@
     },
     "bleachbit": {
       "name": "BleachBit",
-      "lastFetch": "2026-11-26T16:52:13.405Z",
+      "lastFetch": "2026-11-27T16:54:44.590Z",
       "sourceUrl": "https://api.github.com/repos/bleachbit/bleachbit/releases",
       "releases": [
         {
@@ -30822,7 +30822,7 @@
     },
     "borgbackup": {
       "name": "BorgBackup",
-      "lastFetch": "2026-11-26T16:52:14.751Z",
+      "lastFetch": "2026-11-27T16:54:45.622Z",
       "sourceUrl": "https://api.github.com/repos/borgbackup/borg/releases",
       "releases": [
         {
@@ -30969,7 +30969,7 @@
     },
     "btop": {
       "name": "btop",
-      "lastFetch": "2026-11-26T16:52:15.370Z",
+      "lastFetch": "2026-11-27T16:54:46.301Z",
       "sourceUrl": "https://api.github.com/repos/aristocratos/btop/releases",
       "releases": [
         {
@@ -31116,7 +31116,7 @@
     },
     "duf": {
       "name": "duf",
-      "lastFetch": "2026-11-26T16:52:15.804Z",
+      "lastFetch": "2026-11-27T16:54:46.693Z",
       "sourceUrl": "https://api.github.com/repos/muesli/duf/releases",
       "releases": [
         {
@@ -31221,7 +31221,7 @@
     },
     "dust": {
       "name": "dust",
-      "lastFetch": "2026-11-26T16:52:16.462Z",
+      "lastFetch": "2026-11-27T16:54:47.360Z",
       "sourceUrl": "https://api.github.com/repos/bootandy/dust/releases",
       "releases": [
         {
@@ -31368,7 +31368,7 @@
     },
     "fastfetch": {
       "name": "fastfetch",
-      "lastFetch": "2026-11-26T16:52:19.136Z",
+      "lastFetch": "2026-11-27T16:54:50.365Z",
       "sourceUrl": "https://api.github.com/repos/fastfetch-cli/fastfetch/releases",
       "releases": [
         {
@@ -31515,7 +31515,7 @@
     },
     "glances": {
       "name": "Glances",
-      "lastFetch": "2026-11-26T16:52:19.627Z",
+      "lastFetch": "2026-11-27T16:54:50.724Z",
       "sourceUrl": "https://api.github.com/repos/nicolargo/glances/releases",
       "releases": [
         {
@@ -31662,7 +31662,7 @@
     },
     "headscale": {
       "name": "Headscale",
-      "lastFetch": "2026-11-26T16:52:20.849Z",
+      "lastFetch": "2026-11-27T16:54:51.714Z",
       "sourceUrl": "https://api.github.com/repos/juanfont/headscale/releases",
       "releases": [
         {
@@ -31809,7 +31809,7 @@
     },
     "htop": {
       "name": "htop",
-      "lastFetch": "2026-11-26T16:52:21.217Z",
+      "lastFetch": "2026-11-27T16:54:52.021Z",
       "sourceUrl": "https://api.github.com/repos/htop-dev/htop/releases",
       "releases": [
         {
@@ -31956,7 +31956,7 @@
     },
     "kopia": {
       "name": "Kopia",
-      "lastFetch": "2026-11-26T16:52:22.827Z",
+      "lastFetch": "2026-11-27T16:54:53.605Z",
       "sourceUrl": "https://api.github.com/repos/kopia/kopia/releases",
       "releases": [
         {
@@ -32103,7 +32103,7 @@
     },
     "lsd": {
       "name": "lsd",
-      "lastFetch": "2026-11-26T16:52:23.322Z",
+      "lastFetch": "2026-11-27T16:54:54.136Z",
       "sourceUrl": "https://api.github.com/repos/lsd-rs/lsd/releases",
       "releases": [
         {
@@ -32250,7 +32250,7 @@
     },
     "nnn": {
       "name": "nnn",
-      "lastFetch": "2026-11-26T16:52:23.946Z",
+      "lastFetch": "2026-11-27T16:54:54.629Z",
       "sourceUrl": "https://api.github.com/repos/jarun/nnn/releases",
       "releases": [
         {
@@ -32397,7 +32397,7 @@
     },
     "portainer": {
       "name": "Portainer",
-      "lastFetch": "2026-11-26T16:52:25.204Z",
+      "lastFetch": "2026-11-27T16:54:55.613Z",
       "sourceUrl": "https://api.github.com/repos/portainer/portainer/releases",
       "releases": [
         {
@@ -32544,7 +32544,7 @@
     },
     "rclone": {
       "name": "rclone",
-      "lastFetch": "2026-11-26T16:52:27.201Z",
+      "lastFetch": "2026-11-27T16:54:57.644Z",
       "sourceUrl": "https://api.github.com/repos/rclone/rclone/releases",
       "releases": [
         {
@@ -32691,7 +32691,7 @@
     },
     "restic": {
       "name": "restic",
-      "lastFetch": "2026-11-26T16:52:28.127Z",
+      "lastFetch": "2026-11-27T16:54:58.443Z",
       "sourceUrl": "https://api.github.com/repos/restic/restic/releases",
       "releases": [
         {
@@ -32838,7 +32838,7 @@
     },
     "rmlint": {
       "name": "rmlint",
-      "lastFetch": "2026-11-26T16:52:28.466Z",
+      "lastFetch": "2026-11-27T16:54:58.763Z",
       "sourceUrl": "https://api.github.com/repos/sahib/rmlint/releases",
       "releases": [
         {
@@ -32985,7 +32985,7 @@
     },
     "syncthing": {
       "name": "Syncthing",
-      "lastFetch": "2026-11-26T16:52:30.084Z",
+      "lastFetch": "2026-11-27T16:55:00.342Z",
       "sourceUrl": "https://api.github.com/repos/syncthing/syncthing/releases",
       "releases": [
         {
@@ -33132,7 +33132,7 @@
     },
     "timeshift": {
       "name": "Timeshift",
-      "lastFetch": "2026-11-26T16:52:30.413Z",
+      "lastFetch": "2026-11-27T16:55:00.615Z",
       "sourceUrl": "https://api.github.com/repos/linuxmint/timeshift/releases",
       "releases": [
         {
@@ -33181,7 +33181,7 @@
     },
     "tlp": {
       "name": "TLP",
-      "lastFetch": "2026-11-26T16:52:30.827Z",
+      "lastFetch": "2026-11-27T16:55:00.928Z",
       "sourceUrl": "https://api.github.com/repos/linrunner/TLP/releases",
       "releases": [
         {
@@ -33328,7 +33328,7 @@
     },
     "yazi": {
       "name": "yazi",
-      "lastFetch": "2026-11-26T16:52:31.450Z",
+      "lastFetch": "2026-11-27T16:55:01.499Z",
       "sourceUrl": "https://api.github.com/repos/sxyazi/yazi/releases",
       "releases": [
         {
@@ -33475,7 +33475,7 @@
     },
     "anime4k": {
       "name": "Anime4K",
-      "lastFetch": "2026-11-26T16:52:31.739Z",
+      "lastFetch": "2026-11-27T16:55:01.780Z",
       "sourceUrl": "https://api.github.com/repos/bloc97/Anime4K/releases",
       "releases": [
         {
@@ -33524,7 +33524,7 @@
     },
     "celluloid": {
       "name": "Celluloid",
-      "lastFetch": "2026-11-26T16:52:33.259Z",
+      "lastFetch": "2026-11-27T16:55:02.228Z",
       "sourceUrl": "https://api.github.com/repos/celluloid-player/celluloid/releases",
       "releases": [
         {
@@ -33671,7 +33671,7 @@
     },
     "clapper": {
       "name": "Clapper",
-      "lastFetch": "2026-11-26T16:52:33.776Z",
+      "lastFetch": "2026-11-27T16:55:02.606Z",
       "sourceUrl": "https://api.github.com/repos/Rafostar/clapper/releases",
       "releases": [
         {
@@ -33769,7 +33769,7 @@
     },
     "flowblade": {
       "name": "Flowblade",
-      "lastFetch": "2026-11-26T16:52:34.212Z",
+      "lastFetch": "2026-11-27T16:55:02.982Z",
       "sourceUrl": "https://api.github.com/repos/jliljebl/flowblade/releases",
       "releases": [
         {
@@ -33916,7 +33916,7 @@
     },
     "handbrake": {
       "name": "HandBrake",
-      "lastFetch": "2026-11-26T16:52:34.965Z",
+      "lastFetch": "2026-11-27T16:55:03.912Z",
       "sourceUrl": "https://api.github.com/repos/HandBrake/HandBrake/releases",
       "releases": [
         {
@@ -34069,7 +34069,7 @@
     },
     "losslesscut": {
       "name": "LosslessCut",
-      "lastFetch": "2026-11-26T16:52:36.465Z",
+      "lastFetch": "2026-11-27T16:55:05.517Z",
       "sourceUrl": "https://api.github.com/repos/mifi/lossless-cut/releases",
       "releases": [
         {
@@ -34216,7 +34216,7 @@
     },
     "mpv": {
       "name": "mpv",
-      "lastFetch": "2026-11-26T16:52:37.089Z",
+      "lastFetch": "2026-11-27T16:55:06.058Z",
       "sourceUrl": "https://api.github.com/repos/mpv-player/mpv/releases",
       "releases": [
         {
@@ -34363,7 +34363,7 @@
     },
     "natron": {
       "name": "Natron",
-      "lastFetch": "2026-11-26T16:52:37.548Z",
+      "lastFetch": "2026-11-27T16:55:06.442Z",
       "sourceUrl": "https://api.github.com/repos/NatronGitHub/Natron/releases",
       "releases": [
         {
@@ -34510,7 +34510,7 @@
     },
     "obs-studio": {
       "name": "OBS Studio",
-      "lastFetch": "2026-11-26T16:52:38.851Z",
+      "lastFetch": "2026-11-27T16:55:07.604Z",
       "sourceUrl": "https://api.github.com/repos/obsproject/obs-studio/releases",
       "releases": [
         {
@@ -34663,7 +34663,7 @@
     },
     "openshot": {
       "name": "OpenShot",
-      "lastFetch": "2026-11-26T16:52:40.138Z",
+      "lastFetch": "2026-11-27T16:55:08.835Z",
       "sourceUrl": "https://api.github.com/repos/OpenShot/openshot-qt/releases",
       "releases": [
         {
@@ -34810,7 +34810,7 @@
     },
     "peek": {
       "name": "Peek",
-      "lastFetch": "2026-11-26T16:52:40.520Z",
+      "lastFetch": "2026-11-27T16:55:09.226Z",
       "sourceUrl": "https://api.github.com/repos/phw/peek/releases",
       "releases": [
         {
@@ -34957,7 +34957,7 @@
     },
     "screentogif": {
       "name": "ScreenToGif",
-      "lastFetch": "2026-11-26T16:52:41.193Z",
+      "lastFetch": "2026-11-27T16:55:09.854Z",
       "sourceUrl": "https://api.github.com/repos/NickeManarin/ScreenToGif/releases",
       "releases": [
         {
@@ -35104,9 +35104,16 @@
     },
     "sharex": {
       "name": "ShareX",
-      "lastFetch": "2026-11-26T16:52:41.735Z",
+      "lastFetch": "2026-11-27T16:55:10.425Z",
       "sourceUrl": "https://api.github.com/repos/ShareX/ShareX/releases",
       "releases": [
+        {
+          "version": "v22.5.0",
+          "name": "ShareX 22.5.0",
+          "releaseDate": "2026-11-26T18:27:47Z",
+          "releaseUrl": "https://github.com/ShareX/ShareX/releases/tag/v22.5.0",
+          "releaseNotes": "**Changelog:** https://getsharex.com/changelog#v22.5.0\r\n\r\n| File | SHA256 |\r\n| --- | --- |\r\n| ShareX-22.5.0-portable-x64.zip | `52C398B3FC544C5EE37530F6272F52913AEC0EA1DC7666EE50DE2AB78BF0DF4E` |\r\n| ShareX-22.5.0-setup-x64.exe | `0AC699FDE6D29C53EC135864509A7B802FA2E9004484F34165095E5A744D4C0F` |"
+        },
         {
           "version": "v22.4.0",
           "name": "ShareX 22.4.0",
@@ -35239,19 +35246,12 @@
           "releaseDate": "2021-05-13T18:09:39Z",
           "releaseUrl": "https://github.com/ShareX/ShareX/releases/tag/v13.5.0",
           "releaseNotes": "[Changelog](https://getsharex.com/changelog)"
-        },
-        {
-          "version": "v13.4.0",
-          "name": "ShareX 13.4.0",
-          "releaseDate": "2020-12-16T11:38:06Z",
-          "releaseUrl": "https://github.com/ShareX/ShareX/releases/tag/v13.4.0",
-          "releaseNotes": "[Changelog](https://getsharex.com/changelog)"
         }
       ]
     },
     "shotcut": {
       "name": "Shotcut",
-      "lastFetch": "2026-11-26T16:52:42.602Z",
+      "lastFetch": "2026-11-27T16:55:11.431Z",
       "sourceUrl": "https://api.github.com/repos/mltframework/shotcut/releases",
       "releases": [
         {
@@ -35398,7 +35398,7 @@
     },
     "smplayer": {
       "name": "SMPlayer",
-      "lastFetch": "2026-11-26T16:52:43.429Z",
+      "lastFetch": "2026-11-27T16:55:12.265Z",
       "sourceUrl": "https://api.github.com/repos/smplayer-dev/smplayer/releases",
       "releases": [
         {
@@ -35468,7 +35468,7 @@
     },
     "vapoursynth": {
       "name": "VapourSynth",
-      "lastFetch": "2026-11-26T16:52:44.060Z",
+      "lastFetch": "2026-11-27T16:55:13.059Z",
       "sourceUrl": "https://api.github.com/repos/vapoursynth/vapoursynth/releases",
       "releases": [
         {
@@ -35621,7 +35621,7 @@
     },
     "vokoscreenng": {
       "name": "VokoscreenNG",
-      "lastFetch": "2026-11-26T16:52:45.230Z",
+      "lastFetch": "2026-11-27T16:55:14.354Z",
       "sourceUrl": "https://api.github.com/repos/vkohaupt/vokoscreenNG/releases",
       "releases": [
         {
