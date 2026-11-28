@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "lastUpdated": "2026-11-27T16:51:39.434Z",
+  "lastUpdated": "2026-11-28T15:43:24.444Z",
   "applications": {
     "audacious": {
       "name": "Audacious",
-      "lastFetch": "2026-11-27T16:51:40.031Z",
+      "lastFetch": "2026-11-28T15:43:24.883Z",
       "sourceUrl": "https://api.github.com/repos/audacious-media-player/audacious/releases",
       "releases": [
         {
@@ -67,7 +67,7 @@
     },
     "audacity": {
       "name": "Audacity",
-      "lastFetch": "2026-11-27T16:51:40.630Z",
+      "lastFetch": "2026-11-28T15:43:25.555Z",
       "sourceUrl": "https://api.github.com/repos/audacity/audacity/releases",
       "releases": [
         {
@@ -214,7 +214,7 @@
     },
     "bespokesynth": {
       "name": "BespokeSynth",
-      "lastFetch": "2026-11-27T16:51:40.978Z",
+      "lastFetch": "2026-11-28T15:43:25.837Z",
       "sourceUrl": "https://api.github.com/repos/BespokeSynth/BespokeSynth/releases",
       "releases": [
         {
@@ -256,7 +256,7 @@
     },
     "cardinal": {
       "name": "Cardinal",
-      "lastFetch": "2026-11-27T16:51:41.499Z",
+      "lastFetch": "2026-11-28T15:43:26.353Z",
       "sourceUrl": "https://api.github.com/repos/DISTRHO/Cardinal/releases",
       "releases": [
         {
@@ -403,7 +403,7 @@
     },
     "carla": {
       "name": "Carla",
-      "lastFetch": "2026-11-27T16:51:41.918Z",
+      "lastFetch": "2026-11-28T15:43:26.773Z",
       "sourceUrl": "https://api.github.com/repos/falkTX/Carla/releases",
       "releases": [
         {
@@ -550,7 +550,7 @@
     },
     "clementine": {
       "name": "Clementine",
-      "lastFetch": "2026-11-27T16:51:44.124Z",
+      "lastFetch": "2026-11-28T15:43:29.070Z",
       "sourceUrl": "https://api.github.com/repos/clementine-player/Clementine/releases",
       "releases": [
         {
@@ -585,7 +585,7 @@
     },
     "cmus": {
       "name": "cmus",
-      "lastFetch": "2026-11-27T16:51:44.443Z",
+      "lastFetch": "2026-11-28T15:43:29.319Z",
       "sourceUrl": "https://api.github.com/repos/cmus/cmus/releases",
       "releases": [
         {
@@ -655,7 +655,7 @@
     },
     "giada": {
       "name": "Giada",
-      "lastFetch": "2026-11-27T16:51:44.989Z",
+      "lastFetch": "2026-11-28T15:43:29.757Z",
       "sourceUrl": "https://api.github.com/repos/monocasual/giada/releases",
       "releases": [
         {
@@ -802,7 +802,7 @@
     },
     "guitarix": {
       "name": "Guitarix",
-      "lastFetch": "2026-11-27T16:51:45.310Z",
+      "lastFetch": "2026-11-28T15:43:30.068Z",
       "sourceUrl": "https://api.github.com/repos/brummer10/guitarix/releases",
       "releases": [
         {
@@ -892,7 +892,7 @@
     },
     "hydrogen": {
       "name": "Hydrogen",
-      "lastFetch": "2026-11-27T16:51:46.102Z",
+      "lastFetch": "2026-11-28T15:43:30.702Z",
       "sourceUrl": "https://api.github.com/repos/hydrogen-music/hydrogen/releases",
       "releases": [
         {
@@ -1011,7 +1011,7 @@
     },
     "lmms": {
       "name": "LMMS",
-      "lastFetch": "2026-11-27T16:51:46.574Z",
+      "lastFetch": "2026-11-28T15:43:31.119Z",
       "sourceUrl": "https://api.github.com/repos/LMMS/lmms/releases",
       "releases": [
         {
@@ -1158,7 +1158,7 @@
     },
     "mixxx": {
       "name": "Mixxx",
-      "lastFetch": "2026-11-27T16:51:46.836Z",
+      "lastFetch": "2026-11-28T15:43:31.439Z",
       "sourceUrl": "https://api.github.com/repos/mixxxdj/mixxx/releases",
       "releases": [
         {
@@ -1305,7 +1305,7 @@
     },
     "muse": {
       "name": "MusE",
-      "lastFetch": "2026-11-27T16:51:47.141Z",
+      "lastFetch": "2026-11-28T15:43:31.746Z",
       "sourceUrl": "https://api.github.com/repos/muse-sequencer/muse/releases",
       "releases": [
         {
@@ -1361,7 +1361,7 @@
     },
     "musescore": {
       "name": "MuseScore",
-      "lastFetch": "2026-11-27T16:51:47.838Z",
+      "lastFetch": "2026-11-28T15:43:32.472Z",
       "sourceUrl": "https://api.github.com/repos/musescore/MuseScore/releases",
       "releases": [
         {
@@ -1508,7 +1508,7 @@
     },
     "picard": {
       "name": "MusicBrainz Picard",
-      "lastFetch": "2026-11-27T16:51:48.821Z",
+      "lastFetch": "2026-11-28T15:43:33.977Z",
       "sourceUrl": "https://api.github.com/repos/metabrainz/picard/releases",
       "releases": [
         {
@@ -1655,7 +1655,7 @@
     },
     "qmplay2": {
       "name": "QMPlay2",
-      "lastFetch": "2026-11-27T16:51:49.462Z",
+      "lastFetch": "2026-11-28T15:43:34.694Z",
       "sourceUrl": "https://api.github.com/repos/zaps166/QMPlay2/releases",
       "releases": [
         {
@@ -1802,7 +1802,7 @@
     },
     "strawberry": {
       "name": "Strawberry",
-      "lastFetch": "2026-11-27T16:51:51.108Z",
+      "lastFetch": "2026-11-28T15:43:36.467Z",
       "sourceUrl": "https://api.github.com/repos/strawberrymusicplayer/strawberry/releases",
       "releases": [
         {
@@ -1949,7 +1949,7 @@
     },
     "surge": {
       "name": "Surge",
-      "lastFetch": "2026-11-27T16:51:51.373Z",
+      "lastFetch": "2026-11-28T15:43:36.752Z",
       "sourceUrl": "https://api.github.com/repos/surge-synthesizer/surge/releases",
       "releases": [
         {
@@ -1963,7 +1963,7 @@
     },
     "zynaddsubfx": {
       "name": "ZynAddSubFX",
-      "lastFetch": "2026-11-27T16:51:51.644Z",
+      "lastFetch": "2026-11-28T15:43:37.139Z",
       "sourceUrl": "https://api.github.com/repos/zynaddsubfx/zynaddsubfx/releases",
       "releases": [
         {
@@ -1977,7 +1977,7 @@
     },
     "caddy": {
       "name": "Caddy",
-      "lastFetch": "2026-11-27T16:51:55.374Z",
+      "lastFetch": "2026-11-28T15:43:40.525Z",
       "sourceUrl": "https://api.github.com/repos/caddyserver/caddy/releases",
       "releases": [
         {
@@ -2124,7 +2124,7 @@
     },
     "casaos": {
       "name": "CasaOS",
-      "lastFetch": "2026-11-27T16:51:56.170Z",
+      "lastFetch": "2026-11-28T15:43:41.255Z",
       "sourceUrl": "https://api.github.com/repos/IceWhaleTech/CasaOS/releases",
       "releases": [
         {
@@ -2271,7 +2271,7 @@
     },
     "dockge": {
       "name": "Dockge",
-      "lastFetch": "2026-11-27T16:51:56.440Z",
+      "lastFetch": "2026-11-28T15:43:41.523Z",
       "sourceUrl": "https://api.github.com/repos/louislam/dockge/releases",
       "releases": [
         {
@@ -2376,7 +2376,7 @@
     },
     "forgejo": {
       "name": "Forgejo",
-      "lastFetch": "2026-11-27T16:51:57.846Z",
+      "lastFetch": "2026-11-28T15:43:42.583Z",
       "sourceUrl": "https://codeberg.org/api/v1/repos/forgejo/forgejo/releases",
       "releases": [
         {
@@ -2523,7 +2523,7 @@
     },
     "gitea": {
       "name": "Gitea",
-      "lastFetch": "2026-11-27T16:52:01.476Z",
+      "lastFetch": "2026-11-28T15:43:46.609Z",
       "sourceUrl": "https://api.github.com/repos/go-gitea/gitea/releases",
       "releases": [
         {
@@ -2670,7 +2670,7 @@
     },
     "home-assistant": {
       "name": "Home Assistant",
-      "lastFetch": "2026-11-27T16:52:01.866Z",
+      "lastFetch": "2026-11-28T15:43:47.025Z",
       "sourceUrl": "https://api.github.com/repos/home-assistant/core/releases",
       "releases": [
         {
@@ -2817,7 +2817,7 @@
     },
     "jellyfin": {
       "name": "Jellyfin",
-      "lastFetch": "2026-11-27T16:52:02.649Z",
+      "lastFetch": "2026-11-28T15:43:47.696Z",
       "sourceUrl": "https://api.github.com/repos/jellyfin/jellyfin/releases",
       "releases": [
         {
@@ -2964,9 +2964,16 @@
     },
     "memos": {
       "name": "Memos",
-      "lastFetch": "2026-11-27T16:52:03.230Z",
+      "lastFetch": "2026-11-28T15:43:48.319Z",
       "sourceUrl": "https://api.github.com/repos/usememos/memos/releases",
       "releases": [
+        {
+          "version": "26.11.3",
+          "name": "26.11.3",
+          "releaseDate": "2026-11-28T05:54:50Z",
+          "releaseUrl": "https://github.com/usememos/memos/releases/tag/26.11.3",
+          "releaseNotes": "Memos 26.11.3 adds AI tag suggestions, gives each Space one shared timeline, and opens memo actions on right-click. AI provider setup, the calendar, snippets, and SSO sign-in also improve.\n\n## Highlights\n\n* **Tag suggestions:** With a text generation provider configured, Suggest tags with AI in the composer proposes tags for a draft and prefers the tags you already use. ([tag suggestions](https://github.com/usememos/memos/commit/63971da132eeab0a2c5975e092d95c066a28dbe3))\n* **Spaces:** A Space has one timeline that shows every member's readable memos, newest first. A memo written in a Space starts with the Space audience and a comment starts with its parent's audience, so members see each other's memos and comments. You can still pick any audience before saving. ([#6625](https://github.com/usememos/memos/pull/6625))\n* **Places and account:** The sidebar title lists Home, Explore, and every Space in one menu that closes when you choose a place. The account moves to the sidebar's last row, with Inbox, Archived, Settings, theme, language, and Sign out, and it shows the unread count while something is unread. ([#6625](https://github.com/usememos/memos/pull/6625))\n* **Memo actions:** Right-click a memo card to open its More menu at the pointer, even when the card's header has scrolled out of view. Links, images, and selected text keep the browser's own menu. ([#6611](https://github.com/usememos/memos/pull/6611))\n* **Calendar:** The month grid lists every memo of a day, one row each, and ends with \"+N more\" when a day holds more than fit. ([#6615](https://github.com/usememos/memos/pull/6615))\n\n## Fixes and polish\n\n* **Editor and attachments:** Editing or renaming an attachment, such as a saved drawing, keeps its place in the memo. Mermaid diagrams draw without the code block background and in the app's font. Code blocks highlight Visual Basic (`vb`, `vba`, `vbnet`, `vbscript`). Copy coordinates works on instances served over plain HTTP. ([#6669](https://github.com/usememos/memos/pull/6669), [Mermaid diagrams](https://github.com/usememos/memos/commit/4eaab2f09ec749c34f2859dd5d89314c52a11f23), [#6655](https://github.com/usememos/memos/pull/6655), [#6612](https://github.com/usememos/memos/pull/6612))\n* **Memo view:** Opening a memo keeps the line wrapping it has in the timeline. A metadata row keeps its detail readable while hovered, such as a related memo's date or a file's type and size. Long timestamp tooltips wrap inside the tooltip. ([line wrapping](https://github.com/usememos/memos/commit/cb0007e2b3e23ea9de457bec03214c20b14db7d9), [metadata rows](https://github.com/usememos/memos/commit/dd01a907833e2a48ebcfb140e8d1f25a6f7479c1), [#6660](https://github.com/usememos/memos/pull/6660))\n* **Snippets:** Snippets of linked, related, and parent memos carry up to 160 characters and end with \"…\". They keep @mentions, put a space between nested list items, turn line breaks inside inline code into spaces, and show escaped characters and entities as the text they stand for. Long memos also parse faster. ([longer snippets](https://github.com/usememos/memos/commit/72247cafb468bfdce3e9b19f6b1a8af4b7fc426b), [#6622](https://github.com/usememos/memos/pull/6622), [#6624](https://github.com/usememos/memos/pull/6624), [#6644](https://github.com/usememos/memos/pull/6644), [#6667](https://github.com/usememos/memos/pull/6667), [#6654](https://github.com/usememos/memos/pull/6654))\n* **Files:** Two uploads with the same filename at the same moment no longer overwrite each other on local storage whose path template has no `{uuid}`. Local attachments named `index.html` open instead of returning 404. On a private instance, a file request with an expired session gets a sign-in error instead of a server error. ([#6607](https://github.com/usememos/memos/pull/6607), [#6637](https://github.com/usememos/memos/pull/6637), [#6623](https://github.com/usememos/memos/pull/6623))\n* **Import:** Importing an archive that replaces a memo checks the image references of the incoming content, and an import that fails no longer deletes unlinked attachments that existed before it. ([#6613](https://github.com/usememos/memos/pull/6613))\n* **Interface and languages:** Bengali is available. Korean, Hebrew, Russian, and Simplified Chinese translate their remaining English strings, Japanese translates usage limits, and the SSO provider summary uses each language's plural forms. Sidebar titles use the interface font and leave the serif to the Memos wordmark. Full width sits with the layout options and says why the Auto layout locks it. Long Space lists scroll inside their menu. ([#6670](https://github.com/usememos/memos/pull/6670), [#6616](https://github.com/usememos/memos/pull/6616), [#6635](https://github.com/usememos/memos/pull/6635), [#6650](https://github.com/usememos/memos/pull/6650), [#6649](https://github.com/usememos/memos/pull/6649), [#6648](https://github.com/usememos/memos/pull/6648), [#6651](https://github.com/usememos/memos/pull/6651), [sidebar titles](https://github.com/usememos/memos/commit/e126d246f93d0eea08fad6951085c8b6648a27af), [Full width](https://github.com/usememos/memos/commit/7667d643ddb0efab35bfd3c21a1e74294a83d4da), [Space lists](https://github.com/usememos/memos/commit/1ef51894abd925fd2a26780267421f764948ee0c))\n\n## Administration and integrations\n\n* **AI providers:** Settings > AI names each provider by the service it connects to. Eight provider types cover hosted services, local model servers, and any OpenAI-compatible or Anthropic-compatible API; local and compatible types can run without an API key. Each provider shows its status and lists its models in a searchable model field. Saving a new or changed provider checks the connection and shows the reason in the dialog when it fails. Transcription and tag suggestions each have a Try it playground that calls the provider with the saved settings. ([provider catalog](https://github.com/usememos/memos/commit/ecabc47b7779d90d24ab7bb4286dd2bf47c7f04c), [AI settings](https://github.com/usememos/memos/commit/63971da132eeab0a2c5975e092d95c066a28dbe3))\n* **AI errors:** A failed provider call reports a fixed message and a reason, such as a rejected key, an exhausted quota, or an unreachable endpoint; the provider's own error text is never shown. Provider calls do not follow redirects, and an unreachable `localhost` endpoint explains that the address is resolved on the Memos server. Audio the transcription provider cannot take is refused as an invalid request instead of a server error. ([AI settings](https://github.com/usememos/memos/commit/63971da132eeab0a2c5975e092d95c066a28dbe3), [provider catalog](https://github.com/usememos/memos/commit/ecabc47b7779d90d24ab7bb4286dd2bf47c7f04c), [#6608](https://github.com/usememos/memos/pull/6608))\n* **SSO:** When an instance URL is configured, SSO sign-in and identity linking accept only that instance's `/auth/callback` as the redirect URI, so a caller can no longer choose the URI sent to the identity provider. ([SSO redirect URI](https://github.com/usememos/memos/commit/99003b4165526e353953082fb16e7455cc5183b3))\n* **Webhooks:** A receiver that answers 2xx without a JSON body, such as `204 No Content`, counts as delivered instead of logging a failure. ([#6627](https://github.com/usememos/memos/pull/6627))\n* **Declarative configuration:** `config plan` checks linked identities and the remaining sign-in methods against the state the apply would leave. A plan that removes an identity provider no longer accepts identities linked to it. ([#6620](https://github.com/usememos/memos/pull/6620))\n* **API:** `AIService.SuggestTags` suggests tags for a draft, limited to 20 requests per user per hour. `AIService.ListAIProviderTypes` and `ListAIProviderModels` describe provider types and a saved provider's models for administrators, and `InstanceProfile.ai_features` tells signed-in users which AI features are on. `CreateUserWebhook`, `UpdateAttachment`, and `UpdateUserSetting` return an invalid-argument error for a request without a body instead of a server error. ([AI settings](https://github.com/usememos/memos/commit/63971da132eeab0a2c5975e092d95c066a28dbe3), [provider catalog](https://github.com/usememos/memos/commit/ecabc47b7779d90d24ab7bb4286dd2bf47c7f04c), [#6628](https://github.com/usememos/memos/pull/6628))\n* **Maintenance:** The background pass that rebuilds memo metadata no longer skips a memo when memos are deleted while it runs. ([#6666](https://github.com/usememos/memos/pull/6666))\n\n## Upgrade notes\n\n* **Database:** This release adds no schema change after 26.11.2. When upgrading from 26.11.0 or earlier, follow the 26.11.1 migration steps: back up, stop other writers, and start one instance first.\n* **SSO and the instance URL:** If `--instance-url` is set, it must be the address people sign in at: same scheme, host, and port. Sign-in through SSO and linking an identity fail with `redirect_uri must be <instance URL>/auth/callback` when the browser's address differs. Before upgrading, check the instance URL and that the identity provider's registered redirect URI is `<instance URL>/auth/callback`. Instances without an instance URL behave as before. ([SSO redirect URI](https://github.com/usememos/memos/commit/99003b4165526e353953082fb16e7455cc5183b3))\n* **AI settings:** Administrators should open Settings > AI after upgrading. ([AI settings](https://github.com/usememos/memos/commit/63971da132eeab0a2c5975e092d95c066a28dbe3), [provider catalog](https://github.com/usememos/memos/commit/ecabc47b7779d90d24ab7bb4286dd2bf47c7f04c))\n  * A transcription setting stored without a model reads as off. Choose its provider and model again.\n  * A provider of type `OPENAI` that points at another service's endpoint keeps working, but is offered only what OpenAI serves. Change its type to the real service (`DEEPSEEK`, `OPENROUTER`, `OLLAMA`) or to `OPENAI_COMPATIBLE`, and enter the API key again when you do.\n  * Provider endpoints must be `http` or `https` URLs that answer without redirecting. Enter the final URL.\n  * Provider calls no longer pick up `OPENAI_*` environment variables set on the server. Put the key and endpoint in the provider itself.\n* **AI setting API:** API clients and configuration files that write the `AI` instance setting must change as follows. ([AI settings](https://github.com/usememos/memos/commit/63971da132eeab0a2c5975e092d95c066a28dbe3), [provider catalog](https://github.com/usememos/memos/commit/ecabc47b7779d90d24ab7bb4286dd2bf47c7f04c))\n  * The setting is admin only. `GetInstanceSetting` no longer returns it to other signed-in users; they read `InstanceProfile.ai_features` instead.\n  * A capability is on when it is set and off when it is unset. `transcription` and `text_generation` each need both `provider_id` and `model`; an empty `provider_id` no longer means off, and the server no longer chooses a transcription model.\n  * `UpdateInstanceSetting` replaces the setting whole. Omitting `transcription` or `text_generation` turns that capability off.\n  * `InstanceSetting.AIProviderType` names the service: `OPENAI`, `GEMINI`, `ANTHROPIC`, `DEEPSEEK`, `OPENROUTER`, `OLLAMA`, `OPENAI_COMPATIBLE`, `ANTHROPIC_COMPATIBLE`. The `*_COMPATIBLE` types require an endpoint; `OLLAMA` and the `*_COMPATIBLE` types accept an empty API key. An endpoint equal to its type's default is stored and returned as empty.\n  * Changing a provider's type or endpoint requires its API key again. An update to the same connection still accepts an empty key to keep the stored one.\n  * `UpdateInstanceSetting` lists the models of each new or changed provider and refuses the save when the key is rejected, the endpoint cannot be reached or redirects, or the provider does not answer in time. The error carries an `AI_*` `google.rpc.ErrorInfo` reason. It also refuses a capability whose provider type cannot serve it, such as an `ANTHROPIC` provider for transcription.\n* **SSO API:** `AuthService.SignIn` with `sso_credentials` and `UserService.CreateLinkedIdentity` reject a `redirect_uri` that is not `/auth/callback` on the configured instance URL. ([SSO redirect URI](https://github.com/usememos/memos/commit/99003b4165526e353953082fb16e7455cc5183b3))\n* **Space links:** `/spaces/{id}/explore` is removed. Use `/spaces/{id}`, which now shows every member's memos. ([#6625](https://github.com/usememos/memos/pull/6625))\n* **Snippets in the API and webhooks:** `Memo.snippet` carries up to 160 characters and ends with \"…\" where it used to stop at 64 characters and \" ...\". Clients that detect a cut snippet by its trailing \" ...\" need to look for \"…\". ([longer snippets](https://github.com/usememos/memos/commit/72247cafb468bfdce3e9b19f6b1a8af4b7fc426b))\n\n## New Contributors\n* @thejesh23 made their first contribution in https://github.com/usememos/memos/pull/6607\n* @yxshee made their first contribution in https://github.com/usememos/memos/pull/6612\n* @wonjangcloud9 made their first contribution in https://github.com/usememos/memos/pull/6616\n* @mayank609 made their first contribution in https://github.com/usememos/memos/pull/6624\n* @eightman999 made their first contribution in https://github.com/usememos/memos/pull/6648\n* @oriko9 made their first contribution in https://github.com/usememos/memos/pull/6635\n* @yztutu made their first contribution in https://github.com/usememos/memos/pull/6650\n* @DU8866-nice made their first contribution in https://github.com/usememos/memos/pull/6651\n* @g4lb made their first contribution in https://github.com/usememos/memos/pull/6654\n* @ashokram-si made their first contribution in https://github.com/usememos/memos/pull/6644\n* @KarmanyaIyer made their first contribution in https://github.com/usememos/memos/pull/6669\n* @Demiarge made their first contribution in https://github.com/usememos/memos/pull/6670\n\n**Full Changelog**: https://github.com/usememos/memos/compare/26.11.2...26.11.3\n"
+        },
         {
           "version": "26.11.2",
           "name": "26.11.2",
@@ -3099,19 +3106,12 @@
           "releaseDate": "2025-06-02T02:49:05Z",
           "releaseUrl": "https://github.com/usememos/memos/releases/tag/v0.24.4",
           "releaseNotes": "## What's Changed\r\n\r\n* feat: automatically add a new table row in the editor when pressing enter by @dzervas in https://github.com/usememos/memos/pull/4706\r\n* feat: add infinite scrolling for memos by @liltrendi in https://github.com/usememos/memos/pull/4715\r\n* fix: make the save button disabled after a successful update by @dabeeduu in https://github.com/usememos/memos/pull/4721\r\n* fix(editor): Prevent race condition and ensure correct list continuation on Enter by @jonfk in https://github.com/usememos/memos/pull/4716\r\n* feat(rss): Use server title and description for RSS feed, if configured by @maximilian-krauss in https://github.com/usememos/memos/pull/4717\r\n* fix: inherits memo visibility for default comment visibility by @maximilian-krauss in https://github.com/usememos/memos/pull/4728\r\n* refactor: memo editor by @johnnyjoygh in https://github.com/usememos/memos/pull/4730\r\n\r\n## New Contributors\r\n* @RealOrangeOne made their first contribution in https://github.com/usememos/memos/pull/4699\r\n* @dzervas made their first contribution in https://github.com/usememos/memos/pull/4706\r\n* @liltrendi made their first contribution in https://github.com/usememos/memos/pull/4715\r\n* @dabeeduu made their first contribution in https://github.com/usememos/memos/pull/4721\r\n* @eya46 made their first contribution in https://github.com/usememos/memos/pull/4719\r\n* @jonfk made their first contribution in https://github.com/usememos/memos/pull/4716\r\n* @maximilian-krauss made their first contribution in https://github.com/usememos/memos/pull/4717\r\n\r\n**Full Changelog**: https://github.com/usememos/memos/compare/v0.24.3...v0.24.4"
-        },
-        {
-          "version": "v0.24.3",
-          "name": "v0.24.3",
-          "releaseDate": "2025-05-12T15:23:21Z",
-          "releaseUrl": "https://github.com/usememos/memos/releases/tag/v0.24.3",
-          "releaseNotes": "## Changelog\r\n* 070b3929427eb0efa2c5917af5ccbcc5a54df5bf chore: Czech locale update (#4685)\r\n* 0f965c6fe02fa5f8f994afa6db4be8455cf4b192 chore: add action cache\r\n* 75f5c4c0b28d8f84b0cc17f86374aa6198b84d99 chore: add deepwiki badge\r\n* 7e1368028b612f88bc6aad90cccd1b95a308397d chore: add dockerfile.demo\r\n* 18b9b9d18f55cd9dc7e4bed607a3d3bc601f200b chore: implement memo filter in list memo relations\r\n* 9c7899781f253951683bad9c70b2c60dddef8526 chore: update alt text of deepwiki badge\r\n* 8bdd1ec009f5584738d8363e1d830e785899ff35 feat: add norwegian bokmål (nb) translation (#4561)\r\n* 30f37f6a05c7da2b3edd94d9edf3d9feaf55de21 feat: enhance site.webmanifest in chrome (#4676)\r\n* bb892be5b36e0bf0a59d97b4fdc311f75a86dd15 feat: improve visual feedback in MemoEditor for drag/drop file uploads  (#4634)\r\n* 76ed1b5cc50e78142458f6347cb62c5616808d58 feat: set locale based on browser language when user is not logged in (#4635)\r\n* a46301fa77536959603478a494fdfdeb3b5b63c8 feat: support child tags in NSFW blur feature (#4640)\r\n* e23ade1f8b34922512b388916f0693a5957582bf feat: support listening on a UNIX socket (#4654)\r\n* eb33a604b276f8552b02cc82a661b959333f09f4 feat: support mapping avatar url from oauth2\r\n* a63d9b471b6420b7f4fceffe5a2a3b42943a180d feat: update ItalicNode to use repeated children instead of content (#4566)\r\n* 88b38ff2c0022c7febcae2ba06fb253a390838aa fix: aws-chunked encoding is not supported with the specified x-amz-content-sha256 value for some s3 providers (#4575)\r\n* 09c50a8419fc50cb30cc73b1d2a3212cc7ce8656 fix: codeblock highlight\r\n* 2a92baf52c8f2e27c5fa4ad98a8b095b50b43601 fix: filter args of postgres\r\n* 194a49367c8ee2f78e8fea6142c10a34ab1bd857 fix: incorrect checkbox state after removing checked items #4549 (#4552)\r\n* a6be658f42607c78301ce063bbc0e4d54c4bfb3f fix: list memo comments\r\n* 08f9b18ced6f252dff2e2ed64d85120050534d25 fix: list memo relations\r\n* 3cc0e255cee11919d64f68180a03e6d817ae0881 fix: memo filter for postgres\r\n* f6054b6138081e26b41e4cc397ce7465ff0feb58 fix: preview image window proportion error (#4689)\r\n* d649d326ef5eeff53905f8adfdd6ec444a22a19a fix: remove errors.Wrap(nil) (#4576)\r\n* ebccef6033a1055056555793aa69e5ae287ceaab fix: shutdown gRPC server gracefully (#4626)\r\n* ccfa9983e901519a14982dbe27d11af80c545e65 fix: user avatar url\r\n\r\n\r\n\r\n## New Contributors\r\n* @singhanubhavme made their first contribution in https://github.com/usememos/memos/pull/4552\r\n* @olavlan made their first contribution in https://github.com/usememos/memos/pull/4561\r\n* @NOBLES5E made their first contribution in https://github.com/usememos/memos/pull/4575\r\n* @cmppoon made their first contribution in https://github.com/usememos/memos/pull/4576\r\n* @evildao made their first contribution in https://github.com/usememos/memos/pull/4614\r\n* @Alwayswithme made their first contribution in https://github.com/usememos/memos/pull/4626\r\n* @jmlt2002 made their first contribution in https://github.com/usememos/memos/pull/4640\r\n* @gsergey418 made their first contribution in https://github.com/usememos/memos/pull/4654\r\n* @mousemin made their first contribution in https://github.com/usememos/memos/pull/4676\r\n* @wyf903990046 made their first contribution in https://github.com/usememos/memos/pull/4689\r\n\r\n**Full Changelog**: https://github.com/usememos/memos/compare/v0.24.2...v0.24.3"
         }
       ]
     },
     "minio": {
       "name": "MinIO",
-      "lastFetch": "2026-11-27T16:52:06.387Z",
+      "lastFetch": "2026-11-28T15:43:51.278Z",
       "sourceUrl": "https://api.github.com/repos/minio/minio/releases",
       "releases": [
         {
@@ -3258,7 +3258,7 @@
     },
     "nextcloud-server": {
       "name": "Nextcloud Server",
-      "lastFetch": "2026-11-27T16:52:06.838Z",
+      "lastFetch": "2026-11-28T15:43:51.611Z",
       "sourceUrl": "https://api.github.com/repos/nextcloud/server/releases",
       "releases": [
         {
@@ -3405,7 +3405,7 @@
     },
     "openproject": {
       "name": "OpenProject",
-      "lastFetch": "2026-11-27T16:52:07.558Z",
+      "lastFetch": "2026-11-28T15:43:52.109Z",
       "sourceUrl": "https://api.github.com/repos/opf/openproject/releases",
       "releases": [
         {
@@ -3552,7 +3552,7 @@
     },
     "owncast": {
       "name": "Owncast",
-      "lastFetch": "2026-11-27T16:52:07.949Z",
+      "lastFetch": "2026-11-28T15:43:52.472Z",
       "sourceUrl": "https://api.github.com/repos/owncast/owncast/releases",
       "releases": [
         {
@@ -3699,7 +3699,7 @@
     },
     "owncloud-ocis": {
       "name": "ownCloud oCIS",
-      "lastFetch": "2026-11-27T16:52:09.513Z",
+      "lastFetch": "2026-11-28T15:43:53.763Z",
       "sourceUrl": "https://api.github.com/repos/owncloud/ocis/releases",
       "releases": [
         {
@@ -3846,7 +3846,7 @@
     },
     "peertube": {
       "name": "PeerTube",
-      "lastFetch": "2026-11-27T16:52:10.259Z",
+      "lastFetch": "2026-11-28T15:43:54.416Z",
       "sourceUrl": "https://api.github.com/repos/Chocobozzz/PeerTube/releases",
       "releases": [
         {
@@ -3993,7 +3993,7 @@
     },
     "pixelfed": {
       "name": "Pixelfed",
-      "lastFetch": "2026-11-27T16:52:10.786Z",
+      "lastFetch": "2026-11-28T15:43:54.872Z",
       "sourceUrl": "https://api.github.com/repos/pixelfed/pixelfed/releases",
       "releases": [
         {
@@ -4140,7 +4140,7 @@
     },
     "runtipi": {
       "name": "Runtipi",
-      "lastFetch": "2026-11-27T16:52:11.747Z",
+      "lastFetch": "2026-11-28T15:43:55.651Z",
       "sourceUrl": "https://api.github.com/repos/meienberger/runtipi/releases",
       "releases": [
         {
@@ -4287,7 +4287,7 @@
     },
     "seafile": {
       "name": "Seafile",
-      "lastFetch": "2026-11-27T16:52:12.183Z",
+      "lastFetch": "2026-11-28T15:43:55.952Z",
       "sourceUrl": "https://api.github.com/repos/haiwen/seafile/releases",
       "releases": [
         {
@@ -4434,7 +4434,7 @@
     },
     "traefik": {
       "name": "Traefik",
-      "lastFetch": "2026-11-27T16:52:13.778Z",
+      "lastFetch": "2026-11-28T15:43:57.155Z",
       "sourceUrl": "https://api.github.com/repos/traefik/traefik/releases",
       "releases": [
         {
@@ -4581,7 +4581,7 @@
     },
     "vikunja": {
       "name": "Vikunja",
-      "lastFetch": "2026-11-27T16:52:14.525Z",
+      "lastFetch": "2026-11-28T15:43:57.815Z",
       "sourceUrl": "https://api.github.com/repos/go-vikunja/vikunja/releases",
       "releases": [
         {
@@ -4679,7 +4679,7 @@
     },
     "wallabag": {
       "name": "Wallabag",
-      "lastFetch": "2026-11-27T16:52:15.000Z",
+      "lastFetch": "2026-11-28T15:43:58.230Z",
       "sourceUrl": "https://api.github.com/repos/wallabag/wallabag/releases",
       "releases": [
         {
@@ -4826,7 +4826,7 @@
     },
     "akkoma": {
       "name": "Akkoma",
-      "lastFetch": "2026-11-27T16:52:15.626Z",
+      "lastFetch": "2026-11-28T15:43:58.808Z",
       "sourceUrl": "https://akkoma.dev/api/v1/repos/AkkomaGang/akkoma/releases",
       "releases": [
         {
@@ -4973,7 +4973,7 @@
     },
     "bigbluebutton": {
       "name": "BigBlueButton",
-      "lastFetch": "2026-11-27T16:52:16.235Z",
+      "lastFetch": "2026-11-28T15:43:59.391Z",
       "sourceUrl": "https://api.github.com/repos/bigbluebutton/bigbluebutton/releases",
       "releases": [
         {
@@ -5120,9 +5120,16 @@
     },
     "chatwoot": {
       "name": "Chatwoot",
-      "lastFetch": "2026-11-27T16:52:16.777Z",
+      "lastFetch": "2026-11-28T15:43:59.783Z",
       "sourceUrl": "https://api.github.com/repos/chatwoot/chatwoot/releases",
       "releases": [
+        {
+          "version": "v4.20.2",
+          "name": "v4.20.2",
+          "releaseDate": "2026-11-28T02:02:38Z",
+          "releaseUrl": "https://github.com/chatwoot/chatwoot/releases/tag/v4.20.2",
+          "releaseNotes": "## Changelog\r\n\r\n- Copilot workflows for all Captain accounts, with a new ask bar and full-screen view. [Enterprise, Beta]\r\n- WhatsApp call hold and resume, missed-call messages, recordings in the Calls tab, and calling health checks. [Enterprise]\r\n- Sort conversations by their latest public message.\r\n- Install the Chatwoot widget from the Shopify theme editor.\r\n- Faster Captain FAQ search and tool suggestions when saving scenarios. [Enterprise]\r\n- Webhooks now include message delivery status and Help Center article events.\r\n- Help Center articles now support up to 50,000 characters.\r\n- Self-serve Data Processing Agreements and more reliable Stripe subscription sync on Chatwoot Cloud.\r\n- Faster reports, more reliable Google sign-in, and fixes for email transcripts and Help Center custom domains.\r\n- New Languages: Croatian\r\n\r\nThanks to @m86hussein, @nico-stever, @pradelgorithm for the contributions.\r\n\r\n> Existing accounts need a [one-time backfill](https://github.com/chatwoot/chatwoot/blob/v4.20.2/docs/conversation-last-message-sort.md) before enabling last-message sorting.\r\n\r\n> We recommend upgrading to v4.20.2 for at least eight application security fixes and hardening changes, plus security patches for Puma and Rack::Protection."
+        },
         {
           "version": "v4.20.1",
           "name": "v4.20.1",
@@ -5255,19 +5262,12 @@
           "releaseDate": "2026-03-09T15:59:33Z",
           "releaseUrl": "https://github.com/chatwoot/chatwoot/releases/tag/v4.11.2",
           "releaseNotes": "This hotfix adds changes for filter service not normalizing incoming values correctly, along with other changes to harden the service"
-        },
-        {
-          "version": "v4.11.1",
-          "name": "v4.11.1",
-          "releaseDate": "2026-02-20T14:41:06Z",
-          "releaseUrl": "https://github.com/chatwoot/chatwoot/releases/tag/v4.11.1",
-          "releaseNotes": "Hotfix for Google OAuth URL\r\n\r\n**Full Changelog**: https://github.com/chatwoot/chatwoot/compare/v4.11.0...v4.11.1"
         }
       ]
     },
     "conversations": {
       "name": "Conversations",
-      "lastFetch": "2026-11-27T16:52:17.338Z",
+      "lastFetch": "2026-11-28T15:44:00.241Z",
       "sourceUrl": "https://codeberg.org/api/v1/repos/iNPUTmice/Conversations/releases",
       "releases": [
         {
@@ -5316,7 +5316,7 @@
     },
     "element": {
       "name": "Element",
-      "lastFetch": "2026-11-27T16:52:18.156Z",
+      "lastFetch": "2026-11-28T15:44:00.924Z",
       "sourceUrl": "https://api.github.com/repos/element-hq/element-desktop/releases",
       "releases": [
         {
@@ -5463,7 +5463,7 @@
     },
     "firefish": {
       "name": "Firefish",
-      "lastFetch": "2026-11-27T16:52:18.724Z",
+      "lastFetch": "2026-11-28T15:44:02.570Z",
       "sourceUrl": "https://codeberg.org/api/v1/repos/firefish/firefish/releases",
       "releases": [
         {
@@ -5610,7 +5610,7 @@
     },
     "gotify": {
       "name": "Gotify",
-      "lastFetch": "2026-11-27T16:52:19.213Z",
+      "lastFetch": "2026-11-28T15:44:03.113Z",
       "sourceUrl": "https://api.github.com/repos/gotify/server/releases",
       "releases": [
         {
@@ -5757,7 +5757,7 @@
     },
     "jitsi-meet": {
       "name": "Jitsi Meet",
-      "lastFetch": "2026-11-27T16:52:19.695Z",
+      "lastFetch": "2026-11-28T15:44:03.650Z",
       "sourceUrl": "https://api.github.com/repos/jitsi/jitsi-meet/releases",
       "releases": [
         {
@@ -5904,7 +5904,7 @@
     },
     "mastodon": {
       "name": "Mastodon",
-      "lastFetch": "2026-11-27T16:52:20.147Z",
+      "lastFetch": "2026-11-28T15:44:04.173Z",
       "sourceUrl": "https://api.github.com/repos/mastodon/mastodon/releases",
       "releases": [
         {
@@ -6051,7 +6051,7 @@
     },
     "mattermost": {
       "name": "Mattermost",
-      "lastFetch": "2026-11-27T16:52:20.753Z",
+      "lastFetch": "2026-11-28T15:44:04.727Z",
       "sourceUrl": "https://api.github.com/repos/mattermost/mattermost/releases",
       "releases": [
         {
@@ -6198,7 +6198,7 @@
     },
     "misskey": {
       "name": "Misskey",
-      "lastFetch": "2026-11-27T16:52:21.443Z",
+      "lastFetch": "2026-11-28T15:44:05.169Z",
       "sourceUrl": "https://api.github.com/repos/misskey-dev/misskey/releases",
       "releases": [
         {
@@ -6324,7 +6324,7 @@
     },
     "movim": {
       "name": "Movim",
-      "lastFetch": "2026-11-27T16:52:21.851Z",
+      "lastFetch": "2026-11-28T15:44:05.449Z",
       "sourceUrl": "https://api.github.com/repos/movim/movim/releases",
       "releases": [
         {
@@ -6471,7 +6471,7 @@
     },
     "nextcloud-talk": {
       "name": "Nextcloud Talk",
-      "lastFetch": "2026-11-27T16:52:22.472Z",
+      "lastFetch": "2026-11-28T15:44:05.974Z",
       "sourceUrl": "https://api.github.com/repos/nextcloud/spreed/releases",
       "releases": [
         {
@@ -6618,7 +6618,7 @@
     },
     "openfire": {
       "name": "Openfire",
-      "lastFetch": "2026-11-27T16:52:23.234Z",
+      "lastFetch": "2026-11-28T15:44:07.187Z",
       "sourceUrl": "https://api.github.com/repos/igniterealtime/Openfire/releases",
       "releases": [
         {
@@ -6765,7 +6765,7 @@
     },
     "profanity": {
       "name": "Profanity",
-      "lastFetch": "2026-11-27T16:52:23.633Z",
+      "lastFetch": "2026-11-28T15:44:07.542Z",
       "sourceUrl": "https://api.github.com/repos/profanity-im/profanity/releases",
       "releases": [
         {
@@ -6912,7 +6912,7 @@
     },
     "rocket-chat": {
       "name": "Rocket.Chat",
-      "lastFetch": "2026-11-27T16:52:24.070Z",
+      "lastFetch": "2026-11-28T15:44:08.023Z",
       "sourceUrl": "https://api.github.com/repos/RocketChat/Rocket.Chat/releases",
       "releases": [
         {
@@ -7059,7 +7059,7 @@
     },
     "signal": {
       "name": "Signal",
-      "lastFetch": "2026-11-27T16:52:24.606Z",
+      "lastFetch": "2026-11-28T15:44:08.423Z",
       "sourceUrl": "https://api.github.com/repos/signalapp/Signal-Desktop/releases",
       "releases": [
         {
@@ -7206,7 +7206,7 @@
     },
     "telegram-desktop": {
       "name": "Telegram Desktop",
-      "lastFetch": "2026-11-27T16:52:25.425Z",
+      "lastFetch": "2026-11-28T15:44:09.136Z",
       "sourceUrl": "https://api.github.com/repos/telegramdesktop/tdesktop/releases",
       "releases": [
         {
@@ -7353,7 +7353,7 @@
     },
     "wire": {
       "name": "Wire",
-      "lastFetch": "2026-11-27T16:52:25.945Z",
+      "lastFetch": "2026-11-28T15:44:09.775Z",
       "sourceUrl": "https://api.github.com/repos/wireapp/wire-desktop/releases",
       "releases": [
         {
@@ -7500,7 +7500,7 @@
     },
     "zulip": {
       "name": "Zulip",
-      "lastFetch": "2026-11-27T16:52:26.411Z",
+      "lastFetch": "2026-11-28T15:44:10.210Z",
       "sourceUrl": "https://api.github.com/repos/zulip/zulip/releases",
       "releases": [
         {
@@ -7647,7 +7647,7 @@
     },
     "brl-cad": {
       "name": "BRL-CAD",
-      "lastFetch": "2026-11-27T16:52:27.036Z",
+      "lastFetch": "2026-11-28T15:44:10.779Z",
       "sourceUrl": "https://api.github.com/repos/BRL-CAD/brlcad/releases",
       "releases": [
         {
@@ -7794,7 +7794,7 @@
     },
     "freecad": {
       "name": "FreeCAD",
-      "lastFetch": "2026-11-27T16:52:28.366Z",
+      "lastFetch": "2026-11-28T15:44:11.921Z",
       "sourceUrl": "https://api.github.com/repos/FreeCAD/FreeCAD/releases",
       "releases": [
         {
@@ -7849,7 +7849,7 @@
     },
     "ghdl": {
       "name": "GHDL",
-      "lastFetch": "2026-11-27T16:52:29.110Z",
+      "lastFetch": "2026-11-28T15:44:12.665Z",
       "sourceUrl": "https://api.github.com/repos/ghdl/ghdl/releases",
       "releases": [
         {
@@ -7954,7 +7954,7 @@
     },
     "horizon-eda": {
       "name": "Horizon EDA",
-      "lastFetch": "2026-11-27T16:52:29.407Z",
+      "lastFetch": "2026-11-28T15:44:13.016Z",
       "sourceUrl": "https://api.github.com/repos/horizon-eda/horizon/releases",
       "releases": [
         {
@@ -8087,7 +8087,7 @@
     },
     "iverilog": {
       "name": "Icarus Verilog",
-      "lastFetch": "2026-11-27T16:52:29.646Z",
+      "lastFetch": "2026-11-28T15:44:13.281Z",
       "sourceUrl": "https://api.github.com/repos/steveicarus/iverilog/releases",
       "releases": [
         {
@@ -8115,7 +8115,7 @@
     },
     "klayout": {
       "name": "KLayout",
-      "lastFetch": "2026-11-27T16:52:30.000Z",
+      "lastFetch": "2026-11-28T15:44:13.664Z",
       "sourceUrl": "https://api.github.com/repos/KLayout/klayout/releases",
       "releases": [
         {
@@ -8262,7 +8262,7 @@
     },
     "librecad": {
       "name": "LibreCAD",
-      "lastFetch": "2026-11-27T16:52:30.314Z",
+      "lastFetch": "2026-11-28T15:44:14.020Z",
       "sourceUrl": "https://api.github.com/repos/LibreCAD/LibreCAD/releases",
       "releases": [
         {
@@ -8360,7 +8360,7 @@
     },
     "librepcb": {
       "name": "LibrePCB",
-      "lastFetch": "2026-11-27T16:52:30.646Z",
+      "lastFetch": "2026-11-28T15:44:14.342Z",
       "sourceUrl": "https://api.github.com/repos/LibrePCB/LibrePCB/releases",
       "releases": [
         {
@@ -8479,7 +8479,7 @@
     },
     "linuxcnc": {
       "name": "LinuxCNC",
-      "lastFetch": "2026-11-27T16:52:30.986Z",
+      "lastFetch": "2026-11-28T15:44:14.707Z",
       "sourceUrl": "https://api.github.com/repos/LinuxCNC/linuxcnc/releases",
       "releases": [
         {
@@ -8521,7 +8521,7 @@
     },
     "nextpnr": {
       "name": "nextpnr",
-      "lastFetch": "2026-11-27T16:52:31.284Z",
+      "lastFetch": "2026-11-28T15:44:14.994Z",
       "sourceUrl": "https://api.github.com/repos/YosysHQ/nextpnr/releases",
       "releases": [
         {
@@ -8612,7 +8612,7 @@
     },
     "octoprint": {
       "name": "OctoPrint",
-      "lastFetch": "2026-11-27T16:52:31.906Z",
+      "lastFetch": "2026-11-28T15:44:15.552Z",
       "sourceUrl": "https://api.github.com/repos/OctoPrint/OctoPrint/releases",
       "releases": [
         {
@@ -8765,7 +8765,7 @@
     },
     "openscad": {
       "name": "OpenSCAD",
-      "lastFetch": "2026-11-27T16:52:32.530Z",
+      "lastFetch": "2026-11-28T15:44:16.035Z",
       "sourceUrl": "https://api.github.com/repos/openscad/openscad/releases",
       "releases": [
         {
@@ -8849,7 +8849,7 @@
     },
     "prusaslicer": {
       "name": "PrusaSlicer",
-      "lastFetch": "2026-11-27T16:52:33.265Z",
+      "lastFetch": "2026-11-28T15:44:16.792Z",
       "sourceUrl": "https://api.github.com/repos/prusa3d/PrusaSlicer/releases",
       "releases": [
         {
@@ -8996,7 +8996,7 @@
     },
     "qucs-s": {
       "name": "Qucs-S",
-      "lastFetch": "2026-11-27T16:52:33.682Z",
+      "lastFetch": "2026-11-28T15:44:17.211Z",
       "sourceUrl": "https://api.github.com/repos/ra3xdh/qucs_s/releases",
       "releases": [
         {
@@ -9143,7 +9143,7 @@
     },
     "slic3r": {
       "name": "Slic3r",
-      "lastFetch": "2026-11-27T16:52:34.019Z",
+      "lastFetch": "2026-11-28T15:44:17.456Z",
       "sourceUrl": "https://api.github.com/repos/slic3r/Slic3r/releases",
       "releases": [
         {
@@ -9157,7 +9157,7 @@
     },
     "solvespace": {
       "name": "SolveSpace",
-      "lastFetch": "2026-11-27T16:52:34.356Z",
+      "lastFetch": "2026-11-28T15:44:17.730Z",
       "sourceUrl": "https://api.github.com/repos/solvespace/solvespace/releases",
       "releases": [
         {
@@ -9226,7 +9226,7 @@
     },
     "yosys": {
       "name": "Yosys",
-      "lastFetch": "2026-11-27T16:52:35.143Z",
+      "lastFetch": "2026-11-28T15:44:18.642Z",
       "sourceUrl": "https://api.github.com/repos/YosysHQ/yosys/releases",
       "releases": [
         {
@@ -9373,9 +9373,16 @@
     },
     "bat": {
       "name": "bat",
-      "lastFetch": "2026-11-27T16:52:35.683Z",
+      "lastFetch": "2026-11-28T15:44:19.254Z",
       "sourceUrl": "https://api.github.com/repos/sharkdp/bat/releases",
       "releases": [
+        {
+          "version": "v0.27.0",
+          "name": "v0.27.0",
+          "releaseDate": "2026-11-28T07:21:06Z",
+          "releaseUrl": "https://github.com/sharkdp/bat/releases/tag/v0.27.0",
+          "releaseNotes": "# v0.27.0\r\n\r\n## Features\r\n\r\n- Map `.yamllint`, `.prettierrc` and `.eslintrc` to YAML syntax highlighting, see #4156 (@yusufemreboyraz)\r\n- Map `.clang-tidy` to YAML syntax highlighting, see #4150 (@yusufemreboyraz)\r\n- Automatically build the syntax/theme cache on first run when custom themes or syntaxes are present but no cache exists yet, so newly installed dotfiles work without a manual `bat cache --build`. Use `--no-custom-assets` to opt out. Closes #4017, see #4038 (@mmustafasenoglu)\r\n- Add `-b` / `--number-nonblank` flag to only number non-blank lines, for `cat -b` compatibility. Closes #3856, see #3857 (@MeGaurav4)\r\n- Add a `--sanitize=<auto|always|never>` flag for safe display of untrusted input. It substitutes terminal-active control bytes (escape, cursor moves, charset switches, beep, etc.) and Unicode bidi / zero-width formatting characters with the Unicode replacement character (U+FFFD). Mitigates Trojan-Source-style spoofing (CVE-2021-42574). See #3729 (@curious-rabbit)\r\n- Map justfile, Justfile, .justfile, and *.justfile to Makefile syntax highlighting, see #3623 (@zachvalenta)\r\n- Map `.kube/config` to YAML syntax highlighting, see #3911 (@logarithmone1128)\r\n- Preserve `--diff` change markers and snip separators when `--plain` is set. Closes #3630, see #3643 (@mvanhorn)\r\n- Added support for `hidden_file_extensions` from `.sublime-syntax` files, see #3613 (@Matei02355)\r\n- Add word wrapping mode via `--wrap=word`, see #3597 (@veeceey)\r\n- Support configuring `--terminal-width` via `BAT_WIDTH`, see #3679 (@officialasishkumar)\r\n- Implement `--unbuffered` mode for streaming input, allowing partial lines to display immediately (e.g. `tail -f | bat -u`). Closes #3555, see #3583 (@mainnebula)\r\n- Added an initial `flake.nix` for a ready made development environment; see #3578 (@vorburger)\r\n- Add `--quiet-empty` (`-E`) flag to suppress output when input is empty. Closes #1936, see #3563 (@NORMAL-EX)\r\n- Improve native man pages and command help syntax highlighting by stripping overstriking, see #3517 (@akirk)\r\n- Add `--fallback-syntax`/`--fallback-language` to apply syntax highlighting only when auto-detection fails, see #1341 (@Xavrir)\r\n- Map `BUILD` case sensitively to Python (Starlark) for Bazel, see #3576 (@vorburger)\r\n- Syntax highlighting for Python files using uv as script runner in shebang #3689 (@janlarres)\r\n\r\n## Bugfixes\r\n\r\n- Track reverse video (SGR 7 / 27) in the ANSI style tracker so it is re-emitted like bold, dim, italic, and underline, and is no longer dropped after the first wrapped line when displaying ANSI input, see #4144 (@BlueX888)\r\n- Preserve buffered stdin when `$LESSOPEN` temporary-file mode falls back to the original input, and handle CRLF line endings on returned temp paths, see #4158 (@xgbtxy)\r\n- Skip cache metadata validation when `--no-custom-assets` is set so outdated or malformed caches do not block fallback to integrated assets, see #4157 (@xgbtxy)\r\n- Only show style decorations with `--decorations=auto` when stdout is interactive, so piped `--color=always` output no longer includes the header, grid, or line numbers, see #4151 (@draarivpatel-ui)\r\n- Break `--wrap=word` lines at whitespace in earlier highlighted tokens or before ANSI escape sequences instead of in the middle of a word, closes #4139, see #4140 (@mansur-akhmadi)\r\n- Fix `bat cache --help` returning exit code 1 instead of 0. Remove `.arg_required_else_help(true)` from the cache subcommand and show help when no arguments are provided. See #3798, #3831 and #3837 (@Amilliox)\r\n- Fix builtin pager (minus) not responding to search (`/`, `?`, `n`, `N`) and navigation (`PgUp`, `PgDown`, arrows, `g`, `G`) keys. `HashedEventRegister` was overriding all default `minus` bindings instead of extending them. Add `generate_default_bindings()` before custom bindings. See #3831, #3798 and #3837 (@Amilliox)\r\n- Build the cache automatically on first run when custom themes or syntaxes are in subdirectories, see #4131 (@NotAFlightRisk)\r\n- Do not run filter commands from the configuration of the Git repository that contains the displayed file, see #4127 (@curious-rabbit)\r\n- Ignore empty `--ignored-suffix` values to avoid a stack overflow, see #4122 (@spicysharkco)\r\n- Fix `--number-nonblank` counting empty UTF-16 lines, see #4118 (@pcbeingused333)\r\n- Fix automatic cache build progress polluting stdout, see #4130 (@intertermux-code)\r\n- Don't emit `--highlight-line` escape sequences (background color or `ansi` theme underline) when colors are disabled with `--color=never`. Closes #4099, see #4100 (@DeviousCardi)\r\n- Fix missing colors, pager, and decorations in mintty/MSYS2 and Cygwin terminals on Windows, see #4115 (@rezamuliawijaya)\r\n- Make full-path `--map-syntax` patterns and the built-in `$HOME` and `$XDG_CONFIG_HOME` mappings work on Windows, see #4113 (@b84330808)\r\n- Keep configuration and BAT_OPTS active for option-like filenames after `--`, and report invalid configuration for help-like filenames, see #4112 (@Marve10s)\r\n- Keep emoji sequences together within text chunks when wrapping content, and measure their combined display width, see #4108 (@Marve10s)\r\n- Preserve full-path syntax mappings when removing ignored filename suffixes, see #4111 (@Marve10s)\r\n- Fix UTF-16 line splitting at unaligned newline bytes corrupting text and shifting line ranges, see #4110 (@Marve10s)\r\n- Respect `NO_COLOR` for the `[bat error]` and `[bat warning]` prefixes, see #4048 (@qodelicious)\r\n- Offer the valid `--wrap` value `auto` instead of the rejected `always` in the PowerShell completion, see #4070 (@ump45nose)\r\n- Report `BAT_CONFIG_DIR` in `bat --diagnostic`, so bug reports show a config directory that overrides `$XDG_CONFIG_HOME`. See #4068 (@ump45nose)\r\n- Ignore a UTF-8 byte order mark at the start of the config file instead of treating it as part of the first argument, see #4103 (@jaeminbird)\r\n- Keep backslashes in the pager command on Windows, so `BAT_PAGER=C:\\tools\\less.exe` is found instead of becoming `C:toolsless.exe`, see #4104 (@jaeminbird)\r\n- Fix `bat` hanging forever on JavaScript (and Svelte) code where an expression is followed by a block comment, e.g. `a /* x */`. Closes #4080, see #4091 (@NavpreetSSidhu)\r\n- Fix the first line of UTF-16BE input swallowing the second line, which broke line numbers, `--line-range` and highlighting, see #4102 (@cindykrafft)\r\n- Exit quietly with status 0 instead of panicking when stdout is closed early (broken pipe) on auxiliary output paths such as `--completion`, `--config-file`, `--diagnostic`, `--generate-config-file`, `--set-terminal-title` and `cache --build`/`--clear`, matching the main output path since #232, closes #4034, see #4035 (@Mathjk)\r\n- Fix escape sequence handling in `--strip-ansi` and `--sanitize`. `--sanitize` no longer removes escape sequences, which could hide text, see #4024 (@curious-rabbit)\r\n- Report unknown languages in plain piped output, see #4001 (@ryanchou1994)\r\n- Track strikethrough (SGR 9 / 29) in the ANSI style tracker so it is re-emitted like bold, dim, italic, and underline, and is no longer dropped after the first highlighted token when displaying ANSI input with syntax highlighting, see #4015 (@mikehasa)\r\n- Allow boolean flags to be given more than once, so that a flag set in the config file can also be passed on the command line without erroring, see #3912 (@logarithmone1128)\r\n- Allow options that take a value (`--binary`, `--italic-text`, `--nonprintable-notation`, `--fallback-syntax`, `--squeeze-limit`) to be given more than once, so that a value from the config file can be overridden on the command line, see #4102 (@Huang-404-Q)\r\n- Use parsed CLI arguments to detect number flags, see #3908 (@cuishuang)\r\n- Detect binary content beyond the first line, preventing encrypted files with early line breaks from being treated as text. Closes #3554, see #3877 (@Matei02355)\r\n- Use the last occurrence of numbering and plain flags in combined short arguments, see #3897 (@cuishuang)\r\n- Avoid a spurious Cargo manifest error during installation from Git, see #3899 (@rootsec1)\r\n- Avoid repeated scans of long lines in Log syntax highlighting, see #3876 (@Matei02355)\r\n- Fix `--list-languages` respecting `--paging=never`, see #3828 (@cyphercodes)\r\n- Fix `--sanitize` passing through the bidi control characters U+200E, U+200F and U+061C, see #3862 (@lenamonj)\r\n- `--strip-ansi`: also strip 8-bit C1 introducers (U+0090, U+0098, U+009B, U+009D, U+009E, U+009F) and DCS/SOS/PM/APC sequence bodies, which previously passed through. See #3729 (@curious-rabbit)\r\n- Fix `--ignored-suffix` not falling back to first-line/shebang detection when the ignored suffix is also a registered extension (e.g. `--ignored-suffix .txt` on a shebang script), see #2745 and #3816 (@adnrivera)\r\n- Fix `capacity overflow` panic when printing a snip separator at `--terminal-width=1` with multiple line ranges. Closes #3803, see #3804 (@leeewee)\r\n- Pass `--no-paging` to `bat` invocations inside the bash / zsh / fish / PowerShell shell completion scripts so that shell-level pager wiring (e.g. `LESSOPEN='|-bat -f -pp %s'`) cannot inject ANSI escape sequences into the completion candidates. Closes #3760 (@mvanhorn)\r\n- Quote filenames before substituting them into `$LESSOPEN` / `$LESSCLOSE` templates, preventing shell injection when a filename contains shell metacharacters, see #3726 (@curious-rabbit)\r\n- Fix `--list-themes` unconditionally probing the terminal via OSC 10/11 even when `--theme` was set to an explicit value, see #3700 (regression introduced in bc42149a). (@optimistiCli)\r\n- Fix inverted `$LESSCLOSE` warning so bat warns on nonzero exit, not on success. See #3654 (@cuiweixie)\r\n- Sanitize control characters in filenames before displaying them in the file header, error messages, and the terminal title, preventing ANSI escape injection via crafted filenames. Closes #3054, see #3691 (@curious-rabbit)\r\n- Report initial input read errors instead of treating them as empty input. Closes #3002, see #3706 (@lawrence3699)\r\n- Treat ZIP archives as binary content based on their magic header, see #3686 (@officialasishkumar)\r\n- Fix i686 `.deb` package using incorrect architecture name (`i686` instead of `i386`), preventing installation on Debian. Closes #3611, see #3650 (@Sim-hu)\r\n- Fix inconsistent `.deb` MUSL package names (aarch64-musl used `arm64` instead of `musl-linux-arm64`, and `musleabihf` target missed `bat-musl` prefix). Closes #3482, see #3642 (@mvanhorn)\r\n- Fix incorrect text width computation when using `--binary=as-text` with non-printable characters in caret notation, see #3640 and #3631 (@eyupcanakman)\r\n- Fix `BAT_CONFIG_DIR` pointing at system config directory causing duplicate flag errors. Closes #3589, see #3620 (@Xavrir)\r\n- Fix syntax highlighting for symlinked files when the symlink name has no extension but the target does. Closes #1001, see #3621 (@Xavrir)\r\n- Report error when pager is missing instead of silently falling back, see #3588 (@IMaloney)\r\n- Fix `--wrap=never` and `-S` flags being ignored when piping to pager, see #3592 (@IMaloney)\r\n- Fix crash with BusyBox `less` on Windows, see #3527 (@Anchal-T)\r\n- Fix `bat cache --help` failing with 'unexpected argument' error, see #3580 and #3560 (@NORMAL-EX)\r\n- `--help` now correctly honors `--pager=builtin`. See #3516 (@keith-hall)\r\n- `--help` now correctly honors custom themes. See #3524 (@keith-hall)\r\n- Fixed test compatibility with future Cargo build directory changes, see #3550 (@nmacl)\r\n- Fixed bug caused by using `--plain` and `--terminal-width=N` flags simultaneously, see #3529 (@H4k1l)\r\n- Fixed syntax tests path, see #3610 (@foxfromworld)\r\n- Fix zsh tab completion word-splitting language names containing spaces (e.g. `HTML (Jinja2)`, `Apache Conf`), see #3693 (@YoshKoz)\r\n- Fix zsh tab completion offering invalid `-l` arguments (file globs, paths, hidden filenames) sourced from the second column of `--list-languages`. Closes #3735, see #3737 (@truffle-dev)\r\n- Fix `usize` underflow in `--list-languages` when `--terminal-width` is smaller than the longest language name, see #3812 (@greymoth-jp)\r\n- `--sanitize=always` now also sanitizes piped output. `--sanitize=auto` now sanitizes every file type, but only when the output is a terminal, see #4141 (@curious-rabbit)\r\n- Show changes in `--diff` mode and the change-marker column in Git repositories that use the SHA-256 object format (`git init --object-format=sha256`), see #4143 (@BlueX888)\r\n- Skip untracked files and files outside a Git repository in `--diff` mode instead of printing an empty frame, see #4148 (@thejesh23)\r\n- Recognize the end of an OSC 8 hyperlink in ANSI input, so later text is no longer wrapped in redundant hyperlink-close sequences, see #4136 (@divya0795)\r\n\r\n## Other\r\n- Use git version of cross. See #3533 (@OctopusET)\r\n- Bump MSRV to 1.88, update `time` crate to 0.3.47 to fix RUSTSEC-2026-0009, see #3581 (@NORMAL-EX)\r\n- Allow home and end keys to be used with builtin pager, see #3651 (@keith-hall)\r\n- Builtin syntax mapping: cleanup matcher glob parsing logic #3652 (@cyqsimon)\r\n- Statically link the CRT for MSVC builds via Cargo config to avoid runtime DLL dependencies. Closes #3634, see #3692 (@barry3406)\r\n- Replace `libgit2` with a pure Rust implementation of git called `gitoxide`, see PR #3703 (@blinxen)\r\n- Document submodule initialization when rebuilding syntax and theme assets, see #3801 (@xfocus3)\r\n- Fix anchor case in `doc/assets.md` links, see #4026 (@ump45nose)\r\n- Pin the i686 GNU CI runner to Ubuntu 24.04 to avoid `socketpair` failures on Ubuntu 26.04, see #4101 (@PerchAnton)\r\n- Fix dead Visual C++ Redistributable link in README, see #3895 (@1t1sCooL)\r\n- Document `StripAnsiMode` and its variants in rustdoc, see #4067 (@ump45nose)\r\n- Update Cargo dependencies to resolve current RustSec advisories, see #3861 (@TyceHerrman)\r\n- Add instructions for removing fish help abbreviations to README, see #3655 (@claw-explorer). Closes #3536\r\n- Add .NET slnx extension, see #3682 (@ltrzesniewski)\r\n\r\n## Syntaxes\r\n\r\n- Highlight Rust `async` and `await` as keywords. Closes #1534, see #3892 (@JMak-Security)\r\n- Add shebang-based detection for Tcl (`tclsh`, `wish`) and Expect (`expect`) scripts, see #3647 (@mvanhorn)\r\n- Change the URL of Zig submodule from GitHub to Codeberg, see #3519 (@sorairolake)\r\n- Don't color strings inside CSV files, to make it easier to tell which column they belong to, see #3521 (@keith-hall)\r\n- Add syntax highlighting support for COBOL, see #3584 (@adukhan99)\r\n- Fixed manpage syntax so that ANSI escape codes don't get incorrectly highlighted and thus broken, see #3586 (@BlueElectivire)\r\n- Map several Google Cloud CLI config files to their appropriate syntax #3635 (@victor-gp)\r\n- Map all ignore dotfiles to Git Ignore syntax #3636 (@victor-gp)\r\n- Improved Kotlin syntax, see #3699 (@guille)\r\n- Include subdirectories in SSH Config syntax mapping, see #3758 (@injust)\r\n- Add Ghostty syntax mapping, see #3759 (@injust)\r\n- Add syntax highlighting for `Caddyfile` #3789 (@CosmicHorrorDev)\r\n- Include `.code-workspace` as a JSON extension #3809 (@dhruvkb)\r\n- Add syntax mapping for DNF repo configuration files, see #3814 (@injust)\r\n- Add syntax mapping for Podman `.quadlets` files, see #4069 (@injust)\r\n- Add syntax highlighting for CUE, see #4094 (@nikarh)\r\n\r\n## Themes\r\n\r\n- Remove the Visual Studio Dark+ theme, see #3552 (@CosmicHorrorDev)"
+        },
         {
           "version": "v0.26.1",
           "name": "v0.26.1",
@@ -9508,19 +9515,12 @@
           "releaseDate": "2020-05-26T06:27:31Z",
           "releaseUrl": "https://github.com/sharkdp/bat/releases/tag/v0.15.3",
           "releaseNotes": "## Bugfixes\r\n\r\n- Cannot run `bat` with relative paths, see #1022\r\n- bat mishighlights Users that start with digits in SSH config, see #984\r\n\r\n## New syntaxes\r\n\r\n- SML, see #1005 (@kopecs)\r\n\r\n## Other\r\n\r\n- Some syntaxes and themes have been updated to the latest version\r\n"
-        },
-        {
-          "version": "v0.15.2",
-          "name": "v0.15.2",
-          "releaseDate": "2020-05-25T15:30:03Z",
-          "releaseUrl": "https://github.com/sharkdp/bat/releases/tag/v0.15.2",
-          "releaseNotes": "**Warning**: this release suffers from #1022. `bat` will panic when called with a relative file path.\r\n\r\n## Bugfixes\r\n\r\n- `--map-syntax` doesn't work with names provided through `--file-name` (@eth-p)\r\n- Fix syntax detection for files called 'rails', see #1008\r\n- Fix potential errors with syntax detection for symlinked files, see #1001\r\n\r\n## Other\r\n\r\n- Add padding above headers when not using a grid, see #968 and #981 (@pt2121)\r\n- bat now prints an error if an invalid syntax is specified via `-l` or `--map-syntax`, see #1004 (@eth-p)\r\n\r\n## `bat` as a library\r\n\r\n- `PrettyPrinter::vcs_modification_markers` has been marked deprecated when building without the `git` feature, see #997 and #1020 (@eth-p, @sharkdp)\r\n\r\n## Packaging\r\n\r\n- Compilation problems with `onig_sys` on various platforms have been resolved by upgrading to `syntect 4.2`, which includes a new `onig` version that allows to build `onig_sys` without the `bindgen` dependency. This removes the need for `libclang(-dev)` to be installed to compile `bat`. Package maintainers might want to remove `clang` as a build dependency. See #650 for more details."
         }
       ]
     },
     "curl": {
       "name": "curl",
-      "lastFetch": "2026-11-27T16:52:36.316Z",
+      "lastFetch": "2026-11-28T15:44:20.046Z",
       "sourceUrl": "https://api.github.com/repos/curl/curl/releases",
       "releases": [
         {
@@ -9667,7 +9667,7 @@
     },
     "eza": {
       "name": "eza",
-      "lastFetch": "2026-11-27T16:52:37.105Z",
+      "lastFetch": "2026-11-28T15:44:20.815Z",
       "sourceUrl": "https://api.github.com/repos/eza-community/eza/releases",
       "releases": [
         {
@@ -9814,7 +9814,7 @@
     },
     "fd": {
       "name": "fd",
-      "lastFetch": "2026-11-27T16:52:37.744Z",
+      "lastFetch": "2026-11-28T15:44:21.430Z",
       "sourceUrl": "https://api.github.com/repos/sharkdp/fd/releases",
       "releases": [
         {
@@ -9961,7 +9961,7 @@
     },
     "fzf": {
       "name": "fzf",
-      "lastFetch": "2026-11-27T16:52:38.689Z",
+      "lastFetch": "2026-11-28T15:44:22.343Z",
       "sourceUrl": "https://api.github.com/repos/junegunn/fzf/releases",
       "releases": [
         {
@@ -10108,7 +10108,7 @@
     },
     "geany": {
       "name": "Geany",
-      "lastFetch": "2026-11-27T16:52:38.988Z",
+      "lastFetch": "2026-11-28T15:44:22.668Z",
       "sourceUrl": "https://api.github.com/repos/geany/geany/releases",
       "releases": [
         {
@@ -10255,7 +10255,7 @@
     },
     "helix": {
       "name": "Helix",
-      "lastFetch": "2026-11-27T16:52:39.420Z",
+      "lastFetch": "2026-11-28T15:44:23.041Z",
       "sourceUrl": "https://api.github.com/repos/helix-editor/helix/releases",
       "releases": [
         {
@@ -10402,7 +10402,7 @@
     },
     "kakoune": {
       "name": "Kakoune",
-      "lastFetch": "2026-11-27T16:52:39.734Z",
+      "lastFetch": "2026-11-28T15:44:23.352Z",
       "sourceUrl": "https://api.github.com/repos/mawww/kakoune/releases",
       "releases": [
         {
@@ -10549,7 +10549,7 @@
     },
     "lapce": {
       "name": "Lapce",
-      "lastFetch": "2026-11-27T16:52:40.265Z",
+      "lastFetch": "2026-11-28T15:44:23.898Z",
       "sourceUrl": "https://api.github.com/repos/lapce/lapce/releases",
       "releases": [
         {
@@ -10696,7 +10696,7 @@
     },
     "lazydocker": {
       "name": "lazydocker",
-      "lastFetch": "2026-11-27T16:52:40.787Z",
+      "lastFetch": "2026-11-28T15:44:24.364Z",
       "sourceUrl": "https://api.github.com/repos/jesseduffield/lazydocker/releases",
       "releases": [
         {
@@ -10843,7 +10843,7 @@
     },
     "lazygit": {
       "name": "lazygit",
-      "lastFetch": "2026-11-27T16:52:41.994Z",
+      "lastFetch": "2026-11-28T15:44:25.309Z",
       "sourceUrl": "https://api.github.com/repos/jesseduffield/lazygit/releases",
       "releases": [
         {
@@ -10990,7 +10990,7 @@
     },
     "lite-xl": {
       "name": "Lite XL",
-      "lastFetch": "2026-11-27T16:52:42.902Z",
+      "lastFetch": "2026-11-28T15:44:26.120Z",
       "sourceUrl": "https://api.github.com/repos/lite-xl/lite-xl/releases",
       "releases": [
         {
@@ -11137,7 +11137,7 @@
     },
     "micro": {
       "name": "micro",
-      "lastFetch": "2026-11-27T16:52:43.782Z",
+      "lastFetch": "2026-11-28T15:44:26.941Z",
       "sourceUrl": "https://api.github.com/repos/zyedidia/micro/releases",
       "releases": [
         {
@@ -11284,7 +11284,7 @@
     },
     "neovim": {
       "name": "Neovim",
-      "lastFetch": "2026-11-27T16:52:44.431Z",
+      "lastFetch": "2026-11-28T15:44:27.769Z",
       "sourceUrl": "https://api.github.com/repos/neovim/neovim/releases",
       "releases": [
         {
@@ -11431,7 +11431,7 @@
     },
     "ripgrep": {
       "name": "ripgrep",
-      "lastFetch": "2026-11-27T16:52:45.184Z",
+      "lastFetch": "2026-11-28T15:44:28.352Z",
       "sourceUrl": "https://api.github.com/repos/BurntSushi/ripgrep/releases",
       "releases": [
         {
@@ -11578,7 +11578,7 @@
     },
     "spyder": {
       "name": "Spyder",
-      "lastFetch": "2026-11-27T16:52:46.014Z",
+      "lastFetch": "2026-11-28T15:44:29.112Z",
       "sourceUrl": "https://api.github.com/repos/spyder-ide/spyder/releases",
       "releases": [
         {
@@ -11725,7 +11725,7 @@
     },
     "tmux": {
       "name": "tmux",
-      "lastFetch": "2026-11-27T16:52:46.422Z",
+      "lastFetch": "2026-11-28T15:44:29.558Z",
       "sourceUrl": "https://api.github.com/repos/tmux/tmux/releases",
       "releases": [
         {
@@ -11878,7 +11878,7 @@
     },
     "vscodium": {
       "name": "VSCodium",
-      "lastFetch": "2026-11-27T16:52:53.548Z",
+      "lastFetch": "2026-11-28T15:44:36.940Z",
       "sourceUrl": "https://api.github.com/repos/VSCodium/vscodium/releases",
       "releases": [
         {
@@ -12025,7 +12025,7 @@
     },
     "zoxide": {
       "name": "zoxide",
-      "lastFetch": "2026-11-27T16:52:54.144Z",
+      "lastFetch": "2026-11-28T15:44:37.576Z",
       "sourceUrl": "https://api.github.com/repos/ajeetdsouza/zoxide/releases",
       "releases": [
         {
@@ -12172,7 +12172,7 @@
     },
     "actual-budget": {
       "name": "Actual Budget",
-      "lastFetch": "2026-11-27T16:52:54.802Z",
+      "lastFetch": "2026-11-28T15:44:38.199Z",
       "sourceUrl": "https://api.github.com/repos/actualbudget/actual/releases",
       "releases": [
         {
@@ -12325,7 +12325,7 @@
     },
     "bisq": {
       "name": "Bisq",
-      "lastFetch": "2026-11-27T16:52:56.334Z",
+      "lastFetch": "2026-11-28T15:44:39.340Z",
       "sourceUrl": "https://api.github.com/repos/bisq-network/bisq/releases",
       "releases": [
         {
@@ -12472,7 +12472,7 @@
     },
     "bitcoin-core": {
       "name": "Bitcoin Core",
-      "lastFetch": "2026-11-27T16:52:56.744Z",
+      "lastFetch": "2026-11-28T15:44:39.665Z",
       "sourceUrl": "https://api.github.com/repos/bitcoin/bitcoin/releases",
       "releases": [
         {
@@ -12619,7 +12619,7 @@
     },
     "btcpay-server": {
       "name": "BTCPay Server",
-      "lastFetch": "2026-11-27T16:52:57.340Z",
+      "lastFetch": "2026-11-28T15:44:40.139Z",
       "sourceUrl": "https://api.github.com/repos/btcpayserver/btcpayserver/releases",
       "releases": [
         {
@@ -12766,7 +12766,7 @@
     },
     "decred": {
       "name": "Decred",
-      "lastFetch": "2026-11-27T16:52:57.858Z",
+      "lastFetch": "2026-11-28T15:44:40.648Z",
       "sourceUrl": "https://api.github.com/repos/decred/dcrd/releases",
       "releases": [
         {
@@ -12919,7 +12919,7 @@
     },
     "gnucash": {
       "name": "GnuCash",
-      "lastFetch": "2026-11-27T16:52:58.873Z",
+      "lastFetch": "2026-11-28T15:44:42.082Z",
       "sourceUrl": "https://api.github.com/repos/GnuCash/gnucash/releases",
       "releases": [
         {
@@ -13066,7 +13066,7 @@
     },
     "go-ethereum": {
       "name": "Go-Ethereum",
-      "lastFetch": "2026-11-27T16:52:59.331Z",
+      "lastFetch": "2026-11-28T15:44:42.495Z",
       "sourceUrl": "https://api.github.com/repos/ethereum/go-ethereum/releases",
       "releases": [
         {
@@ -13213,7 +13213,7 @@
     },
     "hledger": {
       "name": "hledger",
-      "lastFetch": "2026-11-27T16:53:00.202Z",
+      "lastFetch": "2026-11-28T15:44:43.297Z",
       "sourceUrl": "https://api.github.com/repos/simonmichael/hledger/releases",
       "releases": [
         {
@@ -13360,7 +13360,7 @@
     },
     "joinmarket": {
       "name": "JoinMarket",
-      "lastFetch": "2026-11-27T16:53:00.621Z",
+      "lastFetch": "2026-11-28T15:44:43.694Z",
       "sourceUrl": "https://api.github.com/repos/JoinMarket-Org/joinmarket-clientserver/releases",
       "releases": [
         {
@@ -13507,7 +13507,7 @@
     },
     "kmymoney": {
       "name": "KMyMoney",
-      "lastFetch": "2026-11-27T16:53:01.374Z",
+      "lastFetch": "2026-11-28T15:44:44.323Z",
       "sourceUrl": "https://invent.kde.org/api/v4/projects/office%2Fkmymoney/releases",
       "releases": [
         {
@@ -13535,7 +13535,7 @@
     },
     "ledger": {
       "name": "Ledger",
-      "lastFetch": "2026-11-27T16:53:01.713Z",
+      "lastFetch": "2026-11-28T15:44:44.636Z",
       "sourceUrl": "https://api.github.com/repos/ledger/ledger/releases",
       "releases": [
         {
@@ -13682,7 +13682,7 @@
     },
     "lighthouse": {
       "name": "Lighthouse",
-      "lastFetch": "2026-11-27T16:53:03.009Z",
+      "lastFetch": "2026-11-28T15:44:46.001Z",
       "sourceUrl": "https://api.github.com/repos/sigp/lighthouse/releases",
       "releases": [
         {
@@ -13829,7 +13829,7 @@
     },
     "monero-gui": {
       "name": "Monero GUI Wallet",
-      "lastFetch": "2026-11-27T16:53:03.495Z",
+      "lastFetch": "2026-11-28T15:44:46.446Z",
       "sourceUrl": "https://api.github.com/repos/monero-project/monero-gui/releases",
       "releases": [
         {
@@ -13976,7 +13976,7 @@
     },
     "money-manager-ex": {
       "name": "Money Manager Ex",
-      "lastFetch": "2026-11-27T16:53:04.028Z",
+      "lastFetch": "2026-11-28T15:44:46.939Z",
       "sourceUrl": "https://api.github.com/repos/moneymanagerex/moneymanagerex/releases",
       "releases": [
         {
@@ -14123,7 +14123,7 @@
     },
     "skrooge": {
       "name": "Skrooge",
-      "lastFetch": "2026-11-27T16:53:04.331Z",
+      "lastFetch": "2026-11-28T15:44:47.183Z",
       "sourceUrl": "https://invent.kde.org/api/v4/projects/office%2Fskrooge/releases",
       "releases": [
         {
@@ -14172,7 +14172,7 @@
     },
     "sparrow-wallet": {
       "name": "Sparrow Wallet",
-      "lastFetch": "2026-11-27T16:53:05.250Z",
+      "lastFetch": "2026-11-28T15:44:47.960Z",
       "sourceUrl": "https://api.github.com/repos/sparrowwallet/sparrow/releases",
       "releases": [
         {
@@ -14319,7 +14319,7 @@
     },
     "specter-desktop": {
       "name": "Specter Desktop",
-      "lastFetch": "2026-11-27T16:53:06.106Z",
+      "lastFetch": "2026-11-28T15:44:48.847Z",
       "sourceUrl": "https://api.github.com/repos/cryptoadvance/specter-desktop/releases",
       "releases": [
         {
@@ -14466,7 +14466,7 @@
     },
     "zcash": {
       "name": "Zcash",
-      "lastFetch": "2026-11-27T16:53:06.562Z",
+      "lastFetch": "2026-11-28T15:44:49.264Z",
       "sourceUrl": "https://api.github.com/repos/zcash/zcash/releases",
       "releases": [
         {
@@ -14613,7 +14613,7 @@
     },
     "blender": {
       "name": "Blender",
-      "lastFetch": "2026-11-27T16:53:18.370Z",
+      "lastFetch": "2026-11-28T15:44:59.792Z",
       "sourceUrl": "https://www.blender.org/feed/",
       "releases": [
         {
@@ -14753,7 +14753,7 @@
     },
     "darktable": {
       "name": "darktable",
-      "lastFetch": "2026-11-27T16:53:19.385Z",
+      "lastFetch": "2026-11-28T15:45:00.657Z",
       "sourceUrl": "https://api.github.com/repos/darktable-org/darktable/releases",
       "releases": [
         {
@@ -14900,7 +14900,7 @@
     },
     "flameshot": {
       "name": "Flameshot",
-      "lastFetch": "2026-11-27T16:53:20.020Z",
+      "lastFetch": "2026-11-28T15:45:01.316Z",
       "sourceUrl": "https://api.github.com/repos/flameshot-org/flameshot/releases",
       "releases": [
         {
@@ -15047,7 +15047,7 @@
     },
     "gimp": {
       "name": "GIMP",
-      "lastFetch": "2026-11-27T16:53:20.833Z",
+      "lastFetch": "2026-11-28T15:45:02.288Z",
       "sourceUrl": "https://gitlab.gnome.org/api/v4/projects/GNOME%2Fgimp/releases",
       "releases": [
         {
@@ -15194,7 +15194,7 @@
     },
     "gpick": {
       "name": "GPick",
-      "lastFetch": "2026-11-27T16:53:21.121Z",
+      "lastFetch": "2026-11-28T15:45:02.554Z",
       "sourceUrl": "https://api.github.com/repos/thezbyg/gpick/releases",
       "releases": [
         {
@@ -15215,7 +15215,7 @@
     },
     "inkscape": {
       "name": "Inkscape",
-      "lastFetch": "2026-11-27T16:53:21.720Z",
+      "lastFetch": "2026-11-28T15:45:03.119Z",
       "sourceUrl": "https://gitlab.com/api/v4/projects/inkscape%2Finkscape/releases",
       "releases": [
         {
@@ -15326,7 +15326,7 @@
     },
     "ksnip": {
       "name": "ksnip",
-      "lastFetch": "2026-11-27T16:53:22.737Z",
+      "lastFetch": "2026-11-28T15:45:03.961Z",
       "sourceUrl": "https://api.github.com/repos/ksnip/ksnip/releases",
       "releases": [
         {
@@ -15473,7 +15473,7 @@
     },
     "makehuman": {
       "name": "MakeHuman",
-      "lastFetch": "2026-11-27T16:53:22.972Z",
+      "lastFetch": "2026-11-28T15:45:04.213Z",
       "sourceUrl": "https://api.github.com/repos/makehumancommunity/makehuman/releases",
       "releases": [
         {
@@ -15494,7 +15494,7 @@
     },
     "mypaint": {
       "name": "MyPaint",
-      "lastFetch": "2026-11-27T16:53:23.776Z",
+      "lastFetch": "2026-11-28T15:45:04.622Z",
       "sourceUrl": "https://api.github.com/repos/mypaint/mypaint/releases",
       "releases": [
         {
@@ -15641,7 +15641,7 @@
     },
     "nomacs": {
       "name": "nomacs",
-      "lastFetch": "2026-11-27T16:53:24.174Z",
+      "lastFetch": "2026-11-28T15:45:05.016Z",
       "sourceUrl": "https://api.github.com/repos/nomacs/nomacs/releases",
       "releases": [
         {
@@ -15788,7 +15788,7 @@
     },
     "opentoonz": {
       "name": "OpenToonz",
-      "lastFetch": "2026-11-27T16:53:24.667Z",
+      "lastFetch": "2026-11-28T15:45:05.328Z",
       "sourceUrl": "https://api.github.com/repos/opentoonz/opentoonz/releases",
       "releases": [
         {
@@ -15935,7 +15935,7 @@
     },
     "pencil2d": {
       "name": "Pencil2D",
-      "lastFetch": "2026-11-27T16:53:25.144Z",
+      "lastFetch": "2026-11-28T15:45:05.711Z",
       "sourceUrl": "https://api.github.com/repos/pencil2d/pencil/releases",
       "releases": [
         {
@@ -16019,7 +16019,7 @@
     },
     "penpot": {
       "name": "Penpot",
-      "lastFetch": "2026-11-27T16:53:25.596Z",
+      "lastFetch": "2026-11-28T15:45:06.300Z",
       "sourceUrl": "https://api.github.com/repos/penpot/penpot/releases",
       "releases": [
         {
@@ -16166,7 +16166,7 @@
     },
     "photoflare": {
       "name": "PhotoFlare",
-      "lastFetch": "2026-11-27T16:53:26.065Z",
+      "lastFetch": "2026-11-28T15:45:06.678Z",
       "sourceUrl": "https://api.github.com/repos/PhotoFlare/photoflare/releases",
       "releases": [
         {
@@ -16313,7 +16313,7 @@
     },
     "pinta": {
       "name": "Pinta",
-      "lastFetch": "2026-11-27T16:53:26.491Z",
+      "lastFetch": "2026-11-28T15:45:07.023Z",
       "sourceUrl": "https://api.github.com/repos/PintaProject/Pinta/releases",
       "releases": [
         {
@@ -16453,7 +16453,7 @@
     },
     "qview": {
       "name": "qView",
-      "lastFetch": "2026-11-27T16:53:26.877Z",
+      "lastFetch": "2026-11-28T15:45:07.373Z",
       "sourceUrl": "https://api.github.com/repos/jurplel/qView/releases",
       "releases": [
         {
@@ -16523,7 +16523,7 @@
     },
     "rawtherapee": {
       "name": "RawTherapee",
-      "lastFetch": "2026-11-27T16:53:27.673Z",
+      "lastFetch": "2026-11-28T15:45:08.049Z",
       "sourceUrl": "https://api.github.com/repos/Beep6581/RawTherapee/releases",
       "releases": [
         {
@@ -16662,7 +16662,7 @@
     },
     "synfig": {
       "name": "Synfig Studio",
-      "lastFetch": "2026-11-27T16:53:28.293Z",
+      "lastFetch": "2026-11-28T15:45:08.702Z",
       "sourceUrl": "https://api.github.com/repos/synfig/synfig/releases",
       "releases": [
         {
@@ -16809,7 +16809,7 @@
     },
     "aria2": {
       "name": "aria2",
-      "lastFetch": "2026-11-27T16:53:28.732Z",
+      "lastFetch": "2026-11-28T15:45:09.107Z",
       "sourceUrl": "https://api.github.com/repos/aria2/aria2/releases",
       "releases": [
         {
@@ -16956,7 +16956,7 @@
     },
     "firefox": {
       "name": "Firefox",
-      "lastFetch": "2026-11-27T16:53:28.987Z",
+      "lastFetch": "2026-11-28T15:45:09.436Z",
       "sourceUrl": "https://product-details.mozilla.org/1.0/firefox.json",
       "releases": [
         {
@@ -17103,7 +17103,7 @@
     },
     "fluent-reader": {
       "name": "Fluent Reader",
-      "lastFetch": "2026-11-27T16:53:29.526Z",
+      "lastFetch": "2026-11-28T15:45:10.251Z",
       "sourceUrl": "https://api.github.com/repos/yang991178/fluent-reader/releases",
       "releases": [
         {
@@ -17256,7 +17256,7 @@
     },
     "freshrss": {
       "name": "FreshRSS",
-      "lastFetch": "2026-11-27T16:53:31.119Z",
+      "lastFetch": "2026-11-28T15:45:11.959Z",
       "sourceUrl": "https://api.github.com/repos/FreshRSS/FreshRSS/releases",
       "releases": [
         {
@@ -17403,7 +17403,7 @@
     },
     "gallery-dl": {
       "name": "gallery-dl",
-      "lastFetch": "2026-11-27T16:53:31.955Z",
+      "lastFetch": "2026-11-28T15:45:12.765Z",
       "sourceUrl": "https://api.github.com/repos/mikf/gallery-dl/releases",
       "releases": [
         {
@@ -17550,7 +17550,7 @@
     },
     "hexchat": {
       "name": "Hexchat",
-      "lastFetch": "2026-11-27T16:53:32.237Z",
+      "lastFetch": "2026-11-28T15:45:13.052Z",
       "sourceUrl": "https://api.github.com/repos/hexchat/hexchat/releases",
       "releases": [
         {
@@ -17662,7 +17662,7 @@
     },
     "invidious": {
       "name": "Invidious",
-      "lastFetch": "2026-11-27T16:53:32.588Z",
+      "lastFetch": "2026-11-28T15:45:13.385Z",
       "sourceUrl": "https://api.github.com/repos/iv-org/invidious/releases",
       "releases": [
         {
@@ -17809,7 +17809,7 @@
     },
     "min-browser": {
       "name": "Min Browser",
-      "lastFetch": "2026-11-27T16:53:33.517Z",
+      "lastFetch": "2026-11-28T15:45:14.187Z",
       "sourceUrl": "https://api.github.com/repos/minbrowser/min/releases",
       "releases": [
         {
@@ -17956,7 +17956,7 @@
     },
     "miniflux": {
       "name": "Miniflux",
-      "lastFetch": "2026-11-27T16:53:34.386Z",
+      "lastFetch": "2026-11-28T15:45:15.042Z",
       "sourceUrl": "https://api.github.com/repos/miniflux/v2/releases",
       "releases": [
         {
@@ -18103,7 +18103,7 @@
     },
     "newpipe": {
       "name": "NewPipe",
-      "lastFetch": "2026-11-27T16:53:34.819Z",
+      "lastFetch": "2026-11-28T15:45:15.521Z",
       "sourceUrl": "https://api.github.com/repos/TeamNewPipe/NewPipe/releases",
       "releases": [
         {
@@ -18250,7 +18250,7 @@
     },
     "nyxt": {
       "name": "Nyxt",
-      "lastFetch": "2026-11-27T16:53:35.457Z",
+      "lastFetch": "2026-11-28T15:45:16.010Z",
       "sourceUrl": "https://api.github.com/repos/atlas-engineer/nyxt/releases",
       "releases": [
         {
@@ -18397,7 +18397,7 @@
     },
     "qbittorrent": {
       "name": "qBittorrent",
-      "lastFetch": "2026-11-27T16:53:36.310Z",
+      "lastFetch": "2026-11-28T15:45:16.345Z",
       "sourceUrl": "https://api.github.com/repos/qbittorrent/qBittorrent/releases",
       "releases": [
         {
@@ -18453,7 +18453,7 @@
     },
     "qutebrowser": {
       "name": "qutebrowser",
-      "lastFetch": "2026-11-27T16:53:37.378Z",
+      "lastFetch": "2026-11-28T15:45:17.240Z",
       "sourceUrl": "https://api.github.com/repos/qutebrowser/qutebrowser/releases",
       "releases": [
         {
@@ -18600,7 +18600,7 @@
     },
     "rss-guard": {
       "name": "RSS Guard",
-      "lastFetch": "2026-11-27T16:53:38.317Z",
+      "lastFetch": "2026-11-28T15:45:18.472Z",
       "sourceUrl": "https://api.github.com/repos/martinrotter/rssguard/releases",
       "releases": [
         {
@@ -18747,7 +18747,7 @@
     },
     "thunderbird-android": {
       "name": "Thunderbird for Android",
-      "lastFetch": "2026-11-27T16:53:38.890Z",
+      "lastFetch": "2026-11-28T15:45:18.975Z",
       "sourceUrl": "https://api.github.com/repos/thunderbird/thunderbird-android/releases",
       "releases": [
         {
@@ -18894,7 +18894,7 @@
     },
     "transmission": {
       "name": "Transmission",
-      "lastFetch": "2026-11-27T16:53:39.504Z",
+      "lastFetch": "2026-11-28T15:45:19.496Z",
       "sourceUrl": "https://api.github.com/repos/transmission/transmission/releases",
       "releases": [
         {
@@ -19041,7 +19041,7 @@
     },
     "tusky": {
       "name": "Tusky",
-      "lastFetch": "2026-11-27T16:53:40.084Z",
+      "lastFetch": "2026-11-28T15:45:19.980Z",
       "sourceUrl": "https://api.github.com/repos/tuskyapp/Tusky/releases",
       "releases": [
         {
@@ -19188,7 +19188,7 @@
     },
     "weechat": {
       "name": "WeeChat",
-      "lastFetch": "2026-11-27T16:53:40.518Z",
+      "lastFetch": "2026-11-28T15:45:20.424Z",
       "sourceUrl": "https://api.github.com/repos/weechat/weechat/releases",
       "releases": [
         {
@@ -19335,7 +19335,7 @@
     },
     "yt-dlp": {
       "name": "yt-dlp",
-      "lastFetch": "2026-11-27T16:53:42.167Z",
+      "lastFetch": "2026-11-28T15:45:21.659Z",
       "sourceUrl": "https://api.github.com/repos/yt-dlp/yt-dlp/releases",
       "releases": [
         {
@@ -19482,7 +19482,7 @@
     },
     "anki": {
       "name": "Anki",
-      "lastFetch": "2026-11-27T16:53:42.902Z",
+      "lastFetch": "2026-11-28T15:45:22.532Z",
       "sourceUrl": "https://api.github.com/repos/ankitects/anki/releases",
       "releases": [
         {
@@ -19641,7 +19641,7 @@
     },
     "celestia": {
       "name": "Celestia",
-      "lastFetch": "2026-11-27T16:53:44.623Z",
+      "lastFetch": "2026-11-28T15:45:24.134Z",
       "sourceUrl": "https://api.github.com/repos/CelestiaProject/Celestia/releases",
       "releases": [
         {
@@ -19689,7 +19689,7 @@
     },
     "dosbox-staging": {
       "name": "DOSBox Staging",
-      "lastFetch": "2026-11-27T16:53:45.188Z",
+      "lastFetch": "2026-11-28T15:45:24.731Z",
       "sourceUrl": "https://api.github.com/repos/dosbox-staging/dosbox-staging/releases",
       "releases": [
         {
@@ -19836,7 +19836,7 @@
     },
     "freenet": {
       "name": "Freenet",
-      "lastFetch": "2026-11-27T16:53:46.019Z",
+      "lastFetch": "2026-11-28T15:45:25.632Z",
       "sourceUrl": "https://api.github.com/repos/freenet/fred/releases",
       "releases": [
         {
@@ -19983,7 +19983,7 @@
     },
     "freeplane": {
       "name": "Freeplane",
-      "lastFetch": "2026-11-27T16:53:46.830Z",
+      "lastFetch": "2026-11-28T15:45:26.266Z",
       "sourceUrl": "https://api.github.com/repos/freeplane/freeplane/releases",
       "releases": [
         {
@@ -20074,7 +20074,7 @@
     },
     "ipfs-kubo": {
       "name": "IPFS (Kubo)",
-      "lastFetch": "2026-11-27T16:53:49.716Z",
+      "lastFetch": "2026-11-28T15:45:28.932Z",
       "sourceUrl": "https://api.github.com/repos/ipfs/kubo/releases",
       "releases": [
         {
@@ -20221,7 +20221,7 @@
     },
     "mame": {
       "name": "MAME",
-      "lastFetch": "2026-11-27T16:53:50.362Z",
+      "lastFetch": "2026-11-28T15:45:29.529Z",
       "sourceUrl": "https://api.github.com/repos/mamedev/mame/releases",
       "releases": [
         {
@@ -20368,7 +20368,7 @@
     },
     "manyverse": {
       "name": "Manyverse",
-      "lastFetch": "2026-11-27T16:53:50.813Z",
+      "lastFetch": "2026-11-28T15:45:29.984Z",
       "sourceUrl": "https://api.github.com/repos/staltz/manyverse/releases",
       "releases": [
         {
@@ -20515,7 +20515,7 @@
     },
     "mgba": {
       "name": "mGBA",
-      "lastFetch": "2026-11-27T16:53:51.272Z",
+      "lastFetch": "2026-11-28T15:45:30.535Z",
       "sourceUrl": "https://api.github.com/repos/mgba-emu/mgba/releases",
       "releases": [
         {
@@ -20662,7 +20662,7 @@
     },
     "openmw": {
       "name": "OpenMW",
-      "lastFetch": "2026-11-27T16:53:51.790Z",
+      "lastFetch": "2026-11-28T15:45:31.004Z",
       "sourceUrl": "https://api.github.com/repos/OpenMW/openmw/releases",
       "releases": [
         {
@@ -20809,7 +20809,7 @@
     },
     "openra": {
       "name": "OpenRA",
-      "lastFetch": "2026-11-27T16:53:52.533Z",
+      "lastFetch": "2026-11-28T15:45:31.661Z",
       "sourceUrl": "https://api.github.com/repos/OpenRA/OpenRA/releases",
       "releases": [
         {
@@ -20956,7 +20956,7 @@
     },
     "openttd": {
       "name": "OpenTTD",
-      "lastFetch": "2026-11-27T16:53:52.930Z",
+      "lastFetch": "2026-11-28T15:45:31.997Z",
       "sourceUrl": "https://api.github.com/repos/OpenTTD/OpenTTD/releases",
       "releases": [
         {
@@ -21109,7 +21109,7 @@
     },
     "ppsspp": {
       "name": "PPSSPP",
-      "lastFetch": "2026-11-27T16:53:54.086Z",
+      "lastFetch": "2026-11-28T15:45:33.115Z",
       "sourceUrl": "https://api.github.com/repos/hrydgard/ppsspp/releases",
       "releases": [
         {
@@ -21256,7 +21256,7 @@
     },
     "scummvm": {
       "name": "ScummVM",
-      "lastFetch": "2026-11-27T16:53:54.436Z",
+      "lastFetch": "2026-11-28T15:45:33.496Z",
       "sourceUrl": "https://api.github.com/repos/scummvm/scummvm/releases",
       "releases": [
         {
@@ -21368,7 +21368,7 @@
     },
     "stellarium": {
       "name": "Stellarium",
-      "lastFetch": "2026-11-27T16:53:55.439Z",
+      "lastFetch": "2026-11-28T15:45:34.287Z",
       "sourceUrl": "https://api.github.com/repos/Stellarium/stellarium/releases",
       "releases": [
         {
@@ -21515,7 +21515,7 @@
     },
     "supertuxkart": {
       "name": "SuperTuxKart",
-      "lastFetch": "2026-11-27T16:53:55.966Z",
+      "lastFetch": "2026-11-28T15:45:34.792Z",
       "sourceUrl": "https://api.github.com/repos/supertuxkart/stk-code/releases",
       "releases": [
         {
@@ -21578,7 +21578,7 @@
     },
     "adaway": {
       "name": "AdAway",
-      "lastFetch": "2026-11-27T16:53:56.307Z",
+      "lastFetch": "2026-11-28T15:45:35.131Z",
       "sourceUrl": "https://api.github.com/repos/AdAway/AdAway/releases",
       "releases": [
         {
@@ -21725,7 +21725,7 @@
     },
     "aniyomi": {
       "name": "Aniyomi",
-      "lastFetch": "2026-11-27T16:53:56.969Z",
+      "lastFetch": "2026-11-28T15:45:35.830Z",
       "sourceUrl": "https://api.github.com/repos/jmir1/aniyomi/releases",
       "releases": [
         {
@@ -21872,7 +21872,7 @@
     },
     "ankidroid": {
       "name": "AnkiDroid",
-      "lastFetch": "2026-11-27T16:53:57.592Z",
+      "lastFetch": "2026-11-28T15:45:36.520Z",
       "sourceUrl": "https://api.github.com/repos/ankidroid/Anki-Android/releases",
       "releases": [
         {
@@ -21991,7 +21991,7 @@
     },
     "antennapod": {
       "name": "AntennaPod",
-      "lastFetch": "2026-11-27T16:53:57.996Z",
+      "lastFetch": "2026-11-28T15:45:36.811Z",
       "sourceUrl": "https://api.github.com/repos/AntennaPod/AntennaPod/releases",
       "releases": [
         {
@@ -22138,7 +22138,7 @@
     },
     "audiobookshelf": {
       "name": "Audiobookshelf",
-      "lastFetch": "2026-11-27T16:53:58.382Z",
+      "lastFetch": "2026-11-28T15:45:37.189Z",
       "sourceUrl": "https://api.github.com/repos/advplyr/audiobookshelf/releases",
       "releases": [
         {
@@ -22285,7 +22285,7 @@
     },
     "blokada": {
       "name": "Blokada",
-      "lastFetch": "2026-11-27T16:53:58.671Z",
+      "lastFetch": "2026-11-28T15:45:37.437Z",
       "sourceUrl": "https://api.github.com/repos/blokadaorg/blokada/releases",
       "releases": [
         {
@@ -22313,7 +22313,7 @@
     },
     "davx5": {
       "name": "DAVx5",
-      "lastFetch": "2026-11-27T16:53:59.352Z",
+      "lastFetch": "2026-11-28T15:45:37.913Z",
       "sourceUrl": "https://api.github.com/repos/bitfireAT/davx5-ose/releases",
       "releases": [
         {
@@ -22460,7 +22460,7 @@
     },
     "f-droid": {
       "name": "F-Droid",
-      "lastFetch": "2026-11-27T16:53:59.580Z",
+      "lastFetch": "2026-11-28T15:45:38.293Z",
       "sourceUrl": "https://gitlab.com/api/v4/projects/fdroid%2Ffdroidclient/releases",
       "releases": [
         {
@@ -22509,7 +22509,7 @@
     },
     "kiss-launcher": {
       "name": "KISS Launcher",
-      "lastFetch": "2026-11-27T16:54:00.256Z",
+      "lastFetch": "2026-11-28T15:45:38.622Z",
       "sourceUrl": "https://api.github.com/repos/Neamar/KISS/releases",
       "releases": [
         {
@@ -22656,7 +22656,7 @@
     },
     "libre-tube": {
       "name": "LibreTube",
-      "lastFetch": "2026-11-27T16:54:01.005Z",
+      "lastFetch": "2026-11-28T15:45:39.144Z",
       "sourceUrl": "https://api.github.com/repos/libre-tube/LibreTube/releases",
       "releases": [
         {
@@ -22803,7 +22803,7 @@
     },
     "loop-habit-tracker": {
       "name": "Loop Habit Tracker",
-      "lastFetch": "2026-11-27T16:54:01.388Z",
+      "lastFetch": "2026-11-28T15:45:39.538Z",
       "sourceUrl": "https://api.github.com/repos/iSoron/uhabits/releases",
       "releases": [
         {
@@ -22950,7 +22950,7 @@
     },
     "markor": {
       "name": "Markor",
-      "lastFetch": "2026-11-27T16:54:01.897Z",
+      "lastFetch": "2026-11-28T15:45:39.924Z",
       "sourceUrl": "https://api.github.com/repos/gsantner/markor/releases",
       "releases": [
         {
@@ -23097,7 +23097,7 @@
     },
     "netguard": {
       "name": "NetGuard",
-      "lastFetch": "2026-11-27T16:54:02.420Z",
+      "lastFetch": "2026-11-28T15:45:40.204Z",
       "sourceUrl": "https://api.github.com/repos/M66B/NetGuard/releases",
       "releases": [
         {
@@ -23244,7 +23244,7 @@
     },
     "opentracks": {
       "name": "OpenTracks",
-      "lastFetch": "2026-11-27T16:54:02.916Z",
+      "lastFetch": "2026-11-28T15:45:40.567Z",
       "sourceUrl": "https://api.github.com/repos/OpenTracksApp/OpenTracks/releases",
       "releases": [
         {
@@ -23391,7 +23391,7 @@
     },
     "orbot": {
       "name": "Orbot",
-      "lastFetch": "2026-11-27T16:54:03.761Z",
+      "lastFetch": "2026-11-28T15:45:41.431Z",
       "sourceUrl": "https://api.github.com/repos/guardianproject/orbot/releases",
       "releases": [
         {
@@ -23538,7 +23538,7 @@
     },
     "organic-maps": {
       "name": "Organic Maps",
-      "lastFetch": "2026-11-27T16:54:04.554Z",
+      "lastFetch": "2026-11-28T15:45:42.089Z",
       "sourceUrl": "https://api.github.com/repos/organicmaps/organicmaps/releases",
       "releases": [
         {
@@ -23685,7 +23685,7 @@
     },
     "orgzly": {
       "name": "Orgzly",
-      "lastFetch": "2026-11-27T16:54:05.173Z",
+      "lastFetch": "2026-11-28T15:45:42.536Z",
       "sourceUrl": "https://api.github.com/repos/orgzly/orgzly-android/releases",
       "releases": [
         {
@@ -23832,7 +23832,7 @@
     },
     "seal": {
       "name": "Seal",
-      "lastFetch": "2026-11-27T16:54:05.808Z",
+      "lastFetch": "2026-11-28T15:45:42.992Z",
       "sourceUrl": "https://api.github.com/repos/JunkFood02/Seal/releases",
       "releases": [
         {
@@ -23979,7 +23979,7 @@
     },
     "shelter": {
       "name": "Shelter",
-      "lastFetch": "2026-11-27T16:54:06.041Z",
+      "lastFetch": "2026-11-28T15:45:43.203Z",
       "sourceUrl": "https://api.github.com/repos/PeterCxy/Shelter/releases",
       "releases": [
         {
@@ -23993,7 +23993,7 @@
     },
     "spotube": {
       "name": "Spotube",
-      "lastFetch": "2026-11-27T16:54:06.842Z",
+      "lastFetch": "2026-11-28T15:45:44.005Z",
       "sourceUrl": "https://api.github.com/repos/KRTirtho/spotube/releases",
       "releases": [
         {
@@ -24140,7 +24140,7 @@
     },
     "bookstack": {
       "name": "BookStack",
-      "lastFetch": "2026-11-27T16:54:08.147Z",
+      "lastFetch": "2026-11-28T15:45:45.214Z",
       "sourceUrl": "https://codeberg.org/api/v1/repos/BookStack/BookStack/releases",
       "releases": [
         {
@@ -24287,7 +24287,7 @@
     },
     "calibre": {
       "name": "calibre",
-      "lastFetch": "2026-11-27T16:54:08.631Z",
+      "lastFetch": "2026-11-28T15:45:45.557Z",
       "sourceUrl": "https://api.github.com/repos/kovidgoyal/calibre/releases",
       "releases": [
         {
@@ -24434,7 +24434,7 @@
     },
     "cherrytree": {
       "name": "CherryTree",
-      "lastFetch": "2026-11-27T16:54:09.323Z",
+      "lastFetch": "2026-11-28T15:45:46.056Z",
       "sourceUrl": "https://api.github.com/repos/giuspen/cherrytree/releases",
       "releases": [
         {
@@ -24581,7 +24581,7 @@
     },
     "etherpad": {
       "name": "Etherpad",
-      "lastFetch": "2026-11-27T16:54:10.221Z",
+      "lastFetch": "2026-11-28T15:45:46.793Z",
       "sourceUrl": "https://api.github.com/repos/ether/etherpad-lite/releases",
       "releases": [
         {
@@ -24728,7 +24728,7 @@
     },
     "ghost": {
       "name": "Ghost",
-      "lastFetch": "2026-11-27T16:54:10.681Z",
+      "lastFetch": "2026-11-28T15:45:47.212Z",
       "sourceUrl": "https://api.github.com/repos/TryGhost/Ghost/releases",
       "releases": [
         {
@@ -24875,9 +24875,16 @@
     },
     "hedgedoc": {
       "name": "HedgeDoc",
-      "lastFetch": "2026-11-27T16:54:11.029Z",
+      "lastFetch": "2026-11-28T15:45:47.508Z",
       "sourceUrl": "https://api.github.com/repos/hedgedoc/hedgedoc/releases",
       "releases": [
+        {
+          "version": "1.12.3",
+          "name": "HedgeDoc 1.12.3",
+          "releaseDate": "2026-11-27T21:13:42Z",
+          "releaseUrl": "https://github.com/hedgedoc/hedgedoc/releases/tag/1.12.3",
+          "releaseNotes": "This release should fix the bugs in the withdrawn releases 1.12.1 and 1.12.2 by repairing the database.\r\nTherefore, please inspect the release notes for 1.12.1 and 1.12.2 as well.\r\n\r\n**Note:** This release changes the local database to enforce uniqueness on the email column for local accounts.\r\nIn theory your instance should not have duplicate email addresses. However, it might be good to ensure this is\r\ntrue for your database as well and remove duplicate user entries otherwise.\r\n\r\nThe repair migrations - especially for SQLite - are a bit overcautious in order to not destroy any data.\r\nIn case your database has some weird situation which the repair does not recognize, it might abort and print a\r\nmessage to the log. So, please check your log on the first start of your instance after this update.\r\nAlso remember to create a backup before updating.\r\n\r\n### Security fixes\r\n\r\n- [GHSA-5q59-fhxv-4r9x](https://github.com/hedgedoc/hedgedoc/security/advisories/GHSA-5q59-fhxv-4r9x) reports a possible authorization check bypass when validating OAuth2 role or SAML group claims.\r\n\r\n### Bugfixes\r\n\r\n- Fixed the failing migrations of 1.12.1 and 1.12.2\r\n- Fixed registration breaking due to missing default values\r\n- Fixed login breaking due to a circular dependency import\r\n- Fixed permission check accessing invalid properties on realtime socket vs HTTP API\r\n- Fixed the first slide being printed as an empty page in Firefox\r\n- Fixed a crash on startup when `DATABASE_URL` is set and the config file has no section for the current environment, and `CMD_DB_URL` now takes precedence over the legacy `DATABASE_URL`\r\n\r\n### Contributors\r\n\r\n- [Patrick Lühne](https://github.com/pluehne)\r\n- [Sri Venkateswaran](https://github.com/srivenkateswaran6002)\r\n- [maluyckx](https://github.com/maluyckx)\r\n- [Mayuri Phad](https://github.com/mayuriphad)"
+        },
         {
           "version": "1.12.2",
           "name": "[WITHDRAWN] HedgeDoc 1.12.2",
@@ -25010,19 +25017,12 @@
           "releaseDate": "2022-10-30T21:20:25Z",
           "releaseUrl": "https://github.com/hedgedoc/hedgedoc/releases/tag/1.9.5",
           "releaseNotes": "🚨 This release has a [bug](https://github.com/hedgedoc/hedgedoc/issues/2809) that leads to **data-loss when using SQLite**.\r\nWe advise users of SQLite databases to skip this release and use 1.9.6. 🚨\r\n\r\n## Enhancements\r\n- Add dark mode toggle in mobile view\r\n- Replace embedding shortcode regexes with more specific ones to safeguard against XSS attacks\r\n\r\n## Bugfixes\r\n- Fix a crash when using LDAP authentication with custom search attributes (thanks to [@aboettger-tuhh](https://github.com/aboettger-tuhh) for reporting)\r\n- Fix a crash caused by a long note history when the MySQL database is used\r\n- Fix `breaks` option not being respected in the publish-view\r\n- Fix missing syntax highlighting in the markdown editor\r\n\r\n## Contributors\r\n- Bateausurleau (translator)\r\n- Goncalo (translator)\r\n- Ívarr Vinter (translator)\r\n- Oein0219 (translator)\r\n- [Pol Dellaiera](https://github.com/drupol)"
-        },
-        {
-          "version": "1.9.4",
-          "name": "HedgeDoc 1.9.4",
-          "releaseDate": "2022-07-10T20:14:57Z",
-          "releaseUrl": "https://github.com/hedgedoc/hedgedoc/releases/tag/1.9.4",
-          "releaseNotes": "**Please note:** This release dropped support for Node 12, which is end-of-life since April 2022.\r\nYou now need at least Node 14.13.1 or Node 16 to run HedgeDoc. We don't support more recent versions of Node.\r\n\r\n## Enhancements\r\n- Remove unexpected shell call during migrations\r\n- More S3 config options: upload folder & public ACL (thanks to [@lautaroalvarez](https://github.com/lautaroalvarez))\r\n\r\n## Contributors\r\n- Al_x (translator)\r\n- Emmanuel Courreges (translator)\r\n- paranic (translator)\r\n- Quentin PAGÈS (translator)"
         }
       ]
     },
     "jabref": {
       "name": "JabRef",
-      "lastFetch": "2026-11-27T16:54:11.709Z",
+      "lastFetch": "2026-11-28T15:45:48.019Z",
       "sourceUrl": "https://api.github.com/repos/JabRef/jabref/releases",
       "releases": [
         {
@@ -25169,7 +25169,7 @@
     },
     "joplin": {
       "name": "Joplin",
-      "lastFetch": "2026-11-27T16:54:12.830Z",
+      "lastFetch": "2026-11-28T15:45:48.991Z",
       "sourceUrl": "https://api.github.com/repos/laurent22/joplin/releases",
       "releases": [
         {
@@ -25316,7 +25316,7 @@
     },
     "libreoffice": {
       "name": "LibreOffice",
-      "lastFetch": "2026-11-27T16:54:14.080Z",
+      "lastFetch": "2026-11-28T15:45:49.802Z",
       "sourceUrl": "https://download.documentfoundation.org/libreoffice/stable/",
       "releases": [
         {
@@ -25351,7 +25351,7 @@
     },
     "logseq": {
       "name": "Logseq",
-      "lastFetch": "2026-11-27T16:54:15.241Z",
+      "lastFetch": "2026-11-28T15:45:51.035Z",
       "sourceUrl": "https://api.github.com/repos/logseq/logseq/releases",
       "releases": [
         {
@@ -25498,7 +25498,7 @@
     },
     "marktext": {
       "name": "MarkText",
-      "lastFetch": "2026-11-27T16:54:16.184Z",
+      "lastFetch": "2026-11-28T15:45:52.036Z",
       "sourceUrl": "https://api.github.com/repos/marktext/marktext/releases",
       "releases": [
         {
@@ -25651,7 +25651,7 @@
     },
     "pandoc": {
       "name": "pandoc",
-      "lastFetch": "2026-11-27T16:54:17.547Z",
+      "lastFetch": "2026-11-28T15:45:53.472Z",
       "sourceUrl": "https://api.github.com/repos/jgm/pandoc/releases",
       "releases": [
         {
@@ -25798,7 +25798,7 @@
     },
     "pdfarranger": {
       "name": "PDF Arranger",
-      "lastFetch": "2026-11-27T16:54:17.882Z",
+      "lastFetch": "2026-11-28T15:45:53.834Z",
       "sourceUrl": "https://api.github.com/repos/pdfarranger/pdfarranger/releases",
       "releases": [
         {
@@ -25945,7 +25945,7 @@
     },
     "pdfsam": {
       "name": "PDFsam",
-      "lastFetch": "2026-11-27T16:54:18.826Z",
+      "lastFetch": "2026-11-28T15:45:54.612Z",
       "sourceUrl": "https://api.github.com/repos/torakiki/pdfsam/releases",
       "releases": [
         {
@@ -26092,7 +26092,7 @@
     },
     "simplenote": {
       "name": "Simplenote",
-      "lastFetch": "2026-11-27T16:54:19.986Z",
+      "lastFetch": "2026-11-28T15:45:56.032Z",
       "sourceUrl": "https://api.github.com/repos/Automattic/simplenote-electron/releases",
       "releases": [
         {
@@ -26239,7 +26239,7 @@
     },
     "stirling-pdf": {
       "name": "Stirling-PDF",
-      "lastFetch": "2026-11-27T16:54:21.105Z",
+      "lastFetch": "2026-11-28T15:45:57.036Z",
       "sourceUrl": "https://api.github.com/repos/Stirling-Tools/Stirling-PDF/releases",
       "releases": [
         {
@@ -26386,7 +26386,7 @@
     },
     "trilium": {
       "name": "Trilium Notes",
-      "lastFetch": "2026-11-27T16:54:22.384Z",
+      "lastFetch": "2026-11-28T15:45:58.216Z",
       "sourceUrl": "https://api.github.com/repos/zadam/trilium/releases",
       "releases": [
         {
@@ -26533,7 +26533,7 @@
     },
     "xournalpp": {
       "name": "Xournal++",
-      "lastFetch": "2026-11-27T16:54:23.019Z",
+      "lastFetch": "2026-11-28T15:45:58.873Z",
       "sourceUrl": "https://api.github.com/repos/xournalpp/xournalpp/releases",
       "releases": [
         {
@@ -26686,7 +26686,7 @@
     },
     "etcher": {
       "name": "balenaEtcher",
-      "lastFetch": "2026-11-27T16:54:24.451Z",
+      "lastFetch": "2026-11-28T15:46:00.328Z",
       "sourceUrl": "https://api.github.com/repos/balena-io/etcher/releases",
       "releases": [
         {
@@ -26826,7 +26826,7 @@
     },
     "bedrock-linux": {
       "name": "Bedrock Linux",
-      "lastFetch": "2026-11-27T16:54:25.377Z",
+      "lastFetch": "2026-11-28T15:46:01.161Z",
       "sourceUrl": "https://api.github.com/repos/bedrocklinux/bedrocklinux-userland/releases",
       "releases": [
         {
@@ -26973,7 +26973,7 @@
     },
     "dietpi": {
       "name": "DietPi",
-      "lastFetch": "2026-11-27T16:54:25.739Z",
+      "lastFetch": "2026-11-28T15:46:01.472Z",
       "sourceUrl": "https://api.github.com/repos/MichaIng/DietPi/releases",
       "releases": [
         {
@@ -27112,7 +27112,7 @@
     },
     "elementary-os": {
       "name": "elementary OS",
-      "lastFetch": "2026-11-27T16:54:26.244Z",
+      "lastFetch": "2026-11-28T15:46:02.027Z",
       "sourceUrl": "https://api.github.com/repos/elementary/os/releases",
       "releases": [
         {
@@ -27265,7 +27265,7 @@
     },
     "libreelec": {
       "name": "LibreELEC",
-      "lastFetch": "2026-11-27T16:54:26.781Z",
+      "lastFetch": "2026-11-28T15:46:02.589Z",
       "sourceUrl": "https://api.github.com/repos/LibreELEC/LibreELEC.tv/releases",
       "releases": [
         {
@@ -27418,7 +27418,7 @@
     },
     "openwrt": {
       "name": "OpenWrt",
-      "lastFetch": "2026-11-27T16:54:27.402Z",
+      "lastFetch": "2026-11-28T15:46:03.182Z",
       "sourceUrl": "https://api.github.com/repos/openwrt/openwrt/releases",
       "releases": [
         {
@@ -27577,7 +27577,7 @@
     },
     "puppy-linux": {
       "name": "Puppy Linux",
-      "lastFetch": "2026-11-27T16:54:28.089Z",
+      "lastFetch": "2026-11-28T15:46:03.900Z",
       "sourceUrl": "https://api.github.com/repos/puppylinux-woof-CE/woof-CE/releases",
       "releases": [
         {
@@ -27612,7 +27612,7 @@
     },
     "raspberry-pi-imager": {
       "name": "Raspberry Pi Imager",
-      "lastFetch": "2026-11-27T16:54:28.594Z",
+      "lastFetch": "2026-11-28T15:46:04.533Z",
       "sourceUrl": "https://api.github.com/repos/raspberrypi/rpi-imager/releases",
       "releases": [
         {
@@ -27759,7 +27759,7 @@
     },
     "reactos": {
       "name": "ReactOS",
-      "lastFetch": "2026-11-27T16:54:28.844Z",
+      "lastFetch": "2026-11-28T15:46:04.806Z",
       "sourceUrl": "https://api.github.com/repos/reactos/reactos/releases",
       "releases": [
         {
@@ -27836,7 +27836,7 @@
     },
     "redox-os": {
       "name": "Redox OS",
-      "lastFetch": "2026-11-27T16:54:29.172Z",
+      "lastFetch": "2026-11-28T15:46:05.148Z",
       "sourceUrl": "https://api.github.com/repos/redox-os/redox/releases",
       "releases": [
         {
@@ -27968,7 +27968,7 @@
     },
     "ubuntu": {
       "name": "Ubuntu",
-      "lastFetch": "2026-11-27T16:54:31.439Z",
+      "lastFetch": "2026-11-28T15:46:06.863Z",
       "sourceUrl": "https://cloud-images.ubuntu.com/releases/streams/v1/com.ubuntu.cloud:released:download.json",
       "releases": [
         {
@@ -28115,7 +28115,7 @@
     },
     "ventoy": {
       "name": "Ventoy",
-      "lastFetch": "2026-11-27T16:54:32.270Z",
+      "lastFetch": "2026-11-28T15:46:07.413Z",
       "sourceUrl": "https://api.github.com/repos/ventoy/Ventoy/releases",
       "releases": [
         {
@@ -28274,7 +28274,7 @@
     },
     "adguard-home": {
       "name": "AdGuard Home",
-      "lastFetch": "2026-11-27T16:54:34.210Z",
+      "lastFetch": "2026-11-28T15:46:09.125Z",
       "sourceUrl": "https://api.github.com/repos/AdguardTeam/AdGuardHome/releases",
       "releases": [
         {
@@ -28421,7 +28421,7 @@
     },
     "aircrack-ng": {
       "name": "Aircrack-ng",
-      "lastFetch": "2026-11-27T16:54:34.468Z",
+      "lastFetch": "2026-11-28T15:46:09.408Z",
       "sourceUrl": "https://api.github.com/repos/aircrack-ng/aircrack-ng/releases",
       "releases": [
         {
@@ -28491,7 +28491,7 @@
     },
     "certbot": {
       "name": "Certbot",
-      "lastFetch": "2026-11-27T16:54:35.144Z",
+      "lastFetch": "2026-11-28T15:46:10.022Z",
       "sourceUrl": "https://api.github.com/repos/certbot/certbot/releases",
       "releases": [
         {
@@ -28638,7 +28638,7 @@
     },
     "endlessh": {
       "name": "endlessh",
-      "lastFetch": "2026-11-27T16:54:35.425Z",
+      "lastFetch": "2026-11-28T15:46:10.261Z",
       "sourceUrl": "https://api.github.com/repos/skeeto/endlessh/releases",
       "releases": [
         {
@@ -28652,7 +28652,7 @@
     },
     "fail2ban": {
       "name": "Fail2ban",
-      "lastFetch": "2026-11-27T16:54:35.811Z",
+      "lastFetch": "2026-11-28T15:46:10.578Z",
       "sourceUrl": "https://api.github.com/repos/fail2ban/fail2ban/releases",
       "releases": [
         {
@@ -28799,7 +28799,7 @@
     },
     "gobuster": {
       "name": "Gobuster",
-      "lastFetch": "2026-11-27T16:54:36.223Z",
+      "lastFetch": "2026-11-28T15:46:10.941Z",
       "sourceUrl": "https://api.github.com/repos/OJ/gobuster/releases",
       "releases": [
         {
@@ -28897,7 +28897,7 @@
     },
     "hashcat": {
       "name": "Hashcat",
-      "lastFetch": "2026-11-27T16:54:36.575Z",
+      "lastFetch": "2026-11-28T15:46:11.247Z",
       "sourceUrl": "https://api.github.com/repos/hashcat/hashcat/releases",
       "releases": [
         {
@@ -29044,7 +29044,7 @@
     },
     "keepassxc": {
       "name": "KeePassXC",
-      "lastFetch": "2026-11-27T16:54:37.384Z",
+      "lastFetch": "2026-11-28T15:46:11.928Z",
       "sourceUrl": "https://api.github.com/repos/keepassxreboot/keepassxc/releases",
       "releases": [
         {
@@ -29191,7 +29191,7 @@
     },
     "masscan": {
       "name": "Masscan",
-      "lastFetch": "2026-11-27T16:54:37.693Z",
+      "lastFetch": "2026-11-28T15:46:12.170Z",
       "sourceUrl": "https://api.github.com/repos/robertdavidgraham/masscan/releases",
       "releases": [
         {
@@ -29254,7 +29254,7 @@
     },
     "onionshare": {
       "name": "OnionShare",
-      "lastFetch": "2026-11-27T16:54:38.240Z",
+      "lastFetch": "2026-11-28T15:46:12.608Z",
       "sourceUrl": "https://api.github.com/repos/onionshare/onionshare/releases",
       "releases": [
         {
@@ -29401,7 +29401,7 @@
     },
     "owasp-zap": {
       "name": "OWASP ZAP",
-      "lastFetch": "2026-11-27T16:54:38.778Z",
+      "lastFetch": "2026-11-28T15:46:12.973Z",
       "sourceUrl": "https://api.github.com/repos/zaproxy/zaproxy/releases",
       "releases": [
         {
@@ -29429,7 +29429,7 @@
     },
     "pi-hole": {
       "name": "Pi-hole",
-      "lastFetch": "2026-11-27T16:54:39.156Z",
+      "lastFetch": "2026-11-28T15:46:13.343Z",
       "sourceUrl": "https://api.github.com/repos/pi-hole/pi-hole/releases",
       "releases": [
         {
@@ -29576,7 +29576,7 @@
     },
     "privacy-badger": {
       "name": "Privacy Badger",
-      "lastFetch": "2026-11-27T16:54:39.661Z",
+      "lastFetch": "2026-11-28T15:46:13.720Z",
       "sourceUrl": "https://api.github.com/repos/EFForg/privacybadger/releases",
       "releases": [
         {
@@ -29723,7 +29723,7 @@
     },
     "sqlmap": {
       "name": "sqlmap",
-      "lastFetch": "2026-11-27T16:54:39.932Z",
+      "lastFetch": "2026-11-28T15:46:13.967Z",
       "sourceUrl": "https://api.github.com/repos/sqlmapproject/sqlmap/releases",
       "releases": [
         {
@@ -29807,7 +29807,7 @@
     },
     "suricata": {
       "name": "Suricata",
-      "lastFetch": "2026-11-27T16:54:40.449Z",
+      "lastFetch": "2026-11-28T15:46:14.350Z",
       "sourceUrl": "https://api.github.com/repos/OISF/suricata/releases",
       "releases": [
         {
@@ -29954,7 +29954,7 @@
     },
     "ublock-origin": {
       "name": "uBlock Origin",
-      "lastFetch": "2026-11-27T16:54:41.352Z",
+      "lastFetch": "2026-11-28T15:46:15.094Z",
       "sourceUrl": "https://api.github.com/repos/gorhill/uBlock/releases",
       "releases": [
         {
@@ -30101,7 +30101,7 @@
     },
     "vaultwarden": {
       "name": "Vaultwarden",
-      "lastFetch": "2026-11-27T16:54:41.749Z",
+      "lastFetch": "2026-11-28T15:46:15.481Z",
       "sourceUrl": "https://api.github.com/repos/dani-garcia/vaultwarden/releases",
       "releases": [
         {
@@ -30248,7 +30248,7 @@
     },
     "veracrypt": {
       "name": "VeraCrypt",
-      "lastFetch": "2026-11-27T16:54:42.499Z",
+      "lastFetch": "2026-11-28T15:46:16.376Z",
       "sourceUrl": "https://api.github.com/repos/veracrypt/VeraCrypt/releases",
       "releases": [
         {
@@ -30395,7 +30395,7 @@
     },
     "wazuh": {
       "name": "Wazuh",
-      "lastFetch": "2026-11-27T16:54:43.091Z",
+      "lastFetch": "2026-11-28T15:46:16.850Z",
       "sourceUrl": "https://api.github.com/repos/wazuh/wazuh/releases",
       "releases": [
         {
@@ -30542,7 +30542,7 @@
     },
     "zeek": {
       "name": "Zeek",
-      "lastFetch": "2026-11-27T16:54:43.999Z",
+      "lastFetch": "2026-11-28T15:46:17.452Z",
       "sourceUrl": "https://api.github.com/repos/zeek/zeek/releases",
       "releases": [
         {
@@ -30689,7 +30689,7 @@
     },
     "bleachbit": {
       "name": "BleachBit",
-      "lastFetch": "2026-11-27T16:54:44.590Z",
+      "lastFetch": "2026-11-28T15:46:17.910Z",
       "sourceUrl": "https://api.github.com/repos/bleachbit/bleachbit/releases",
       "releases": [
         {
@@ -30822,7 +30822,7 @@
     },
     "borgbackup": {
       "name": "BorgBackup",
-      "lastFetch": "2026-11-27T16:54:45.622Z",
+      "lastFetch": "2026-11-28T15:46:18.887Z",
       "sourceUrl": "https://api.github.com/repos/borgbackup/borg/releases",
       "releases": [
         {
@@ -30969,7 +30969,7 @@
     },
     "btop": {
       "name": "btop",
-      "lastFetch": "2026-11-27T16:54:46.301Z",
+      "lastFetch": "2026-11-28T15:46:19.435Z",
       "sourceUrl": "https://api.github.com/repos/aristocratos/btop/releases",
       "releases": [
         {
@@ -31116,7 +31116,7 @@
     },
     "duf": {
       "name": "duf",
-      "lastFetch": "2026-11-27T16:54:46.693Z",
+      "lastFetch": "2026-11-28T15:46:19.840Z",
       "sourceUrl": "https://api.github.com/repos/muesli/duf/releases",
       "releases": [
         {
@@ -31221,7 +31221,7 @@
     },
     "dust": {
       "name": "dust",
-      "lastFetch": "2026-11-27T16:54:47.360Z",
+      "lastFetch": "2026-11-28T15:46:20.334Z",
       "sourceUrl": "https://api.github.com/repos/bootandy/dust/releases",
       "releases": [
         {
@@ -31368,9 +31368,16 @@
     },
     "fastfetch": {
       "name": "fastfetch",
-      "lastFetch": "2026-11-27T16:54:50.365Z",
+      "lastFetch": "2026-11-28T15:46:23.066Z",
       "sourceUrl": "https://api.github.com/repos/fastfetch-cli/fastfetch/releases",
       "releases": [
+        {
+          "version": "2.72.0",
+          "name": "2.72.0",
+          "releaseDate": "2026-11-28T05:58:37Z",
+          "releaseUrl": "https://github.com/fastfetch-cli/fastfetch/releases/tag/2.72.0",
+          "releaseNotes": "Changes:\r\n* DragonFly BSD support is deprecated and will be removed in a future release.\r\n    * DF BSD keeps introducing broken packages and breaks fastfetch CI, making it difficult to maintain reliable support. Considering its low usage and the maintenance burden, I have decided to deprecate it.\r\n\r\nFeatures:\r\n* Added glob and environment variable expansion to logo sources on Windows. `%VAR%`, `$VAR` and `${VAR}` are supported, and a glob matching several files picks one randomly. (#2718, Logo, Windows)\r\n* Added opt-in drive health detection for NVMe disks, via udisks2 on Linux (no root required), NVMe SMART on macOS and the NVMe health log on Windows. (#2726, PhysicalDisk, Linux / macOS / Windows)\r\n    * Enable it with `\"health\": true`. The default output appends `Health <100 - percentage used>%` and any critical warnings.\r\n    * New format args: `{health}`, `{percent-used}`, `{available-spare}` and `{critical-warning}`.\r\n    * ATA disks report the SMART `failing` status as a critical warning (SAS and RAID disks stay unknown). On Windows and macOS, checking them may wake a sleeping HDD.\r\n* Added unprivileged detection of DMI physical memory slots on Linux using udev's DMI database (`/run/udev/data/+dmi:id`, systemd 248+). (PhysicalMemory, Linux)\r\n    * Falls back to reading SMBIOS directly when the udev DMI database is unavailable (requires root).\r\n* Added version detection and a `PowerShell Preview` display name for `pwsh-preview`. (Shell, Windows)\r\n* Added CPU temperature detection via PawnIO on Windows. (CPU, Windows)\r\n    * Previously CPU temperature was read from the `\\_TZ.CPUZ` thermal zone via perflib, which can be unavailable or inaccurate on some systems. The new method reads Intel MSRs directly through the PawnIO driver.\r\n    * Requires an x86_64 Intel CPU, the PawnIO driver installed, and administrator privileges; otherwise fastfetch falls back to the thermal zone method. Maximum frequency detection is also improved when PawnIO is available.\r\n    * Disclaimer: installing an 3rd-party kernel driver is generally not recommended and may pose security risks. Use it at your own risk.\r\n\r\nChanges:\r\n* Improved PCI GPU name resolution by checking udev's hardware database and the NVIDIA driver's procfs before falling back to pci.ids. (GPU, Linux)\r\n* Redhat Virtio GPUs are now reported as integrated instead of discrete. (GPU, Linux)\r\n\r\nBugfixes:\r\n* Fixed libc version detection on FreeBSD without binutils installed, and on DragonFly BSD. (Libc, FreeBSD / DragonFly)\r\n* Fixed CPU cache detection failing entirely when any CPU is offline. (#2736, CPUCache, Linux)\r\n* Fixed the scale factor of rotated monitors on Wayland, e.g. a 1920x1200 monitor rotated by 90 degrees at scale 1 being reported as `@ 1.59x`. (Display, Linux)\r\n* Fixed Linux DRM display detection reading connector information from the wrong sysfs path after the EDID path was appended, and appending the EDID display name to the connector name instead of replacing it. (Display, Linux)\r\n* Fixed the sysfs modes buffer not being NUL-terminated before parsing on Linux. (Display, Linux)\r\n* Fixed out-of-bounds reads when parsing malformed CTA-861 EDID extensions. (General)\r\n* Fixed the init system executable path being truncated on platforms where POSIX `basename()` modifies its argument. (InitSystem, Linux)\r\n* Fixed undefined behavior from passing negative `char` values to ctype functions. (General)\r\n* Fixed OS detection failed when `TARGET_DIR_ETC` is set on FreeBSD. (OS, FreeBSD)\r\n\r\nLogos:\r\n* Updated the CuerdOS logo and colors (#2712)\r\n* Removed the Turkmen Linux (`Turkish`) logo\r\n\r\n---\r\n\r\nSHA256 and SHA512 checksums for all release assets are available in `SHA256SUMS.txt` and `SHA512SUMS.txt`.\r\n"
+        },
         {
           "version": "2.71.0",
           "name": "2.71.0",
@@ -31503,19 +31510,12 @@
           "releaseDate": "2026-03-07T03:41:27Z",
           "releaseUrl": "https://github.com/fastfetch-cli/fastfetch/releases/tag/2.60.0",
           "releaseNotes": "Changes:\r\n* The CMake option `ENABLE_WIN7_COMPAT:BOOLEAN` now defaults to `OFF` and will be removed in v2.61.0, effectively dropping support for Windows 7 in the next release.\r\n    * This follows the Windows 7 deprecation notice introduced in v2.57.0.\r\n* `wm.detectPlugin` now defaults to `true` (WM)\r\n\r\nFeatures:\r\n* Adds `{cwd}` for custom title formatting, which displays the current working directory (Title)\r\n* Adds support for detecting the Zed version (#2200, Editor)\r\n* Adds support for detecting `moss` packages (Packages, Linux)\r\n* Adds support for detecting komorebi, FancyWM, and GlazeWM (WM, Windows)\r\n* Adds support for WM plugin version detection on macOS (WM, macOS)\r\n* Adds support for retrieving the executable path on OpenBSD (#2195, OpenBSD)\r\n\r\nBugfixes:\r\n* Fixes a potential segmentation fault caused by dereferencing a negative index (#2198)\r\n* Fixes `tempSensor` parsing so that it accepts only string values (#2202, CPU)\r\n* Fixes an issue that unexpectedly caused fewer devices to be reported (Keyboard, Linux)\r\n* Improves WM detection on LXQt by querying WM settings only when no WM has already been detected (#2199, WM, Linux)\r\n* Fixes memory leaks in DBus connection handling and in the OpenGL EGL context lifecycle\r\n* Fixes niri version detection on Fedora (WM, Linux)\r\n* Includes various internal cleanups and optimizations\r\n\r\nLogos:\r\n* Adds `RengeOS` (#2170)\r\n* Adds `Emmabuntüs` (#2207)\r\n* Updates Artix Linux (#2157)\r\n* Updates Linux Mint (#2186)\r\n* Renames `Refracted Devuan` to `Refracta`\r\n* Renames `ExodiaPredator` to `ExodiaOS`\r\n\r\n---\r\n\r\n<details><summary>SHA256SUMs</summary><br>\r\n\r\n```\r\n6d15456f13595834c2e9571e3d8a6d8a1bf4bf02bfccdc8c86f01196f24e0a47  fastfetch-dragonfly-amd64/fastfetch-dragonfly-amd64.tar.gz\r\n9e1c240a994376c296000a1a4b7438c891144d3139883796b6f8f18fe8bece66  fastfetch-dragonfly-amd64/fastfetch-dragonfly-amd64.zip\r\nb62041e6c3f2aa57ed54e7c41353106d092a54abfda8b0f7b56d776d103fc37d  fastfetch-freebsd-amd64/fastfetch-freebsd-amd64.pkg\r\ndb0557b6551d47bc2d53ee8506d3b33a7ef0e6954009a4e2399117740142819f  fastfetch-freebsd-amd64/fastfetch-freebsd-amd64.tar.gz\r\nf676007b6807c9ccad140b8ea62c702906db67c48f7c1743bf1024c4af2e7bc9  fastfetch-freebsd-amd64/fastfetch-freebsd-amd64.zip\r\nbfd8f3959ec7b31bfbcb79db3add72f6240c35d26af7c0155c0c843e94d819bf  fastfetch-haiku-amd64/fastfetch-haiku-amd64.tar.gz\r\n9212197190df960b974f44fa781e7c739bcbf1a23f9ac5603086ff8ec5e372f0  fastfetch-haiku-amd64/fastfetch-haiku-amd64.zip\r\nc5c12be3a8025d5a17505a168aad88d0e75382845913e48e3ceddca24b77bbc3  fastfetch-linux-aarch64/fastfetch-linux-aarch64-polyfilled.deb\r\ne44e2e61c470435be7f0c6ea607904c6445083b88de54a5ea07990b340d32909  fastfetch-linux-aarch64/fastfetch-linux-aarch64-polyfilled.rpm\r\n7c78b6412eedd8c9a1c0d06f60c05b2f55523f11b9dcf7a52181c7f988d24627  fastfetch-linux-aarch64/fastfetch-linux-aarch64-polyfilled.tar.gz\r\n30be67046bc1d1eaa0ee8424edec5a37f4c9153032b3a9f1f4c2f48ee1a1d1f2  fastfetch-linux-aarch64/fastfetch-linux-aarch64-polyfilled.zip\r\nedeaea6c343fd098f9b11d6d7017552219f74475a94241431901287e95ad8d36  fastfetch-linux-aarch64/fastfetch-linux-aarch64.deb\r\naced8b8f6e73ae2a15a7d4591be7051814681763735758cd3c7c4ddb72c782c2  fastfetch-linux-aarch64/fastfetch-linux-aarch64.rpm\r\n6ce2f87ac780337973687a43219dff3b8a45a4bc68b99959d5a287d2ffbaae22  fastfetch-linux-aarch64/fastfetch-linux-aarch64.tar.gz\r\n5fa1daf85d0cf03580b4caebca2bf0f22a118700d8af00260c6666c896d2b805  fastfetch-linux-aarch64/fastfetch-linux-aarch64.zip\r\n75882d69b58aec60db4e8548b355b57478988bf9b58edb316bcea0d0666e5b38  fastfetch-linux-amd64/fastfetch-linux-amd64-polyfilled.deb\r\nfe1906f09898ff6baa39aabfeb866e6d10cdc73cfc24f67bc85796c9d664f5ad  fastfetch-linux-amd64/fastfetch-linux-amd64-polyfilled.rpm\r\nea006064c6ad2db16a062d248d21c19fcdcc250390b8a245199a0762e21a878b  fastfetch-linux-amd64/fastfetch-linux-amd64-polyfilled.tar.gz\r\neb270c237791621662ab87a5975e388b76a2f20979f8a7ef2e30db7e0fb4cb67  fastfetch-linux-amd64/fastfetch-linux-amd64-polyfilled.zip\r\nf24aa1187c544250177d1329a7abc0c31ee9f06ec8e6cbba1ad57a2ddc4eec25  fastfetch-linux-amd64/fastfetch-linux-amd64.deb\r\ned0d192dabeda8b91a837c068a0653bd215234539ebfce86943243a367f67bcb  fastfetch-linux-amd64/fastfetch-linux-amd64.rpm\r\n168c9ab15cf00ffbb08dd157ad71d023714b8e278336d7eec9c4e3c17284dced  fastfetch-linux-amd64/fastfetch-linux-amd64.tar.gz\r\n3c67a2531d9a97c352d11226655428faeabe3408cb90ae1bc327065c6b88828f  fastfetch-linux-amd64/fastfetch-linux-amd64.zip\r\nde05bae83aaa9d9bbcaa4ac50cb69add24fc46600be1ff434bd4f03a6cf4e29d  fastfetch-linux-armv6l/fastfetch-linux-armv6l.deb\r\nd2bc00458617573dcb2d3160531c6dee040caf7de358159124288a35eabd7fe2  fastfetch-linux-armv6l/fastfetch-linux-armv6l.rpm\r\n99fe22401fc23ae3347dff87776c78e39fa908ff52e7ae6ba44d51aa8c98a272  fastfetch-linux-armv6l/fastfetch-linux-armv6l.tar.gz\r\nbb9a0be1f7852cf2cd90a36f5169647e77e74bd228bf21edaa2850f12e907a08  fastfetch-linux-armv6l/fastfetch-linux-armv6l.zip\r\n8de91a066ba8b83504107ae24e90c6cfec9e15fa2d8c35dbd04617b46c9c7932  fastfetch-linux-armv7l/fastfetch-linux-armv7l.deb\r\nb74c624b6253c84055c2d915ef55f63d6a24b8cc22ae40938f99378675c911af  fastfetch-linux-armv7l/fastfetch-linux-armv7l.rpm\r\nffefe898fba38aaeedf2ba48475b359543e63c6f6e0a7a844f157e73ebaf7421  fastfetch-linux-armv7l/fastfetch-linux-armv7l.tar.gz\r\ne521dcd8f43b4a2a5154a08400dfa88d5f80219ed7db00628a940fad93267673  fastfetch-linux-armv7l/fastfetch-linux-armv7l.zip\r\n7856e5f2e61760428bdd2a2870ac4cbd4f70315e888ea03f7dc52e698fa7a22c  fastfetch-linux-i686/fastfetch-linux-i686.deb\r\n346d3302a2cd08eb6739b459cbc7f7d868d7b42e36e4625c0743e5a7ff0068c7  fastfetch-linux-i686/fastfetch-linux-i686.rpm\r\n19a87e152492c50f3c21a1049c29e2399166019715bb2e95ba1ae77f10937584  fastfetch-linux-i686/fastfetch-linux-i686.tar.gz\r\n3bd05f577720f02cccabc78077645c8cd80fa07c515fc3ededfeaf44ec8f2ec1  fastfetch-linux-i686/fastfetch-linux-i686.zip\r\n42d6b8bda0e8d87ae8ca06aa09a7cf67893e58a09fc4e69737c6b8a3263ca9d7  fastfetch-linux-ppc64le/fastfetch-linux-ppc64le.deb\r\na6c8b9e1d7af9d4e8f35ad0193ed8f0ca19aabe3eb7c6e0a8fb5f9c787a84d91  fastfetch-linux-ppc64le/fastfetch-linux-ppc64le.rpm\r\n4003200b42b45f50d93a01d59a1e5bac98e64cf9bba659b2797e9beb0d9d324e  fastfetch-linux-ppc64le/fastfetch-linux-ppc64le.tar.gz\r\n5d2b2d24a8d3aa852063642d1805eb1c87ba0ccc459a961be1353e312b3e60ea  fastfetch-linux-ppc64le/fastfetch-linux-ppc64le.zip\r\naab8e9dad1e91cd972c3d2a9c2830241562bbb00d0710957b89be490c5e20352  fastfetch-linux-riscv64/fastfetch-linux-riscv64.deb\r\nb3631d74659fb0629dbd6b4280f889df324aa688cc254d5ab378fd48fd60c6cb  fastfetch-linux-riscv64/fastfetch-linux-riscv64.rpm\r\ncf5503f26a18bb8bae829c0dd7371fb2d28b49f2eb1db6e12b15000d75d267df  fastfetch-linux-riscv64/fastfetch-linux-riscv64.tar.gz\r\n34eaa1c0cdae6c578263940a070f04d121529616aec2ac5769bb2c40c6d24732  fastfetch-linux-riscv64/fastfetch-linux-riscv64.zip\r\n397df754a8dfe7d8b88c823cf0246b23aa41dfe2e7b99bb9260ef2286d38f144  fastfetch-linux-s390x/fastfetch-linux-s390x.deb\r\ne1068d6854bf358d9f2616bb8c6a20f1e9156992a4f165aed36cd5fdb1424a26  fastfetch-linux-s390x/fastfetch-linux-s390x.rpm\r\n685c7e8866fbcab7157fa5b46a7a6df347e84f5dc27ae9e9639536edb4278434  fastfetch-linux-s390x/fastfetch-linux-s390x.tar.gz\r\ndd1456a24f88d06e3f91259ac31d83a2ee9991b239ba5e74bd07cbb66b36b576  fastfetch-linux-s390x/fastfetch-linux-s390x.zip\r\nd44a0e6b59102c5cc2c374fd6d83c05f1a54964fa30abde94188d06582b43ea7  fastfetch-macos-aarch64/fastfetch-macos-aarch64.tar.gz\r\neaeec3873f4538305b2aefa912364a3036ddb51a4e9eaa482172a032b56f39e5  fastfetch-macos-aarch64/fastfetch-macos-aarch64.zip\r\n093aa4901c2010c1aa78742ef744c88c2957e1e7278a6f1ee116f8d9aae74a35  fastfetch-macos-amd64/fastfetch-macos-amd64.tar.gz\r\nd9d1275112b5cfa48ec84e2c00059d4914fb080e69bb73ca6c57093147a36a3f  fastfetch-macos-amd64/fastfetch-macos-amd64.zip\r\n742202f7ec9ddeb1efbb54bff1259cb2b850e8593dfa374b3dd95bb9cce6b6ab  fastfetch-musl-amd64/fastfetch-musl-amd64.tar.gz\r\n25834aeeab65b7e8d3becd388a5ed7934b4e4e868fb640285998800dc5de6758  fastfetch-musl-amd64/fastfetch-musl-amd64.zip\r\n6c8038e4c3728c3564510cd3eef340a76ca4160f514e8eb9774ae7fa92e02831  fastfetch-netbsd-amd64/fastfetch-netbsd-amd64.tar.gz\r\n4a0bd1f4d95d67de6a86abd6e03102608642225a2d6d7128aaf2ee6cf48f4408  fastfetch-netbsd-amd64/fastfetch-netbsd-amd64.zip\r\n0ad96267231307cdee3d2516065f4ece6ab73c3aeabc014786259397fd2204b6  fastfetch-omnios-amd64/fastfetch-omnios-amd64.tar.gz\r\nc84c97f4745217f102868dded9823b399b609c2aa5d933e55e58466402e9c7c3  fastfetch-omnios-amd64/fastfetch-omnios-amd64.zip\r\nfc747dcbaa6b187d69d8976af69e673b9e6eb845a99bb1417566c06944f3be9a  fastfetch-openbsd-amd64/fastfetch-openbsd-amd64.tar.gz\r\n77370f1046d2a94fa32cdb9fdfafb7ed77f836c8fe241f3e5d065b1138a633c9  fastfetch-openbsd-amd64/fastfetch-openbsd-amd64.zip\r\n45b480b1f5331ef227fc03e9cac6a1b3281d8a48f93a182d64aae7a1f40cbb59  fastfetch-solaris-amd64/fastfetch-solaris-amd64.tar.gz\r\n88d4ec10e1f2bc72740934523818895c4f13d4660e0c2880a63526dc26f2ff1c  fastfetch-solaris-amd64/fastfetch-solaris-amd64.zip\r\n001dd608ebe0d8b651069983690cc93fe7f3e41ac11a50fc591b22c2fe97d9a4  fastfetch-source/2.60.0.tar.gz\r\ndf4edf3bf4498264385fb25e63a26b6b6ac935399b5cae1e2a324ddbb751ba84  fastfetch-source/2.60.0.zip\r\n8e7926deeaa0a6043e0be658e9ed87cbca70d5168a87df603c5f77f8e72af82e  fastfetch-windows-aarch64/fastfetch-windows-aarch64.7z\r\n26a8c9611ba98eeb1234c4eafe94fbdc0cffc29053467a3b449ae2dff7dd372c  fastfetch-windows-aarch64/fastfetch-windows-aarch64.zip\r\n8d23e92993a223b7b0877314f1d166d4e49f0fd7a0b3dd438d0722121bb39c1b  fastfetch-windows-amd64-win7/fastfetch-windows-amd64-win7.7z\r\n28f996f0af2591c18710c9e4505d895f372f8334cd5cf7642095ab4636349243  fastfetch-windows-amd64-win7/fastfetch-windows-amd64-win7.zip\r\n7ca4decbd10846c922182b0179835fac821225f52492637017533dc98668d2b0  fastfetch-windows-amd64/fastfetch-windows-amd64.7z\r\nfecbdc2f25aede90aaa57d44fb0d74e5a2c423b9f9982e16e475e5c2f957e3ee  fastfetch-windows-amd64/fastfetch-windows-amd64.zip\r\n```\r\n</details>\r\n\r\n<details><summary>SHA512SUMs</summary><br>\r\n\r\n```\r\n85003a01b11e1fd9dbbeffba73221caf0ef2c16b829ded41922304605baaf2ecc5dbcf021e4397d83f87b8e686cf8fd2e0812f4bbef3873a35ac7c2ce5d47e8f  fastfetch-dragonfly-amd64/fastfetch-dragonfly-amd64.tar.gz\r\nfaa938a8253de6855c70aae52fdbfb35f77984724ecc96ff118a1dc52265dadb6016ba05d9f41c7698a0e29e9406cfaad027c846d3604ab9167eeb06a8976a06  fastfetch-dragonfly-amd64/fastfetch-dragonfly-amd64.zip\r\n1ebefd142c0edd71865254ebdb8ae7bda0ecaef7f33671e5b3595ebdf813d3fd3cafba7d638552ad36353e8e23c4ead1d70fe0510adcd2c285064fbe1c055bee  fastfetch-freebsd-amd64/fastfetch-freebsd-amd64.pkg\r\nf1485b28a1cdbe20bcf32c6681907afe19616622187a02be30c9597b8bcb0852453df7ce8026854ea8f82d6f3dd46859e9b686d228f95df0d26c9d704ed767a0  fastfetch-freebsd-amd64/fastfetch-freebsd-amd64.tar.gz\r\n5c5bbc96ab57a61b75b8b792ecdff470aa1e4aff5ac86e6d7c00f6b7175a8607ff209f44a46eb1b2ac1f6fca6467a6c22864e1c1d880575ec3cc8b8e4729623b  fastfetch-freebsd-amd64/fastfetch-freebsd-amd64.zip\r\nd6ef7b3a641851f9a4d8996d7570f3fd9d4011f2bb0fdfd587a8e85bfec534a5961231a2afe465b6d23752df57731d005600ac25417ccb66ea66afb9f0404d2d  fastfetch-haiku-amd64/fastfetch-haiku-amd64.tar.gz\r\n6b4daffc08664557c85969a256a5c8284c4c156637cccd0b0adddebf5091b6164d7ae943606bfe028fe92e6c4e239da2249f5a1309221ac04c8c6914f3a96702  fastfetch-haiku-amd64/fastfetch-haiku-amd64.zip\r\n6abfdadefab838d1eb11fa744c148a305b987f5f00f90d7015af8ff695a7f53af4a1536f2514724f9781cb6c50a3a396a8c108ca06998ec4d9d4097140fe7ee4  fastfetch-linux-aarch64/fastfetch-linux-aarch64-polyfilled.deb\r\n2c4fe90ef4d9e0bf4e4236180e205c5f738f56e8745d6de3134e943f0eb046d99d269e5618e20c3465b6d107f9c03adbe8b6f27580fb04eb4f17cd6f3323b5e3  fastfetch-linux-aarch64/fastfetch-linux-aarch64-polyfilled.rpm\r\n6605adec3188bd9af0c7defa82b5f46b31c26ff5a2351840b6e51e9abecdbdd90aea3ae9017f493963c1165e453434feaa746396b3c94d48b13d02d073619463  fastfetch-linux-aarch64/fastfetch-linux-aarch64-polyfilled.tar.gz\r\nd8843fede2ee27046c7f4c675e0a8fcabcc38661247a68c9cac88d08618467ed58bccd176b075ddad55a70406aac015ba685037051d6261c1eb9afcc48b94138  fastfetch-linux-aarch64/fastfetch-linux-aarch64-polyfilled.zip\r\nfe2ed45349471f4a8b11ce601c5598c7e4acf56f39360575401035d6648ce4969959d9ba7311f8055af5890bba26bf39307dbb4588eeae6d9568f74588caa92f  fastfetch-linux-aarch64/fastfetch-linux-aarch64.deb\r\nbb16849a493b685acc95686f66ed1cf869476d086ac414bd728e761e933c01018191ca235b3930fae87c1f39f5a9b64b65954410aced98e92539e48a18773134  fastfetch-linux-aarch64/fastfetch-linux-aarch64.rpm\r\n6eeb9f051f55d0ac152d59d841061cedb6af6fba5c672c8786acba046cef62c947cf9f25632a4b6b4016335ca1b13da230e161b8254525eaf6f2f48521b8618c  fastfetch-linux-aarch64/fastfetch-linux-aarch64.tar.gz\r\n255321d39f7df89409eb188dddba16a85a940c1d2f5f7f3d64d62bafd4d136668eabc5d02f439a11529a60c83ce4110fdbaad6d1cf0e8d1abaac9e41bcdbfc3b  fastfetch-linux-aarch64/fastfetch-linux-aarch64.zip\r\n63c2ceb7e00ca78799cdda13a4b53feb72777b0341681437c80b6c59afd4e460bd2e56d374a37d9dbca5a169c220e5050a66f0e40e3da0fce85706155e4a16dd  fastfetch-linux-amd64/fastfetch-linux-amd64-polyfilled.deb\r\n19c2ff73a452d243105e413d25cbb5b372ce807073b11438ab3e2f483863849f8c6a2d9ad02392be99fe5cbda0e82873b705648fd8d0985141ee4e35579245ea  fastfetch-linux-amd64/fastfetch-linux-amd64-polyfilled.rpm\r\n4d0b3c46068de441dfcb6e342438746aad02a164b58820b77cf3698fe6415950f1bbc8e9f69329050c0249c3944d0e7745c1078f1bbd3ebdeaea3e847b23b16d  fastfetch-linux-amd64/fastfetch-linux-amd64-polyfilled.tar.gz\r\ne5870df2f7126c987d19b4dd623108550e92341c158359f4f00263f2b4e285ebb085bba54578a1cf0f13f817d4f69c565699154b58c5eb15835518ef52bd68f0  fastfetch-linux-amd64/fastfetch-linux-amd64-polyfilled.zip\r\n22269f38ddb1d9ec3cf4ef26bf73dd4f006db109909a8626e0d8cc370d6122c5eeab835b233addc04b8f4b50b7e144f672f8a250c2848733ba2dae9936c30e2f  fastfetch-linux-amd64/fastfetch-linux-amd64.deb\r\n57209c2f7fec6bec8117882cb7b8339105163f3e35ab8523b3138bf657ac419374d767927bd82c795c362cf8bb359ddd1a5f524ab8591a138c218a692561514f  fastfetch-linux-amd64/fastfetch-linux-amd64.rpm\r\na98d20a1a4605baa645352c39ceef3133c381257a569ebb35f66a4343bb8ecdd4e4bcc1e96023b44e56be2c1d491a9917d3c63e282249dd473746ee2f247122e  fastfetch-linux-amd64/fastfetch-linux-amd64.tar.gz\r\n97274fd46706998994a38b7158d0c28ace77f1b469b047e8c69430dc2dd4412269fa682f37fa76682e3b6c9a7da6a2147336c3458e6b52b53866f7b8c83ac849  fastfetch-linux-amd64/fastfetch-linux-amd64.zip\r\neae667a465dd744a1ff48012225d56fb897c35cea00e2ebd549579b081ec218689bce20ceacc485640e448d0db000743019708461b1725215695aa03913bc484  fastfetch-linux-armv6l/fastfetch-linux-armv6l.deb\r\n939bb25d3f841d94aaffe58cd9cd85643a23f2e9ebcbf624d07b45ba96fb37b9c0ae453b394c036672bc94e4b4921856268985c68d23338e9e779ad8c208098e  fastfetch-linux-armv6l/fastfetch-linux-armv6l.rpm\r\n371e20b49bbee37212e5101757429ebd918fa27db0e380e91c27f320b06721f02cd125f7efd1f72f87ad7e852c00034627549239d2cb974bae193c69508ac9cd  fastfetch-linux-armv6l/fastfetch-linux-armv6l.tar.gz\r\nb05facfe224f02c75cb41ab0a596b3771c4d3a74237d1480b20ad3318caf67a6a7678280a55e72d26c658432bc9d847060bb288ef421eefdd83ddfe585123701  fastfetch-linux-armv6l/fastfetch-linux-armv6l.zip\r\ne486161930685a457b4cc0045422f66848cf39df350cbefb9fb5c9b1a2443c22405c5c106a37531690ce7025c6727e3e57cccb046be98d22f6fc8a85666db8ad  fastfetch-linux-armv7l/fastfetch-linux-armv7l.deb\r\n126e389bb5b7d4ba0ccc192b90b836a552dc064a217d6e254244831a86606785700d3ba0aceba7369a38cd40024b289e233c2c0735a57d0a6dc67fc81587d61d  fastfetch-linux-armv7l/fastfetch-linux-armv7l.rpm\r\ne2c0827a93e44584286b167b43bddc7e01e1c21a173fbea6fbad9d1d6cab55c195f2dec244cb23e8f5b54b1f9e64817be1030de4c3c95874b10ac75271920fec  fastfetch-linux-armv7l/fastfetch-linux-armv7l.tar.gz\r\n7faa91f81238166b065099ed6c0e56ab10a99997673c4b77256f583f88008d4234b598e65b228aeb1e5da91818375436cf8e341a53a571482db9260e254a644e  fastfetch-linux-armv7l/fastfetch-linux-armv7l.zip\r\n328ef9c4608bcbe74630eaa56a659f5ce8b7cd9e937e38dde4a4209f365fed9cd1dc61590e3dd17c7ca8f04a07f5cb3bf81ced0b7838b0dfedb42b8808af286e  fastfetch-linux-i686/fastfetch-linux-i686.deb\r\n41fbcd33a36664d9edd50a8efe567f4b33057f090f0ef2a3f1c93367920e831c81b9cc1d528c59139827f45965ec448f2cf1322a5664e00bd8869853c7293845  fastfetch-linux-i686/fastfetch-linux-i686.rpm\r\n69b7c6e2d1660c7aa041d9fa4c396b4d280bc5c120df0c9b16de3e4a7122310dc21fa19d1cb5ab0f6975c6933bb432a56832608ac20fbe2ffdbb9f33229d427d  fastfetch-linux-i686/fastfetch-linux-i686.tar.gz\r\n3985dfbfda9180706ee8ad71f6b5881ec3e0ef0afbe128bf2d2993f5d37f7b110ea68366fb409e2e78ecfa2e90793341f362662887a4c5424d2358355d2716af  fastfetch-linux-i686/fastfetch-linux-i686.zip\r\n67799ce7cc629c665e308757c287e39a7730db7a0e63862fb8d9e9e81af6b4d43c1f19b64fef507dc11dfbb3fba278b3d369742857373570267ee39dae330865  fastfetch-linux-ppc64le/fastfetch-linux-ppc64le.deb\r\nf0ec96a18add294e83fd5a51ce23ed127d85a6046e17616f65ca3074c32e8ab8987dfbef202ee746793ab0af91c0ae29c6c9338b5a6525580f577c013a43b8a4  fastfetch-linux-ppc64le/fastfetch-linux-ppc64le.rpm\r\nf6251ef244551ae59f672fbcecd54af44bfdf18bfd09db37d53b0db194cca18717e208cc78ac15971af555a1d7b352855e81ac599e2fbb9e6b384ab8be8ee40e  fastfetch-linux-ppc64le/fastfetch-linux-ppc64le.tar.gz\r\n554ec27391d6473156990268cb2cc334a703d59437a7c2de69b0a3a16da8b8939d6ef51562258e285a6bb7adb4978475e5ba04672cb576670943a30ecad50136  fastfetch-linux-ppc64le/fastfetch-linux-ppc64le.zip\r\n03e395e764ca811592378866dfb73f6d8f18748ef9088823a2da082d48b048bb3c13b6c38c01e1b3a88d135f0bf865199fa78761ef83a1aa9f5530804c98a349  fastfetch-linux-riscv64/fastfetch-linux-riscv64.deb\r\nd55cbf1db979de0d8f73c0b89424c01ecfb3cea514a23b72bec79fff3c3cf575a54acafe25887b3c80c119027e47088719f42e1eda0ef83a69fd6896bcba60f0  fastfetch-linux-riscv64/fastfetch-linux-riscv64.rpm\r\nca19a72e0bef2e27442b2344e8716c0150d02813d25e704035452617b0050d02ccf3eff9ad4faf76b5e0489777beaf09af73ea3549e22a5f09962a458e625cfe  fastfetch-linux-riscv64/fastfetch-linux-riscv64.tar.gz\r\nab85acaf6d2b9814f61a35f732376a665ad67fcc56510245f6fe32561e3fece13929794f0bd2c593c662616af7d2b3bf39d458996e0bbb502915d097b5d1f25a  fastfetch-linux-riscv64/fastfetch-linux-riscv64.zip\r\n546b34e055bb9cd98669e5aab5938a3db51a3db7994555c26ee546f3ab51ec91efa29f6a3e1b368bc785634138a748fd06f65fd15f90c2ab574d6b113bc7d0e9  fastfetch-linux-s390x/fastfetch-linux-s390x.deb\r\n4808807b71031b08b0ec2f498e409b58b33ceb80b575939439d994720e699dfc7dff379a626551be7025cb01a12c7101f69dd8fd0803d508248c9c95e98e78d0  fastfetch-linux-s390x/fastfetch-linux-s390x.rpm\r\n15a1aa162925702cb827b17fe5ba0009c459bc0ec5004b016123d00d8ffab6cf3af48e89a29853b2f0a5c09232107286cf5562c2fd7abbf20d3db018d5b45603  fastfetch-linux-s390x/fastfetch-linux-s390x.tar.gz\r\naf36910f2da230d7e7c63424e46c5b26bd2b6149b3cc97fcb816b0fb1f14ba435562b3da254c392dc2476ef42a83c0538ddea94ea75a81e951594daf56c39cbc  fastfetch-linux-s390x/fastfetch-linux-s390x.zip\r\nde6b57136e51d80ef954186cfbed755ac16c0330732c05badfd63e457e35f941ce79a2cff897f5a6081acd9c28611fd1a7d4655b12dd86fcd84d3566dde0a7a1  fastfetch-macos-aarch64/fastfetch-macos-aarch64.tar.gz\r\ne64da088b01164ff9b521688cac22a948601da4b28fce744db4e53351929eb39769dc6cb2d3c92acaf5564aa74cbb3d96166dc222879248cc3a953de2ec3f80d  fastfetch-macos-aarch64/fastfetch-macos-aarch64.zip\r\n022879b46baae164cefe204ead6eb077043cd2ecf455244585e1e9a257aa737a955bcd2df24bf47eb2410c6dcf47fc6c9d67b768991e0c7989ed7386379c9927  fastfetch-macos-amd64/fastfetch-macos-amd64.tar.gz\r\n92691777528103a788e26d238004a984e195c7b132d8ea1699fc47bb3fb1b3c81c75424bb26b80bbe203891b33bc0c7e16a9eb485f637e1540bf1dcf79b3f249  fastfetch-macos-amd64/fastfetch-macos-amd64.zip\r\n095f0e82f8b7e392f95097386e18b1af072ed3204e4a8372ac72125fc220b1eb851470b48f0469176c0bc7e0e8a294527ed859cce595718c318b6256c1010786  fastfetch-musl-amd64/fastfetch-musl-amd64.tar.gz\r\nb9831e08cf6b7e3ece460cdf107cdb8a93a56c4bea3f693901da1025cc5b88e9cf6e0578f47ad5cc6cc38617afdfefaa17d22ad9fafff81c02dd1feb4487ae59  fastfetch-musl-amd64/fastfetch-musl-amd64.zip\r\nada10d0c983b20c430f7052a05ba3a60209b96d709da39077ab1f1f4930abd9624c1432bd8d15441c6de2ecd59622d7a735e6ea94b1846f7ce5eda8f354a2116  fastfetch-netbsd-amd64/fastfetch-netbsd-amd64.tar.gz\r\n5de03a523b7352d92d594448b479af04fb5281aabdbcec94360d9ada5684781811e4dfb455e81e7128aa3f1c8ae28815d3c15f03933b3255daf9787a28fbe637  fastfetch-netbsd-amd64/fastfetch-netbsd-amd64.zip\r\nc02b39d19ca2c0488c78646a715fd83bc1248e3283426021e9bf152715b329e30be7834add53edade2f0d4151d02d57d5b4f5bfa9b9ae238fd5c00f7471d10ce  fastfetch-omnios-amd64/fastfetch-omnios-amd64.tar.gz\r\na9ec2e59c6c596898ffda10b1b0e6184a2f7bdd302ec20f710570bbaa2db3f31e88591badec3b0cf7aee5b3642a0b8518c3d807ae1f1cfb512d6db070c549853  fastfetch-omnios-amd64/fastfetch-omnios-amd64.zip\r\nae93b9d614efc33cedd3a7684fbe0f63c31c3af09442c07527fea1791d65327d7832967d8ad108fd87f0dbf56c90977add1206f7bc506bbcd51d221acb2b197a  fastfetch-openbsd-amd64/fastfetch-openbsd-amd64.tar.gz\r\n2cf4fdf401d09f0a9e736510258e3b1389a27fa93ae35b5827ec419b37c988f3914b0a148a8ccc03b79863fa5eb62820a5524eb9a9be6191a07f5c16d0583dc1  fastfetch-openbsd-amd64/fastfetch-openbsd-amd64.zip\r\n7eca4465aecdb17935fceb0575dd04b5cd6578bdaed9c8ae675342c65c5074b909663a33a474f1af18126d50b03ee6ec75a0eba7f40f8102124aa3490e243b7a  fastfetch-solaris-amd64/fastfetch-solaris-amd64.tar.gz\r\n4d231808e5b6f330e2e15f953b94aa657ad2e1239588ace3a753a9222e383712027ff07ee6922d797b7a70ac0c1aac29e3db004d968e1953999948e684bca8d3  fastfetch-solaris-amd64/fastfetch-solaris-amd64.zip\r\nb4984dd0b5ffbd002deea1b3c4d35d0e18857b6517fb493495fc4661448ea14861267671eefb8cd26909d6f2c0aa00989dfd18f9b34d1c1f5af8026e9457645a  fastfetch-source/2.60.0.tar.gz\r\n0e8ac401e27430873288c317097b4570b769e556c78e57f8305ff18210e8938944e3da046130f27b3b64bad750315626fe6e6855b518c4cab277f842255dab6a  fastfetch-source/2.60.0.zip\r\n8c82a4c016f7ed428fb250ca7f5b65ef38289bc019d47e5473b2a46b7d874db3d4d84af2815e3edc7bfcf29ce4fd5bfe6dac34a9dbdd74a7794b6e097cb506e4  fastfetch-windows-aarch64/fastfetch-windows-aarch64.7z\r\n0dfc886ced263a3905611bafeb6d21059dff4049aa4afb9fdb37c90049a8eaa4540b5736bee4be7d0cf1af8ddcf2c662b3a6e2d408e11fa098be79d9d2a1b1ae  fastfetch-windows-aarch64/fastfetch-windows-aarch64.zip\r\n86084fd037d98ac6f025b60826a4188519f9b77ca2fccfb7d738fcad2eb22e386f1d8547fc0133584bcd7e7dae487de17ba7f952e284d79cfd609fb296e2bf46  fastfetch-windows-amd64-win7/fastfetch-windows-amd64-win7.7z\r\n636b81a635f411f9c045d851b9f03acba083ec4b1e8e428922cee9bce48e525db59402bc45ea7c5d23c81b632c1242cdefe467480e6a54163ebfcf7e74db6349  fastfetch-windows-amd64-win7/fastfetch-windows-amd64-win7.zip\r\n78a563e9665f4a12efe75a46add5e9cf6041398e3bc18838d1a78b33f6952d111dbaaf5e9012de1e09ea3180c74911d3014980a41a36ec23841521c1677fd896  fastfetch-windows-amd64/fastfetch-windows-amd64.7z\r\n60d7c2b18ac3375063bd25126eff93f83d9339c905f7293389202a9ab03b5607ec833da54dc8b431c602d4cb0c07039125e619179bb48c583c91ed555ddf6e9b  fastfetch-windows-amd64/fastfetch-windows-amd64.zip\r\n```\r\n</details>\r\n"
-        },
-        {
-          "version": "2.59.0",
-          "name": "2.59.0",
-          "releaseDate": "2026-02-13T17:00:56Z",
-          "releaseUrl": "https://github.com/fastfetch-cli/fastfetch/releases/tag/2.59.0",
-          "releaseNotes": "[20k stars](https://github.com/fastfetch-cli/fastfetch/stargazers) celebration. Happy Valentine's Day!\r\n\r\nChanges:\r\n* Fastfetch no longer uses on the unreliable environment variables `$USER` or `%USERPROFILE%` to determine the current username (Title)\r\n    * People who set `$USER` to customize the Fastfetch title should use `{ \"type\": \"title\", \"format\": \"your-custom-user-name\" }` to achieve the same result.\r\n* Fastfetch no longer tries to probe inaccessible remote disk drives on Windows (Disk, Windows)\r\n    * People who have remote drives may use `{ \"type\": \"disk\", \"hideFolders\": \"X:\\\\\" }` to ignore problematic ones.\r\n    * This change removes some ugly hacks from the codebase and matches the behavior on `*nix`.\r\n\r\nFeatures:\r\n* Adds Oracle Solaris support (#2176, SunOS)\r\n* Adds UID / SID detection (Title)\r\n    * In custom format: `{user-id}`\r\n* Switches to native GPU detection on GNU/Hurd and removes the `libpciaccess` dependency (GPU, Hurd)\r\n* Improves memory size detection on macOS (Memory, macOS)\r\n    * Avoids relying on `hw.memsize_usable` by default, which may not be available on older macOS versions\r\n* Improves Windows disk detection accuracy and performance (Disk, Windows)\r\n* Adds more ARM CPU parts and removes duplicated cases (CPU, ARM)\r\n\r\nLogos:\r\n* Adds 6-color support to the NixOS logo (including the small variant) (#2180)\r\n\r\n---\r\n\r\n<details><summary>SHA256SUMs</summary><br>\r\n\r\n```\r\nc75dad96f8cd31d9b3b5dfc52841acbf93ce54d9609b0c9197d5a9d15beec1b3  fastfetch-dragonfly-amd64/fastfetch-dragonfly-amd64.tar.gz\r\n578bb1d9864c3c168e32ce4cedf5758ee9a4d46023253754371dbc205e2ddb05  fastfetch-dragonfly-amd64/fastfetch-dragonfly-amd64.zip\r\n081b5bb34a34c867800b9a8518f539833de435718b7fb6a076e26e89f716f7e2  fastfetch-freebsd-amd64/fastfetch-freebsd-amd64.pkg\r\n6186b61350a4e5b90fe4ebf0018991ac4957cf502255b378abee9a45edc08b50  fastfetch-freebsd-amd64/fastfetch-freebsd-amd64.tar.gz\r\n03af81ff2f086e9639908b8c6485ecf842dc251f8badb99fe623d86d16542364  fastfetch-freebsd-amd64/fastfetch-freebsd-amd64.zip\r\n87dafbb927e24b882f68258e48d3d5b92164851e9bedf729a4e8a1ec3ffd2b0d  fastfetch-haiku-amd64/fastfetch-haiku-amd64.tar.gz\r\n2cc00c12827880084b2f23b71b22c2df1f952a0930e3a6e447d4886931119c45  fastfetch-haiku-amd64/fastfetch-haiku-amd64.zip\r\n88da064ffcf4c7f59ab5c74f9ff6f39304e7bc2fb9b01a45b4021a0c9c07761d  fastfetch-linux-aarch64/fastfetch-linux-aarch64-polyfilled.deb\r\nabd69281aeb95dc345199ac73e4bf36558ac6eca1e660569ca83618f0729c34a  fastfetch-linux-aarch64/fastfetch-linux-aarch64-polyfilled.rpm\r\n91bfff7d889038ad6f23a1c1df38d936abf1294cdef403d88b1aae3def4c1445  fastfetch-linux-aarch64/fastfetch-linux-aarch64-polyfilled.tar.gz\r\n6cbd5bec1b35aa7d45fcde517c47bfc6be052c9171349cf43a52fa05ff69b0f8  fastfetch-linux-aarch64/fastfetch-linux-aarch64-polyfilled.zip\r\nbc8e1312f9565659ad19f7c3f5761eb6dacc226fb95701bbcf5ef531b4cc9a0f  fastfetch-linux-aarch64/fastfetch-linux-aarch64.deb\r\n78e7f45401a3dd80f8d027c6deba02acb7169921257bd5104fbfcd478aec1418  fastfetch-linux-aarch64/fastfetch-linux-aarch64.rpm\r\n02a5188837348f7543d4f597bf5cdcedc958396a669756eb6f40a825d2cd52b5  fastfetch-linux-aarch64/fastfetch-linux-aarch64.tar.gz\r\n485c3cb51fa1583e7bcc6529154c4024e7480254af04e6b85572f7260e79a0bd  fastfetch-linux-aarch64/fastfetch-linux-aarch64.zip\r\nf82b53111bf4e057fa738462c2b0571cf855f282f46c7bdf5396d70f28fa3ed6  fastfetch-linux-amd64/fastfetch-linux-amd64-polyfilled.deb\r\n49439e0738d53c759103df738ebb265d5f6d7266d9eb8e417896bf90965b9d3f  fastfetch-linux-amd64/fastfetch-linux-amd64-polyfilled.rpm\r\n4fa7af54b4fdc75c46614a6808ae47deedaf6a20fe060d3ab4c139c34fc7ec51  fastfetch-linux-amd64/fastfetch-linux-amd64-polyfilled.tar.gz\r\n1bf096e72525c2276c30a2240783ac0913dcd25dc37be4c6eb1225ecfd41169f  fastfetch-linux-amd64/fastfetch-linux-amd64-polyfilled.zip\r\n13dbcd395428beb6bb05fed344f9562b29acecd57fbe014c89209544937107f2  fastfetch-linux-amd64/fastfetch-linux-amd64.deb\r\n7524bd0f7aa165497ed898dae5e2026c6786beb5ba21edecbee9b5cf339af89a  fastfetch-linux-amd64/fastfetch-linux-amd64.rpm\r\ncbcbb308136e254420703a1c41ba2af1eec17b0dac792c7fddff7bce04e54805  fastfetch-linux-amd64/fastfetch-linux-amd64.tar.gz\r\n353df8ec6ef3905ac32965b505839131a4ccc8a585e327257d1e8e2abf1a3dd9  fastfetch-linux-amd64/fastfetch-linux-amd64.zip\r\na59ab77a6242852bf901e38522153543d841e141404b8c24c94db8469f766840  fastfetch-linux-armv6l/fastfetch-linux-armv6l.deb\r\n5e1296b528d53a7cfb1f4d5eafd7434720fc1efb0b11c58714624618a4233a8a  fastfetch-linux-armv6l/fastfetch-linux-armv6l.rpm\r\n6e6952f412935738473eb196ec35383bbb3e1ee1f5d5842a3bd545a81a2dfafd  fastfetch-linux-armv6l/fastfetch-linux-armv6l.tar.gz\r\n18396db627350b01d332e7927bb9cb0f6e80dc6adc8aaa7a82d9d680882ee777  fastfetch-linux-armv6l/fastfetch-linux-armv6l.zip\r\n6698bbbdedb5fe61132c2cdba537e4b73409226437314cf18bfd707bc21cf343  fastfetch-linux-armv7l/fastfetch-linux-armv7l.deb\r\n999d101ef168f24c0b9345cb086ab941e57ea6507d16fe51e217b28f28192e1b  fastfetch-linux-armv7l/fastfetch-linux-armv7l.rpm\r\nbd68ddb9f9fdfd595714adaae0e51aa232eeeaeb037e8317d09fcebb3ef82114  fastfetch-linux-armv7l/fastfetch-linux-armv7l.tar.gz\r\n0924f1c475d2d83d1b5f37c05768576acaa0c9b57f5fd83ab9c209380d73a9cc  fastfetch-linux-armv7l/fastfetch-linux-armv7l.zip\r\n0129e2dbb2519b217a0b9314fbba6d33d7786e4bb3b15ea0b2467798d3f51dc6  fastfetch-linux-i686/fastfetch-linux-i686.deb\r\n5be6953d78bd5fbaaa7a0d4a6b13e56da64d891dabcddf6223a7c9b6087f400b  fastfetch-linux-i686/fastfetch-linux-i686.rpm\r\nd7b7b2576801e855e09994477c78c11c0d93098c44ad796f7219db6f662284c2  fastfetch-linux-i686/fastfetch-linux-i686.tar.gz\r\nfc9bd26e40daf1f6d05a7a4c0436c30dcbff8a5b0171406f19bbd9c7ff831ccf  fastfetch-linux-i686/fastfetch-linux-i686.zip\r\n0a128786c6a73a0a06e683bb281be15bab8cd70bd4ada13b25a03cacba8a438b  fastfetch-linux-ppc64le/fastfetch-linux-ppc64le.deb\r\nd692fa7b11ef7bf3a627f4723b6dd520fc943afe4d4369b3d91cf3802d5e5791  fastfetch-linux-ppc64le/fastfetch-linux-ppc64le.rpm\r\ndb666729cce21d410f3d4a331b88b76c1595ec5fd80e742cc7da1f56e338b455  fastfetch-linux-ppc64le/fastfetch-linux-ppc64le.tar.gz\r\nf7c27004dd66105a17d58737d802babcc8570ee06205330626f1d959704cc94a  fastfetch-linux-ppc64le/fastfetch-linux-ppc64le.zip\r\nc06f51fd93a958c2b947eeca995e04cb3926306fdc7334c8f65aa196452a8919  fastfetch-linux-riscv64/fastfetch-linux-riscv64.deb\r\n4a54537de3652d91003c6620d19598e81a0e5661d992b5cd639659db21634d76  fastfetch-linux-riscv64/fastfetch-linux-riscv64.rpm\r\n7e90849f6ac6b10167740dc850b441fc6b94c6bf32e83b39b506ee1eb7712ab9  fastfetch-linux-riscv64/fastfetch-linux-riscv64.tar.gz\r\n0e91ace0eaf4a60d44bf4e7451da600ee935c64a4dfc9ce076488ce723952508  fastfetch-linux-riscv64/fastfetch-linux-riscv64.zip\r\n7421f2be4673e91be6448153231c1232bb68eb82969a7bce97cfdeec2da638d6  fastfetch-linux-s390x/fastfetch-linux-s390x.deb\r\nbd78ef53b829f60b065e149f38d55a89c26f0a5f1307a717debf31069abc8166  fastfetch-linux-s390x/fastfetch-linux-s390x.rpm\r\n6cb41affdce0aeb1f83db6e691ad7548ae0766b923424f71569affd80b30279b  fastfetch-linux-s390x/fastfetch-linux-s390x.tar.gz\r\n6a9da562a80b656756293cd67521c1a5a6c1490478c4715907ee9f594c197031  fastfetch-linux-s390x/fastfetch-linux-s390x.zip\r\n05cf1c0e71f80bcd66e12086d0bef2bd2fa81188a4f83feb4c7c85091d8d3e67  fastfetch-macos-aarch64/fastfetch-macos-aarch64.tar.gz\r\n4a836190c29cacb27fc945e2b5e7ac1f40f2be5480eb95b6808f9484bf2faca6  fastfetch-macos-aarch64/fastfetch-macos-aarch64.zip\r\n201c7f9d5275c1b9bf4eb3fd2be189eb69d0b316f6777e63ab2da4813f8a33a9  fastfetch-macos-amd64/fastfetch-macos-amd64.tar.gz\r\nb640be772ed603e93d01fb91371b64f02311fd196f34abeb32f46e73540dc42a  fastfetch-macos-amd64/fastfetch-macos-amd64.zip\r\ne3808ab01181be7f2a1748b578ee02f0a6713b71ddb865df2b1bf72cb27d2e50  fastfetch-musl-amd64/fastfetch-musl-amd64.tar.gz\r\nd5030844da0dabdd6096524121ddf1adcc418650b590e13389e757ba0deb43cc  fastfetch-musl-amd64/fastfetch-musl-amd64.zip\r\nb71fe767ff7ef7d8ace412f4d20658c27a9085f1ee965435a6879e301c31aff4  fastfetch-netbsd-amd64/fastfetch-netbsd-amd64.tar.gz\r\n1981eb3e011df1d91133693f09428b2ca7bf58705d762bb9328ec302c8606299  fastfetch-netbsd-amd64/fastfetch-netbsd-amd64.zip\r\nef3784ef7d66a8c6f2373c0d451e8de963de96f2dc59dc4872874142952f7789  fastfetch-omnios-amd64/fastfetch-omnios-amd64.tar.gz\r\n278825419515e0c3971315a593688205edec6b6ee4c22f87cf9e0966dc3c7502  fastfetch-omnios-amd64/fastfetch-omnios-amd64.zip\r\n8f456495a4c5d68a097fff72acd988d40415b592ff63c675e5cfdd126c8c90bf  fastfetch-openbsd-amd64/fastfetch-openbsd-amd64.tar.gz\r\n8e3767828b35f505b4f500e27a24877fc51b627d4430ec01da39f6522076f7e2  fastfetch-openbsd-amd64/fastfetch-openbsd-amd64.zip\r\nebe17f70ad5cdd8dfe2f2bdad433e76eace7f7759bd0a85025e6f500619b3316  fastfetch-solaris-amd64/fastfetch-solaris-amd64.tar.gz\r\neaeb3aade8970a36fad916ba0c350f3afe750f1db451f56703a0cb908d3badcb  fastfetch-solaris-amd64/fastfetch-solaris-amd64.zip\r\n978e2524d0dc1ff9fd8c89fb24ae5b131af18ff108da82c6d99823712557e499  fastfetch-source/2.59.0.tar.gz\r\n9814ff6315ef9e20c2920b88db4ee2a0d521283d85ece26dae3d2a528bde99d8  fastfetch-source/2.59.0.zip\r\ndfabd9b6873962fbed846e287323e88c19e41f56b7de55876894fc26588d71a5  fastfetch-windows-aarch64/fastfetch-windows-aarch64.7z\r\ncdcef573aecb9103cbed27f1a61521a715f0b61b950716fa751aae043a7095fb  fastfetch-windows-aarch64/fastfetch-windows-aarch64.zip\r\nab14f91252610712430ed8ba62db6ed687120b2b5c8d66dffcc70106a4b3f96b  fastfetch-windows-amd64-win7/fastfetch-windows-amd64-win7.7z\r\n962875937541528cab1019a4119afc57900d3d95620087ece86495f1236b298c  fastfetch-windows-amd64-win7/fastfetch-windows-amd64-win7.zip\r\nba8ed2f472ba65140f7e08b8dbc3425b34f3717edb13b4f607781fad8ddd8eed  fastfetch-windows-amd64/fastfetch-windows-amd64.7z\r\n54fc6e9fb485277f326dff33047f1a1c6a3ceefa12cbe8e3da34c26faaa74fc0  fastfetch-windows-amd64/fastfetch-windows-amd64.zip\r\n```\r\n</details>\r\n\r\n<details><summary>SHA512SUMs</summary><br>\r\n\r\n```\r\na38519b5da1113c8162111139d4af663e1c67afe93e28865d57a919926f3db866f92b7ce82a83498084a845af885357d913fb03028c9d3e1999dd9385a76de55  fastfetch-dragonfly-amd64/fastfetch-dragonfly-amd64.tar.gz\r\na6f0c2b99f9af95cc96b21689914a66daf520d059665334195f4085b1c1fd7d8952c2dc3b22eec30026ced641026868b55da8f66b11b985a0c716ec2596b7fe0  fastfetch-dragonfly-amd64/fastfetch-dragonfly-amd64.zip\r\nd301fe25b2f5dc6db0aadb9285f1ac276bd9361e85c0d34e3aade71dea84abb2bab69f260e776e3160d046889e19e73536ce0c0bff9e0bcba0948c604e2a5886  fastfetch-freebsd-amd64/fastfetch-freebsd-amd64.pkg\r\n43c45904db456d465fed0dbf6683716081ed6b4f2f225b70fcfabdc05c19fbe4ecacb873a0c6c6fab5f3af8ca9c2e67b96194f8556d6d8953b556aa91b0d9e05  fastfetch-freebsd-amd64/fastfetch-freebsd-amd64.tar.gz\r\ne74e93f2bced74a6867b375113d56ae9f379f47dce684092979a7b15b643503de754ed259f695f9f734aad521f7e2736b2bfd4c2fa68c03665ea352d7cdbdcb5  fastfetch-freebsd-amd64/fastfetch-freebsd-amd64.zip\r\ndafdd726a8c82cf787a9816af25f90a4d0cfee3958d1002c7c6e5ac5a64138936f7e833532c540c1dee7cc27adebc4c87052ad5438c0f00f9494ac6f776838db  fastfetch-haiku-amd64/fastfetch-haiku-amd64.tar.gz\r\n33f247ac325479b0b83e0b49b547254c31a52e95a562fa864ca69d14484514565c02647d510fcb87ffc87043b33c05875d8a67b341bac56c7b6fa2bc9d4e8b3b  fastfetch-haiku-amd64/fastfetch-haiku-amd64.zip\r\n8a88a406bf440b6290ecbea08472afceaef614051dc6e534bf1977ccb35e08f14bac4ef63c511ae8d682ddbdd6b5fb73ce9b637c07c04257b1c3f9eba10de5a8  fastfetch-linux-aarch64/fastfetch-linux-aarch64-polyfilled.deb\r\nfff2460efa93f77269c96aef950e24668038c12a25932297983334c9de2528276a000c1c214e4c17ee80769c93d8717f4521290c325c9b0cc243bf6aa8a4b1cb  fastfetch-linux-aarch64/fastfetch-linux-aarch64-polyfilled.rpm\r\n5d6156e0c4f8addacefe9d9b3f0c12217336bdf71cfbcc230f10408442bf2f71e8fe51db4297a98f714141bb7e41f4d50d2934fbe5b669ce9b5721bdd9e38514  fastfetch-linux-aarch64/fastfetch-linux-aarch64-polyfilled.tar.gz\r\n1f00280fe80721a9971c35723aa15477cf6562bfc646449fe4d8fccc75e60fa78468f22185aee5dd6d6a037b058061970e799550b0017e2801df6c4741c5752f  fastfetch-linux-aarch64/fastfetch-linux-aarch64-polyfilled.zip\r\n976d31908c0e9f7bb2ef2cc7d1ef29e2629d138457b56ab2ed179451bc170fc5d623e2a91bb80390d4410dbc10b0718ad8bc912780d60a730854ba15ae72d3b9  fastfetch-linux-aarch64/fastfetch-linux-aarch64.deb\r\na2c7a32d8afdcf6f7437f6acddc876f46c5c94bc071703421bcfc359c12769aad297f57a1e36b238baad9e0380fb346c1e9a6602cc95ab20d5ac95f00c6a6706  fastfetch-linux-aarch64/fastfetch-linux-aarch64.rpm\r\n1b8bfdcb6705ee15507417651ef1db0abc9e4995fa0a137d6dc0fc0a4cb7f97a71234985053276c12aec245168c060a263061a292b7faf1047c6dd9baf933b13  fastfetch-linux-aarch64/fastfetch-linux-aarch64.tar.gz\r\nb24e769b7bb6387a9be3cf9ead7c6218578e40e4f8a8aece2b4f3b2f72bd05ae4e28b0204fc55a451b2283cf7803634c157ac3a90b5f346f490ff93026486ce5  fastfetch-linux-aarch64/fastfetch-linux-aarch64.zip\r\n9d214768f8e07933ffea9d18870e803579fc7560b54e00b88d549a11baafc8625f6a8b8f33c924ac5444ff744b74f18a9367a4f83de9c2b1cc4bd2bf3aaa0441  fastfetch-linux-amd64/fastfetch-linux-amd64-polyfilled.deb\r\n1b5b5e90e6e300e3e8a041e60a8118a3d9b5c04d33034bf5486018064b47b47ffbc0dd365ec862d426fc2731bb9f05e0ac5a000731c29ad6ebd4b51752667003  fastfetch-linux-amd64/fastfetch-linux-amd64-polyfilled.rpm\r\n0c5f00ea58c505adf1a2e5906dca40f15a298e6c06be0c470bee6b60f7bad1bd9b10ef6447db969c7fd25d8393b5a21d8aea5f4e40db9429ae6d68ebdd6574f6  fastfetch-linux-amd64/fastfetch-linux-amd64-polyfilled.tar.gz\r\n96eb64804ac4bce63e26f793caeca75b6a149be81d1332ab6b040d29bf651ae0a7c0b968b81676fab50d28b04537454adb5c3fa31e0e569541b530d94b6c0a06  fastfetch-linux-amd64/fastfetch-linux-amd64-polyfilled.zip\r\n83c64d7a4a92383761ef3d49fda9641cfe0ce34f1560aae7b9d1b97754aacb715170c0d517fb52c9b098d00938b9b2d8cd98377135a3ec6d640ea4de8a4e1117  fastfetch-linux-amd64/fastfetch-linux-amd64.deb\r\n3fba36e5a490724faaf07b638ae55474a397164a224abf5c93dc21873ec3dee5b8bf75562fc8746858e211578ffd57c698f19df8388e1212e317cead87ee2b41  fastfetch-linux-amd64/fastfetch-linux-amd64.rpm\r\n7d7509e233ada75df64998598b24c2e17760392c5997d81a81285264ddfcc9018b62e9eb89de1ccb62dfab26f03db6a4f6f48d19e6f589e8d6b59b5717566ec9  fastfetch-linux-amd64/fastfetch-linux-amd64.tar.gz\r\nee5ad76f35a53df7208f135e4af8add8ec5af29b4be6f83622b45428f72b83bacbb3d7039371fc4d6bf68456ae0808d6b943299c7637f0c2f1f132473b18e5d1  fastfetch-linux-amd64/fastfetch-linux-amd64.zip\r\n69d51d865da5b0ec8d539385ea201a81c5ff1d2e86f5e9c74da0957a02757874f484f32ddd9b74e1cfbb6a102de696aa36011fedce0ade31c51d886bf5e33e8d  fastfetch-linux-armv6l/fastfetch-linux-armv6l.deb\r\n93db8a912b4a3045b69055d63f6ee8282a997ce04a0768ec20ed1c3564d258cd5991fd2113079111fb2bdb27754c2c17b6f390828ab2d9204bfce5009e97317a  fastfetch-linux-armv6l/fastfetch-linux-armv6l.rpm\r\n9544900fb980cf0cfe127488f51be941e98833220de8ee1afaabd35deb22e7a3d6850475fae761316a095af78815bcd4f4184608326006d0d79424e513a68d83  fastfetch-linux-armv6l/fastfetch-linux-armv6l.tar.gz\r\n80fed2d91ab680437f714d2a113355877d8e2edb22855ed95e7fc1507c52cda7eca2a59d9db5eec8dfc4d50b3b8390fb884c9e0bd25ac7dbe5157fd67195b0a3  fastfetch-linux-armv6l/fastfetch-linux-armv6l.zip\r\nefd24b86e34b198e120bc71ab5414f2e4185b4161e051adf060ea60e6c489a3901c1a686e3e80fce318233a1574f88c5473aefd90a476f70c271b97fd0aa2ee8  fastfetch-linux-armv7l/fastfetch-linux-armv7l.deb\r\n2d1ce4fc195866a14fb55e7139917cb157fe8fee1b89e9972d05c23961a9fe16d04fd0d0250a7794caaf9fb00b9798483a1d3a6d88ce7fd943f4a933351dd748  fastfetch-linux-armv7l/fastfetch-linux-armv7l.rpm\r\n2186e0159debeb4bddac1c2976ddaabc62f92424bfcfec45a17337af9f40b9b21dbabfb5362506f9cb632604768b0966a0169dfc81484dafbfa7e5dd9e6ed6bf  fastfetch-linux-armv7l/fastfetch-linux-armv7l.tar.gz\r\n8fa914238b77a38c6d3ba48a017ac42b8d4c122c288f8cad9e936ebbaf05540b18beebd8e8d61ed1abd0d8834f251e53ef9872122e153610360179abcfd1a59f  fastfetch-linux-armv7l/fastfetch-linux-armv7l.zip\r\ne186952951cc5b025402a0b486ad68bcf50fd9832bee5f15752cf2d99a887ff5f8df07907e7291ce1f552ddc76da4fd599879760517a506f67bf0db980c19d71  fastfetch-linux-i686/fastfetch-linux-i686.deb\r\ne6c4b516f7920cea71e4b4cf853b27497a126a8792b41dce3620b9f9f205d6aa4c362040d81a2b0c905a251cd5d4f3ee0064dd795aac0573d2665d0fdc571463  fastfetch-linux-i686/fastfetch-linux-i686.rpm\r\n02adf8e4dfad2db89013a7fea09a9c3a7c95699ff35cc90e59ed4c228da0294c7d0a6a925be532e1d8fa7a5c34afa503102e8a4e3f2c3297fb11b1bcdf84a7a1  fastfetch-linux-i686/fastfetch-linux-i686.tar.gz\r\n9992ce3e445ff0febae936036da30f0a2474a854bbf42010661c59b4c87ec1f5b98fe3d84506c826ea649d608af725959ed54d6d8cd33556b77d46bd8a6c49d3  fastfetch-linux-i686/fastfetch-linux-i686.zip\r\n5045482d0fbb53026cd06b7578176d12e4f3d91f86b6698e1f27e8e092859df46f824b1eea5ea897491684c5632f37f34c3fb0de1454383aa8d25a4c07ee4395  fastfetch-linux-ppc64le/fastfetch-linux-ppc64le.deb\r\nb3143f4eabdfb774e68d177856de26005727df1df283f3d77c4418cccdcbfb44d2b318d45c6f9c39a8af652b31a3d950f2eff6540a62d90f45377ef1e8cc555b  fastfetch-linux-ppc64le/fastfetch-linux-ppc64le.rpm\r\nb52084fcf3ab9bab721dcac2feb49564d90b82d3aeee5247b710fb9f8c3222178503120bde1aa64b02909fd7e0f85a1d68729228b829eb3d6e97c1a013eef535  fastfetch-linux-ppc64le/fastfetch-linux-ppc64le.tar.gz\r\nab358ec590c211b61073d4f297073cc4fbe902d201d9514d775d7016ec081fd559edb238aeb05400bff2b1cf6722b3fecdb154954418ba9a6b6f6236c8aca7be  fastfetch-linux-ppc64le/fastfetch-linux-ppc64le.zip\r\n818879c8c4c5dc88e1aa3c44d8919b925602c143f04369341e3d8cf9990adce2e8ddef3d5b21fb508bce82c4b6524cdf2f55079505a4db948ffcaf9143c18b02  fastfetch-linux-riscv64/fastfetch-linux-riscv64.deb\r\n3d6b1dc4ac6306c4cb263a6ca498f315c79a94dbaccbb4643c4d253fd49faea214e814cc0e9fdb0f9c72f9f4d2e038210a27f5f645bc2ab617636835b9492500  fastfetch-linux-riscv64/fastfetch-linux-riscv64.rpm\r\n935f68498f0a3f115b7b1e3ac3fa2fe55d522e2d38f8187fee00695b723e8a4f0aecb37d5e5aec5ccec45ca3cd606f8545a1150ab87b5140cbd197cbf2d38220  fastfetch-linux-riscv64/fastfetch-linux-riscv64.tar.gz\r\n7c7d46af80ca20acbfa29a0b29a3a3fc0a15dc802db75dd039cee070a817ac2d432f0e9659bad2255f24f51a5786df2935cdfdfcd83f8371c8eee5f131cadb90  fastfetch-linux-riscv64/fastfetch-linux-riscv64.zip\r\n16bfa72bdcee683642888e1654513e6d5c4b2f16b2cb90571ade7b6c469da24bdb013118d15e51815454d8a7b61c115f5c890666b759e4cd9846abb05ffa93b3  fastfetch-linux-s390x/fastfetch-linux-s390x.deb\r\n4c2a47ce06ee87b0809a52373bb086492e80905345042bd6d3565079fb63a82af7893de4ec7b52c8bbf579d99ac07c92a6a156efa2ce61d0f34d017ed6a0ad84  fastfetch-linux-s390x/fastfetch-linux-s390x.rpm\r\n95c73bd0f6dc597cb1774c40fdcb8022f00fd9da49d228c1ad49138e4904c081f02deb3443a3934aabccc07bdb9b231be55b5497180c503169026d7314cd9bee  fastfetch-linux-s390x/fastfetch-linux-s390x.tar.gz\r\nc7cc8064de9f9f697629b7e3726b4381b7e2add477a7b60d35a138e50151bf130f4d2be6bbabe0323db0fdc92f88393618b0676a9e50eed242a168dff5b503f1  fastfetch-linux-s390x/fastfetch-linux-s390x.zip\r\n4727270fc23ca8acb25da424af94523ed569d6b51371daffccf7ac9a8fdeccf2da927a994c37353180cde27faf7b5281d05b12478e400a00dc15cb461069f5ba  fastfetch-macos-aarch64/fastfetch-macos-aarch64.tar.gz\r\n4d1fa18cceb16da3e8ff1bfb6a4739174d3f79e498098aae45b4b74e85872f95f41e03240e9d79bfc743e050e61d74a4fedac418d8ceb2dd922f598257097abc  fastfetch-macos-aarch64/fastfetch-macos-aarch64.zip\r\n571500d580cf7583ce14f8323127738c2df29c2402f7a8967ffa2dbd89929d551bb394ed482779c3a17a5efc827cb5771e6341cab51cb8def83996d295e4cf82  fastfetch-macos-amd64/fastfetch-macos-amd64.tar.gz\r\n694057155d68c9cec07d05d85a3d174e9295966988b2920d393a77a35e973dd83497d135b1bf4e002e3414d2a49abfe7b739c7d52c168c83922054b793f5182c  fastfetch-macos-amd64/fastfetch-macos-amd64.zip\r\n1a0b2eddfab7aba2272fe38d0bc8303046b96e34d46bbe580a9034bd81ec18c46b3c60ae19fa6df23ce459219eefb0c8697908a2084786c16ee238e8b01b5117  fastfetch-musl-amd64/fastfetch-musl-amd64.tar.gz\r\n1d0e05f9b114624cd8294b32ce42cab6e6f74d477fc6311e99fbdef7d53b911c8f76bb89f4fa5f3ba3fd9115cde4924694877882155f096e6ffcecc7ca6e9d19  fastfetch-musl-amd64/fastfetch-musl-amd64.zip\r\n0d0ac85160623470a4f33826638ebf3977413cc74555b4213262c992c7913078d02aefdde9c10b15c0e8c50913b354f987224108b5cee51c6b22c8656ab819a7  fastfetch-netbsd-amd64/fastfetch-netbsd-amd64.tar.gz\r\nd18b915e6d9e82765cef754d2564721ae176e5f5ddc99765f66a9d843048e3d3e53526548c4e14709dd25351d2fc2d8fd66be69e488fce5fe93bf6758aa9ecad  fastfetch-netbsd-amd64/fastfetch-netbsd-amd64.zip\r\n131c07c6bdf8c53890393d4c1b2f38740b95077eaaf8288f418c27db783e7f5a1a2864214e434c14cf2fadfb8a0aa0b417819620edfa8ded8efe927cab905642  fastfetch-omnios-amd64/fastfetch-omnios-amd64.tar.gz\r\n7b91e06969d3315b0bf5531d5e7b0b208dc8413c276521f3f571f03da9d118cbcf1547a499565f9300579f9d654f74ac3bd1b21fe953b8361dfb589bfb470973  fastfetch-omnios-amd64/fastfetch-omnios-amd64.zip\r\n6c8a1670508ff5f6a284654c3ecba568da08013ce30488140d5629b966f34e23ac80eab43673d511350a3710b31dc01c605fcf51f8c7bd6f5c8e49461ad8a9d4  fastfetch-openbsd-amd64/fastfetch-openbsd-amd64.tar.gz\r\n19f4a63c7289aedfc3ee8136bd5f18c13a1858255b599ca00093d9f246128f44838991024d137e9d13dfc250bd4584c8f19beb33166f534db192fb24f64062c8  fastfetch-openbsd-amd64/fastfetch-openbsd-amd64.zip\r\n5f2e3b658722d5b48d97354f943878b1f6c21e395f8a7e52f997f4321dc8daf8c113912025ebc8fbcd0d8124d76c51351a5c26a0871fe6aee3ed53b89e63ca5f  fastfetch-solaris-amd64/fastfetch-solaris-amd64.tar.gz\r\nf7462600295519765118d58f7d8d80f2eac987421004a6e88d52c8b068bb743798fbbd69cee0b1a681d617c6cb73f7a8b18c2ab4157382ebcbf6341f2057db46  fastfetch-solaris-amd64/fastfetch-solaris-amd64.zip\r\nf9c1a67818c5c40455d2e638204e2a90c00c74b0113b792cd01e4af629c55346c2c7f8f18d875354f4c7608c219b4e2d38135449b39379dcf77817644ee56af1  fastfetch-source/2.59.0.tar.gz\r\nb43e5d8dbe1695a8477821c44c1b6ead3bb2a105cdf0bea37f504ca608e6a8620c8a04b678e7c054b5c8df617a895e11cf84270f8f23d94c7f986e8104c2a650  fastfetch-source/2.59.0.zip\r\n4737c27c2554425e02fd52facaa78f67f369b61e97ea1b1dd6ec87e1e5bd9b3b96fcc87c06b627f0ed79d94efc9d8b3c5fd59c8b5feb465d2986f5251d97a978  fastfetch-windows-aarch64/fastfetch-windows-aarch64.7z\r\n0740cccae89d297aab658f52f534e7c82ebb72e57d4cbe6765e1134fcd837c3be9f95fa7883c547f6c4c66062130b3dd32442d9f1ab95d6d28bba24d9b2e65f7  fastfetch-windows-aarch64/fastfetch-windows-aarch64.zip\r\n8cdd0f62d97ce17e3ec7f1e8d2761c5aec68145f1b041eff32d241ac0a716955acaedc0accc7ab40c568e3325d78dbda4428e95eb24281a4effe05ac64feff0f  fastfetch-windows-amd64-win7/fastfetch-windows-amd64-win7.7z\r\nebc9041c276ad701d442354617bd648c8e68835765a883274ab59f0fe30feef3af66d3fef93ff0fb8dfeca5315c704fa55eb6d27ed670c07b937ee55f7aeabf5  fastfetch-windows-amd64-win7/fastfetch-windows-amd64-win7.zip\r\nb444002cf8734baaa35ef3eb6c6a9380b53f4a8d037dc5472de1342d43750116e2231908467187dde2480946a00f55260f88235690563192efd969841706966f  fastfetch-windows-amd64/fastfetch-windows-amd64.7z\r\n4b9d03bb402746943c48f5252e4aaf5b1c924dc7f6a0917e7ee64ecafa43a087514613bae8e6416bb4e768ca26556aeb2966d5c3e819367f1cd7a0209b70ac80  fastfetch-windows-amd64/fastfetch-windows-amd64.zip\r\n```\r\n</details>\r\n"
         }
       ]
     },
     "glances": {
       "name": "Glances",
-      "lastFetch": "2026-11-27T16:54:50.724Z",
+      "lastFetch": "2026-11-28T15:46:23.450Z",
       "sourceUrl": "https://api.github.com/repos/nicolargo/glances/releases",
       "releases": [
         {
@@ -31662,7 +31662,7 @@
     },
     "headscale": {
       "name": "Headscale",
-      "lastFetch": "2026-11-27T16:54:51.714Z",
+      "lastFetch": "2026-11-28T15:46:24.494Z",
       "sourceUrl": "https://api.github.com/repos/juanfont/headscale/releases",
       "releases": [
         {
@@ -31809,7 +31809,7 @@
     },
     "htop": {
       "name": "htop",
-      "lastFetch": "2026-11-27T16:54:52.021Z",
+      "lastFetch": "2026-11-28T15:46:24.848Z",
       "sourceUrl": "https://api.github.com/repos/htop-dev/htop/releases",
       "releases": [
         {
@@ -31956,7 +31956,7 @@
     },
     "kopia": {
       "name": "Kopia",
-      "lastFetch": "2026-11-27T16:54:53.605Z",
+      "lastFetch": "2026-11-28T15:46:26.047Z",
       "sourceUrl": "https://api.github.com/repos/kopia/kopia/releases",
       "releases": [
         {
@@ -32103,7 +32103,7 @@
     },
     "lsd": {
       "name": "lsd",
-      "lastFetch": "2026-11-27T16:54:54.136Z",
+      "lastFetch": "2026-11-28T15:46:26.509Z",
       "sourceUrl": "https://api.github.com/repos/lsd-rs/lsd/releases",
       "releases": [
         {
@@ -32250,7 +32250,7 @@
     },
     "nnn": {
       "name": "nnn",
-      "lastFetch": "2026-11-27T16:54:54.629Z",
+      "lastFetch": "2026-11-28T15:46:26.929Z",
       "sourceUrl": "https://api.github.com/repos/jarun/nnn/releases",
       "releases": [
         {
@@ -32397,7 +32397,7 @@
     },
     "portainer": {
       "name": "Portainer",
-      "lastFetch": "2026-11-27T16:54:55.613Z",
+      "lastFetch": "2026-11-28T15:46:27.861Z",
       "sourceUrl": "https://api.github.com/repos/portainer/portainer/releases",
       "releases": [
         {
@@ -32544,7 +32544,7 @@
     },
     "rclone": {
       "name": "rclone",
-      "lastFetch": "2026-11-27T16:54:57.644Z",
+      "lastFetch": "2026-11-28T15:46:29.716Z",
       "sourceUrl": "https://api.github.com/repos/rclone/rclone/releases",
       "releases": [
         {
@@ -32691,7 +32691,7 @@
     },
     "restic": {
       "name": "restic",
-      "lastFetch": "2026-11-27T16:54:58.443Z",
+      "lastFetch": "2026-11-28T15:46:30.381Z",
       "sourceUrl": "https://api.github.com/repos/restic/restic/releases",
       "releases": [
         {
@@ -32838,7 +32838,7 @@
     },
     "rmlint": {
       "name": "rmlint",
-      "lastFetch": "2026-11-27T16:54:58.763Z",
+      "lastFetch": "2026-11-28T15:46:30.661Z",
       "sourceUrl": "https://api.github.com/repos/sahib/rmlint/releases",
       "releases": [
         {
@@ -32985,7 +32985,7 @@
     },
     "syncthing": {
       "name": "Syncthing",
-      "lastFetch": "2026-11-27T16:55:00.342Z",
+      "lastFetch": "2026-11-28T15:46:32.532Z",
       "sourceUrl": "https://api.github.com/repos/syncthing/syncthing/releases",
       "releases": [
         {
@@ -33132,7 +33132,7 @@
     },
     "timeshift": {
       "name": "Timeshift",
-      "lastFetch": "2026-11-27T16:55:00.615Z",
+      "lastFetch": "2026-11-28T15:46:32.763Z",
       "sourceUrl": "https://api.github.com/repos/linuxmint/timeshift/releases",
       "releases": [
         {
@@ -33181,7 +33181,7 @@
     },
     "tlp": {
       "name": "TLP",
-      "lastFetch": "2026-11-27T16:55:00.928Z",
+      "lastFetch": "2026-11-28T15:46:33.069Z",
       "sourceUrl": "https://api.github.com/repos/linrunner/TLP/releases",
       "releases": [
         {
@@ -33328,7 +33328,7 @@
     },
     "yazi": {
       "name": "yazi",
-      "lastFetch": "2026-11-27T16:55:01.499Z",
+      "lastFetch": "2026-11-28T15:46:33.541Z",
       "sourceUrl": "https://api.github.com/repos/sxyazi/yazi/releases",
       "releases": [
         {
@@ -33475,7 +33475,7 @@
     },
     "anime4k": {
       "name": "Anime4K",
-      "lastFetch": "2026-11-27T16:55:01.780Z",
+      "lastFetch": "2026-11-28T15:46:33.820Z",
       "sourceUrl": "https://api.github.com/repos/bloc97/Anime4K/releases",
       "releases": [
         {
@@ -33524,7 +33524,7 @@
     },
     "celluloid": {
       "name": "Celluloid",
-      "lastFetch": "2026-11-27T16:55:02.228Z",
+      "lastFetch": "2026-11-28T15:46:34.127Z",
       "sourceUrl": "https://api.github.com/repos/celluloid-player/celluloid/releases",
       "releases": [
         {
@@ -33671,7 +33671,7 @@
     },
     "clapper": {
       "name": "Clapper",
-      "lastFetch": "2026-11-27T16:55:02.606Z",
+      "lastFetch": "2026-11-28T15:46:34.407Z",
       "sourceUrl": "https://api.github.com/repos/Rafostar/clapper/releases",
       "releases": [
         {
@@ -33769,7 +33769,7 @@
     },
     "flowblade": {
       "name": "Flowblade",
-      "lastFetch": "2026-11-27T16:55:02.982Z",
+      "lastFetch": "2026-11-28T15:46:34.714Z",
       "sourceUrl": "https://api.github.com/repos/jliljebl/flowblade/releases",
       "releases": [
         {
@@ -33916,7 +33916,7 @@
     },
     "handbrake": {
       "name": "HandBrake",
-      "lastFetch": "2026-11-27T16:55:03.912Z",
+      "lastFetch": "2026-11-28T15:46:35.331Z",
       "sourceUrl": "https://api.github.com/repos/HandBrake/HandBrake/releases",
       "releases": [
         {
@@ -34069,7 +34069,7 @@
     },
     "losslesscut": {
       "name": "LosslessCut",
-      "lastFetch": "2026-11-27T16:55:05.517Z",
+      "lastFetch": "2026-11-28T15:46:36.594Z",
       "sourceUrl": "https://api.github.com/repos/mifi/lossless-cut/releases",
       "releases": [
         {
@@ -34216,7 +34216,7 @@
     },
     "mpv": {
       "name": "mpv",
-      "lastFetch": "2026-11-27T16:55:06.058Z",
+      "lastFetch": "2026-11-28T15:46:37.044Z",
       "sourceUrl": "https://api.github.com/repos/mpv-player/mpv/releases",
       "releases": [
         {
@@ -34363,7 +34363,7 @@
     },
     "natron": {
       "name": "Natron",
-      "lastFetch": "2026-11-27T16:55:06.442Z",
+      "lastFetch": "2026-11-28T15:46:37.436Z",
       "sourceUrl": "https://api.github.com/repos/NatronGitHub/Natron/releases",
       "releases": [
         {
@@ -34510,7 +34510,7 @@
     },
     "obs-studio": {
       "name": "OBS Studio",
-      "lastFetch": "2026-11-27T16:55:07.604Z",
+      "lastFetch": "2026-11-28T15:46:38.483Z",
       "sourceUrl": "https://api.github.com/repos/obsproject/obs-studio/releases",
       "releases": [
         {
@@ -34663,7 +34663,7 @@
     },
     "openshot": {
       "name": "OpenShot",
-      "lastFetch": "2026-11-27T16:55:08.835Z",
+      "lastFetch": "2026-11-28T15:46:39.696Z",
       "sourceUrl": "https://api.github.com/repos/OpenShot/openshot-qt/releases",
       "releases": [
         {
@@ -34810,7 +34810,7 @@
     },
     "peek": {
       "name": "Peek",
-      "lastFetch": "2026-11-27T16:55:09.226Z",
+      "lastFetch": "2026-11-28T15:46:39.948Z",
       "sourceUrl": "https://api.github.com/repos/phw/peek/releases",
       "releases": [
         {
@@ -34957,7 +34957,7 @@
     },
     "screentogif": {
       "name": "ScreenToGif",
-      "lastFetch": "2026-11-27T16:55:09.854Z",
+      "lastFetch": "2026-11-28T15:46:40.580Z",
       "sourceUrl": "https://api.github.com/repos/NickeManarin/ScreenToGif/releases",
       "releases": [
         {
@@ -35104,7 +35104,7 @@
     },
     "sharex": {
       "name": "ShareX",
-      "lastFetch": "2026-11-27T16:55:10.425Z",
+      "lastFetch": "2026-11-28T15:46:40.996Z",
       "sourceUrl": "https://api.github.com/repos/ShareX/ShareX/releases",
       "releases": [
         {
@@ -35251,7 +35251,7 @@
     },
     "shotcut": {
       "name": "Shotcut",
-      "lastFetch": "2026-11-27T16:55:11.431Z",
+      "lastFetch": "2026-11-28T15:46:41.879Z",
       "sourceUrl": "https://api.github.com/repos/mltframework/shotcut/releases",
       "releases": [
         {
@@ -35398,7 +35398,7 @@
     },
     "smplayer": {
       "name": "SMPlayer",
-      "lastFetch": "2026-11-27T16:55:12.265Z",
+      "lastFetch": "2026-11-28T15:46:42.569Z",
       "sourceUrl": "https://api.github.com/repos/smplayer-dev/smplayer/releases",
       "releases": [
         {
@@ -35468,7 +35468,7 @@
     },
     "vapoursynth": {
       "name": "VapourSynth",
-      "lastFetch": "2026-11-27T16:55:13.059Z",
+      "lastFetch": "2026-11-28T15:46:43.102Z",
       "sourceUrl": "https://api.github.com/repos/vapoursynth/vapoursynth/releases",
       "releases": [
         {
@@ -35621,7 +35621,7 @@
     },
     "vokoscreenng": {
       "name": "VokoscreenNG",
-      "lastFetch": "2026-11-27T16:55:14.354Z",
+      "lastFetch": "2026-11-28T15:46:44.151Z",
       "sourceUrl": "https://api.github.com/repos/vkohaupt/vokoscreenNG/releases",
       "releases": [
         {
